@@ -150,11 +150,18 @@
 				<div class="col-md-5">
 					<div class="row">
 						<label class="label-text">Vessel Service Code : </label> 
-								<select class="text-input">
-                                    <option selected="" disabled="" value="">Click Me</option>
-                                    <option value="france">#4566871</option>
-                                    <option value="brazil">#45665455</option>
-                                 </select>
+						<div class="dropdownlist">
+							<div class="selected-listitem dropdown-box">Select Category</div>
+							<ul>
+								<li value="">Select Category</li>
+								<li value="1" rel="5">Select Category1</li>
+								<li value="2" rel="6">Select Category2</li>
+								<li value="3" rel="7">Select Category3</li>
+								<li value="4" rel="8">Select Category4</li>
+								<li value="5" rel="9">Select Category5</li>
+							</ul>
+							<input type="hidden" name="search_category" class="dropdown-item" value="12" />
+						</div>
 						<input class="text-input small-width" type="text"/>
 						<label class="label-text">Berthing Type :</label> 
 						<select class="text-input full-width">
