@@ -443,6 +443,7 @@ input[type="radio"]:checked:not(old) + label > span > span {
     margin-top: 8px;
     text-align: right;
     width: 160px;
+	float:left;
 }
 .text-input {
     border: 1px solid #d8d8d8;
@@ -938,6 +939,16 @@ input[type="radio"]:checked:not(old) + label > span > span {
 */
 /*------- Forms Element Drop Down -------*/
 
+.dropdown-list {
+    position: absolute;
+}
 .dropdownlist {
-    position: relative;
+    border: 1px solid #d8d8d8;
+    float: left;
+    height: 35px;
+    margin: 0 5px 0 0;
+    max-width: 160px;
+    padding: 8px 12px;
+    vertical-align: middle;
+    width: 100%;
 }
