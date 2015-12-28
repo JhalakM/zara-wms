@@ -15,7 +15,7 @@ $(window).load(function(){
 $(document).ready(function() {
 	
 	/* Custom Select Box */
-	$('.select-dropdown').fancySelect();
+	//$('.select-dropdown').fancySelect();
 	var menu = $('#top').find('menu');
 
 	function positionMenuArrow() {
@@ -57,5 +57,25 @@ $(document).ready(function() {
 			$(this).parents("li").addClass("switch"); 
 		});
 	});
-		
+	
+	
+	custom_dropdown_list();
 });
+
+function custom_dropdown_list()
+{
+	$('.dropdownlist .selected-listitem').click(function(){
+		var this_ul = $(this).parent().find('ul');
+		$('.dropdownlist ul').not(this_ul).hide();
+		this_ul.toggle();
+	});
+	$('.dropdownlist ul li').click(function(){
+		var selectbox_val  = $(this).attr('rel');
+		var selectbox_text = $(this).text();
+		alert(selectbox_val);
+		$(this).parents('.dropdownlist').find('.selected-listitem').text(selectbox_text);
+		$(this).parents('.dropdownlist').find('.dropdown-item').attr('value',selectbox_val);
+		$('.dropdownlist ul').hide();
+	});
+	
+}
