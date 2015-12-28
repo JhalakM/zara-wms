@@ -124,7 +124,8 @@ box-shadow:none;
 }
 .uie-btn-icon {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border-right: 1px solid #d8d8d8;
+	border:none;
+	border-right: 1px solid #d8d8d8;
     color: #0c79c1;
     display: block;
     float: left;
@@ -172,7 +173,8 @@ box-shadow: 0 2px 4px -5px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 
 }
 .ico-based-btn-set-btn {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border-right: 1px solid #d8d8d8;
+    border:none;
+	border-right: 1px solid #d8d8d8;
     color: #0c79c1;
     display: block;
     float: left;
@@ -311,6 +313,7 @@ color:#2991d6;
     font-size: 16px;
     font-weight: bold;
     margin: 0;
+	border:none;
     padding: 10px;
 	background:none;
 }
@@ -324,7 +327,7 @@ color:#2991d6;
     display: none;
 }
 .css-label {
-    background-image: url("../img/checkbox.png");
+    background-image: url("../img/icons/checkbox.png");
 }
 input.css-checkbox[type="checkbox"] + label.css-label {
     background-position: 0 2px;
@@ -435,23 +438,36 @@ input[type="radio"]:checked:not(old) + label > span > span {
     font-size: 12px;
     font-weight: normal;
     margin-top: 8px;
+    text-align: right;
+    width: 160px;
 }
-
 .text-input {
     border: 1px solid #d8d8d8;
-    max-width: 140px;
+    max-width: 160px;
     padding: 5px 8px;
     width: 100%;
-	font-size:12px;
-	height:35px;
-	line-height:30px;
+    font-size: 14px;
+    height: 35px;
+    line-height: 30px;
+    color: #120e5b;
+	margin:0 0 5px 0px;
 }
 .text-input.small-width {
-    max-width: 110px;
+    max-width: 130px;
 	width:100%;
+	margin:0 0 5px 0px;
 }
 .text-input:focus{
  border: 1px solid #2991D6;
+ box-shadow: -1px -1px 3px 0 rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(41, 145, 214, 0.18);
+	-webkit-box-shadow: -1px -1px 3px 0 rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(41, 145, 214, 0.18);
+	-moz-box-shadow: -1px -1px 3px 0 rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(41, 145, 214, 0.18);
+}
+.text-input.full-width {
+    max-width: 295px;
+}
+.radio-btn-form-uie {
+    margin: 3px 0 7px 0;
 }
 /*------- Forms Element Tool Tip -------*/
 
@@ -911,4 +927,9 @@ input[type="radio"]:checked:not(old) + label > span > span {
     border-right: 7px solid #e67e22
 }
 
-/*------- Forms Element Tool Tip -------*/
+/*------- Forms Element SVG ICON -------*/
+/*
+.ship-icon{
+	background-image: url("../img/svg-file/ship.svg");
+}
+*/

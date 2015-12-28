@@ -114,6 +114,7 @@
                     </ul>
                 </div>
             </div>
+			<div class="pading-top"></br></div>
             <div class="checkbox">
                 <input type="checkbox" class="css-checkbox" id="checkbox1">
                 <label class="css-label" for="checkbox1">Day</label>
@@ -140,13 +141,39 @@
         </div>
         <div class="padding-top"></div>
         <section class="ac_item">
-			<div class=" form-content">
+			<div class=" form-content col-md-12">
 				<form>
-				<div class="col-md-6">
+				<div class="col-md-5">
 					<div class="row">
 						<label class="label-text">Vessel Service Code : </label> 
-						<input class="text-input" value="name" />
-						<input class="text-input small-width" value="name" />
+								<select class="text-input">
+                                    <option selected="" disabled="" value="">Click Me</option>
+                                    <option value="france">#4566871</option>
+                                    <option value="brazil">#45665455</option>
+                                 </select>
+						<input class="text-input small-width" type="text"/>
+						<label class="label-text">Berthing Type :</label> 
+						<select class="text-input full-width">
+                            <option selected="" disabled="" value="">Click Me</option>
+                            <option value="france">#4566871</option>
+                            <option value="brazil">#45665455</option>
+                        </select>
+						<label class="label-text">Transmit Days : </label> 
+						<input class="text-input" type="text"/>	
+						<div class="radio-btn-form-uie">
+							<label class="label-text"> </label> 
+							<input type="radio" value="6" name="radio" id="radio6">
+							<label for="radio6"><span><span></span></span>Hour</label>
+							<input type="radio" value="7" name="radio" id="radio7">
+							<label for="radio7"><span><span></span></span>Hour</label>
+							<input type="radio" value="8" name="radio" id="radio8">
+							<label for="radio8"><span><span></span></span>Hour</label>
+							<input type="radio" value="9" name="radio" id="radio9">
+							<label for="radio9"><span><span></span></span>Hour</label>
+						</div>
+						<label class="label-text">Days of GP :</label> 		
+						<input class="text-input small-width" type="text"/>
+						
 					</div>
 				</div>	
 				</form>
