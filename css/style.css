@@ -528,7 +528,7 @@ input.css-checkbox[type="checkbox"]:checked + label.css-label {
       z-index: 99;
 }
 .dp-menu {
-    display: block;
+    display: none;
     z-index: 999;
 }
 .dp-menu li {
@@ -757,7 +757,7 @@ Panel
 .col-action {
     background-color: #120E5B;
     color: #FFFFFF;
-    display: block;
+    display: none;
     font-size: 8px;
     height: 10px;
     text-align: center;
