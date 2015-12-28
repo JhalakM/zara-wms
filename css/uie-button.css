@@ -438,12 +438,12 @@ input[type="radio"]:checked:not(old) + label > span > span {
 
 .label-text {
     color: #2b2e33;
+    float: left;
     font-size: 12px;
     font-weight: normal;
-    margin-top: 8px;
+    margin: 8px 7px 0 0;
     text-align: right;
     width: 160px;
-	float:left;
 }
 .text-input {
     border: 1px solid #d8d8d8;
@@ -951,4 +951,43 @@ input[type="radio"]:checked:not(old) + label > span > span {
     padding: 8px 12px;
     vertical-align: middle;
     width: 100%;
+}
+.dropdownlist.full-width {
+    margin: 0 0 5px;
+    max-width: 294px;
+}
+.drop-menu-list .dropdownlist ul li i {
+    font-size: 18px;
+    margin: 0 5px 0 0;
+	color:#373B41;
+}
+.drop-menu-list .dropdownlist ul li:hover i{
+color:#373B41;
+}
+.check-btn-form-uie {
+    margin: 5px 0 10px;
+}
+.uie-reset {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #0c79c1;
+    border-radius: 3px;
+    height: 41px;
+    line-height: 0;
+    padding: 0 24px;
+	font-size:14px;
+	transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+}
+
+.uie-reset:hover{
+background:#0c79c1;
+color:#ffffff;
+	box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+	transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	
 }
