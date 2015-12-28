@@ -7,42 +7,6 @@
 		   params - parameter keys and values
 */
 
-
-/* function to start block ui for loader */
-function ajaxloaderStart()
-{
-	$.blockUI({ message: LOADER_MESSAGE });
-	$(document).ajaxStart($.blockUI);
-}
-
-/* function to stop block ui loader */
-function ajaxLoaderStop()
-{
-	$(document).ajaxStop($.unblockUI());
-}
-
-/* function to get ajax response */
-function ajaxCallBack(ajax_url,success_callback,failure_callback,params)
-{
-	ajaxloaderStart();
-	$.ajax({
-   			url: ajax_url,
-            dataType: "json",
-		    type: "POST",
-			data:params,
-			cache:false,
-		    crossDomain: true,
-	   error: function(data,status,error) {
-		  ajaxLoaderStop();
-		  failure_callback(error);
-	   },
-	   success: function(data) {
-	   	 ajaxLoaderStop();
-	   	 success_callback(data);
-	   }
-	});
-}
-
 /* function to call xustom exception */
 function customException(){
 	try {
@@ -75,4 +39,15 @@ function loadScript(url, callback){
     }
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+
+/* function to call dynamic form plugin for success */
+function generate_form_success(json_data){
+	alert(json_data);
+}
+
+/* function to call dynamic form plugin for error */
+function generate_form_error(json_data){
+	alert(json_data);
 }
