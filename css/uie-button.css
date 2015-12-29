@@ -242,12 +242,12 @@ color:#2991d6;
 }
 .uie-dp-menu {
     background: #ffffff none repeat scroll 0 0;
-    display: block;
-    left: 30px;
+    bottom: -47px;
+    display: none;
+    left: 45px;
     list-style: outside none none;
     padding: 0;
     position: absolute;
-    top: 31px;
     width: 120px;
     z-index: 9999;
 }
@@ -325,12 +325,19 @@ color:#2991d6;
 	text-decoration:none;
 }
 
-/*------- Forms Element Check box -------*/
-.css-checkbox {
-    display: none;
-}
+/*------------------------------------*\
+Checkbox
+\*------------------------------------*/
+
 .css-label {
     background-image: url("../img/icons/checkbox.png");
+}
+.checkbox { margin: 0 10px;}
+.checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"], .radio input[type="radio"], .radio-inline input[type="radio"] {
+    margin-left: 2px;
+    opacity: 0;
+    position: absolute;
+	cursor:pointer;
 }
 input.css-checkbox[type="checkbox"] + label.css-label {
     background-position: 0 2px;
@@ -341,29 +348,27 @@ input.css-checkbox[type="checkbox"] + label.css-label {
     height: 20px;
     line-height: 22px;
     opacity: 1;
-	margin-right:15px;
-    padding-left: 25px;
     vertical-align: middle;
-    width: auto;
+    width: 16px;
+	padding-left: 17px;
 }
-.checkbox-list {
+input[type="checkbox"]:not(old) + label > span, input[type="radio"]:not(old) + label > span {
+    background: none repeat scroll 0 0 transparent;
+    border: 2px solid;
+    border-radius: 50% 50% 50% 50%;
+    display: inline-block;
     float: left;
-    padding: 0;
-    width: 49%;
+    height: 16px;
+    margin: 0.25em 0.5em 0.25em 0.25em;
+    vertical-align: bottom;
+    width: 16px;
 }
-.check-block .checkbox {
-    margin-bottom: 6px;
-    margin-top: 6px;
-}
-.date-col .checkbox-btn {
-    float: left;
-    width: 49%;
+input[type="checkbox"]:checked:not(old) + label > span, input[type="radio"]:checked:not(old) + label > span {
+    background-image: linear-gradient(#E0E0E0, #F0F0F0);
 }
 input.css-checkbox[type="checkbox"]:checked + label.css-label {
     background-position: 0 -18px;
 }
-
-	
 /*------- Forms Element Radio Button -------*/
 
 .radio-btn input {
@@ -944,13 +949,13 @@ input[type="radio"]:checked:not(old) + label > span > span {
 }
 .dropdownlist {
     border: 1px solid #d8d8d8;
-    float: left;
-    height: 35px;
-    margin: 0 5px 0 0;
-    max-width: 160px;
-    padding: 8px 12px;
-    vertical-align: middle;
-    width: 100%;
+    color: #120e5b;
+	cursor: pointer;
+    font-size: 14px;
+    height: 33px;
+    line-height: 30px;
+    padding: 0 14px 0 10px;
+	
 }
 .dropdownlist.full-width {
     margin: 0 0 5px;
@@ -961,8 +966,46 @@ input[type="radio"]:checked:not(old) + label > span > span {
     margin: 0 5px 0 0;
 	color:#373B41;
 }
-.drop-menu-list .dropdownlist ul li:hover i{
-color:#373B41;
+
+.dropdownlist .default-listitem { 
+	display:none;
+}
+.dropdownlist ul {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #d8d8d8;
+    display: none;
+    left: -1px;
+    max-height: 280px;
+    overflow-y: auto;
+    position: absolute;
+    top: 31px;
+    width: 101%;
+    z-index: 100;
+}
+.dropdownlist ul li {
+    border-bottom: 1px solid #d8d8d8;
+    color: #5c5c5c;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    padding: 0 10px;
+}
+.dropdownlist ul li:last-child {
+    border-bottom: 0 none;
+}
+.dropdownlist ul li:hover {
+    background: #e0f3ff none repeat scroll 0 0;
+	color: #2991d6;
+}
+.selected-listitem::before {
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-top: 5px solid #373374;
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 13px;
 }
 .check-btn-form-uie {
     margin: 5px 0 10px;
