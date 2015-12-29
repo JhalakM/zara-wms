@@ -792,14 +792,6 @@ Panel
 	position:relative;
 	background:url("search-box-bg.jpg") repeat-x scroll center center transparent;
 }
-
-.dropdownlist .selected-listitem { 
-	cursor:pointer;
-	height:27px;
-	line-height:30px;
-	border:1px solid #32AFD8;
-	padding:0 0 0 10px;
-}
 .drop-menu-list .dropdownlist .selected-listitem {
     border: medium none;
     color: #120e5b;
