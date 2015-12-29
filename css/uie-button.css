@@ -944,10 +944,8 @@ input[type="radio"]:checked:not(old) + label > span > span {
 */
 /*------- Forms Element Drop Down -------*/
 
+
 .dropdown-list {
-    position: absolute;
-}
-.dropdownlist {
     border: 1px solid #d8d8d8;
     color: #120e5b;
 	cursor: pointer;
@@ -957,20 +955,20 @@ input[type="radio"]:checked:not(old) + label > span > span {
     padding: 0 14px 0 10px;
 	
 }
-.dropdownlist.full-width {
+.dropdown-list.full-width {
     margin: 0 0 5px;
     max-width: 294px;
 }
-.drop-menu-list .dropdownlist ul li i {
+.drop-menu-list .dropdown-list ul li i {
     font-size: 18px;
     margin: 0 5px 0 0;
 	color:#373B41;
 }
 
-.dropdownlist .default-listitem { 
+.dropdown-list .default-listitem { 
 	display:none;
 }
-.dropdownlist ul {
+.dropdown-list ul {
     background: #fff none repeat scroll 0 0;
     border: 1px solid #d8d8d8;
     display: none;
@@ -982,7 +980,7 @@ input[type="radio"]:checked:not(old) + label > span > span {
     width: 101%;
     z-index: 100;
 }
-.dropdownlist ul li {
+.dropdown-list ul li {
     border-bottom: 1px solid #d8d8d8;
     color: #5c5c5c;
     cursor: pointer;
@@ -991,10 +989,10 @@ input[type="radio"]:checked:not(old) + label > span > span {
     height: 34px;
     padding: 0 10px;
 }
-.dropdownlist ul li:last-child {
+.dropdown-list ul li:last-child {
     border-bottom: 0 none;
 }
-.dropdownlist ul li:hover {
+.dropdown-list ul li:hover {
     background: #e0f3ff none repeat scroll 0 0;
 	color: #2991d6;
 }
