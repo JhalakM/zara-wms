@@ -14,7 +14,7 @@ $(window).load(function(){
 
 $(document).ready(function() {
 	
-	/* Switch JavaScript */
+	// Switch JavaScript
 	$(".toggle-switch a").each(function(){
 		$(this).click(function(){
 			$(this).parents(".toggle-switch").children("li").removeClass("switch");

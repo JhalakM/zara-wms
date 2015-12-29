@@ -1,6 +1,6 @@
 /*
 |@author : Intech Creative Services
-|@desc   : function need to use on init level.
+|@desc   : Function need to use on init level.
 |@param  : SET_WEB_URL - define baseurl path
 		   LOADER_MESSAGE - default loader message
 		   current_lang - language selected default
