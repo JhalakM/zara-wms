@@ -950,7 +950,7 @@ input[type="radio"]:checked:not(old) + label > span > span {
     color: #120e5b;
 	cursor: pointer;
     font-size: 14px;
-    height: 33px;
+    height: 35px;
     line-height: 30px;
     padding: 0 14px 0 10px;
 	

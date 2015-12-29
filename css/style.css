@@ -159,7 +159,7 @@ a:focus {
 }
 .form-btn-group {
     clear: both;
-    margin-top: 0px;
+    margin-top: 10px;
     overflow: hidden;
     text-align: center;  margin-left: 90px;
 }
