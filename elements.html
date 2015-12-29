@@ -102,7 +102,7 @@
 				
 					<button class="uie-dropdown-btn" type="button"><i class="fa fa-refresh"></i><span class="action-btn"> Action</span>
                 </button>
-				<button class="uie-dropdown-btn-click" type="button"><span></span>
+				<button class="uie-dropdown-btn-click" type="button" onclick="toggle_visibility('uie-dp-menu');"><span></span>
 						<span class="caret"></span>
 					</button>
 					<div class="uie-dp-menu">
@@ -147,79 +147,92 @@
         <section class="ac_item">
 			<div class=" form-content col-md-12">
 				<form>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<div class="row">
 					<div class="form-row clearfix">
 						<div class="drop-menu-list">
 							<label class="label-text">Vessel Service Code : </label> 
-							<div class="dropdown-list">
-								<div class="selected-listitem">Click Me</div>
-								<ul>
-									<li value=""> <i class="fa fa-pencil-square-o"></i> Select Category</li>
-									<li value="1" rel="5"> <i class="fa fa-pencil-square-o"></i> Select Category1</li>
-									<li value="2" rel="6"> <i class="fa fa-pencil-square-o"></i> Select Category2</li>
-									<li value="3" rel="7"> <i class="fa fa-pencil-square-o"></i> Select Category3</li>
-									<li value="4" rel="8"> <i class="fa fa-pencil-square-o"></i> Select Category4</li>
-									<li value="5" rel="9"> <i class="fa fa-pencil-square-o"></i> Select Category5</li>
-								</ul>
-								<input type="hidden" name="search_category" class="dropdown-item" value="12" />
+								<div class="col-md-4">	
+									<div class="dropdown-list">
+										<div class="selected-listitem">Click Me</div>
+										<ul>
+											<li value=""> <i class="fa fa-pencil-square-o"></i> Select Category</li>
+											<li value="1" rel="5"> <i class="fa fa-pencil-square-o"></i> Select Category1</li>
+											<li value="2" rel="6"> <i class="fa fa-pencil-square-o"></i> Select Category2</li>
+											<li value="3" rel="7"> <i class="fa fa-pencil-square-o"></i> Select Category3</li>
+											<li value="4" rel="8"> <i class="fa fa-pencil-square-o"></i> Select Category4</li>
+											<li value="5" rel="9"> <i class="fa fa-pencil-square-o"></i> Select Category5</li>
+										</ul>
+										<input type="hidden" name="search_category" class="dropdown-item" value="12" />
+									</div>
+								</div>
+							<div class="col-md-4">
+								<input class="text-input" type="text"/>
 							</div>
-							
-							<input class="text-input small-width" type="text"/>
 						</div>
 					</div>
 					<div class="form-row clearfix">
 						<label class="label-text">Berthing Type :</label> 
-						<div class="drop-menu-list">
-							<div class="dropdown-list full-width">
-								<div class="selected-listitem">Click Me</div>
-								<ul>
-									<li value=""> <i class="fa fa-pencil-square-o"></i> Select Category</li>
-									<li value="1" rel="5"> <i class="fa fa-pencil-square-o"></i> Select Category1</li>
-									<li value="2" rel="6"> <i class="fa fa-pencil-square-o"></i> Select Category2</li>
-									<li value="3" rel="7"> <i class="fa fa-pencil-square-o"></i> Select Category3</li>
-									<li value="4" rel="8"> <i class="fa fa-pencil-square-o"></i> Select Category4</li>
-									<li value="5" rel="9"> <i class="fa fa-pencil-square-o"></i> Select Category5</li>
-								</ul>
-								<input type="hidden" name="search_category" class="dropdown-item" value="12" />
+						<div class="col-md-8">
+							<div class="drop-menu-list">
+								<div class="dropdown-list">
+									<div class="selected-listitem">Click Me</div>
+									<ul>
+										<li value=""> <i class="fa fa-pencil-square-o"></i> Select Category</li>
+										<li value="1" rel="5"> <i class="fa fa-pencil-square-o"></i> Select Category1</li>
+										<li value="2" rel="6"> <i class="fa fa-pencil-square-o"></i> Select Category2</li>
+										<li value="3" rel="7"> <i class="fa fa-pencil-square-o"></i> Select Category3</li>
+										<li value="4" rel="8"> <i class="fa fa-pencil-square-o"></i> Select Category4</li>
+										<li value="5" rel="9"> <i class="fa fa-pencil-square-o"></i> Select Category5</li>
+									</ul>
+									<input type="hidden" name="search_category" class="dropdown-item" value="12" />
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="form-row clearfix">
 						<label class="label-text">Transmit Days : </label> 
-						<input class="text-input" type="text"/>	
+						<div class="col-md-8">
+							<input class="text-input" type="text"/>	
+						</div>
 					</div>
 					<div class="form-row clearfix">
 						<div class="radio-btn-form-uie">
 							<label class="label-text"> </label> 
-							<input type="radio" value="6" name="radio" id="radio6">
-							<label for="radio6"><span><span></span></span>Hour</label>
-							<input type="radio" value="7" name="radio" id="radio7">
-							<label for="radio7"><span><span></span></span>Hour</label>
-							<input type="radio" value="8" name="radio" id="radio8">
-							<label for="radio8"><span><span></span></span>Hour</label>
-							<input type="radio" value="9" name="radio" id="radio9">
-							<label for="radio9"><span><span></span></span>Hour</label>
+							<div class="col-md-8">
+								<input type="radio" value="6" name="radio" id="radio6">
+								<label for="radio6"><span><span></span></span>Hour</label>
+								<input type="radio" value="7" name="radio" id="radio7">
+								<label for="radio7"><span><span></span></span>Hour</label>
+								<input type="radio" value="8" name="radio" id="radio8">
+								<label for="radio8"><span><span></span></span>Hour</label>
+								<input type="radio" value="9" name="radio" id="radio9">
+								<label for="radio9"><span><span></span></span>Hour</label>
+							</div>
 						</div>
 					</div>
 					<div class="form-row clearfix">
-						<label class="label-text">Days of GP :</label> 		
-						<input class="text-input small-width" type="text"/>
+						<label class="label-text">Days of GP :</label> 
+						<div class="col-md-5">
+							<input class="text-input" type="text"/>
+						</div>
 					</div>
 					<div class="form-row clearfix">
 						<div class="drop-menu-list">
 						<label class="label-text">Vessel Service Code : </label> 
-							<div class="dropdown-list">
-								<div class="selected-listitem">Click Me</div>
-								<ul>
-									<li value=""> <i class="fa fa-pencil-square-o"></i> Select Category</li>
-									<li value="1" rel="5"> <i class="fa fa-pencil-square-o"></i> Select Category1</li>
-									<li value="2" rel="6"> <i class="fa fa-pencil-square-o"></i> Select Category2</li>
-									<li value="3" rel="7"> <i class="fa fa-pencil-square-o"></i> Select Category3</li>
-									<li value="4" rel="8"> <i class="fa fa-pencil-square-o"></i> Select Category4</li>
-									<li value="5" rel="9"> <i class="fa fa-pencil-square-o"></i> Select Category5</li>
-								</ul>
-								<input type="hidden" name="search_category" class="dropdown-item" value="12" />
+							<div class="col-md-5">
+								<div class="dropdown-list">
+									<div class="selected-listitem">Click Me</div>
+									<ul>
+										<li value=""> <i class="fa fa-pencil-square-o"></i> Select Category</li>
+										<li value="1" rel="5"> <i class="fa fa-pencil-square-o"></i> Select Category1</li>
+										<li value="2" rel="6"> <i class="fa fa-pencil-square-o"></i> Select Category2</li>
+										<li value="3" rel="7"> <i class="fa fa-pencil-square-o"></i> Select Category3</li>
+										<li value="4" rel="8"> <i class="fa fa-pencil-square-o"></i> Select Category4</li>
+										<li value="5" rel="9"> <i class="fa fa-pencil-square-o"></i> Select Category5</li>
+									</ul>
+									<input type="hidden" name="search_category" class="dropdown-item" value="12" />
+								</div>
 							</div>
 						</div>	
 					</div>					
@@ -227,7 +240,7 @@
 					</div>
 				</div>
 				
-				<div class="col-md-5">
+				<div class="col-md-6">
 				<div class="row">
 					<div class="form-row clearfix">
 						<label class="label-text">Service Type :</label> 
