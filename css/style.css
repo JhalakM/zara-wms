@@ -220,7 +220,7 @@ input[type="radio"]:checked:not(old) + label > span > span {
     height: 40px;
     line-height: 40px;
     padding: 0 24px;
-    transition: all 0.2s ease 0s;
+   
 }
 .btn-icon {
     background-color: #0C79C1;
@@ -860,15 +860,15 @@ Forms Element
     color: #ffffff;
     font-size: 14px;
     padding: 12px 24px;
-	transition: all 0.5s ease 0s;
-	-webkit-transition: all 0.5s ease 0s;
+	
+	-webkit-
 	min-width:96px;
 }
 .uie-btn:hover {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 	-webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 	-moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-	transition: all 0.5s ease 0s;
+	
 }
 
 /*------- Forms Element normal Disable -------*/
@@ -919,13 +919,12 @@ box-shadow:none;
     text-align: left;
 	border-radius:4px;
 	background:#2991d6;
-	transition: all 0.5s ease 0s;
+	
 	color:#ffffff;
 	font-size:14px;
 	float: left;
-	transition: all 0.5s ease 0s;
-	-moz-transition: all 0.5s ease 0s;
-	-webkit-transition: all 0.5s ease 0s;
+	
+	
 }
 
 
@@ -950,7 +949,7 @@ box-shadow:none;
     height: 38px;
     line-height: 38px;
     padding: 0 24px;
-    transition: all 0.2s ease 0s;
+   
     width: auto;
 }
 
@@ -963,21 +962,19 @@ box-shadow:none;
     padding: 0 24px;
 	float: left;
 	font-size:14px;
-	transition: all 0.5s ease 0s;
-	-moz-transition: all 0.5s ease 0s;
-	-webkit-transition: all 0.5s ease 0s;
+	
+	
 }
-.uie-icon-btn:hover{background:#fff !important;}
-.uie-icon-btn:hover .btn-value{color:#0c79c1 !important;}
+.uie-icon-btn:hover{background:#fff !important; transition: all 0.2s ease 0s;}
+.uie-icon-btn:hover .btn-value{color:#0c79c1 !important; transition: all 0.2s ease 0s;}
 .uie-button:hover{
 background:#0c79c1;
-color:#ffffff;
+color:#ffffff; transition: all 0.2s ease 0s;
 	box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 	-webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 	-moz-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-	transition: all 0.5s ease 0s;
-	-moz-transition: all 0.5s ease 0s;
-	-webkit-transition: all 0.5s ease 0s;
+	
+	
 	
 }
 /*------- Forms Element Icon Based Button -------*/
@@ -1003,23 +1000,20 @@ color:#ffffff;
     margin: 0;
     padding: 0;
     text-align: center;
-    transition: all 0.5s ease 0s;
-	-webkit-transition:0.5s;
-	-moz-transition:0.5s;
+    
+	
     width: 45px;
 }
 .uie-btn-icon:hover a{
 color:#ffffff;
- transition: all 0.5s ease 0s;
-	-webkit-transition:0.5s;
-	-moz-transition:0.5s;
+ 
+	
 }
 .uie-btn-icon:hover	{
 	background-color:#2991d6;
 	color:#ffffff;
 	transition:0.5s;
-	-webkit-transition:0.5s;
-	-moz-transition:0.5s;
+	
 }
 
 .col-md-12 .uie-btn-icon div{
@@ -1052,17 +1046,15 @@ box-shadow: 0 2px 4px -5px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 
     margin: 0;
     padding: 0;
     text-align: center;
-    transition: all 0.5s ease 0s;
-	-webkit-transition:0.5s;
-	-moz-transition:0.5s;
+    
+	
     width: 38px;
 }
 .ico-based-btn-set-btn:hover{
 background-color:#2991d6;
 	color:#ffffff;
 	transition:0.5s;
-	-webkit-transition:0.5s;
-	-moz-transition:0.5s;
+	
 }
 .ico-based-btn-set-btn:last-child {
     border: medium none;
