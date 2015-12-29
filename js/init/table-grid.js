@@ -4,14 +4,13 @@
 */
 
 $(document).ready(function(){
-	getFormElement();
-	customDropdownList();
-	effectToggleSwitch();
+	
+	loadCSS(['lib/bootstrap/bootstrap.min.css','lib/font/font-awesome.min.css','style.css','reset.css','responsive.css', 'lib/scrollbar/jquery.mCustomScrollbar.css']);
 	languagePlugin(current_lang);
 });
 
 
 
 $(window).load(function(){
-	
+	generateScrollbar();
 });
