@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /zara-wms/ 
+RewriteRule ^$ login.html [L,R=301]
+RewriteRule ^index.html$ login.html [L,R=301]
