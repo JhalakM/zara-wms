@@ -30,17 +30,17 @@ $(document).ready(function() {
 // function to generate custom dropdown
 function custom_dropdown_list()
 {
-	$('.dropdownlist .selected-listitem').click(function(){
+	$('.dropdown-list .selected-listitem').click(function(){
 		var this_ul = $(this).parent().find('ul');
-		$('.dropdownlist ul').not(this_ul).hide();
+		$('.dropdown-list ul').not(this_ul).hide();
 		this_ul.toggle();
 	});
-	$('.dropdownlist ul li').click(function(){
+	$('.dropdown-list ul li').click(function(){
 		var selectbox_val  = $(this).attr('rel');
 		var selectbox_text = $(this).text();
-		$(this).parents('.dropdownlist').find('.selected-listitem').text(selectbox_text);
-		$(this).parents('.dropdownlist').find('.dropdown-item').attr('value',selectbox_val);
-		$('.dropdownlist ul').hide();
+		$(this).parents('.dropdown-list').find('.selected-listitem').text(selectbox_text);
+		$(this).parents('.dropdown-list').find('.dropdown-item').attr('value',selectbox_val);
+		$('.dropdown-list ul').hide();
 	});
 	
 }
