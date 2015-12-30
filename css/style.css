@@ -701,7 +701,10 @@ Panel
 }
 
 /*----------Table Pagination-----------*/
-
+.pages-info {
+    color: #5c5c5c;
+    font-size: 12px;
+}
 .page a {
     border: 1px solid #D8D8D8;
     color: #120e5b;
@@ -737,8 +740,6 @@ Panel
     float: left;
     width: auto;
     padding: 0 10px;
-	    color: #5c5c5c;
-    font-size: 12px;
 }
 .page,
 .view {
@@ -824,7 +825,7 @@ Panel
     border: 1px solid #d8d8d8;
     clear: both;
     position: absolute;
-	
+ 
     right: -1px;
     top: 36px;
    
@@ -853,7 +854,7 @@ Panel
 .action-grp .app-action-group {
     border: 1px solid #d8d8d8;
     margin-top: 5px;
-	
+ 
 }
 .app-specific {padding:10px;}
 .grid-specific .app-action-group a{
@@ -921,7 +922,7 @@ Panel
     color: #c5c5c5;
     cursor: not-allowed;
 }
-.table-grid tr.selected {
+.table-grid td.selected {
     background-color: #e0f3ff;
 }
 /*------------------------------------*\
@@ -1945,4 +1946,59 @@ input[type="radio"]:checked:not(old) + label > span > span {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
     color: #ffffff;
     transition: all 0.5s ease 0s;
+}
+
+/*------- Forms Accordion   -------*/
+
+.accordion {
+    margin: 0;
+    padding: 0;
+	border:1px solid #d8d8d8;
+	border-top:none;
+	border-bottom:none;
+}
+
+.accordion-panel {
+    margin: 0;
+    padding: 0;
+}
+.accordion-header {
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+    height: 28px;
+	padding:0 15px;
+	position:relative;
+}
+.accordion-header h3 {
+    color: #5c5c5c;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.accordion-header span {
+    border-left: 1px solid #d8d8d8;
+    height: 28px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+	
+}
+.accordion-header span i{
+border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-top: 5px solid #373374;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 11px;
+}
+.accordion-content {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 20px 0;
 }
