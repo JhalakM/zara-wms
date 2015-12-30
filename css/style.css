@@ -684,6 +684,9 @@ Panel
 .app-action-group a.active {
     background-color: #FFFFFF;
 }
+.app-action-group a.active:hover {
+    background: #120e5b none repeat scroll 0 0;
+}
 .panel-block-content {
     background-color: #fff;
     border-bottom: none;
@@ -696,6 +699,8 @@ Panel
 .no-padding {
     padding: 0
 }
+
+/*----------Table Pagination-----------*/
 .pages-info {
     color: #5c5c5c;
     font-size: 12px;
@@ -726,8 +731,6 @@ Panel
     float: left;
     margin-right: 15px;
 }
-/*----------Table Pagination-----------*/
-
 .pagination-block {
     height: 45px;
     line-height: 45px;
