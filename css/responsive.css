@@ -6,10 +6,18 @@
 iPad landscape · width: 1024px
 \*------------------------------------*/
 
-@media (max-width:1024px) {}
+@media (max-width:1024px) {
+
+}
 
 
 
+
+@media (max-width:1000px) {
+.container {
+    width: 100%;
+}
+}
 
 
 /*------------------------------------*\
