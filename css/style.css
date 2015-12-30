@@ -1876,3 +1876,23 @@ input[type="radio"]:checked:not(old) + label > span > span {
 .check-btn-form-uie {
     margin: 5px 0 10px;
 }
+.padding-top {
+    clear: both;
+    padding: 20px;
+}
+.uie-reset {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #0c79c1;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 41px;
+    line-height: 0;
+    padding: 0 24px;
+    transition: all 0.5s ease 0s;
+}
+.uie-reset:hover {
+    background: #0c79c1 none repeat scroll 0 0;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #ffffff;
+    transition: all 0.5s ease 0s;
+}

@@ -197,7 +197,7 @@ Ventricle and Horizontal Scrollbar
 	}
 	
 	.mCSB_container_wrapper > .mCSB_container{
-		padding-right: 30px;
+		padding-right: 0px;
 		padding-bottom: 10px;
 		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 	}
@@ -314,14 +314,14 @@ Scroll bar Colors and Background
 
 	.mCSB_scrollTools .mCSB_buttonLeft,
 	.mCSB_scrollTools .mCSB_buttonRight{
-		background-image: url(../../img/icons/v-scroll-arrow.png); 
+		background-image: url(../../../img/icons/v-scroll-arrow.png); 
 		background-repeat: no-repeat;
 		 background-size: auto 10px;
 	
 	}
 	
 		.mCSB_scrollTools .mCSB_buttonUp,
-	.mCSB_scrollTools .mCSB_buttonDown{background-image: url(../../img/icons/h-scroll-arrow.png); 
+	.mCSB_scrollTools .mCSB_buttonDown{background-image: url(../../../img/icons/h-scroll-arrow.png); 
 		background-repeat: no-repeat; background-size: 10px auto;}
 
 

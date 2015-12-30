@@ -5,7 +5,7 @@
 
 
 /* constant for set baseurl path */
-const SET_WEB_URL = "http://localhost/zara-wms/";
+const SET_WEB_URL = "https://localhost/zara-wms/";
 //const SET_WEB_URL = "./";
 
 /* constant for set loader message */
@@ -137,21 +137,34 @@ function generateScrollbar(){
 }
 
 /* function to generate custom dropdown */
-function customDropdownList()
+function custom_dropdown_list()
 {
-	$('.dropdownlist .selected-listitem').click(function(){
-		var this_ul = $(this).parent().find('ul');
-		$('.dropdownlist ul').not(this_ul).hide();
-		this_ul.toggle();
-	});
-	$('.dropdownlist ul li').click(function(){
-		var selectbox_val  = $(this).attr('rel');
-		var selectbox_text = $(this).text();
-		$(this).parents('.dropdownlist').find('.selected-listitem').text(selectbox_text);
-		$(this).parents('.dropdownlist').find('.dropdown-item').attr('value',selectbox_val);
-		$('.dropdownlist ul').hide();
-	});
-	
+ $('.dropdown-list .selected-listitem').click(function(){
+  var this_ul = $(this).parent().find('ul');
+  $('.dropdown-list ul').not(this_ul).hide();
+  this_ul.toggle();
+  
+  //alert(this_ul.height());
+  if(this_ul.find('li').length >= 4)
+  {
+   this_ul.css({height:this_ul.height()});
+   // Scrollbar JavaScript
+   this_ul.mCustomScrollbar({
+    axis:"yx",
+    scrollButtons:{enable:true},
+    theme:"3d",
+    scrollbarPosition:"inside"
+   });  
+  } 
+ });
+ $('.dropdown-list ul li').click(function(){
+  var selectbox_val  = $(this).attr('rel');
+  var selectbox_text = $(this).text();
+  $(this).parents('.dropdown-list').find('.selected-listitem').text(selectbox_text);
+  $(this).parents('.dropdown-list').find('.dropdown-item').attr('value',selectbox_val);
+  $('.dropdown-list ul').hide();
+ });
+ 
 }
 
 /* function to generate effects of toggle switch */
@@ -196,3 +209,12 @@ function loadCSS(css_array){
 	}
 	$('head').append(css);
 }
+
+/* function to  Display Show None  css dynamically */
+ function toggle_visibility(className) {
+      var className = $("."+className);
+       if($(className).css('display') == 'block')
+		$(className).css('display','none');
+	  else
+		$(className).css('display','block');
+    }
