@@ -12,5 +12,5 @@ $(document).ready(function(){
 
 
 $(window).load(function(){
-	generateScrollbar('.scroll');
+	generateScrollbar();
 });

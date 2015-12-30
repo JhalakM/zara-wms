@@ -108,8 +108,13 @@ function generateFormError(json_data){
 }
 
 /* function to call generate scrollbar */
-function generateScrollbar(scrollId){
-	$(scrollId).mCustomScrollbar({
+function generateScrollbar(selector){
+	var scroll_selector = "";
+	if(selector == undefined)
+		scroll_selector = "[data-scroll]";
+	else	
+		scroll_selector = selector;
+	$(scroll_selector).mCustomScrollbar({
 		axis:"yx",
 		scrollButtons:{enable:true},
 		theme:"3d",
@@ -128,7 +133,6 @@ function custom_dropdown_list()
 		if(this_ul.find('li').length >= 4)
 		{
 			this_ul.css({height:this_ul.height()});
-			
 		   // Scrollbar JavaScript
 		   generateScrollbar(this_ul);
 		} 
