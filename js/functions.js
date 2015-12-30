@@ -213,7 +213,7 @@ function generateBlockUI(){
 			
 			break;
 		default:
-			$.blockUI({ overlayCSS: { backgroundColor: '#00f' },message: LOADER_MESSAGE }  ); 
+			$.blockUI({ overlayCSS: { backgroundColor: '#ccc' },message: LOADER_MESSAGE }  ); 
 		}
 	});
 }
