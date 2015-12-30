@@ -246,10 +246,4 @@ function loadScript(url, callback){
     script.src = url;
     document.getElementsByTagName("body")[0].appendChild(script);
 }
- function datepicker() 
-	{
-		$( "#datepicker" ).datepicker({
-		  changeMonth: true,
-		  changeYear: true
-		});
-	}
+ 
