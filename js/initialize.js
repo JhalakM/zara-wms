@@ -4,14 +4,12 @@
 */
 
 $(document).ready(function(){
-	getFormElement();
-	customDropdownList();
-	effectToggleSwitch();
 	languagePlugin(current_lang);
 });
 
 
 
 $(window).load(function(){
-	
+	generateBlockUI();
+	unblockUI();
 });

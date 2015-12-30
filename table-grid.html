@@ -19,7 +19,7 @@
     
 </head>
 
-<body>
+<body data-reference="page-loader">
    
          <div class="container">
         <!-- Panel Block-->
@@ -243,7 +243,7 @@
                 </div>
                 <!-- Panel Content Table-grid -->
 
-                <div id="table-grid" class="table-record scroll">
+                <div id="table-grid" class="table-record scroll" data-scroll="true">
                     <table class="table-grid">
                         <thead>
                             <tr>
@@ -807,15 +807,23 @@
     
 	
     <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
+	<script src="js/lib/blockUI/jquery.blockUI.js"></script>
 	<script src="js/lib/language/jquery.i18n.properties.js"></script>
-
+		
+	<!-- custom scrollbar plugin -->
+    <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	
     <!-- Custom JavaScript -->
     <script src="js/functions.js"></script>
+	<script src="js/initialize.js"></script>
     <script src="js/init/table-grid.js"></script>
 	<script src="js/init/elements.js"></script>
+<<<<<<< HEAD
 	
 	<!-- custom scrollbar plugin -->
     <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+=======
+>>>>>>> 408b3c0ddb9c852df7d95f744ac9e7633a4e022f
 	
 	<!-- Bootstrap Plugin Js -->
 	<script src="js/lib/bootstrap/bootstrap.min.js"></script>
