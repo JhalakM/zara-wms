@@ -5,7 +5,7 @@
 
 $(document).ready(function(){
 	
-	loadCSS(['lib/bootstrap/bootstrap.min.css','lib/font/font-awesome.min.css','style.css','reset.css','responsive.css', 'lib/scrollbar/jquery.mCustomScrollbar.css']);
+	loadCSS(['lib/scrollbar/jquery.mCustomScrollbar.css']);
 	languagePlugin(current_lang);
 });
 
