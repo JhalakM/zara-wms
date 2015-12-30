@@ -247,14 +247,17 @@ function loadScript(url, callback){
     document.getElementsByTagName("body")[0].appendChild(script);
 }
 
+/* function to cerate captcha code */
 function createCaptcha(formId){
 	 $("#"+formId).captchaWord(); 
 }
 
+/* function to generate date picker */
 function datepicker() 
 {
 	$( "#datepicker" ).datepicker({
 	  changeMonth: true,
-	  changeYear: true
+	  changeYear: true,
+	  dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // For formatting
 	});
 }
