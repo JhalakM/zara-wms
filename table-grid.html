@@ -19,7 +19,7 @@
     
 </head>
 
-<body>
+<body data-reference="page-loader">
    
          <div class="container">
         <!-- Panel Block-->
@@ -35,11 +35,58 @@
                     <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
                     <a href="#"><i class="fa fa-plus"></i></a>
                 </div>
+				<div class="mobile-action-grp-btn">
+					<div class="action-arrow open"><a href="#"><i class="fa fa-caret-down"></i></a></div>
+					<div class="action-grp">
+						<div class="grid-specific clearfix">
+						<p>Grid Specific Actions</p>
+							<div class="app-action-group ">
+								<a href="#"><i class="fa fa-print"></i></a>
+								<a href="#" class="active"><i class="fa fa-filter"></i></a>
+								<a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+								<a href="#"><i class="fa fa-plus"></i></a>
+								<a href="#"><i class="fa fa-print"></i></a>
+							</div>
+						</div>
+						<div class="app-specific clearfix">
+						<p>Application Specific Actions</p>
+							<div class="app-action-group ">
+								<a href="#"><i class="fa fa-print"></i></a>
+								<a href="#" class="active"><i class="fa fa-filter"></i></a>
+								<a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+								<a href="#"><i class="fa fa-plus"></i></a>
+								<a href="#"><i class="fa fa-print"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
             </div>
             <div class="panel-block-content no-padding">
                 <div class="app-action-form clearfix">
                     <span class="heading ">Filter </span>
-                    <div class="col-md-3 no-padding">
+                    <div class="col-md-3 col-sm-3 col-xs-3 no-padding">
 						<div class="dropdown-list ">
 							<div class="selected-listitem">Click Me</div>
 							<ul>
@@ -59,7 +106,7 @@
                                 <div class="form-row clearfix">
                                     <label class="label">Type</label>
 									
-										<div class="no-padding margin-5 col-md-3">
+										<div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3">
 											<div class="dropdown-list">
 												<div class="selected-listitem">Click Me</div>
 												<ul>
@@ -88,7 +135,7 @@
                                 <div class="form-row clearfix">
                                     <label class="label">Class</label>
 									
-										<div class="no-padding margin-5  pull-left col-md-3">
+										<div class="no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
 											<div class="dropdown-list">
 												<div class="selected-listitem">Click Me</div>
 												<ul>
@@ -116,7 +163,7 @@
                                 </div>
                                 <div class="form-row clearfix">
                                     <label class="label">Add more fields</label>
-                                   <div class="no-padding margin-5  pull-left col-md-3">
+                                   <div class="no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
                                         <div class="dropdown-list">
                                             <div class="selected-listitem">Click Me</div>
                                             <ul>
@@ -196,7 +243,7 @@
                 </div>
                 <!-- Panel Content Table-grid -->
 
-                <div id="table-grid" class="table-record scroll">
+                <div id="table-grid" class="table-record scroll" data-scroll="true">
                     <table class="table-grid">
                         <thead>
                             <tr>
@@ -263,7 +310,7 @@
                                     </div>
                                 </td>
                                 <td>000</td>
-                                <td>LOLO</td>
+                                <td class="disable">LOLO</td>
                                 <td>0000</td>
                                 <td>LOLO</td>
                                 <td>RAIL</td>
@@ -293,7 +340,7 @@
                                     </div>
                                 </td>
                                 <td>000</td>
-                                <td>LOLO</td>
+                                <td class="disable">LOLO</td>
                                 <td>0000</td>
                                 <td>LOLO</td>
                                 <td>RAIL</td>
@@ -323,7 +370,7 @@
                                     </div>
                                 </td>
                                 <td>000</td>
-                                <td>LOLO</td>
+                                <td class="disable">LOLO</td>
                                 <td>0000</td>
                                 <td>LOLO</td>
                                 <td>RAIL</td>
@@ -353,7 +400,7 @@
                                     </div>
                                 </td>
                                 <td>000</td>
-                                <td>LOLO</td>
+                                <td class="disable">LOLO</td>
                                 <td>0000</td>
                                 <td>LOLO</td>
                                 <td>RAIL</td>
@@ -375,7 +422,7 @@
                                 <td>004</td>
                                 <td>455</td>
                             </tr>
-                            <tr>
+                            <tr class="selected">
                                 <td>
                                     <div class="checkbox">
                                         <input class="css-checkbox" type="checkbox">
@@ -383,7 +430,7 @@
                                     </div>
                                 </td>
                                 <td>000</td>
-                                <td>LOLO</td>
+                                <td class="disable">LOLO</td>
                                 <td>0000</td>
                                 <td>LOLO</td>
                                 <td>RAIL</td>
@@ -708,6 +755,51 @@
                         </tbody>
                     </table>
                 </div>
+				<!-- Panel pagination -->
+                <div class="pagination-block clearfix">
+                    <div class="pages-info">
+                        <div class="page">
+                            <span>Page</span> <a href="#"><i class="fa fa-chevron-left"></i></a>
+							
+								<div class="dropdown-list">
+												<div class="selected-listitem">11</div>
+												<ul>
+													<li value="" rel="">11</li>
+													<li value="" rel="">22</li>
+													<li value="" rel="">33</li>
+													<li value="" rel="">44</li>
+													<li value="" rel=""> 55</li>
+													<li value="" rel="">66</li>
+												</ul>
+								</div>
+							
+                            <a href="#"><i class="fa fa-chevron-right"></i></a>
+                            <span>of 260 </span>
+                        </div>
+                        <div class="view">
+                            View
+                           
+								<div class="dropdown-list">
+												<div class="selected-listitem">11</div>
+												<ul>
+													<li value="" rel="">11</li>
+													<li value="" rel="">22</li>
+													<li value="" rel="">33</li>
+													<li value="" rel="">44</li>
+													<li value="" rel=""> 55</li>
+													<li value="" rel="">66</li>
+												</ul>
+								</div>
+							
+                            records
+                        </div>
+                        <div class="records">
+                            Total 6049 records found.
+                        </div>
+                    </div>
+                   
+                </div>
+                <!-- Panel Content Table-grid -->
             </div>
         </div>
         <!--End Panel-->
@@ -715,15 +807,25 @@
     
 	
     <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
+	<script src="js/lib/blockUI/jquery.blockUI.js"></script>
 	<script src="js/lib/language/jquery.i18n.properties.js"></script>
-
+		
+	<!-- custom scrollbar plugin -->
+    <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	
     <!-- Custom JavaScript -->
     <script src="js/functions.js"></script>
+	<script src="js/initialize.js"></script>
     <script src="js/init/table-grid.js"></script>
+	<script src="js/init/elements.js"></script>
+<<<<<<< HEAD
 	
 	<!-- custom scrollbar plugin -->
     <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="js/init/elements.js"></script>
+=======
+>>>>>>> 408b3c0ddb9c852df7d95f744ac9e7633a4e022f
 	
+	<!-- Bootstrap Plugin Js -->
+	<script src="js/lib/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>

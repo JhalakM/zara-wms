@@ -68,7 +68,16 @@ iPhone 6 landscape · width: 667px
 iPhone 6 landscape · width: 600px 
 \*------------------------------------*/
 
-@media (max-width:600px) {}
+@media (max-width:600px) {
+.form-action-field .label {
+    clear: both;
+    display: block;
+    float: none;
+    text-align: left;
+	height: 27px;
+}
+.form-btn-group{ margin-left: 0;}
+}
 
 
 
@@ -78,7 +87,22 @@ iPhone 6 landscape · width: 600px
 iPhone 5 landscape · width: 568px
 \*------------------------------------*/
 
-@media (max-width:568px) {}
+@media (max-width:568px) {
+.form-action-field .no-padding {
+    margin-top: 5px;
+    width: 100%;
+}
+.app-action-form .no-padding {
+    width: 100%;
+}
+.app-action-group{display:none;}
+.mobile-action-grp-btn{display:block;}
+.mobile-action-grp-btn .app-action-group {
+    display: block;
+}
+.pagination-block {padding: 0 0 10px 0}
+.grid-action-group{display:none;}
+}
 
 
 
@@ -87,7 +111,9 @@ iPhone 5 landscape · width: 568px
 iPhone 6 Plump portrait · width: 414px
 \*------------------------------------*/
 
-@media (max-width:414px) {}
+@media (max-width:414px) {
+
+}
 
 
 
