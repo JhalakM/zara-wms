@@ -5,7 +5,7 @@
 
 
 /* constant for set baseurl path */
-const SET_WEB_URL = "https://localhost/zara-wms/";
+const SET_WEB_URL = "http://localhost/zara-wms/";
 //const SET_WEB_URL = "./";
 
 var current_lang = "en-us";
@@ -108,8 +108,13 @@ function generateFormError(json_data){
 }
 
 /* function to call generate scrollbar */
-function generateScrollbar(scrollId){
-	$(scrollId).mCustomScrollbar({
+function generateScrollbar(selector){
+	var scroll_selector = "";
+	if(selector == undefined)
+		scroll_selector = "[data-scroll]";
+	else
+		scroll_selector = selector;
+	$(scroll_selector).mCustomScrollbar({
 		axis:"yx",
 		scrollButtons:{enable:true},
 		theme:"3d",
