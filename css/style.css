@@ -1267,7 +1267,7 @@ input.css-checkbox[type="checkbox"] + label.css-label {
     line-height: 22px;
     opacity: 1;
     vertical-align: middle;
-    padding: 0 7px 0 9px;
+    
 }
 input[type="checkbox"]:not(old) + label > span,
 input[type="radio"]:not(old) + label > span {
@@ -1956,6 +1956,7 @@ input[type="radio"]:checked:not(old) + label > span > span {
 	border:1px solid #d8d8d8;
 	border-top:none;
 	border-bottom:none;
+	border-bottom:1px solid #d8d8d8;
 }
 
 .accordion-panel {
@@ -1963,11 +1964,13 @@ input[type="radio"]:checked:not(old) + label > span > span {
     padding: 0;
 }
 .accordion-header {
-    border-bottom: 1px solid #d8d8d8;
     border-top: 1px solid #d8d8d8;
     height: 28px;
 	padding:0 15px;
 	position:relative;
+}
+.active .accordion-header {
+    border-bottom: 1px solid #d8d8d8;
 }
 .accordion-header h3 {
     color: #5c5c5c;
@@ -1981,13 +1984,25 @@ input[type="radio"]:checked:not(old) + label > span > span {
 }
 .accordion-header span {
     border-left: 1px solid #d8d8d8;
-    height: 28px;
+    height: 27px;
     position: absolute;
     right: 0;
     top: 0;
     width: 30px;
 	
 }
+.active .accordion-header span i
+{
+border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-bottom: 5px solid #373374;
+	border-top: none;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 11px;
+
+ }
 .accordion-header span i{
 border-left: 5px solid #ffffff;
     border-right: 5px solid #ffffff;
@@ -1997,8 +2012,12 @@ border-left: 5px solid #ffffff;
     right: 10px;
     top: 11px;
 }
+
 .accordion-content {
     font-size: 12px;
     line-height: 20px;
     margin: 20px 0;
+}
+.accordion-close .accordion-content {
+    display: none;
 }

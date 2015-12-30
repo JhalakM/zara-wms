@@ -5,7 +5,7 @@
 
 
 /* constant for set baseurl path */
-const SET_WEB_URL = "http://localhost/zara-wms/";
+const SET_WEB_URL = "https://localhost/zara-wms/";
 //const SET_WEB_URL = "./";
 
 var current_lang = "en-us";
@@ -246,4 +246,10 @@ function loadScript(url, callback){
     script.src = url;
     document.getElementsByTagName("body")[0].appendChild(script);
 }
-
+ function datepicker() 
+	{
+		$( "#datepicker" ).datepicker({
+		  changeMonth: true,
+		  changeYear: true
+		});
+	}
