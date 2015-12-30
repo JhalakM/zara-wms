@@ -8,10 +8,12 @@
 const SET_WEB_URL = "http://localhost/zara-wms/";
 //const SET_WEB_URL = "./";
 
-/* constant for set loader message */
-const LOADER_MESSAGE = "<h4> Please wait...</h4>";
-
 var current_lang = "en-us";
+
+var current_theme = "blue";
+var current_theme_css = SET_WEB_URL+"assets/"+current_theme+"/style.css";
+
+var LOADER_MESSAGE = "";
 
 function resourceBundle(){
 	return SET_WEB_URL+'bundle/'+current_lang+'/';
@@ -63,7 +65,6 @@ function getFormElement(){
 	});
 }
 
-
 /* call plugin for i18n language tanslation library */
 function languagePlugin(lang){
 	
@@ -75,6 +76,10 @@ function languagePlugin(lang){
 		callback: function() {
 			// We specified mode: 'both' so translated values will be
 			// available as JS vars/functions and as a map
+			
+			/* variable for set loader message */
+			LOADER_MESSAGE = "<h4>"+$.i18n.prop('loading_message')+"</h4>";
+
 			getTemplateParams();
 		}
 	});
@@ -91,30 +96,6 @@ function customException(){
 		// this code always gets executed
 	}
 }
-
-/* function to load javascript file in run time */
-function loadScript(url, callback){
-
-    var script = document.createElement("script")
-    script.type = "text/javascript";
-
-    if (script.readyState){  //IE
-        script.onreadystatechange = function(){
-            if (script.readyState == "loaded" ||
-                    script.readyState == "complete"){
-                script.onreadystatechange = null;
-                callback();
-            }
-        };
-    } else {  //Others
-        script.onload = function(){
-            callback();
-        };
-    }
-    script.src = url;
-    document.getElementsByTagName("head")[0].appendChild(script);
-}
-
 
 /* function to call dynamic form plugin for success */
 function generateFormSuccess(json_data){
@@ -151,7 +132,6 @@ function customDropdownList()
 		$(this).parents('.dropdownlist').find('.dropdown-item').attr('value',selectbox_val);
 		$('.dropdownlist ul').hide();
 	});
-	
 }
 
 /* function to generate effects of toggle switch */
@@ -194,5 +174,53 @@ function loadCSS(css_array){
 	for(i=0;i<css_array.length;i++){
 		css += ' <link href="css/'+css_array[i]+'" rel="stylesheet">';
 	}
+	
+	css += '<link href="'+current_theme_css+'" rel="stylesheet">';
+	
 	$('head').append(css);
+}
+
+/* function to generate block UI element */
+function generateBlockUI(){
+
+	$('[data-reference]').each(function(){
+
+	  var element = $(this);
+	  var getReference = $(this).data("reference");
+	  switch(getReference) {
+		case "filter-loader":
+			
+			break;
+		default:
+			$.blockUI({ overlayCSS: { backgroundColor: '#00f' },message: LOADER_MESSAGE }  ); 
+		}
+	});
+}
+
+/* function to unblock block UI element */
+function unblockUI(){
+	setTimeout($.unblockUI, 5000); 
+}
+
+/* function to load javascript file in run time */
+function loadScript(url, callback){
+
+    var script = document.createElement("script")
+    script.type = "text/javascript";
+
+    if (script.readyState){  //IE
+        script.onreadystatechange = function(){
+            if (script.readyState == "loaded" ||
+                    script.readyState == "complete"){
+                script.onreadystatechange = null;
+                callback();
+            }
+        };
+    } else {  //Others
+        script.onload = function(){
+            callback();
+        };
+    }
+    script.src = url;
+    document.getElementsByTagName("body")[0].appendChild(script);
 }

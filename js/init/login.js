@@ -12,5 +12,6 @@ $(document).ready(function(){
 
 
 $(window).load(function(){
-	//getTemplateParams('login-template');
+	generateBlockUI();
+	unblockUI();
 });

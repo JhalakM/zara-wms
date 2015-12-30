@@ -69,14 +69,14 @@
 
     var languages = [];
 
-    $.ajax({
+    /*$.ajax({
       url: indexFileUrl,
       async: false,
       cache: false,
       success: function (data, status) {
           languages = data.languages;
       }
-    });
+    });*/
     
     if (!languages) {
       languages = [];
