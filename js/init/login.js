@@ -5,9 +5,11 @@
 
 $(document).ready(function(){
 	loadCSS(['lib/bootstrap/bootstrap.min.css','lib/font/font-awesome.min.css','style.css','reset.css','responsive.css']);
+	createCaptcha("frmLogin");
 });
 
 
 
 $(window).load(function(){
+	
 });

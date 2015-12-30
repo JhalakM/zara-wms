@@ -247,3 +247,6 @@ function loadScript(url, callback){
     document.getElementsByTagName("body")[0].appendChild(script);
 }
 
+function createCaptcha(formId){
+	 $("#"+formId).captchaWord(); 
+}
