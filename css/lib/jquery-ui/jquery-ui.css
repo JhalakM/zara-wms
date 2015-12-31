@@ -272,9 +272,11 @@ button.ui-button::-moz-focus-inner {
 	font-size: 1em;
 	margin: 1px 0;
 }
-.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year {
-	width: 45%;
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    border: 1px solid #000000;
+    height: 35px;
+    margin: 0 5px;
+    width: 90px;
 }
 .ui-datepicker table {
 	width: 100%;
@@ -299,11 +301,12 @@ button.ui-button::-moz-focus-inner {
     color: #5c5c5c;
     display: block;
     font-size: 12px;
-    height: 27px;
+    height: 30px;
     line-height: 27px;
     text-align: center;
     text-decoration: none;
-    width: 42px;
+    width: 40px;
+	border: 1px solid #ffffff;
 }
 .ui-datepicker .ui-datepicker-buttonpane {
 	background-image: none;
@@ -881,6 +884,9 @@ body .ui-tooltip {
 .ui-widget-header .ui-state-focus {
 	color: #212121;
 }
+.ui-state-default:hover{
+border:1px solid #2991D6;
+}
 .ui-state-hover a,
 .ui-state-hover a:hover,
 .ui-state-hover a:link,
@@ -911,7 +917,7 @@ body .ui-tooltip {
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-	border: 1px solid #2991d6;
+	border: 1px solid #120e5b;
 	background: #fbf9ee url("images/ui-bg_glass_55_fbf9ee_1x400.png") 50% 50% repeat-x;
 	color: #363636;
 }
@@ -1188,4 +1194,16 @@ body .ui-tooltip {
 	opacity: .3;
 	filter: Alpha(Opacity=30); /* support: IE8 */
 	border-radius: 8px;
+}
+
+.ui-datepicker-title select {
+      -webkit-appearance: none;        /*Removes default chrome and safari style*/
+      -moz-appearance: none;          /* Removes Default Firefox style*/
+      background: url(../../../img/icons/h-scroll-arrow.png) no-repeat;         /*Adds background-image*/
+      background-position: 82px 7px;                /*Position of the background-image*/
+      width: 100px;                /*Width of select dropdown to give space for arrow image*/
+}
+.ui-datepicker-title select::after{
+background:red;
+position:absolute;
 }
