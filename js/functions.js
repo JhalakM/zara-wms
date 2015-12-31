@@ -227,7 +227,7 @@ function generateBlockUI(){
 
 /* function to unblock block UI element */
 function unblockUI(){
-	//setTimeout($.unblockUI, 5000); 
+	setTimeout($.unblockUI, 5000); 
 }
 
 /* function to load javascript file in run time */
