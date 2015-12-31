@@ -1278,7 +1278,12 @@ Loader
     width: 20px;
 }
 .ispinner .ispinner-blade {
-    animation: 1s linear 0s normal none infinite paused ispinner-fade;
+	-webkit-animation: 1s linear 0s normal none infinite paused ispinner-fade;
+    -moz-animation:    1s linear 0s normal none infinite paused ispinner-fade;
+    -o-animation:      1s linear 0s normal none infinite paused ispinner-fade;
+    -ms-transition:    1s linear 0s normal none infinite paused ispinner-fade; 
+    animation:         1s linear 0s normal none infinite paused ispinner-fade;
+    
     border-radius: 50% / 20%;
     height: 25%;
     left: 44.5%;
@@ -1288,54 +1293,109 @@ Loader
 }
 .ispinner .ispinner-blade:nth-child(1) {
     animation-delay: -1.66667s;
-    transform:rotate(0deg) translate(0px, -150%)
+	-webkit-animation-delay: -1.66667s;
+	-moz-animation-delay: -1.66667s;
+	-o-animation-delay: -1.66667s;
+	-ms-animation-delay: -1.66667s;
+    transform:rotate(0deg) translate(0px, -150%);
+	-webkit-transform:rotate(0deg) translate(0px, -150%);
+    -moz-transform:rotate(0deg) translate(0px, -150%);
+    -o-transform:rotate(45deg) translate(0px, -150%);
+   
 }
 .ispinner .ispinner-blade:nth-child(2) {
     animation-delay: -1.58333s;
-    transform:rotate(45deg) translate(0px, -150%)
+	
+	-webkit-animation-delay: -1.58333s;
+	-moz-animation-delay: -1.58333s;
+	-o-animation-delay: -1.58333s;
+	-ms-animation-delay: -1.58333s;
+    transform:rotate(45deg) translate(0px, -150%);
+	-webkit-transform:rotate(45deg) translate(0px, -150%);
+    -moz-transform:rotate(45deg) translate(0px, -150%);
+    -o-transform:rotate(45deg) translate(0px, -150%);
 }
 .ispinner .ispinner-blade:nth-child(3) {
     animation-delay: -1.5s;
-    transform: rotate(90deg) translate(0px, -150%)
+	-webkit-animation-delay: -1.5s;
+	-moz-animation-delay: -1.5s;
+	-o-animation-delay: -1.5s;
+	-ms-animation-delay: -1.5s;
+    transform: rotate(90deg) translate(0px, -150%);
+	-webkit-transform:rotate(90deg) translate(0px, -150%);
+    -moz-transform:rotate(90deg) translate(0px, -150%);
+    -o-transform:rotate(90deg) translate(0px, -150%);
 }
 .ispinner .ispinner-blade:nth-child(4) {
-    animation-delay: -1.41667s;
-    transform: rotate(135deg) translate(0px, -150%)
+    
+	 animation-delay: -1.41667s;
+	-webkit-animation-delay: -1.41667s;
+	-moz-animation-delay: -1.41667s;
+	-o-animation-delay:-1.41667s;
+	-ms-animation-delay: -1.41667s;
+    transform: rotate(135deg) translate(0px, -150%);
+	-webkit-transform:rotate(135deg) translate(0px, -150%);
+    -moz-transform:rotate(135deg) translate(0px, -150%);
+    -o-transform:rotate(135deg) translate(0px, -150%);
+	
 }
 .ispinner .ispinner-blade:nth-child(5) {
-    animation-delay: -1.33333s;
-    transform: rotate(180deg) translate(0px, -150%)
+     animation-delay: -1.33333s;
+	-webkit-animation-delay: -1.33333s;
+	-moz-animation-delay: -1.33333s;
+	-o-animation-delay:-1.33333s;
+	-ms-animation-delay: -1.33333s;
+    transform: rotate(180deg) translate(0px, -150%);
+	-webkit-transform:rotate(180deg) translate(0px, -150%);
+    -moz-transform:rotate(180deg) translate(0px, -150%);
+    -o-transform:rotate(180deg) translate(0px, -150%);
+	
 }
 .ispinner .ispinner-blade:nth-child(6) {
-    animation-delay: -1.25s;
-    transform: rotate(225deg) translate(0px, -150%)
+   
+	 animation-delay: -1.25s;
+	-webkit-animation-delay: -1.25s;
+	-moz-animation-delay: -1.25s;
+	-o-animation-delay:-1.25s;
+	-ms-animation-delay:-1.25s;
+    transform: rotate(225deg) translate(0px, -150%);
+	-webkit-transform:rotate(225deg) translate(0px, -150%);
+    -moz-transform:rotate(225deg) translate(0px, -150%);
+    -o-transform:rotate(225deg) translate(0px, -150%);
 }
 .ispinner .ispinner-blade:nth-child(7) {
-    animation-delay: -1.16667s;
-    transform: rotate(270deg) translate(0px, -150%)
+    
+	animation-delay: -1.16667s;
+	-webkit-animation-delay:-1.16667s;
+	-moz-animation-delay: -1.16667s;
+	-o-animation-delay:-1.16667s;
+	-ms-animation-delay:-1.16667s;
+    transform: rotate(270deg) translate(0px, -150%);
+	-webkit-transform:rotate(270deg) translate(0px, -150%);
+    -moz-transform:rotate(270deg) translate(0px, -150%);
+    -o-transform:rotate(270deg) translate(0px, -150%);
 }
 .ispinner .ispinner-blade:nth-child(8) {
-    animation-delay: -1.08333s;
-    transform: rotate(315deg) translate(0px, -150%)
+    
+	animation-delay: -1.08333s;
+	-webkit-animation-delay:-1.08333s;
+	-moz-animation-delay:-1.08333s;
+	-o-animation-delay: -1.08333s;
+	-ms-animation-delay:-1.08333s;
+    transform: rotate(315deg) translate(0px, -150%);
+	-webkit-transform:rotate(315deg) translate(0px, -150%);
+    -moz-transform:rotate(315deg) translate(0px, -150%);
+    -o-transform:rotate(315deg) translate(0px, -150%);
 }
-.ispinner .ispinner-blade:nth-child(9) {
-    animation-delay: -1s;
-    transform: rotate(270deg) translate(0px, -150%);
-}
-.ispinner .ispinner-blade:nth-child(10) {
-    animation-delay: -0.91667s;
-    transform: rotate(300deg) translate(0px, -150%);
-}
-.ispinner .ispinner-blade:nth-child(11) {
-    animation-delay: -0.83333s;
-    transform: rotate(330deg) translate(0px, -150%);
-}
-.ispinner .ispinner-blade:nth-child(12) {
-    animation-delay: -0.75s;
-    transform: rotate(360deg) translate(0px, -150%);
-}
+
 .ispinner.animating .ispinner-blade {
     animation-play-state: running;
+	animation-play-state: running;
+	-webkit-animation-play-state: running;
+	-moz-animation-play-state: running;
+	-o-animation-play-state: running;
+	-ms-animation-play-state: running;
+	
 }
 .ispinner.white .ispinner-blade {
     background-color: white;
@@ -1352,17 +1412,53 @@ Loader
     height: 21px;
     width: 11px;
 }
-@keyframes ispinner-fade {
+@keyframes ispinner-fade{
 0% {
-    opacity: 1;
+  
+  /* Netscape */
+  -moz-opacity: 1;
+
+  /* Safari 1.x */
+  -khtml-opacity: 1;
+
+  /* Good browsers */
+  opacity: 1;
+  zoom: 1;
+	filter: alpha(opacity=1);
+  
+	
 }
 50% {
-    opacity: 0.25;
+ zoom: 1;
+   	 /* IE 5-7 */
+  filter: alpha(opacity=0.25);
+
+  /* Netscape */
+  -moz-opacity: 0.25;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.25;
+
+  /* Good browsers */
+  opacity: 0.25;
 }
 100% {
-    opacity: 0.25;
+ zoom: 1;
+   	 /* IE 5-7 */
+  filter: alpha(opacity=0.25);
+
+  /* Netscape */
+  -moz-opacity: 0.25;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.25;
+
+  /* Good browsers */
+  opacity: 0.25;
 }
 }
+
+
 .blockMsg {
     background-color: transparent !important;
 }
@@ -1373,7 +1469,7 @@ Application form action ablock
 \*------------------------------------*/
 
 .app-action-form {
-    padding: 15px;
+    padding:  15px 15px 0 15px;
 }
 .heading {
     color: #5C5C5C;
@@ -1394,7 +1490,7 @@ Application form action ablock
 .form-row {
     margin-bottom: 5px;
 }
-.form-action-field .field-name {
+.app-action-form .field-name {
     display: inline-block;
     float: left;
     text-align: right;
@@ -1438,7 +1534,7 @@ Panel
     border-right: 1px solid #D8D8D8;
     border-bottom: 1px solid #D8D8D8;
     overflow: hidden;
-    padding: 20px;
+  
 }
 /*---------- App Action Group -----------*/
 .app-action-group {
@@ -1505,7 +1601,7 @@ Panel
     position: relative;
     float: left;
     width: auto;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 .page,
 .view {
@@ -1558,7 +1654,7 @@ Panel
 .grid-action-group {
     border: 1px solid #D8D8D8;
     float: right;
-    margin: 7px;
+    margin: 7px 15px 7px 7px;
 }
 .grid-action-group a {
     border-right: 1px solid #D8D8D8;
@@ -1635,9 +1731,7 @@ Panel
 /*------------------------------------*\
 Table
 \*------------------------------------*/
-.table-grid {
-    border: 1px solid #d8d8d8;
-}
+
 .table-grid th:first-child {
     padding: 0 10px;
 }
@@ -1683,7 +1777,7 @@ Table
     padding: 0;
     width: 100%;
 }
-<<<<<<< HEAD
+
 .table-grid th:first-child span,
 .table-grid tr td:first-child {
     padding: 0;
@@ -1698,7 +1792,7 @@ Table
 }
 .table-grid th:first-child  .checkbox .css-label, .table-grid tr td:first-child  .checkbox .css-label{
     margin: 0;
-=======
+}
 .active .accordion-header span i
 {
 	border-left: 5px solid #ffffff;
@@ -1719,7 +1813,7 @@ Table
     position: absolute;
     right: 10px;
     top: 11px;
->>>>>>> 72d13357cf9c5ef4f10ff9eaa7da1c957097f9b8
+
 }
 
 /*------------------------------------*\
@@ -1731,7 +1825,7 @@ Forms Element
     text-align: right;
     width: 130px;
 }
-<<<<<<< HEAD
+
 
 
 /*------------------------------------*\
@@ -1746,8 +1840,3 @@ Model Dialog Box
     transform: translate(-50%, -50%) !important;
     width: 600px;
 }
-=======
-/*.accordion-close .accordion-content {
-    display: none;
-}*/
->>>>>>> 72d13357cf9c5ef4f10ff9eaa7da1c957097f9b8
