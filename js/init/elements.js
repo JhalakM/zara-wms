@@ -9,6 +9,7 @@ $(document).ready(function(){
 	effectToggleSwitch();
 	datepicker();
 	accordionPanel();
+	generateSVG();
 });
 
 
