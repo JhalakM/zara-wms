@@ -1993,7 +1993,7 @@ input[type="radio"]:checked:not(old) + label > span > span {
 }
 .active .accordion-header span i
 {
-border-left: 5px solid #ffffff;
+	border-left: 5px solid #ffffff;
     border-right: 5px solid #ffffff;
     border-bottom: 5px solid #373374;
 	border-top: none;
@@ -2004,7 +2004,7 @@ border-left: 5px solid #ffffff;
 
  }
 .accordion-header span i{
-border-left: 5px solid #ffffff;
+	border-left: 5px solid #ffffff;
     border-right: 5px solid #ffffff;
     border-top: 5px solid #373374;
     content: "";
@@ -2018,6 +2018,6 @@ border-left: 5px solid #ffffff;
     line-height: 20px;
     margin: 20px 0;
 }
-.accordion-close .accordion-content {
+/*.accordion-close .accordion-content {
     display: none;
-}
+}*/
