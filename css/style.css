@@ -2018,6 +2018,3 @@ input[type="radio"]:checked:not(old) + label > span > span {
     line-height: 20px;
     margin: 20px 0;
 }
-/*.accordion-close .accordion-content {
-    display: none;
-}*/
