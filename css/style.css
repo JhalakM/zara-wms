@@ -1683,6 +1683,7 @@ Table
     padding: 0;
     width: 100%;
 }
+<<<<<<< HEAD
 .table-grid th:first-child span,
 .table-grid tr td:first-child {
     padding: 0;
@@ -1697,6 +1698,28 @@ Table
 }
 .table-grid th:first-child  .checkbox .css-label, .table-grid tr td:first-child  .checkbox .css-label{
     margin: 0;
+=======
+.active .accordion-header span i
+{
+	border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-bottom: 5px solid #373374;
+	border-top: none;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 11px;
+
+ }
+.accordion-header span i{
+	border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-top: 5px solid #373374;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 11px;
+>>>>>>> 72d13357cf9c5ef4f10ff9eaa7da1c957097f9b8
 }
 
 /*------------------------------------*\
@@ -1708,6 +1731,7 @@ Forms Element
     text-align: right;
     width: 130px;
 }
+<<<<<<< HEAD
 
 
 /*------------------------------------*\
@@ -1722,3 +1746,8 @@ Model Dialog Box
     transform: translate(-50%, -50%) !important;
     width: 600px;
 }
+=======
+/*.accordion-close .accordion-content {
+    display: none;
+}*/
+>>>>>>> 72d13357cf9c5ef4f10ff9eaa7da1c957097f9b8

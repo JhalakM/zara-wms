@@ -258,6 +258,27 @@ function createCaptcha(formId){
 	 $("#"+formId).captchaWord(); 
 }
 
+/* function to set accordion panel effects */
+function accordionPanel(){
+	$(".accordion .accordion-content:not(:first)").hide();
+	$(".accordion .accordion-panel").each(function(){
+		$(this).children(".accordion-header").click(function(){
+			if($(this).parents(".accordion-panel").hasClass("active")){
+				$(this).parents(".accordion-panel").addClass("accordion-close");
+				$(this).parents(".accordion-panel").removeClass("active");
+				$(this).siblings(".accordion-content").slideUp();
+			}else{
+				$(".accordion-content").slideUp();
+				$(".accordion-panel").removeClass("active");
+				$(".accordion-panel").addClass("accordion-close");
+				$(this).parents(".accordion-panel").removeClass("accordion-close");
+				$(this).parents(".accordion-panel").addClass("active");
+				$(this).siblings(".accordion-content").slideDown();
+			}
+		});
+	});
+}
+
 /* function to generate date picker */
 function datepicker() 
 {
