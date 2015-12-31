@@ -78,7 +78,13 @@ function languagePlugin(lang){
 			// available as JS vars/functions and as a map
 			
 			/* variable for set loader message */
-			LOADER_MESSAGE = "<h4>"+$.i18n.prop('loading_message')+"</h4>";
+			LOADER_MESSAGE = "<div class='white large'><div class='ispinner white large animating'>"+
+							  "<div class='ispinner-blade'></div><div class='ispinner-blade'></div>"+
+							  "<div class='ispinner-blade'></div><div class='ispinner-blade'></div>"+
+							  "<div class='ispinner-blade'></div><div class='ispinner-blade'></div>"+
+							  "<div class='ispinner-blade'></div><div class='ispinner-blade'></div>"+
+							  "</div></div>"+
+							  "<h4></h4>";
 
 			getTemplateParams();
 		}
@@ -214,14 +220,14 @@ function generateBlockUI(){
 			
 			break;
 		default:
-			$.blockUI({ overlayCSS: { backgroundColor: '#00f' },message: LOADER_MESSAGE }  ); 
+			$.blockUI({ overlayCSS: { backgroundColor: '#000' },message: LOADER_MESSAGE }  ); 
 		}
 	});
 }
 
 /* function to unblock block UI element */
 function unblockUI(){
-	setTimeout($.unblockUI, 5000); 
+	//setTimeout($.unblockUI, 5000); 
 }
 
 /* function to load javascript file in run time */
