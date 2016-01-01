@@ -4,20 +4,20 @@
 |@param  : -
 */
 
-(function ($) {
+$.fn.dynamicForm = function(options){
+	var self = $(this);
 
-	$.fn.dataGrid = function(options){
-		var self = $(this);
-
-		var defaults = $.extend({
-			
-		},options);
-		var addTypes = {};
-		var methods = {
-			init : function(){
-				alert("aa");
-			}
-		};
-		return methods.init();
+	var defaults = $.extend({
+		ajaxUrl : false,
+		datatype:'json',
+		method : 'POST',
+		columns: [],
+	},options);
+	//var addTypes = {};
+	var methods = {
+		init : function(){
+			alert(defaults.columns);
+		}
 	};
-})(jQuery);
+	return methods.init();
+};

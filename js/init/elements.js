@@ -10,10 +10,12 @@ $(document).ready(function(){
 	datepicker();
 	accordionPanel();
 	generateSVG();
+	
 });
 
 
 
 
 $(window).load(function(){
+	getFormElement();
 });
