@@ -29,12 +29,7 @@
 	font-size: 100%;
 	list-style: none;
 }
-.ui-helper-clearfix:before,
-.ui-helper-clearfix:after {
-	content: "";
-	display: table;
-	border-collapse: collapse;
-}
+
 .ui-helper-clearfix:after {
 	clear: both;
 }
@@ -861,6 +856,7 @@ body .ui-tooltip {
 	border: 1px solid #aaaaaa;
 	background: #ffffff;
 	color: #222222;
+	margin:10px 0 0 0px;
 }
 .ui-widget-content a {
 	color: #222222;
@@ -869,6 +865,7 @@ body .ui-tooltip {
     border-bottom: 1px solid #d8d8d8;
     color: #222222;
     font-weight: bold;
+	
 }
 .ui-widget-header a {
 	color: #222222;
@@ -1191,13 +1188,4 @@ border:1px solid #2991D6;
       background: url(../../../img/icons/h-scroll-arrow.png) no-repeat;         /*Adds background-image*/
       background-position: 70px 10px;                /*Position of the background-image*/
       width: 100px;                /*Width of select dropdown to give space for arrow image*/
-}
-#datepicker::before{
-border-left: 5px solid #ffffff;
-    border-right: 5px solid #ffffff;
-    border-top: 5px solid #373374;
-    content: "";
-    position: absolute;
-    right: 14px;
-    top: 13px;
 }
