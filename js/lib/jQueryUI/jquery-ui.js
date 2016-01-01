@@ -15031,7 +15031,7 @@ var spinner = $.widget( "ui.spinner", {
 	_buttonHtml: function() {
 		return "" +
 			"<a class='ui-spinner-button ui-spinner-up ui-corner-tr'>" +
-				"<span class='ui-icon " + this.options.icons.up + "'>&#9650;</span>" +
+				"<span class='ui-icon ui-icon " + this.options.icons.up + "'>&#9650; </span>" +
 			"</a>" +
 			"<a class='ui-spinner-button ui-spinner-down ui-corner-br'>" +
 				"<span class='ui-icon " + this.options.icons.down + "'>&#9660;</span>" +
