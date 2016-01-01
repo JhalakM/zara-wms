@@ -279,6 +279,38 @@ function accordionPanel(){
 	});
 }
 
+/* function to generate svg files */
+
+function generateSVG(){
+	$('[data-svg]').each(function(){
+	  // Find the pattern.
+	  var element = $(this);
+	  var replaceWith = $(this).data("svg");
+	  switch(replaceWith) {
+		case "svg-filter":
+				var svg_html = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" ' +
+					'" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">'+
+					'<g>'+
+						'<polygon class="filter-icon" points="1.1,5.9 24.3,29.1 24.3,60 39.7,52.3 39.7,29.1 62.9,5.9"/>'+
+					'</g>'+
+				'</svg>';
+				$(this).html(svg_html);
+			break;
+			case "svg-calendar":
+				var svg_html = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" ' +
+					'" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">'+
+					'<g>'+
+						'<polygon class="filter-icon" points="1.1,5.9 24.3,29.1 24.3,60 39.7,52.3 39.7,29.1 62.9,5.9"/>'+
+					'</g>'+
+				'</svg>';
+				$(this).html(svg_html);
+			break;
+		default:
+			
+		}
+	});
+}
+
 /* function to generate date picker */
 function datepicker() 
 {

@@ -4,7 +4,7 @@
 		var element = this; 
 		
 		var button = $(this).find('input[type=button]');
-		$('<canvas id="canvas" width="500" height="100" style="border: none;padding-left:0;padding-right:0;margin-left:auto;margin-right:auto;display:block;width: 100%;"><label id="captcha_text"></label></canvas>').insertBefore(button)
+		$('<canvas id="canvas" width="500" height="100" style="border: none;padding-left:0;padding-right:0;margin-left:auto;margin-right:auto;display:inline-block;width: 100%; max-width:250px;"><label id="captcha_text"></label></canvas>').insertBefore(button)
 		$('<input type="text" class="textbox" id="captcha_input"/><br/><br/>').insertBefore(button);
 		var input = this.find('#captcha_input'); 
 		var label = this.find('#captcha_text'); 
@@ -30,8 +30,9 @@
 
 		var c = document.getElementById("canvas");
 		var ctx = c.getContext("2d");
-		ctx.font="20px Tahoma";
+		ctx.font="40px Tahoma";
 		ctx.textBaseline="alphabetic";
+		ctx.textdecoration="underline";
 		ctx.fillText(randomMessage, 190, 70);
 	
 		$(input).keyup(function(){
