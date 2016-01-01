@@ -320,3 +320,27 @@ function datepicker()
 	  dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // For formatting
 	});
 }
+
+function sidebarScroll()
+{
+	 var sticky = $('.sidebar'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 107) sticky.addClass('sticky');
+  else sticky.removeClass('sticky');
+  
+}
+
+function actionBlock()
+{
+	$( ".grid-action-group a" ).click(function(){
+    $( ".grid-action-form" ).slideToggle( "slow" );
+});
+}
+
+function appActionBlock()
+{
+	$( ".app-action-group a" ).click(function(){
+    $( ".app-action-form " ).slideToggle( "slow" );
+});
+}

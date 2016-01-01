@@ -1268,6 +1268,149 @@ border-left: 5px solid #ffffff;
 .accordion-header:hover h3{
 color: #2991d6;
 } 
+.active .accordion-header span i
+{
+	border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-bottom: 5px solid #373374;
+	border-top: none;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 11px;
+
+ }
+.accordion-header span i{
+	border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-top: 5px solid #373374;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 11px;
+
+}
+/*------------------------------------*\
+Date and time Piker
+\*------------------------------------*/
+
+.dropdown-menu-time-piker {
+    display: none;
+}
+.calendar-icon {
+    background: #ff0000 none repeat scroll 0 0;
+    clear: none;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu-time-piker {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #d8d8d8;
+    max-width: 300px;
+    padding: 5px;
+    width: 100%;
+ margin:11px 0 0 0px;
+}
+
+.table-condensed tr:nth-child(2) td {
+    text-align: center;
+    width: 16px;
+}
+
+.table-condensed tr:nth-child(2) .minute{
+font-size:16px;
+color:#000;
+}
+
+.timepicker-minutes .table-condensed tr:nth-child(2){
+height:30px;
+font-size:16px;
+line-height:20px;
+}
+
+.timepicker-hours .table-condensed tr:nth-child(2){
+height:30px;
+font-size:16px;
+line-height:20px;
+}
+
+.timepicker-seconds .table-condensed tr:nth-child(2){
+height:30px;
+font-size:16px;
+line-height:20px;
+}
+
+.timepicker-minutes .table-condensed tr:nth-child(2) .hour {
+
+
+}
+
+.table-condensed .btn i {
+    color: #120e5b;
+    font-size: 13px;
+}
+
+.table-condensed tr:nth-child(2) {
+    color: #120e5b;
+    font-size: 24px;
+    height: 60px;
+    line-height: 50px;
+ 
+}
+.table-condensed .btn {
+    border: 1px solid #d8d8d8;
+    border-radius: 0;
+}
+.timepicker-hours .table-condensed tr td {
+    text-align: center;
+    width: 43px;
+}
+
+.timepicker-seconds .table-condensed tr td {
+    text-align: center;
+    width: 43px;
+}
+.timepicker-minutes .table-condensed tr td {
+    text-align: center;
+    width: 43px;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu-time-piker::before {
+    border-bottom: 10px dashed #dadada;
+    border-left: 10px solid #ffffff;
+    border-right: 10px solid #ffffff;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -11px;
+}
+ 
+.text-box.add-on {
+    max-width: 300px;
+}
+.clear-top {
+    clear: both;
+    padding: 20px;
+}
+
+.text-box.hasDatepicker {
+    max-width: 300px;
+}
+.table-condensed {
+    margin: auto;
+    text-align: center;
+}
+.ui-widget-content::before{
+    border-bottom: 10px dashed #dadada;
+    border-left: 10px solid #ffffff;
+    border-right: 10px solid #ffffff;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -11px;
+
+}
 
 /*------------------------------------*\
 Loader
@@ -1396,11 +1539,18 @@ Application form action ablock
 .form-row {
     margin-bottom: 5px;
 }
-.app-action-form .field-name {
+.app-action-form .field-name,.grid-action-form  .field-name {
     display: inline-block;
     float: left;
     text-align: right;
     width: 100px;
+}
+.set-empty {
+    margin-top: 5px;
+}
+
+.title {
+    padding: 15px 15px 10px;
 }
 /*------------------------------------*\
 Panel
@@ -1509,7 +1659,7 @@ Panel
     position: relative;
     float: left;
     width: auto;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 .page,
 .view {
@@ -1545,7 +1695,7 @@ Panel
     padding: 0 20px 0 5px;
 }
 .page .selected-listitem::before,
-.view .selected-listitem::before {
+.view  .selected-listitem::before {
     right: 4px;
     top: 7px;
     border-left: 4px solid #ffffff;
@@ -1562,7 +1712,7 @@ Panel
 .grid-action-group {
     border: 1px solid #D8D8D8;
     float: right;
-    margin: 7px 15px 7px 7px;
+    margin: 7px;
 }
 .grid-action-group a {
     border-right: 1px solid #D8D8D8;
@@ -1582,7 +1732,7 @@ Panel
 }
 /*------Mobile Grid Action Group-----------*/
 .mobile-action-grp-btn{display:none;position:relative}
-.selected-listitem::before {
+.mobile-action-grp-btn .selected-listitem::before {
     border-left: 5px solid #ffffff;
     border-right: 5px solid #ffffff;
     border-top: 5px solid #373374;
@@ -1634,6 +1784,26 @@ Panel
 }
 .action-arrow.open {
     background: #fff none repeat scroll 0 0;
+}
+
+/*------------------------------------*\
+Alert message 
+\*------------------------------------*/
+
+.ui-alert-success {
+ border:1px solid #45b6b0;
+}
+
+.ui-alert {
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.validations-ui-text {
+    display: inline-block;
+}
+.validations-ui.alert-icon {
+    display: inline-block;
 }
 
 /*------------------------------------*\
@@ -1702,27 +1872,14 @@ Table
     margin: 0;    padding-left: 16px;
 }
 .table-grid tr.selected{background:#E0F3FF}
-.active .accordion-header span i
-{
-	border-left: 5px solid #ffffff;
-    border-right: 5px solid #ffffff;
-    border-bottom: 5px solid #373374;
-	border-top: none;
-    content: "";
-    position: absolute;
-    right: 10px;
-    top: 11px;
-
- }
-.accordion-header span i{
-	border-left: 5px solid #ffffff;
-    border-right: 5px solid #ffffff;
-    border-top: 5px solid #373374;
-    content: "";
-    position: absolute;
-    right: 10px;
-    top: 11px;
-
+.table-grid .more-field-show span{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0;
+	color:#2991d6;line-height: 25px;
+}
+.table-grid th.more-field-show  span{
+    padding: 0 0 0 10px;color:#ffffff;
 }
 
 /*------------------------------------*\
@@ -1738,83 +1895,107 @@ Forms Element
 
 
 /*------------------------------------*\
-Model Dialog Box
+Header
 \*------------------------------------*/
-.modal-dialog {
-    left: 50%;
-    margin-left: -10px;
-    margin-top: -50px;
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%) !important;
-       width: auto;
+
+header {
+    background: #555 none repeat scroll 0 0 !important;
+    height: 106px;
+	color:#fff;
+    
 }
-.modal-title {
-    color: #5c5c5c;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.42857;
-    margin: 0;
-	padding:10px;
+.header-top {
+    background: #ffffff none repeat scroll 0 0;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 10px 0 7px;
 }
-.modal-title .icon {
-    margin-right: 6px;
+.block-container {
+    padding-left: 80px;
+    width: 100%;
 }
-.modal-content{  border-radius: 0;}
-.modal-header {
-    border-bottom: 1px solid #e5e5e5;
-    height: 40px;
-    padding: 0px;
+.header-left {
+    float: left;
+    padding-left: 223px;
 }
-.modal-header .close{
- border-left: 1px solid #d8d8d8;
-    color: #120e5b;
-    display: block;
+.header-date {
+    background: rgba(0, 0, 0, 0) url("../img/calender-icon.png") no-repeat scroll 0 0;
+    border-right: 1px solid #e7e7e7;
+    color: #474747;
+    float: left;
+    font-size: 11px;
+    opacity: 0.7;
+    padding-left: 25px;
+    padding-right: 10px;
+	   line-height: 14px;
+	   padding-bottom: 5px;
+}
+.header-time {
+    background: rgba(0, 0, 0, 0) url("../img/clock-icon.png") no-repeat scroll 0 0;
+    color: #474747;
     float: right;
-    line-height: 39px;
-    text-align: center;
-    width: 37px;
-	margin-top: 0;
-	opacity:1;
-	  text-shadow: none;}
-	.modal-header .close:hover {
-    background: #120e5b none repeat scroll 0 0;
+    font-size: 11px;
+    line-height: 14px;
+    margin-left: 10px;
+    opacity: 0.7;
+    padding-bottom: 5px;
+    padding-left: 25px;
+}
+.header-right {
+    float: right;
+}
+.user-profile-menu .dropdown-list {
+    height: 16px;
+    width: 16px;
+}
+.user-name {
+    color: #5c5c5c;
+    display: inline-block;
+    float: left;
+    font-size: 11px;
+}
+
+/*------------------------------------*\
+Sidebar
+\*------------------------------------*/
+.sidebar {
+    background: #333 none repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 107px;
+    width: 150px;
+	color:#fff;
+	-webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    transition: all 0.1s linear
+
+}
+.sidebar.sticky {
+    top: 0;
+	-webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear
+}
+
+/*------------------------------------*\
+Main Body
+\*------------------------------------*/
+.main {
+    background: #000 none repeat scroll 0 0;
     color: #fff;
+    height: 1640px;
+    margin-left: 150px;
   
 }
-#batch_update .modal-dialog {
-    width: 460px;
-}
-#batch_update .field-name {
-    float: left;
-    text-align: right;
-    width: 70px;
-}
 
-.modal-body {
-    padding: 15px 15px 5px;
-    position: relative;
-}
-.modal-content .form-btn-group.clearfix {
-    margin-bottom: 10px;
-   
-}
-.modal-dialog .uie-button .btn-icon i {
-    font-size: 18px;
-}
-#add-record .modal-dialog {
-    width: 820px;
-}
-.modal-body .field-name {
-    float: left;
-    text-align: right;
-    width: 80px;
-}
-.modal-body .form-btn-group{  margin-left: 80px;}
 
-.accordion-content {
-    font-size: 12px;
-    line-height: 20px;
-    margin: 20px 0;
+/*------------------------------------*\
+Footer
+\*------------------------------------*/
+footer {
+    margin-left: 150px;
 }
-

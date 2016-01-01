@@ -20,7 +20,7 @@
 </head>
 
 <body data-reference="page-loader">
-   
+	<aside>
          <div class="container">
         <!-- Panel Block-->
         <div class="panel-block">
@@ -62,8 +62,8 @@
 				</div>
 				 
             </div>
-            <div class="panel-block-content no-padding">
-                <div class="app-action-form clearfix">
+            <div class="panel-block-content no-padding" >
+                <div class="app-action-form clearfix" style="display:none;">
                    <div class="field-name"> <span class="heading ">Filter </span></div>
                     <div class="col-md-3 col-sm-3 col-xs-3 no-padding">
 						<div class="dropdown-list ">
@@ -172,6 +172,37 @@
                     </div>
                 </div>
 				</div>
+				<div class="grid-action-form clearfix " style="display:none;">
+                   <form>
+                            <div class="form-col ">
+							<div class="title"><span class="heading ">Batch Update </span></div>
+							<div class="form-action-field clearfix">
+                                <div class="form-row clearfix">
+									<div class="field-name"><label class="label">Vessel Name</label></div>
+									<div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3"><input type="text" class="text-box" name="service_code" value=""></div>
+									<div class=" margin-5  pull-left set-empty col-md-3 col-sm-3 col-xs-3"><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty1"><label for="set-empty1" class="css-label">Set Empty</label></span></div>
+                                </div>
+								<div class="form-row clearfix">
+									<div class="field-name"><label class="label">Type </label></div>
+									<div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3"><input type="text" class="text-box" name="service_code" value=""></div>
+									<div class=" margin-5  pull-left set-empty col-md-3 col-sm-3 col-xs-3"><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty1"><label for="set-empty1" class="css-label">Set Empty</label></span></div>
+                                </div>
+								<div class="form-row clearfix">
+									<div class="field-name"><label class="label">Length </label></div>
+									<div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3"><input type="text" class="text-box" name="service_code" value=""></div>
+									<div class=" margin-5  pull-left set-empty col-md-3 col-sm-3 col-xs-3"><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty1"><label for="set-empty1" class="css-label">Set Empty</label></span></div>
+                                </div>
+								
+                                <!-- Form Footer -->
+								<div class="form-btn-group  clearfix"> 
+								<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><img src="img/icons/svg/filter-white.svg" alt="Filter" ></span>
+                                <div class="btn-value">Update </div></button>
+                            </div> 
+						</div>
+                        </form>
+                    
+                </div>
+				</div>
                 <!-- Panel pagination -->
                 <div class="pagination-block clearfix">
                     <div class="pages-info">
@@ -215,158 +246,20 @@
                         </div>
                     </div>
                     <div class="grid-action-group">
-                        <a href="#"  data-toggle="modal" data-target="#batch_update"><i class="fa fa-print"></i></a>
+                        <a href="#"><i class="fa fa-print"></i></a>
                         <a href="#"><i class="fa fa-filter"></i></a>
                         <a href="#"><i class="fa fa-sort-amount-desc"></i></a>
                         <a href="#"  data-toggle="modal" data-target="#add-record"><i class="fa fa-plus"></i></a>
 						
                     </div>
-					<!-- Modal -->
-				  <div class="modal fade" id="add-record" role="dialog">
-					<div class="modal-dialog">
 					
-					  <!-- Modal content-->
-					  <div class="modal-content">
-						<div class="modal-header">
-						  <button type="button" class="close" data-dismiss="modal">&times;</button>
-						  <h4 class="modal-title"><span class="icon"><i class="fa fa-pencil-square-o"></span></i>Batch Update</h4>
-						</div>
-						<div class="modal-body">
-						  <form>
-						  <div class="col-md-4  no-padding ">
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label">Cal</label></div>
-						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
-                                <input type="text" value="" name="service_code" class="text-box">
-                          </div>
-						  </div>
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label">Vessel Name</label></div>
-						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
-                                <input type="text" value="" name="service_code" class="text-box">
-                          </div>
-						  </div>
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label">Type</label></div>
-						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
-                                <input type="text" value="" name="service_code" class="text-box">
-                          </div>
-						  </div>
-						  </div>
-						   <div class="col-md-4  no-padding ">
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label">Class</label></div>
-						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
-                                <input type="text" value="" name="service_code" class="text-box">
-                          </div>
-						  </div>
-						   <div class="clearfix">
-						  <div class="field-name"><label class="label">Opr</label></div>
-						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
-                                <input type="text" value="" name="service_code" class="text-box">
-                          </div>
-						  </div>
-						   <div class="clearfix">
-						  <div class="field-name"><label class="label">Lioyds</label></div>
-						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
-                                <input type="text" value="" name="service_code" class="text-box">
-                          </div>
-						  </div>
-						  </div>
-						   <div class="col-md-4  no-padding ">
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label">Call Sign</label></div>
-						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
-                                <input type="text" value="" name="service_code" class="text-box">
-                          </div>
-						  </div>
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label">Length(m)</label></div>
-						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
-                                <input type="text" value="" name="service_code" class="text-box">
-                          </div>
-						  </div>
-						  </div>
-						  <div class="clearfix"></div>
-						  <div class="form-btn-group  clearfix"> 
-							<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><i class="fa fa-pencil-square-o"></i></span>
-						<div class="btn-value">Update </div>
-					   </button>
-					   
-										   </div>
-						  </form>
-						</div>
-						
-					  </div>
-					  
-					</div>
-				  </div>
- <!-- Modal -->
-				  <div class="modal fade" id="batch_update" role="dialog">
-					<div class="modal-dialog">
-					
-					  <!-- Modal content-->
-					  <div class="modal-content">
-						<div class="modal-header">
-						  <button type="button" class="close" data-dismiss="modal">&times;</button>
-						  <h4 class="modal-title"><span class="icon"><i class="fa fa-pencil-square-o"></span></i>Batch Update</h4>
-						</div>
-						<div class="modal-body">
-						  <form>
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label">Vessel Name</label></div>
-						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
-						   <input type="text" value="" name="service_code" class="text-box">
-													</div>
-						  <div class=" margin-5  pull-left set-empty">
-						  <span class="checkbox">
-														<input type="checkbox" class="css-checkbox" id="set-empty1">
-														<label for="set-empty1" class="css-label">Set Empty</label>
-						  </span>
-						  
-						  </div>
-						  </div>
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label"> Type </label></div>
-						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
-						   <input type="text" value="" name="service_code" class="text-box">
-													</div>
-						  <div class=" margin-5  pull-left set-empty">
-						  <span class="checkbox">
-														<input type="checkbox" class="css-checkbox" id="set-empty2">
-														<label for="set-empty2" class="css-label">Set Empty</label>
-						  </span>
-						  
-						  </div>
-						  </div>
-						  <div class="clearfix">
-						  <div class="field-name"><label class="label"> Length </label></div>
-						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
-						   <input type="text" value="" name="service_code" class="text-box">
-													</div>
-						  <div class=" margin-5  pull-left set-empty">
-						  <span class="checkbox">
-														<input type="checkbox" class="css-checkbox" id="set-empty3">
-														<label for="set-empty3" class="css-label">Set Empty</label>
-						  </span>
-						  
-						  </div>
-						  </div>
-						  </form>
-						</div>
-						<div class="form-btn-group  clearfix"> 
-												<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><i class="fa fa-pencil-square-o"></i></span>
-						<div class="btn-value">Update </div>
-					   </button>
-					   
-										   </div>
-					  </div>
-					  
-					</div>
-				  </div>
+				  
                 </div>
+				
+				
+				
                 <!-- Panel Content Table-grid -->
-
+ <div class="clearfix"></div>
                 <div id="table-grid" class="table-record scroll" data-scroll="true">
                     <table class="table-grid">
                         <thead>
@@ -377,6 +270,9 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </span>
                                 </th>
+								<th class="more-field-show">
+								<span >+</span>
+								</th>
                                 <th>
                                     <span>Cal </span>
 
@@ -433,6 +329,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td class="disable">LOLO</td>
                                 <td>0000</td>
@@ -463,6 +360,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td class="disable">LOLO</td>
                                 <td>0000</td>
@@ -493,6 +391,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td class="disable">LOLO</td>
                                 <td>0000</td>
@@ -523,6 +422,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td class="disable">LOLO</td>
                                 <td>0000</td>
@@ -546,6 +446,7 @@
                                 <td>004</td>
                                 <td>455</td>
                             </tr>
+							
                             <tr class="selected">
                                 <td>
                                     <div class="checkbox">
@@ -553,6 +454,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td class="disable">LOLO</td>
                                 <td>0000</td>
@@ -583,6 +485,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -613,6 +516,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -643,6 +547,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -673,6 +578,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -703,6 +609,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -733,6 +640,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -763,6 +671,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -793,6 +702,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -823,6 +733,7 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -853,6 +764,10 @@
                                         <label class="css-label" for="checkbox2"></label>
                                     </div>
                                 </td>
+								<td class="more-field-show"><span >+</span></td>
+								
+								</td>
+								
                                 <td>000</td>
                                 <td>LOLO</td>
                                 <td>0000</td>
@@ -927,6 +842,7 @@
         </div>
         <!--End Panel-->
     </div>
+	</aside>
     <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
 	<!-- Bootstrap Plugin Js -->
 	<script src="js/lib/bootstrap/bootstrap.min.js"></script>
