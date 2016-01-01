@@ -32,7 +32,7 @@
                 <div class="app-action-group">
                     <a href="#"><i class="fa fa-print"></i></a>
                     <a href="#" class="active"><i class="fa fa-filter"></i></a>
-                    <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+                    <a href="#"><i class="fa fa-sort-amount-desc"></i></a>
                     <a href="#"><i class="fa fa-plus"></i></a>
                 </div>
 				<div class="mobile-action-grp-btn">
@@ -43,7 +43,7 @@
 							<div class="app-action-group ">
 								<a href="#"><i class="fa fa-print"></i></a>
 								<a href="#" class="active"><i class="fa fa-filter"></i></a>
-								<a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+								<a href="#"><i class="fa fa-sort-amount-desc"></i></a>
 								<a href="#"><i class="fa fa-plus"></i></a>
 								<a href="#"><i class="fa fa-print"></i></a>
 							</div>
@@ -51,37 +51,16 @@
 						<div class="app-specific clearfix">
 						<p>Application Specific Actions</p>
 							<div class="app-action-group ">
-								<a href="#"  data-toggle="modal" data-target="#myModal"><i class="fa fa-print"></i></a>
+								<a href="#" ><i class="fa fa-print"></i></a>
 								<a href="#" class="active"><i class="fa fa-filter"></i></a>
-								<a href="#"><i class="fa fa-sort-amount-asc"></i></a>
+								<a href="#"><i  class="fa fa-sort-amount-desc"></i></a>
 								<a href="#"><i class="fa fa-plus"></i></a>
 								<a href="#"><i class="fa fa-print"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+				 
             </div>
             <div class="panel-block-content no-padding">
                 <div class="app-action-form clearfix">
@@ -175,10 +154,11 @@
                                                 <li value="" rel="">#4566871</li>
                                             </ul>
                                         </div>
-                                </div></div>
+                                </div>
+								</div>
                                
                                 <!-- Form Footer -->
-                               
+                              
 								 <div class="form-btn-group  clearfix"> 
 								<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><img src="img/icons/svg/filter-white.svg" alt="Filter" ></span>
         <div class="btn-value">Filter </div>
@@ -235,11 +215,155 @@
                         </div>
                     </div>
                     <div class="grid-action-group">
-                        <a href="#"  data-toggle="modal" data-target="#myModal"><i class="fa fa-print"></i></a>
+                        <a href="#"  data-toggle="modal" data-target="#batch_update"><i class="fa fa-print"></i></a>
                         <a href="#"><i class="fa fa-filter"></i></a>
-                        <a href="#"><i class="fa fa-sort-amount-asc"></i></a>
-                        <a href="#"><i class="fa fa-plus"></i></a>
+                        <a href="#"><i class="fa fa-sort-amount-desc"></i></a>
+                        <a href="#"  data-toggle="modal" data-target="#add-record"><i class="fa fa-plus"></i></a>
+						
                     </div>
+					<!-- Modal -->
+				  <div class="modal fade" id="add-record" role="dialog">
+					<div class="modal-dialog">
+					
+					  <!-- Modal content-->
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title"><span class="icon"><i class="fa fa-pencil-square-o"></span></i>Batch Update</h4>
+						</div>
+						<div class="modal-body">
+						  <form>
+						  <div class="col-md-4  no-padding ">
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label">Cal</label></div>
+						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
+                                <input type="text" value="" name="service_code" class="text-box">
+                          </div>
+						  </div>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label">Vessel Name</label></div>
+						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
+                                <input type="text" value="" name="service_code" class="text-box">
+                          </div>
+						  </div>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label">Type</label></div>
+						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
+                                <input type="text" value="" name="service_code" class="text-box">
+                          </div>
+						  </div>
+						  </div>
+						   <div class="col-md-4  no-padding ">
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label">Class</label></div>
+						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
+                                <input type="text" value="" name="service_code" class="text-box">
+                          </div>
+						  </div>
+						   <div class="clearfix">
+						  <div class="field-name"><label class="label">Opr</label></div>
+						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
+                                <input type="text" value="" name="service_code" class="text-box">
+                          </div>
+						  </div>
+						   <div class="clearfix">
+						  <div class="field-name"><label class="label">Lioyds</label></div>
+						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
+                                <input type="text" value="" name="service_code" class="text-box">
+                          </div>
+						  </div>
+						  </div>
+						   <div class="col-md-4  no-padding ">
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label">Call Sign</label></div>
+						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
+                                <input type="text" value="" name="service_code" class="text-box">
+                          </div>
+						  </div>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label">Length(m)</label></div>
+						  <div class=" no-padding margin-5  pull-left col-md-8 col-sm-8 col-xs-8">
+                                <input type="text" value="" name="service_code" class="text-box">
+                          </div>
+						  </div>
+						  </div>
+						  <div class="clearfix"></div>
+						  <div class="form-btn-group  clearfix"> 
+							<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><i class="fa fa-pencil-square-o"></i></span>
+						<div class="btn-value">Update </div>
+					   </button>
+					   
+										   </div>
+						  </form>
+						</div>
+						
+					  </div>
+					  
+					</div>
+				  </div>
+ <!-- Modal -->
+				  <div class="modal fade" id="batch_update" role="dialog">
+					<div class="modal-dialog">
+					
+					  <!-- Modal content-->
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title"><span class="icon"><i class="fa fa-pencil-square-o"></span></i>Batch Update</h4>
+						</div>
+						<div class="modal-body">
+						  <form>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label">Vessel Name</label></div>
+						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
+						   <input type="text" value="" name="service_code" class="text-box">
+													</div>
+						  <div class=" margin-5  pull-left set-empty">
+						  <span class="checkbox">
+														<input type="checkbox" class="css-checkbox" id="set-empty1">
+														<label for="set-empty1" class="css-label">Set Empty</label>
+						  </span>
+						  
+						  </div>
+						  </div>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label"> Type </label></div>
+						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
+						   <input type="text" value="" name="service_code" class="text-box">
+													</div>
+						  <div class=" margin-5  pull-left set-empty">
+						  <span class="checkbox">
+														<input type="checkbox" class="css-checkbox" id="set-empty2">
+														<label for="set-empty2" class="css-label">Set Empty</label>
+						  </span>
+						  
+						  </div>
+						  </div>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label"> Length </label></div>
+						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
+						   <input type="text" value="" name="service_code" class="text-box">
+													</div>
+						  <div class=" margin-5  pull-left set-empty">
+						  <span class="checkbox">
+														<input type="checkbox" class="css-checkbox" id="set-empty3">
+														<label for="set-empty3" class="css-label">Set Empty</label>
+						  </span>
+						  
+						  </div>
+						  </div>
+						  </form>
+						</div>
+						<div class="form-btn-group  clearfix"> 
+												<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><i class="fa fa-pencil-square-o"></i></span>
+						<div class="btn-value">Update </div>
+					   </button>
+					   
+										   </div>
+					  </div>
+					  
+					</div>
+				  </div>
                 </div>
                 <!-- Panel Content Table-grid -->
 
@@ -332,7 +456,7 @@
                                 <td>004</td>
                                 <td>455</td>
                             </tr>
-                            <tr>
+                            <tr class="selected">
                                 <td>
                                     <div class="checkbox">
                                         <input class="css-checkbox" type="checkbox">
@@ -362,7 +486,7 @@
                                 <td>004</td>
                                 <td>455</td>
                             </tr>
-                            <tr>
+                            <tr class="selected">
                                 <td>
                                     <div class="checkbox">
                                         <input class="css-checkbox" type="checkbox">
