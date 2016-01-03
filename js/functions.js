@@ -57,7 +57,7 @@ function ajaxCallBack(ajax_url,success_callback,failure_callback,params)
 /* function to get form element from dynamic form plugin */
 function getFormElement(){
 	
-	$(".flat-button").click(function(){
+	$(".call-formbtn").click(function(){
 		var ajaxUrl = SET_WEB_URL+"file/form_configuration.json";
 		ajaxCallBack(ajaxUrl,generateFormSuccess,generateFormError);
 	});
@@ -108,7 +108,7 @@ function generateFormSuccess(json_data){
 	var obj = jQuery.parseJSON(jsonString);
 	if (obj.errorcode == 0) {
 		$('.form-content').dynamicForm({
-			columns : obj.returnobject
+			formObject : obj.returnobject
 		});
 	}
 	
@@ -349,4 +349,11 @@ function appActionBlock()
 	$( ".app-action-group a" ).click(function(){
     $( ".app-action-form " ).slideToggle( "slow" );
 });
+}
+
+
+function generateDynamicElements(){
+	loadScript(SET_WEB_URL+"template/elements.js", function(){
+		$(".call-formbtn").html(btn_normal);
+	});
 }
