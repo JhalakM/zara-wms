@@ -106,7 +106,7 @@ function customException(){
 function generateFormSuccess(json_data){
 	var jsonString = jsonStringify(json_data);
 	var obj = jsonParse(jsonString);
-	if (obj.errorCode == 0) {
+	if (parseInt(obj.errorCode) == 0) {
 		$('.form-content').dynamicForm({
 			formObject : obj.returnObject
 		});

@@ -18,46 +18,10 @@ $.fn.dynamicForm = function(options){
 		formObject: [],
 	},options);
 	var methods = {
-		generateElements : function(elem_type){
-			 switch(elem_type) {
-				case "text":
-					
-					break;
-				case "textarea":
-						
-					break;
-				case "dropdown":
-						
-					break;				
-				case "radio":
-						
-					break;				
-				case "checkbox":
-						
-					break;
-				case "file":
-						
-					break;
-					
-			}
-		},
-		generateButtons : function(btn_type){
-			switch(btn_type) {
-				case "submit":
-						
-					break;
-				case "reset":
-						
-					break;				
-				case "cancel":
-						
-					break;				
-			}
-		},
 		generateForm : function(formData){
 			var formString = jsonStringify(formData);
 			
-			/*/$.each(formData, function(key, value) {
+			$.each(formData, function(key, value) {
 				caption = formData[key].caption;
 				formTag = jsonParse(jsonStringify(formData[key].formTag));
 				formCreate = document.createElement("form");
@@ -69,20 +33,12 @@ $.fn.dynamicForm = function(options){
 					"action" : formTag.action,
 				});
 				formElement = jsonParse(jsonStringify(formData[key].formElements));
-				for(var fe = 0; fe < formElement.length; fe++){
-					var element = document.createElement("input");
-					
-						//alert(formElement[fe]);
-					
-					
-					$(formCreate).append(element);
-					//methods.generateElements(formElement[fe].type);
-				}
+				var getElement = generateElements(formElement); 
+				$(formCreate).append(getElement);
 			});
-			$(self).append(formCreate);*/
+			$(self).append(formCreate);
 		},
 		init : function(){
-			alert("aaaa");
 			loadScript(SET_WEB_URL+"template/elements.js", function(){
 					methods.generateForm(defaults.formObject);
 					
