@@ -1870,13 +1870,73 @@ Alert message
 .ui-alert {
     margin-bottom: 20px;
     padding: 15px;
+	float: left;
+    width: 100%;
 }
 
 .validations-ui-text {
     display: inline-block;
+	color:#5c5c5c;
+	float:left;
+	width:74%;
 }
 .validations-ui.alert-icon {
     display: inline-block;
+}
+
+.validations-ui {
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+}
+
+.alert-icon {
+    background:#45b6b0;
+    border-radius: 20px;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+    width: 34px;
+}
+.validations-ui .alert-icon i {
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    padding: 5px;
+}
+.validations-ui-text h3 {
+    font-size: 15px;
+    font-weight: normal;
+
+}
+.validations-ui-text p {
+      font-size: 12px;
+}
+.close-icon {
+    display: table-row;
+    float: right;
+    padding: 10px 0;
+    vertical-align: middle;
+	color:#120e5b;
+}
+.alert-er-bg-color {
+border:1px solid #ff0000;
+}
+.alert-er-bg-color .alert-icon {
+    background: rgb(255, 0, 0) none repeat scroll 0 0;
+}
+
+.alert-wr-bg-color {
+border:1px solid #feaa30;
+}
+.alert-wr-bg-color .alert-icon {
+    background: #feaa30;
+}
+.ui-alert-normal {
+    border: 1px solid rgb(234, 234, 234);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 /*------------------------------------*\
