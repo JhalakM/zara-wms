@@ -1,85 +1,102 @@
 <!DOCTYPE html>
-
 <html lang="en" >
-<head>
-	<!-- Meta tags details -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
- 
-	<meta name="description" content="{{meta_dashboard_desc}}" data-replace="meta">
-	<meta name="keywords" content="{{meta_dashboard_keywords}}" data-replace="meta">
-	<meta name="title" content="{{meta_dashboard_title}}" data-replace="meta">
-	
-	<!-- Favicon icon -->
-	<link rel="icon" href="img/favicon.ico">
-    
-	<title data-replace="text">{{site_dashboard_title}}</title>
-    
-</head>
-
-<body  data-reference="page-loader">
-    
-	<!-- Header -->
-	<header>
-		<section class="header-top">
-		<div class="block-container clearfix">
-		<div class="col-md-8 no-padding">
-                  <div class="header-left">
-                     <div class="header-date">Monday, 10 August 2015</div>
-                     <div class="header-time">10:33:34 AM</div>
-                  </div>
-               </div>
-		<div class="col-md-4">
-		<div class="header-right">
-		<div class="user-profile">
-		<span class="user-name"></span>
-		<div class="user-profile-menu">
-		
-		</div></div>
-		<div class="top-bar-menu" >
-                       <div class="user-profile">
-							<a href="#" class="user-profile-link">Hello Zodiac <span class="arrow"><i class="fa fa-caret-down"></i></span> </a>
-							<div style="display: none;" class="user-profile-menu">
-							 <ul>
-							<li><a href="login.html">Logout</a></li>
-							<li><a href="# ">Change Password</a></li>
-							 </ul>
-						   </div>
-                     </div>
-                     </div>
-		</div>
-		</div>
-		</div>
-		</section>
-	</header>
-	<div class="sidebar" id="wrap">
+    <head>
+        <!-- Meta tags details -->
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+                    <meta name="description" content="{{meta_dashboard_desc}}" data-replace="meta">
+                        <meta name="keywords" content="{{meta_dashboard_keywords}}" data-replace="meta">
+                            <meta name="title" content="{{meta_dashboard_title}}" data-replace="meta">
+                                <!-- Favicon icon -->
+                                <link rel="icon" href="img/favicon.ico">
+                                    <title data-replace="text">{{site_dashboard_title}}</title>
+                                </head>
+                                <body  data-reference="page-loader">
+                                    <!-- Header -->
+                                    <header>
+                                        <section class="header-top">
+                                            <div class="block-container clearfix">
+                                                <div class="col-md-8 no-padding">
+                                                    <div class="header-left">
+                                                        <div class="header-date">Monday, 10 August 2015</div>
+                                                        <div class="header-time">10:33:34 AM</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="header-right">
+                                                        <div class="user-profile">
+                                                            <span class="user-name"></span>
+                                                            <div class="user-profile-menu"></div>
+                                                        </div>
+                                                        <div class="top-bar-menu" >
+                                                            <div class="user-profile">
+                                                                <a href="#" class="user-profile-link">Hello Zodiac 
+                                                                    
+                                                                    <span class="arrow">
+                                                                        <i class="fa fa-caret-down"></i>
+                                                                    </span>
+                                                                </a>
+                                                                <div style="display: none;" class="user-profile-menu">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="login.html">Logout</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="# ">Change Password</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="notify-msg">
+                                                                <a href="#">
+                                                                    <img src="img/icons/notification.png">
+                                                                        <span class="badge badge-danger badge-xs circle">3</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="settings">
+                                                                    <a href="#">
+                                                                        <img src="img/icons/settings.png">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="language">
+                                                                        <div class="dropdown-list ">
+                                                                            <div class="selected-listitem">English</div>
+                                                                            <ul>
+                                                                                <li value=""> English</li>
+                                                                                <li value="" rel="">Brazil</li>
+                                                                                <li value="" rel=""> French</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </header>
+                                            <div class="sidebar" id="wrap">
 		Sidebar
 	</div>
-	<div class="main">
+                                            <div class="main">
 	Body
 	</div>
-	<!-- End Header -->
-	<footer>
+                                            <!-- End Header -->
+                                            <footer>
 			2015 Copyright &copy; DP World. All rights reserved.
 		</footer>
-	
-    <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
-	<!-- Bootstrap Plugin Js -->
-	<script src="js/lib/bootstrap/bootstrap.min.js"></script>
-	
-	<script src="js/lib/blockUI/jquery.blockUI.js"></script>
-	<script src="js/lib/language/jquery.i18n.properties.js"></script>
-		
-	<!-- custom scrollbar plugin -->
-    <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	
-    <!-- Custom JavaScript -->
-    <script src="js/functions.js"></script>
-	<script src="js/initialize.js"></script>
-    <script src="js/init/table-grid.js"></script>
-	<script src="js/init/dashboard.js"></script>
-	
-</body>
-</html>
+                                            <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
+                                            <!-- Bootstrap Plugin Js -->
+                                            <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+                                            <script src="js/lib/blockUI/jquery.blockUI.js"></script>
+                                            <script src="js/lib/language/jquery.i18n.properties.js"></script>
+                                            <!-- custom scrollbar plugin -->
+                                            <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+                                            <!-- Custom JavaScript -->
+                                            <script src="js/functions.js"></script>
+                                            <script src="js/initialize.js"></script>
+                                            <script src="js/init/table-grid.js"></script>
+                                            <script src="js/init/dashboard.js"></script>
+                                        </body>
+                                    </html>
