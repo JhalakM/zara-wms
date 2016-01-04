@@ -17,15 +17,7 @@ $.fn.dynamicForm = function(options){
 		method : 'POST',
 		formObject: [],
 	},options);
-	//var addTypes = {};
-	
 	var methods = {
-		jsonStringify : function(jStringData){
-			return  JSON.stringify(jStringData);
-		},
-		jsonParse : function(jParseData){
-			return  jQuery.parseJSON(jParseData);
-		},
 		generateElements : function(elem_type){
 			 switch(elem_type) {
 				case "text":
@@ -63,10 +55,11 @@ $.fn.dynamicForm = function(options){
 			}
 		},
 		generateForm : function(formData){
-			var formString = methods.jsonStringify(formData);
-			$.each(formData, function(key, value) {
+			var formString = jsonStringify(formData);
+			
+			/*/$.each(formData, function(key, value) {
 				caption = formData[key].caption;
-				formTag = methods.jsonParse(methods.jsonStringify(formData[key].formTag));
+				formTag = jsonParse(jsonStringify(formData[key].formTag));
 				formCreate = document.createElement("form");
 	
 				$(formCreate).attr({
@@ -75,7 +68,7 @@ $.fn.dynamicForm = function(options){
 					"method" : formTag.method,
 					"action" : formTag.action,
 				});
-				formElement =  methods.jsonParse(methods.jsonStringify(formData[key].formElements));
+				formElement = jsonParse(jsonStringify(formData[key].formElements));
 				for(var fe = 0; fe < formElement.length; fe++){
 					var element = document.createElement("input");
 					
@@ -86,11 +79,13 @@ $.fn.dynamicForm = function(options){
 					//methods.generateElements(formElement[fe].type);
 				}
 			});
-			$(self).append(formCreate);
+			$(self).append(formCreate);*/
 		},
 		init : function(){
+			alert("aaaa");
 			loadScript(SET_WEB_URL+"template/elements.js", function(){
 					methods.generateForm(defaults.formObject);
+					
 			});
 		}
 	};
