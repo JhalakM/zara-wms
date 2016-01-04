@@ -38,7 +38,8 @@ Mobile Screen · width: 767px
 /*----------Table Grid-----------*/
 	.view, .page, .records {display: inline;float: none;margin-right: 5px;}
 	.pages-info div:before{ right: -1px;top: 0;}
-	.pagination-block {height: auto; line-height: 24px; padding: 15px;}
+	.pagination-block {height: auto; line-height: 24px;}
+	.pages-info {float: left;padding: 10px 15px;}
 /*---------- End Table Grid-----------*/
 
 }
@@ -59,7 +60,13 @@ iPhone 6 Plump landscape · width: 736px
 iPhone 6 landscape · width: 667px 
 \*------------------------------------*/
 
-@media (max-width:667px) {}
+@media (max-width:667px) {
+/*----------Table Grid-----------*/
+	.pages-info {  width: 321px;}
+	.view::before {background-color: transparent;}
+	
+/*---------- End Table Grid-----------*/
+}
 
 
 
@@ -69,16 +76,17 @@ iPhone 6 landscape · width: 600px
 \*------------------------------------*/
 
 @media (max-width:600px) {
-.form-action-field .label {
-    clear: both;
-    display: block;
-    float: none;
-    text-align: left;
-	height: 27px;
-}
-.form-btn-group{ margin-left: 0;}
-}
-
+/*----------Table Grid-----------*/
+	.form-action-field .label {
+		clear: both;
+		display: block;
+		float: none;
+		text-align: left;
+		height: 27px;
+	}
+	.form-btn-group{ margin-left: 0;}
+	}
+/*---------- End Table Grid-----------*/
 
 
 
@@ -88,22 +96,25 @@ iPhone 5 landscape · width: 568px
 \*------------------------------------*/
 
 @media (max-width:568px) {
-.form-action-field .no-padding {
-    margin-top: 5px;
-    width: 100%;
+/*----------Table Grid-----------*/
+	.form-action-field .no-padding {
+		margin-top: 5px;
+		width: 100%;
+	}
+	.app-action-form .no-padding {
+		width: 100%;
+	}
+	.app-action-group{display:none;}
+	.mobile-action-grp-btn{display:block;}
+	.mobile-action-grp-btn .app-action-group {
+		display: block;
+	}
+	.pagination-block {padding: 0 0 10px 0}
+	.grid-action-group{display:none;}
+	.pages-info {width: 100%;}
+	.view::before {background-color: #5c5c5c;}
+/*---------- End Table Grid-----------*/
 }
-.app-action-form .no-padding {
-    width: 100%;
-}
-.app-action-group{display:none;}
-.mobile-action-grp-btn{display:block;}
-.mobile-action-grp-btn .app-action-group {
-    display: block;
-}
-.pagination-block {padding: 0 0 10px 0}
-.grid-action-group{display:none;}
-}
-
 
 
 
@@ -122,16 +133,20 @@ iPhone 6 Plump portrait · width: 414px
 Android (Nexus 4) portrait · width: 384px
 \*------------------------------------*/
 
-@media (max-width:384px) {}
-
-
+@media (max-width:384px) {
+/*----------Table Grid-----------*/
+	
+/*---------- End Table Grid-----------*/
+}
 
 
 /*------------------------------------*\
 iPhone 6 portrait · width: 375px
 \*------------------------------------*/
 
-@media (max-width:375px) {}
+@media (max-width:375px) {
+	.view::before {background-color: transparent;}
+}
 
 
 

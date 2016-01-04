@@ -1,297 +1,152 @@
-{  
-   "formTag":{  
-      "method":"POST / GET / PUT / DELETE",
-      "name":"formName",
-      "id":"formId",
-      "action":"submitUrl"
-   },
-   "formElements":[  
-      {  
-        # Section contains info about
-		// Text Box
-		"label":{  
-            "for":"txtFirstName",
-            "display_name":"First Name"
-         },
-         "type":"text",
-         "name":"txtFirstName",
-         "id":"first_name",
-         "placeholder":"Enter First Name",
-         "tabindex":"1",
-         "value":"Xyz",
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please enter name"
-            },
-            {  
-               "rule":"onlyLetter",
-               "message":"Please enter only letters"
-            }
-         ]
-      },
-	  {  
-        # Section contains info about
-		// Text Area
-		"label":{  
-            "for":"txtAddress",
-            "display_name":"Address"
-         },
-         "type":"textarea",
-         "name":"txtAddress",
-         "id":"user_address",
-         "placeholder":"Enter Current Address",
-         "tabindex":"1",
-         "rows":"10",
-         "cols":"5",
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please enter address"
-            }
-         ]
-      },
-      {  
-        # Section contains info about
-		// Text Box - Email Validation
-		"label":{  
-            "for":"txtEmailId",
-            "display_name":"Email Address"
-         },
-         "type":"text",
-         "name":"txtEmailId",
-         "id":"email_id",
-         "placeholder":"Enter Email Address",
-         "tabindex":"1",
-         "value":"xyz@gmail.com",
-         "format":"email",
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please enter email address"
-            },
-            {  
-               "rule":"email",
-               "message":"Please enter valid email address"
-            }
-         ]
-      },
-      {  
-        # Section contains info about
-		// Radio 
-		"label":{  
-            "for":"status",
-            "display_name":"Status"
-         },
-         "type":"radio",
-         "name":"rdoStatus",
-         "id":"status_radio",
-		  "additional":{  
-             "switch":true
-         },
-         "values":[  
-            {  
-               "label":{  
-                  "for":"active",
-                  "display_name":"Active"
-               },
-               "value":"active",
-               "checked":"checked"
-            },
-            {  
-               "label":{  
-                  "for":"inactive",
-                  "display_name":"InActive"
-               },
-               "value":"inactive"
-            },
-            {  
-               "label":{  
-                  "for":"disabled",
-                  "display_name":"Disabled"
-               },
-               "value":"disabled"
-            }
-         ],
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please select atleast one status"
-            }
-         ]
-      },
-      {  
-        # Section contains info about
-		// Checkbox
-		"label":{  
-            "for":"days of GP",
-            "display_name":"Days of GP"
-         },
-         "type":"checkbox",
-         "name":"chkDays",
-         "id":"days_checkbox",
-         "values":[  
-            {  
-               "label":{  
-                  "for":"days",
-                  "display_name":"Days"
-               },
-               "value":"days"
-            },
-            {  
-               "label":{  
-                  "for":"week",
-                  "display_name":"Week"
-               },
-               "value":"week",
-               "checked":"checked"
-            },
-            {  
-               "label":{  
-                  "for":"month",
-                  "display_name":"Month"
-               },
-               "value":"month"
-            }
-         ],
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please select atleast one checkbox"
-            }
-         ]
-      },
-      {  
-        # Section contains info about
-		// Dropdown - Multiple/Single
-		"label":{  
-            "for":"drop box operation",
-            "display_name":"Operations"
-         },
-         "type":"dropdown",
-         "name":"drpboxOperation",
-         "id":"box_operation",
-         "multiple":true,
-         "values":[  
-            {  
-               "key":102,
-               "value":"EMC",
-               "selected":"true"
-            },
-            {  
-               "key":105,
-               "value":"GAL"
-            },
-            {  
-               "key":130,
-               "value":"HAP"
-            }
-         ],
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please select atleast one value"
-            }
-         ]
-      },
-      {  
-        # Section contains info about
-		// Textbox - Date 
-		"label":{  
-            "for":"start date",
-            "display_name":"Start Date"
-         },
-         "type":"text",
-         "name":"dtStartDate",
-         "id":"start_date",
-         "placeholder":"Select Start Date",
-         "format":"date",
-         "additional":{  
-            "dateFormat":"d/m/yyyy",
-            "minDate":"24/12/2015"
-         },
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please select any date"
-            }
-         ]
-      },
-      {  
-        # Section contains info about
-		// Textbox - Integer/Float 
-		"label":{  
-            "for":"total weight",
-            "display_name":"Total Weight"
-         },
-         "type":"text",
-         "name":"txtTotalWeight",
-         "id":"total_weight",
-         "placeholder":"Enter total weight",
-         "additional":{  
-            "precision":"2",
-            "min":"1",
-            "max":"17.10"
-         },
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please enter weight"
-            }
-         ]
-      },
-      {  
-        # Section contains info about
-		// File - Image Upload 
-		"label":{  
-            "for":"select image",
-            "display_name":"Select Image"
-         },
-         "type":"file",
-         "name":"imgProfile",
-         "id":"profile_pic",
-         "multiple":true,
-         "validation":[  
-            {  
-               "rule":"required",
-               "message":"Please select image"
-            },
-            {  
-               "rule":"accept",
-               "message":"Please select valid file type"
-            }
-         ],
-         "additional":{  
-            "image":[  
-               {  
-                  "src":"http://zara.com/profile.png",
-                  "alt":"profile-pic",
-                  "height":250,
-                  "width":250
-               }
-            ],
-            "accept":"jpg,png",
-            "size":"5MB"
-         }
-      }
-   ],
-   "formButtons":[  
-      {  
-         "submit":{  
-            "name":"btnSubmit",
-            "id":"btnSubmit",
-            "value":"Submit / Save"
-         },
-         "reset":{  
-            "name":"btnReset",
-            "id":"btnReset",
-            "value":"Reset"
-         },
-         "cancel":{  
-            "name":"btnCancel",
-            "id":"btnCancel",
-            "value":"Cancel"
-         }
-      }
-   ]
+{    
+	"errorcode": 0,
+	"returnobject": {
+		"forminfo":{  
+			"caption":"Add Container Inventory",
+			"formTag":{
+				"method":"POST",
+				"name":"addContainerInventory",
+				"action":"../containerInventory/addContainerInventory"
+			},
+			"formElements":[  
+			   	{  
+				  "labelkey": "containerInventory.containerNumber",
+			        "type":"text",
+			        "name":"containerNumber",
+			         "tabindex":"1",
+			         "defaultvalue":"",
+			         "validation":"r"
+			      },
+			      {  
+			        "labelkey": "containerInventory.containerCycle",
+			        "type":"text",
+			        "name":"containerCycle",
+			         "tabindex":"2",
+			         "defaultvalue":"",
+			         "validation":"r,n"
+			      },
+	  			{  
+		              "labelkey": "containerInventory.email",
+			        "type":"text",
+			        "name":"email",
+			         "tabindex":"3",
+			         "defaultvalue":"",
+			         "validation":"r,e"
+			    },
+			    {  
+				"labelkey": "containerInventory.vgm",
+			      "type":"text",
+			      "name":"vgm",
+			      "tabindex":"4",
+			      "defaultvalue":"",
+			      "validation":"r,n"
+			    },
+		          {  
+			      "labelkey": "containerInventory.address",
+			      "type":"textarea",
+			      "name":"address",
+			      "tabindex":"5",
+				"rows":"10",
+				"cols":"5",
+			      "defaultvalue":"",
+			      "validation":""
+			   },
+	  		    {  
+				"labelkey": "containerInventory.shippingStatus",
+			      "type":"dropdown",
+			      "name":"shippingStatus",
+			      "tabindex":"6",
+			      "defaultvalue":[
+			            {  
+			               "key":102,
+			               "value":"Departed"
+			            },
+			            {  
+			               "key":105,
+			               "value":"Not Departed"
+			            }
+				],
+			      "validation":"r"
+			  },
+      			  {  
+		          “labelkey":"containerInventory.containerStatus",
+		          "type":"radio",
+			    "name":"containerStatus",
+		          "tabindex":"7",
+			    "switch":true,
+		          "defaultvalue":[  
+				{  
+		               "labelkey":"containerInventory.containerStatus.active",
+            			   "value":"active"
+            			},
+		            {  
+            			   "labelkey":"containerInventory.containerStatus.inActive",
+		               "value":"InActive",
+            			},
+			     ],
+		         "validation":"r"
+		      },
+		      {  
+			  "labelkey":"containerInventory.daysOfGP",
+		        "type":"checkbox",
+		        "name":"daysOfGP",
+		        "tabindex":"8",
+		        "defaultvalue":[  
+            			{  
+		               "label":"containerInventory.daysOfGP.Days",
+            			   "value":"days"
+		            },
+            			{  
+		               "label":"containerInventory.daysOfGP.Week",
+            			   "value":"week"
+            			},
+		            {  
+            			   "label":"containerInventory.daysOfGP.Month",
+		               "value":"month"
+            			}
+		         ],
+		       "validation":"r"
+		      },
+		      {  
+			 "labelkey":"containerInventory.vgmMeasuredDate",
+		       "type":"text",
+		       "name":"vgmMeasuredDate",
+			 "tabindex":"9",
+      			 "format":"date",
+			 "defaultvalue":"",
+		       "dateFormat":"d/m/yyyy",
+		       "minDate":"24/12/2015",
+		       "validation":"r"
+		      },
+		      {  
+			 "labelkey":"containerInventory.containerImage",
+		       "type":"file",
+		       "name":"containerImage",
+			 "tabindex":"10",
+		       "multiple":true,
+		       "validation":"r",
+		       "image":{  
+				"accept":"jpg,png",
+				"size":"5MB"
+		         }
+     		      }
+	   ],
+   	"formButtons":[  
+      		{  
+         		"submit":{  
+	            		"keyname":"btnSubmit",
+      		      		"keyvalue":"containerInventory.btnAddContainerInventory"
+	      		},
+      			"reset":{  
+		            "keyname":"btnReset",
+      			      "keyvalue":"containerInventory.btnResetContainerInventory"
+	         	},
+		      "cancel":{  
+            			“keyname":"btnCancel",
+	            		"keyvalue":"containerInventory.btnCancelContainerInventory"
+         		}
+      		}
+   	  ]
+	}
+   }
 }

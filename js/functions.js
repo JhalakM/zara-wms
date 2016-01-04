@@ -106,9 +106,15 @@ function customException(){
 function generateFormSuccess(json_data){
 	var jsonString = JSON.stringify(json_data);
 	var obj = jQuery.parseJSON(jsonString);
+<<<<<<< HEAD
 	if (obj.errorCode == 0) {
 		$('.form-content').dynamicForm({
 			formObject : obj.returnObject
+=======
+	if (obj.errorcode == 0) {
+		$('.form-content').dynamicForm({
+			formObject : obj.returnobject
+>>>>>>> 06d20170dac9df0cddf1a34a78002f5ef03a3699
 		});
 	}
 	

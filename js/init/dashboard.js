@@ -4,9 +4,15 @@
 */
 
 $(document).ready(function(){
+	linkDropdown();
 });
 
 
 
 $(window).load(function(){
+});
+
+
+$(window).scroll(function(){
+	sidebarScroll();
 });
