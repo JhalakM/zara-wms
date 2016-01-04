@@ -57,12 +57,11 @@ function ajaxCallBack(ajax_url,success_callback,failure_callback,params)
 /* function to get form element from dynamic form plugin */
 function getFormElement(){
 	
-	$(".dynamic-call").click(function(){
-		$('.form-content').dynamicForm({
-			//var ajaxURL = SET_WEB_URL+"file/form_configuration.json";
-			//ajaxCallBack(ajaxURL,generateFormSuccess,generateFormError);
-		});
+	$(".call-formbtn").click(function(){
+		var ajaxUrl = SET_WEB_URL+"file/form_configuration.json";
+		ajaxCallBack(ajaxUrl,generateFormSuccess,generateFormError);
 	});
+	
 }
 
 /* call plugin for i18n language tanslation library */
@@ -78,7 +77,13 @@ function languagePlugin(lang){
 			// available as JS vars/functions and as a map
 			
 			/* variable for set loader message */
-			LOADER_MESSAGE = "<h4>"+$.i18n.prop('loading_message')+"</h4>";
+			LOADER_MESSAGE = "<div class='white large'><div class='ispinner white large animating'>"+
+							  "<div class='ispinner-blade'></div><div class='ispinner-blade'></div>"+
+							  "<div class='ispinner-blade'></div><div class='ispinner-blade'></div>"+
+							  "<div class='ispinner-blade'></div><div class='ispinner-blade'></div>"+
+							  "<div class='ispinner-blade'></div><div class='ispinner-blade'></div>"+
+							  "</div></div>"+
+							  "<h4></h4>";
 
 			getTemplateParams();
 		}
@@ -99,7 +104,14 @@ function customException(){
 
 /* function to call dynamic form plugin for success */
 function generateFormSuccess(json_data){
-	alert(json_data);
+	var jsonString = JSON.stringify(json_data);
+	var obj = jQuery.parseJSON(jsonString);
+	if (obj.errorCode == 0) {
+		$('.form-content').dynamicForm({
+			formObject : obj.returnObject
+		});
+	}
+	
 }
 
 /* function to call dynamic form plugin for error */
@@ -168,9 +180,9 @@ function getTemplateParams(){
 	  switch(replaceWith) {
 		case "meta":
 			element.attr("content",element.attr("content").replace(/{{(.*)}}/g,function(match, contents, offset, s)
-					{
-						return $.i18n.prop(contents);
-				 }));
+			{
+				return $.i18n.prop(contents);
+			}));
 			break;
 		default:
 			element.text(element.text().replace(/{{(.*)}}/g,function(match, contents, offset, s)
@@ -214,14 +226,14 @@ function generateBlockUI(){
 			
 			break;
 		default:
-			$.blockUI({ overlayCSS: { backgroundColor: '#00f' },message: LOADER_MESSAGE }  ); 
+			$.blockUI({ overlayCSS: { backgroundColor: '#000' },message: LOADER_MESSAGE }  ); 
 		}
 	});
 }
 
 /* function to unblock block UI element */
 function unblockUI(){
-	setTimeout($.unblockUI, 5000); 
+	setTimeout($.unblockUI, 1000); 
 }
 
 /* function to load javascript file in run time */
@@ -314,3 +326,47 @@ function datepicker()
 	  dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // For formatting
 	});
 }
+
+function sidebarScroll()
+{
+	 var sticky = $('.sidebar'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 107) sticky.addClass('sticky');
+  else sticky.removeClass('sticky');
+  
+}
+
+function actionBlock()
+{
+	$( ".grid-action-group a" ).click(function(){
+    $( ".grid-action-form" ).slideToggle( "slow" );
+});
+}
+
+function appActionBlock()
+{
+	$( ".app-action-group a" ).click(function(){
+    $( ".app-action-form " ).slideToggle( "slow" );
+});
+}
+
+
+//dp-menu action
+function linkDropdown()
+{
+				$(".user-profile").click(function(){
+				 if($(".user-profile-menu").css('display')=="none"){
+					$(".user-profile-menu").show();
+				 }else{
+					$(".user-profile-menu").hide();
+				 }
+				});}
+
+
+function generateDynamicElements(){
+	loadScript(SET_WEB_URL+"template/elements.js", function(){
+		$(".call-formbtn").html(btn_normal);
+	});
+}
+
