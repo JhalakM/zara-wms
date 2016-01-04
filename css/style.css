@@ -1893,7 +1893,6 @@ Forms Element
 }
 
 
-
 /*------------------------------------*\
 Header
 \*------------------------------------*/
@@ -1901,8 +1900,7 @@ Header
 header {
     background: #555 none repeat scroll 0 0 !important;
     height: 106px;
-	color:#fff;
-    
+    color: #fff;
 }
 .header-top {
     background: #ffffff none repeat scroll 0 0;
@@ -1926,8 +1924,8 @@ header {
     opacity: 0.7;
     padding-left: 25px;
     padding-right: 10px;
-	   line-height: 14px;
-	   padding-bottom: 5px;
+    line-height: 14px;
+    padding-bottom: 5px;
 }
 .header-time {
     background: rgba(0, 0, 0, 0) url("../img/clock-icon.png") no-repeat scroll 0 0;
@@ -1943,15 +1941,66 @@ header {
 .header-right {
     float: right;
 }
-.user-profile-menu .dropdown-list {
-    height: 16px;
-    width: 16px;
-}
-.user-name {
-    color: #5c5c5c;
-    display: inline-block;
+.top-bar-menu {
     float: left;
+    height: 19px;
+    margin-top: -5px;
+    padding-right: 9px;
+}
+.user-profile {
+    float: left;
+    position: relative;
+}
+.user-profile > a {
+    color: #474747;
     font-size: 11px;
+    text-decoration: none;
+	display: block;
+}
+.user-profile .user-profile-menu {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #dadada;
+    display: none;
+    left: -16px;
+    position: absolute;
+    top: 26px;
+    width: 110px;
+    z-index: 99;
+}
+.user-profile-menu > ul {
+    margin: 0;
+    padding: 0;
+}
+.user-profile-menu > ul::before {
+    border-bottom: 5px dashed #dadada;
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    content: "";
+    left: 48%;
+    position: absolute;
+    top: -6px;
+}
+.user-profile-menu li {
+    border-bottom: 1px solid #e6e6e6;
+    color: #5c5c5c;
+    height: 30px;
+    line-height: 20px;
+    list-style: outside none none;
+    padding: 3px 10px 10px;
+}
+.user-profile-menu li a {
+    color: #5c5c5c;
+    display: block;
+    font-size: 11px;
+    text-decoration: none;
+}
+.arrow {
+    border: 1px solid #5c5c5c;
+    display: inline-block;
+    height: 18px;
+    line-height: 15px;
+    text-align: center;
+    width: 18px;
 }
 
 /*------------------------------------*\
