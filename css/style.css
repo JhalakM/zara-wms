@@ -244,6 +244,18 @@ button
     background-color: #d98a18;
     border: 1px solid #d98a18;
 }
+
+.uie-btn-disable{
+    background-color: #f6f6f6;
+    color: #c5c5c5;
+}
+.uie-btn-disable:hover {
+    cursor: no-drop;
+	background-color: #f6f6f6;
+	border: 1px solid #d8d8d8;
+	box-shadow:none;
+	color: #c5c5c5;
+}
 .w-xs {
     min-width: 80px;
 }
