@@ -15,8 +15,15 @@
 
     <!-- Favicon icon -->
     <link rel="icon" href="img/favicon.ico">
-
     <title data-replace="text">{{site_login_title}}</title>
+	<link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/lib/font/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/lib/scrollbar/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/lib/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="css/assets/blue/style.css">
 </head>
 
 <body>
@@ -322,6 +329,24 @@
                     </div>
                 </form>
             </div>
+			<div class="col-md-12 panel">
+                <h2 class="panel-title">Date and Time Piker</h2>
+                <p>
+                    </br>
+                </p>
+                <div class="datepicker-row col-md-4">
+                    <label class="label">Date:</label>
+                    <input type="text" id="datepicker" class="text-box"></input>
+                </div>
+
+                <div id="datetimepicker3" class="input-append col-md-4">
+                    <label class="label">Time:</label>
+                    <input data-format="hh:mm:ss" type="text" class="text-box add-on" data-date-icon="icon-calendar"></input>
+                    <span class="add-on">
+						<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					</span>
+                </div>
+            </div>
             <div class="col-md-12 panel">
                 <h2 class="panel-title">Accordion List </h2>
                 <p>
@@ -364,24 +389,7 @@
                 </div>
 
             </div>
-			<div class="col-md-12 panel">
-                <h2 class="panel-title">Date and Time Piker</h2>
-                <p>
-                    </br>
-                </p>
-                <div class="datepicker-row col-md-4">
-                    <label class="label">Date:</label>
-                    <input type="text" id="datepicker" class="text-box"></input>
-                </div>
-
-                <div id="datetimepicker3" class="input-append col-md-4">
-                    <label class="label">Time:</label>
-                    <input data-format="hh:mm:ss" type="text" class="text-box add-on" data-date-icon="icon-calendar"></input>
-                    <span class="add-on">
-						<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-					</span>
-                </div>
-            </div>
+			
             <div class="col-md-12 panel">
                 <h2 class="panel-title">Group Button </h2>
                 <p>
@@ -422,9 +430,77 @@
                                     </li>
                                 </ul>
                             </div>
+							<button class="flat-button">Flat Button</button>
+							<a class="flat-button" href="#">Flat Button</a>
 
                 </div>
             </div>
+			<div class="col-md-12 panel"> 
+				<h2 class="panel-title">Error message</h2>
+				<div class="row">
+					 
+                <p>
+                    </br>
+                </p>
+				<div class="col-md-6">
+					<div class="ui-alert ui-alert-success clearfix">
+						<div class="validations-ui">
+							<div class="alert-icon alert-bg-color"><i class="fa fa-check"></i></div>
+						</div>
+						<div class="validations-ui-text">
+							<h3>Success</h3>
+							<p>A message may be formatted to display success message</p>
+							
+						</div>
+						<div class="close-icon">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+
+					<div class="ui-alert alert-er-bg-color clearfix">
+						<div class="validations-ui">
+							<div class="alert-icon"><i class="fa fa-times"></i></div>
+						</div>
+						<div class="validations-ui-text">
+							<h3>Error</h3>
+							<p>A message may be formatted to display success message</p>
+							
+						</div>
+						<div class="close-icon">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+
+					<div class="ui-alert alert-wr-bg-color clearfix">
+						<div class="validations-ui">
+							<div class="alert-icon alert-bg-color"><i class="fa fa-exclamation"></i></div>
+						</div>
+						<div class="validations-ui-text">
+							<h3>Warning</h3>
+							<p>A message may be formatted to display success message</p>
+							
+						</div>
+						<div class="close-icon">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+
+					<div class="ui-alert ui-alert-normal clearfix">
+						<div class="validations-ui">
+							<div class="alert-icon alert-bg-color"><i class="fa fa-envelope"></i></div>
+						</div>
+						<div class="validations-ui-text">
+							<h3>Normal Message </h3>
+							<p>A message may be formatted to display success message</p>
+							
+						</div>
+						<div class="close-icon">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
 		</section>
     </div>
     <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
