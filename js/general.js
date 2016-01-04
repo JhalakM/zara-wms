@@ -37,44 +37,70 @@ function jsonParse(jParseData){
 }
 
 function generateElements(formElement){
-	var getElementData;
+	var getElement = "";
+	var element;
 	var formWrapper;
+	
 	for(var fe = 0; fe < formElement.length; fe++){
-		var element = document.createElement("input");
-		var labelElement = document.createElement("label");
 		
-		$(labelElement).text($.i18n.prop(formElement[fe].labelkey));
-		$(element).attr({
-			"name" : formElement[fe].name,
-		});
 		switch(formElement[fe].type) {
 			case "text":
-				
+				element = $(ele_input).attr({
+					"class" : "text-box",
+					"name"    : formElement[fe].name,
+					"tabindex": formElement[fe].tabindex,
+					"type"    : formElement[fe].type
+				});
 				break;
 			case "textarea":
-					
+				element = $(ele_textarea).attr({
+					"name"    : formElement[fe].name,
+					"tabindex": formElement[fe].tabindex,
+					"type"    : formElement[fe].type
+				});	
 				break;
 			case "dropdown":
-					
+				var input = $(ele_dropdown).find("input");
+				element = $(input).attr({
+					"name"    : formElement[fe].name,
+					"tabindex": formElement[fe].tabindex,
+				});
+				
 				break;				
 			case "radio":
-					
+				element =  $(ele_input).attr({
+					"name"    : formElement[fe].name,
+					"tabindex": formElement[fe].tabindex,
+					"type"    : formElement[fe].type
+				});		
 				break;				
 			case "checkbox":
-					
+				element =  $(ele_input).attr({
+					"class" : "css-checkbox",
+					"name"    : formElement[fe].name,
+					"tabindex": formElement[fe].tabindex,
+					"type"    : formElement[fe].type
+				});		
 				break;
 			case "file":
-					
+				element = $(ele_input).attr({
+					"name"    : formElement[fe].name,
+					"tabindex": formElement[fe].tabindex,
+					"type"    : formElement[fe].type
+				});		
 				break;
 				
 		}
-		getElementData = element;
+		var html = returnObject(element);
+		getElement += html;
 	}
-	return getElementData;
+	return getElement;
 	
 }
 
-
+function returnObject(obj){
+	return $('<div>').append(obj.clone()).html();
+}
 function generateButtons(btn_type){
 	switch(btn_type) {
 		case "submit":

@@ -320,7 +320,7 @@ function generateSVG() {
 }
 
 /* function to generate date picker */
-function datepicker() {
+function datePicker() {
     $("#datepicker").datepicker({
         changeMonth: true,
         changeYear: true,
@@ -368,7 +368,7 @@ function generateDynamicElements() {
     });
 }
 
-function datetimepicker() {
+function dateTimePicker() {
     $('#datetimepicker3').datetimepicker({
         pickDate: false
     });
