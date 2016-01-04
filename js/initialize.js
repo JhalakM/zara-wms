@@ -12,4 +12,5 @@ $(document).ready(function(){
 $(window).load(function(){
 	generateBlockUI();
 	unblockUI();
+	generateDynamicElements();
 });
