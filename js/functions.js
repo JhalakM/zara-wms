@@ -104,11 +104,11 @@ function customException(){
 
 /* function to call dynamic form plugin for success */
 function generateFormSuccess(json_data){
-	var jsonString = JSON.stringify(json_data);
-	var obj = jQuery.parseJSON(jsonString);
-	if (obj.errorcode == 0) {
+	var jsonString = jsonStringify(json_data);
+	var obj = jsonParse(jsonString);
+	if (obj.errorCode == 0) {
 		$('.form-content').dynamicForm({
-			formObject : obj.returnobject
+			formObject : obj.returnObject
 		});
 	}
 	
@@ -193,19 +193,7 @@ function getTemplateParams(){
 	});
 }
 
-/* function to load css dynamically */
-function loadCSS(css_array){
-	var css = "";
-	for(i=0;i<css_array.length;i++){
-		css += ' <link href="css/'+css_array[i]+'" rel="stylesheet">';
-	}
-	
-	css += '<link href="'+current_theme_css+'" rel="stylesheet">';
-	
-	$('head').append(css);
-}
-
-/* function to  Display Show None  css dynamically */
+/* function to  Display Show None css dynamically */
 function toggle_visibility(className) {
   var className = $("."+className);
    if($(className).css('display') == 'block')
@@ -234,29 +222,6 @@ function generateBlockUI(){
 /* function to unblock block UI element */
 function unblockUI(){
 	setTimeout($.unblockUI, 1000); 
-}
-
-/* function to load javascript file in run time */
-function loadScript(url, callback){
-
-    var script = document.createElement("script")
-    script.type = "text/javascript";
-
-    if (script.readyState){  //IE
-        script.onreadystatechange = function(){
-            if (script.readyState == "loaded" ||
-                    script.readyState == "complete"){
-                script.onreadystatechange = null;
-                callback();
-            }
-        };
-    } else {  //Others
-        script.onload = function(){
-            callback();
-        };
-    }
-    script.src = url;
-    document.getElementsByTagName("body")[0].appendChild(script);
 }
 
 /* function to cerate captcha code */
@@ -369,4 +334,3 @@ function generateDynamicElements(){
 		$(".call-formbtn").html(btn_normal);
 	});
 }
-
