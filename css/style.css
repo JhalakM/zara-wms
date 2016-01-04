@@ -1329,9 +1329,6 @@ border-left: 5px solid #ffffff;
     line-height: 20px;
     margin: 20px 0;
 }
-.accordion-close .accordion-content {
-    display: none;
-}
 .accordion-panel.active h3 {
     color: #2991d6;
 }
@@ -1359,6 +1356,9 @@ color: #2991d6;
     right: 10px;
     top: 11px;
 
+}
+.accordion-header:hover {
+    cursor: pointer;
 }
 /*------------------------------------*\
 Date and time Piker
