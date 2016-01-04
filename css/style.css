@@ -122,6 +122,9 @@ input.css-checkbox[type="checkbox"]:checked + label.css-label {
     float: left;
    
 }
+.css-checkbox {
+}
+    height: 18px;
 /*------- Forms Element Radio Button -------*/
 
 .radio-btn input {
@@ -1951,7 +1954,9 @@ Table
 .table-grid th.more-field-show  span{
     padding: 0 0 0 10px;color:#ffffff;
 }
-
+.table-grid td.more-field-show {
+    padding: 0;
+}
 /*------------------------------------*\
 Forms Element 
 \*------------------------------------*/
@@ -1998,7 +2003,7 @@ header {
 }
 .header-top {
     background: #ffffff none repeat scroll 0 0;
-    border-bottom: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d8d8d8;
     padding: 10px 0 7px;
 }
 .block-container {
@@ -2011,8 +2016,8 @@ header {
 }
 .header-date {
     background: rgba(0, 0, 0, 0) url("../img/calender-icon.png") no-repeat scroll 0 0;
-    border-right: 1px solid #e7e7e7;
-    color: #474747;
+    border-right: 1px solid #d8d8d8;
+    color: #5c5c5c;
     float: left;
     font-size: 11px;
     opacity: 0.7;
@@ -2023,7 +2028,7 @@ header {
 }
 .header-time {
     background: rgba(0, 0, 0, 0) url("../img/clock-icon.png") no-repeat scroll 0 0;
-    color: #474747;
+    color: #5c5c5c;
     float: right;
     font-size: 11px;
     line-height: 14px;
@@ -2038,22 +2043,23 @@ header {
 .top-bar-menu {
     float: left;
     height: 19px;
-    margin-top: -5px;
     padding-right: 9px;
 }
 .user-profile {
+    border-right: 1px solid #d8d8d8;
     float: left;
+    padding-right: 10px;
     position: relative;
 }
 .user-profile > a {
-    color: #474747;
+    color: #5c5c5c;
     font-size: 11px;
     text-decoration: none;
 	display: block;
 }
 .user-profile .user-profile-menu {
     background: #ffffff none repeat scroll 0 0;
-    border: 1px solid #dadada;
+    border: 1px solid #d8d8d8;
     display: none;
     left: -16px;
     position: absolute;
@@ -2066,7 +2072,7 @@ header {
     padding: 0;
 }
 .user-profile-menu > ul::before {
-    border-bottom: 5px dashed #dadada;
+    border-bottom: 5px dashed #d8d8d8;
     border-left: 4px solid rgba(0, 0, 0, 0);
     border-right: 4px solid rgba(0, 0, 0, 0);
     content: "";
@@ -2075,7 +2081,7 @@ header {
     top: -6px;
 }
 .user-profile-menu li {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #d8d8d8;
     color: #5c5c5c;
     height: 30px;
     line-height: 20px;
@@ -2095,8 +2101,62 @@ header {
     line-height: 15px;
     text-align: center;
     width: 18px;
+	font-size: 12px;
 }
-
+.notify-msg {
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    height: 16px;
+    padding: 2px 24px 2px 11px;
+    width: 32px;
+}
+.notify-msg .badge {
+    background: #e91e63 none repeat scroll 0 0;
+    border-radius: 50px;
+    bottom: 33px;
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 7px;
+    padding: 2px 5px;
+    position: relative;
+    right: -6px;
+}
+.settings {
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    height: 17px;
+    padding: 0 10px;
+}
+.settings a img {
+    height: 18px;
+    position: relative;
+    width: 18px;
+}
+.language {
+    float: left;
+}
+.language .dropdown-list {
+    border: medium none;
+    color: #5c5c5c;
+    font-size: 11px;
+    height: 22px;
+    line-height: 17px;
+}
+.language  .selected-listitem::before {
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-top: 5px solid #373374;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+.language  .dropdown-list ul{ top: 18px;}
+.language .dropdown-list ul li{color: #5c5c5c;
+    display: block;
+    font-size: 11px;
+    text-decoration: none;}
+	
 /*------------------------------------*\
 Sidebar
 \*------------------------------------*/
