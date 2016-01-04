@@ -253,10 +253,10 @@ button
 }
 .uie-btn-disable:hover {
     cursor: no-drop;
-	background-color: #f6f6f6;
-	border: 1px solid #d8d8d8;
-	box-shadow:none;
-	color: #c5c5c5;
+ background-color: #f6f6f6;
+ border: 1px solid #d8d8d8;
+ box-shadow:none;
+ color: #c5c5c5;
 }
 .w-xs {
     min-width: 80px;
@@ -293,7 +293,7 @@ button
 .form-btn-group {
     clear: both;
     margin-top: 0px;
- 
+    overflow: hidden;
     text-align: center;
     margin-left: 100px;
     margin-top: 10px;
@@ -419,7 +419,7 @@ a.button:focus {
     display: inline-block;
     float: left;
     height: 100%;
-    line-height: 40px;
+    line-height: 38px;
     text-align: center;
     width: 40px;
 }
@@ -1712,15 +1712,12 @@ Panel
     font-size: 12px;
 }
 .page a {
-    border: 1px solid #d8d8d8;
+    border: 1px solid #D8D8D8;
     color: #120e5b;
     display: inline-block;
-    float: left;
     font-size: 9px;
     height: 20px;
-    line-height: 16px;
-    margin-right: 3px;
-    margin-top: 5px;
+    line-height: 18px;
     text-align: center;
     width: 20px;
 }
@@ -1734,51 +1731,43 @@ Panel
     text-align: center;
     width: auto
 }
-.view, .page, .records {
+.view,
+.page,
+.records {
     float: left;
-    line-height: 30px;
     margin-right: 15px;
-}
-.page span:first-child{
-    float: left;
-    margin-right: 5px;
 }
 .pagination-block {
     height: 45px;
-   
+    line-height: 45px;
 }
 .pages-info {
-    float: left;
-    padding: 10px;
     position: relative;
+    float: left;
     width: auto;
+    padding: 0 10px;
 }
 .page,
 .view {
     position: relative;
 }
-.page > span {
-    float: left;
-}
-.page::before, .view::before {
-    background-color: #5c5c5c;
+.page:before,
+.view:before {
+    background-color: #5C5C5C;
     content: "";
     display: block;
     height: 13px;
     position: absolute;
     right: -8px;
-    top: 9px;
+    top: 17px;
     width: 1px;
 }
-.page .dropdown-list, .view .dropdown-list {
-    border: medium none;
+.page .dropdown-list,
+.view .dropdown-list {
     display: inline-block;
-    float: left;
     font-size: 12px;
-    height: 20px;
+    height:20px;
     line-height: 16px;
-    margin-right: 3px;
-    margin-top: 5px;
     padding: 0;
 }
 .page .dropdown-list ul li,
@@ -1787,21 +1776,17 @@ Panel
     height: 19px;
     padding: 0 5px;
 }
-.view {
-    margin-left: 5px;
-}
-.page .dropdown-list .selected-listitem, .view .dropdown-list .selected-listitem {
-    border: 1px solid #d8d8d8;
-    height: 20px;
-    line-height: 16px;
+.page .dropdown-list .selected-listitem,
+.view .dropdown-list .selected-listitem {
     padding: 0 20px 0 5px;
 }
-.page .selected-listitem::before, .view .selected-listitem::before {
+.page .selected-listitem::before,
+.view  .selected-listitem::before {
+    right: 4px;
+    top: 7px;
     border-left: 4px solid #ffffff;
     border-right: 4px solid #ffffff;
     border-top: 4px solid #373374;
-    right: 4px;
-    top: 8px;
 }
 .page .dropdown-list ul,
 .view .dropdown-list ul {
@@ -1813,7 +1798,7 @@ Panel
 .grid-action-group {
     border: 1px solid #D8D8D8;
     float: right;
-    margin: 10px;
+    margin: 7px;
 }
 .grid-action-group a {
     border-right: 1px solid #D8D8D8;
@@ -2093,6 +2078,24 @@ Forms Element
     float: left;
     text-align: right;
     width: 130px;
+}
+.form-col-1 {
+    float: left;
+    text-align: right;
+    width: 125px;
+}
+.form-col-2 {
+    float: left;
+    width: 76%;
+}
+.p-r-5{padding:0 5px 0 0 ;}
+.form-col-full-width {
+    float: left;
+    max-width: 375px;
+    width: 100%;
+}
+.padding-right {
+    padding: 0 2px 0 0;
 }
 
 /*------------------------------------*\
