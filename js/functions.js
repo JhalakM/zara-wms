@@ -352,8 +352,21 @@ function appActionBlock()
 }
 
 
+//dp-menu action
+function linkDropdown()
+{
+				$(".user-profile").click(function(){
+				 if($(".user-profile-menu").css('display')=="none"){
+					$(".user-profile-menu").show();
+				 }else{
+					$(".user-profile-menu").hide();
+				 }
+				});}
+
+
 function generateDynamicElements(){
 	loadScript(SET_WEB_URL+"template/elements.js", function(){
 		$(".call-formbtn").html(btn_normal);
 	});
 }
+
