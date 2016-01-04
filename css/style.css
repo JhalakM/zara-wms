@@ -122,9 +122,8 @@ input.css-checkbox[type="checkbox"]:checked + label.css-label {
     float: left;
    
 }
-.css-checkbox {
-}
-    height: 18px;
+.css-checkbox { height: 18px;}
+
 /*------- Forms Element Radio Button -------*/
 
 .radio-btn input {
@@ -1887,6 +1886,13 @@ Table
 .table-grid td.more-field-show {
     padding: 0;
 }
+.table-grid td.more-field-show a {
+    display: block;
+    height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+.table-grid td.more-field-show a:hover{}
 /*------------------------------------*\
 Forms Element 
 \*------------------------------------*/
