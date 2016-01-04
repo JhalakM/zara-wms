@@ -1914,9 +1914,9 @@ Alert message
     width: 34px;
 }
 .validations-ui .alert-icon i {
-    color: rgb(255, 255, 255);
-    font-size: 26px;
-    padding: 5px;
+    color: #ffffff;
+    font-size: 22px;
+    padding: 6px;
 }
 .validations-ui-text h3 {
     font-size: 15px;
@@ -1950,7 +1950,9 @@ border:1px solid #feaa30;
     border: 1px solid rgb(234, 234, 234);
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
 }
-
+.ui-alert-normal .alert-bg-color {
+    background: #5c5c5c none repeat scroll 0 0;
+}
 /*------------------------------------*\
 Table
 \*------------------------------------*/
