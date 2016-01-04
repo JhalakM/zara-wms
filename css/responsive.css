@@ -64,6 +64,7 @@ iPhone 6 landscape · width: 667px
 /*----------Table Grid-----------*/
 	.pages-info {  width: 321px;}
 	.view::before {background-color: transparent;}
+	
 /*---------- End Table Grid-----------*/
 }
 

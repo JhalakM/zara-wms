@@ -57,12 +57,11 @@ function ajaxCallBack(ajax_url,success_callback,failure_callback,params)
 /* function to get form element from dynamic form plugin */
 function getFormElement(){
 	
-	$(".dynamic-call").click(function(){
-		$('.form-content').dynamicForm({
-			//var ajaxURL = SET_WEB_URL+"file/form_configuration.json";
-			//ajaxCallBack(ajaxURL,generateFormSuccess,generateFormError);
-		});
+	$(".call-formbtn").click(function(){
+		var ajaxUrl = SET_WEB_URL+"file/form_configuration.json";
+		ajaxCallBack(ajaxUrl,generateFormSuccess,generateFormError);
 	});
+	
 }
 
 /* call plugin for i18n language tanslation library */
@@ -105,7 +104,14 @@ function customException(){
 
 /* function to call dynamic form plugin for success */
 function generateFormSuccess(json_data){
-	alert(json_data);
+	var jsonString = JSON.stringify(json_data);
+	var obj = jQuery.parseJSON(jsonString);
+	if (obj.errorcode == 0) {
+		$('.form-content').dynamicForm({
+			formObject : obj.returnobject
+		});
+	}
+	
 }
 
 /* function to call dynamic form plugin for error */
@@ -174,9 +180,9 @@ function getTemplateParams(){
 	  switch(replaceWith) {
 		case "meta":
 			element.attr("content",element.attr("content").replace(/{{(.*)}}/g,function(match, contents, offset, s)
-					{
-						return $.i18n.prop(contents);
-				 }));
+			{
+				return $.i18n.prop(contents);
+			}));
 			break;
 		default:
 			element.text(element.text().replace(/{{(.*)}}/g,function(match, contents, offset, s)
@@ -318,5 +324,36 @@ function datepicker()
 	  changeMonth: true,
 	  changeYear: true,
 	  dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // For formatting
+	});
+}
+
+function sidebarScroll()
+{
+	 var sticky = $('.sidebar'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 107) sticky.addClass('sticky');
+  else sticky.removeClass('sticky');
+  
+}
+
+function actionBlock()
+{
+	$( ".grid-action-group a" ).click(function(){
+    $( ".grid-action-form" ).slideToggle( "slow" );
+});
+}
+
+function appActionBlock()
+{
+	$( ".app-action-group a" ).click(function(){
+    $( ".app-action-form " ).slideToggle( "slow" );
+});
+}
+
+
+function generateDynamicElements(){
+	loadScript(SET_WEB_URL+"template/elements.js", function(){
+		$(".call-formbtn").html(btn_normal);
 	});
 }
