@@ -64,6 +64,7 @@
             </div>
             <div class="panel-block-content no-padding" >
                 <div class="app-action-form clearfix" style="display:none;">
+				<div class="title clearfix">
                    <div class="field-name"> <span class="heading ">Filter </span></div>
                     <div class="col-md-3 col-sm-3 col-xs-3 no-padding">
 						<div class="dropdown-list ">
@@ -75,6 +76,7 @@
 								
 							</ul>
 						</div>
+					</div>
 					</div>
                     <div class=" clearfix"></div>
                     <div class="form-action-field clearfix">
@@ -160,7 +162,7 @@
                                 <!-- Form Footer -->
                               
 								 <div class="form-btn-group  clearfix"> 
-								<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><img src="img/icons/svg/filter-white.svg" alt="Filter" ></span>
+								<button class="uie-primary-button margin-5 uie-button uie-icon-btn" type="button"> <span class="btn-icon"><img src="img/icons/svg/filter-white.svg" alt="Filter" ></span>
         <div class="btn-value">Filter </div>
        </button>
        <button class="uie-secondary-button uie-button" type="reset">Reset </button>
@@ -185,12 +187,12 @@
 								<div class="form-row clearfix">
 									<div class="field-name"><label class="label">Type </label></div>
 									<div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3"><input type="text" class="text-box" name="service_code" value=""></div>
-									<div class=" margin-5  pull-left set-empty col-md-3 col-sm-3 col-xs-3"><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty1"><label for="set-empty1" class="css-label">Set Empty</label></span></div>
+									<div class=" margin-5  pull-left set-empty col-md-3 col-sm-3 col-xs-3"><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty2"><label for="set-empty2" class="css-label">Set Empty</label></span></div>
                                 </div>
 								<div class="form-row clearfix">
 									<div class="field-name"><label class="label">Length </label></div>
 									<div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3"><input type="text" class="text-box" name="service_code" value=""></div>
-									<div class=" margin-5  pull-left set-empty col-md-3 col-sm-3 col-xs-3"><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty1"><label for="set-empty1" class="css-label">Set Empty</label></span></div>
+									<div class=" margin-5  pull-left set-empty col-md-3 col-sm-3 col-xs-3"><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty3"><label for="set-empty3" class="css-label">Set Empty</label></span></div>
                                 </div>
 								
                                 <!-- Form Footer -->
@@ -275,19 +277,50 @@
 								</th>
                                 <th>
                                     <span>Cal </span>
-
+									<span class="sorting sortable">
+									<a href="#" class="asc"><i class="fa fa-caret-up"></i></a>
+									<a href="#" class="desc"><i class="fa fa-caret-down"></i></a>
+									</span>
                                 </th>
                                 <th><span>Vessel Name</span> 
+								<span class="sorting sortable">
+									<a href="#" class="asc"><i class="fa fa-caret-up"></i></a>
+									<p class="sorting-order">4</p>
+									<a href="#"  class="desc"><i class="fa fa-caret-down"></i></a>
+								</span>
                                 </th>
                                 <th><span>Type</span>
+								<span class="sorting">
+									<a href="#" class="asc disable"><i class="fa fa-caret-up"></i></a>
+									<p class="sorting-order">4</p>
+									<a href="#"  class="desc"><i class="fa fa-caret-down"></i></a>
+								</span>
                                 </th>
                                 <th><span>Class</span>
+								<span class="sorting">
+									<a href="#" class="asc"><i class="fa fa-caret-up"></i></a>
+									<p class="sorting-order">4</p>
+									<a href="#" class="desc disable"><i class="fa fa-caret-down"></i></a>
+								</span>
                                 </th>
                                 <th><span>Opr</span>
+								<span class="sorting">
+									<a href="#" class="asc"><i class="fa fa-caret-up"></i></a>
+								
+									<a href="#" class="desc"><i class="fa fa-caret-down"></i></a>
+								</span>
                                 </th>
                                 <th><span>Lioyds</span>
+								<span class="sorting">
+									<a href="#" class="asc disable"><i class="fa fa-caret-up"></i></a>
+								    <a href="#"  class="desc"><i class="fa fa-caret-down"></i></a>
+								</span>
                                 </th>
                                 <th><span>Call Sign</span>
+								<span class="sorting">
+									<a href="#" class="asc"><i class="fa fa-caret-up"></i></a>
+								    <a href="#"  class="desc disable"><i class="fa fa-caret-down"></i></a>
+								</span>
                                 </th>
                                 <th><span>Length(m)</span>
                                 </th>
