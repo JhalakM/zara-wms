@@ -100,15 +100,15 @@ function customException() {
 }
 
 /* function to call dynamic form plugin for success */
-function generateFormSuccess(json_data) {
-    var jsonString = JSON.stringify(json_data);
-    var obj = jQuery.parseJSON(jsonString);
-    if (obj.errorCode == 0) {
-        $('.form-content').dynamicForm({
-            formObject: obj.returnObject
-        });
-    }
 
+function generateFormSuccess(json_data){
+	var jsonString = jsonStringify(json_data);
+	var obj = jsonParse(jsonString);
+	if (obj.errorCode == 0) {
+		$('.form-content').dynamicForm({
+			formObject : obj.returnObject
+		});
+	}
 }
 
 /* function to call dynamic form plugin for error */
@@ -320,7 +320,7 @@ function generateSVG() {
 }
 
 /* function to generate date picker */
-function datepicker() {
+function datePicker() {
     $("#datepicker").datepicker({
         changeMonth: true,
         changeYear: true,
@@ -368,7 +368,7 @@ function generateDynamicElements() {
     });
 }
 
-function datetimepicker() {
+function dateTimePicker() {
     $('#datetimepicker3').datetimepicker({
         pickDate: false
     });

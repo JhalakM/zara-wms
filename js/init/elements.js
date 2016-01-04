@@ -6,10 +6,10 @@
 $(document).ready(function(){
 	custom_dropdown_list();
 	effectToggleSwitch();
-	datepicker();
+	datePicker();
 	accordionPanel();
 	generateSVG();
-	datetimepicker();
+	//dateTimePicker();
 	
 });
 
