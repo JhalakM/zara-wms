@@ -68,9 +68,11 @@ a:focus {
 /*------------------------------------*\
 Checkbox Radio Button
 \*------------------------------------*/
-
-.css-label {
+.table-grid th .css-label {
     background-image: url("../img/icons/checkbox.png");
+}
+.css-label {
+    background-image: url("../img/icons/icon-checkbox.png");
 }
 .checkbox {
     margin: 0 10px;
@@ -1764,7 +1766,7 @@ Panel
 .view .dropdown-list {
     display: inline-block;
     font-size: 12px;
-    height: 19px;
+    height:20px;
     line-height: 16px;
     padding: 0;
 }
@@ -2028,13 +2030,17 @@ Table
 .table-grid td.more-field-show {
     padding: 0;
 }
-.table-grid td.more-field-show a {
+.table-grid th.more-field-show a span,.table-grid th.more-field-show a:hover {text-decoration: none;}
+.table-grid td.more-field-show a{ text-decoration: none;}
+.table-grid td.more-field-show a span {
     display: block;
     height: 30px;
     padding: 0 10px;
     text-decoration: none;
+	
 }
-.table-grid td.more-field-show a:hover{}
+.table-grid td.more-field-show a:hover span{background-color:#2991d6;color:#ffffff;}
+
 /*------------------------------------*\
 Forms Element 
 \*------------------------------------*/
