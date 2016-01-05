@@ -88,18 +88,17 @@ Checkbox Radio Button
 }
 input.css-checkbox[type="checkbox"] + label.css-label {
     background-position: 0 2px;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
     height: 20px;
     line-height: 22px;
-    margin-left: -20px;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 10px;
     opacity: 1;
     padding-left: 20px;
     vertical-align: middle;
-    
 }
 input[type="checkbox"]:not(old) + label > span,
 input[type="radio"]:not(old) + label > span {
@@ -637,7 +636,7 @@ Lable
 Dropdown
 \*------------------------------------*/
 .dropdown-list {
-    border: 1px solid #d8d8d8;
+  
     cursor: pointer;
     font-size: 14px;
     height: 35px;
@@ -1719,8 +1718,8 @@ Panel
     height: 20px;
     line-height: 18px;
     text-align: center;
-    width: 20px;
-}
+    width: 20px; float: left;
+	 margin: 0 5px;}
 .page select {
     border: 1px solid #D8D8D8;
     color: #120e5b;
@@ -1739,7 +1738,7 @@ Panel
 }
 .pagination-block {
     height: 45px;
-    line-height: 45px;
+    line-height: 42px;
 }
 .pages-info {
     position: relative;
@@ -1768,7 +1767,7 @@ Panel
     font-size: 12px;
     height:20px;
     line-height: 16px;
-    padding: 0;
+    padding: 0;    float: left;
 }
 .page .dropdown-list ul li,
 .view .dropdown-list ul li {
@@ -1776,9 +1775,11 @@ Panel
     height: 19px;
     padding: 0 5px;
 }
-.page .dropdown-list .selected-listitem,
-.view .dropdown-list .selected-listitem {
+.page .dropdown-list .selected-listitem, .view .dropdown-list .selected-listitem {
     padding: 0 20px 0 5px;
+    line-height: 16px;
+    border: 1px solid #d8d8d8;
+    height: 20px;
 }
 .page .selected-listitem::before,
 .view  .selected-listitem::before {
@@ -1792,6 +1793,20 @@ Panel
 .view .dropdown-list ul {
     top: 17px;
     width: 106%;
+}
+.page > span,.view > span {
+    display: inline-block;
+    float: left;
+    line-height: 18px;
+}
+.page{
+    min-width: 166px;   padding: 12px 0;
+}
+.view {
+    min-width: 120px;   padding: 12px 0;
+}
+.view .dropdown-list {
+    margin: 0 5px;
 }
 /*----------Grid Action Group-----------*/
 
