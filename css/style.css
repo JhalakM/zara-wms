@@ -74,7 +74,7 @@ Checkbox Radio Button
 .css-label {
     background-image: url("../img/icons/icon-checkbox.png");
 }
-.checkbox {
+.table-grid .checkbox {
        text-align: center;
 }
 .checkbox input[type="checkbox"],
@@ -1627,15 +1627,14 @@ Application form action ablock
     text-align: right;
     width: 100px;
 }
-.set-empty {
-    margin-top: 8px;
-}
-
 .title {
     padding: 15px;
 }
 .app-action-form .title {
     padding: 10px 0;
+}
+.set-empty .checkbox {
+    margin: 7px 0 0;
 }
 /*------------------------------------*\
 Panel
