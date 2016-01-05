@@ -20,12 +20,12 @@ $.fn.dynamicForm = function(options){
 	var methods = {
 		generateForm : function(formData){
 			var formString = jsonStringify(formData);
-			
+			formCreate  = document.createElement("form");
+			$(self).append(formCreate);
 			$.each(formData, function(key, value) {
-				formCaption = formData[key].caption;
+				
 				formTag 	= jsonParse(jsonStringify(formData[key].formTag));
-				formCreate  = document.createElement("form");
-	
+
 				$(formCreate).attr({
 					"name" 	 : formTag.name,
 					"id"	 : formTag.name,
@@ -33,10 +33,10 @@ $.fn.dynamicForm = function(options){
 					"action" : formTag.action,
 				});
 				formElement 	= jsonParse(jsonStringify(formData[key].formElements));
-				//var getElement  = generateElements(formElement); 
-				$(formCreate).append(generateElements(formElement));
+				$(formCreate).append(generateElements(formElement,formTag.name));
+				formCaption = generateCaption(formTag.name,formData[key].caption);
 			});
-			$(self).append(formCreate);
+			
 		},
 		init : function(){
 			loadScript(SET_WEB_URL+"template/elements.js", function(){
