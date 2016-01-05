@@ -60,27 +60,54 @@ function generateElements(formElement){
 				});	
 				break;
 			case "dropdown":
-				var input = $(ele_dropdown).find("input");
-				element = $(input).attr({
+				var input  = document.createElement("input");
+				$(input).attr({
 					"name"    : formElement[fe].name,
 					"tabindex": formElement[fe].tabindex,
+					"type"	  : "hidden",
+					"class"	  : "dropdown-item" 
 				});
-				
+				element = $(ele_dropdown).append(input);
 				break;				
 			case "radio":
-				element =  $(ele_input).attr({
-					"name"    : formElement[fe].name,
-					"tabindex": formElement[fe].tabindex,
-					"type"    : formElement[fe].type
-				});		
+				var radioElement = "";
+				var defualtValue = formElement[fe].defaultvalue;
+				var input = $(ele_radio_wrapper).find("input");
+				var label = $(ele_radio_wrapper).find("label span");
+
+				for(var i=0; i < defualtValue.length; i++){
+					 $(input).attr({
+						"name"    : formElement[fe].name,
+						"tabindex": formElement[fe].tabindex,
+						"type"    : formElement[fe].type,
+						"value"	  : defualtValue.value
+					});
+					$(label).text(defualtValue[i].labelkey);
+				}
+				
+				
+
 				break;				
 			case "checkbox":
-				element =  $(ele_input).attr({
-					"class" : "css-checkbox",
+				var checkElement = "";
+				var defualtValue = formElement[fe].defaultvalue;
+				var input  = document.createElement("input");
+				for(var i=0; i < defualtValue.length; i++){
+					checkElement +=  $(input).attr({
+						"name"    : formElement[fe].name,
+						"tabindex": formElement[fe].tabindex,
+						"type"    : formElement[fe].type,
+						"value"	  : defualtValue.key
+					}).text(defualtValue[i].value);	
+					
+				}
+				//element = $(div_radio_btn).append(checkElement);
+				/*element =  $(ele_input).attr({
+					"class"   : "css-checkbox",
 					"name"    : formElement[fe].name,
 					"tabindex": formElement[fe].tabindex,
 					"type"    : formElement[fe].type
-				});		
+				});	*/	
 				break;
 			case "file":
 				element = $(ele_input).attr({
@@ -91,8 +118,8 @@ function generateElements(formElement){
 				break;
 				
 		}
-		var html = returnObject(element);
-		getElement += html;
+		//var html = returnObject(element);
+		getElement += returnObject(element);
 	}
 	return getElement;
 	

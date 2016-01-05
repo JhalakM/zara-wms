@@ -14,16 +14,21 @@ var btn_reset = '<button class="uie-secondary-button uie-button" type="reset">Re
 
 var ele_label = '<label class="label"></label>';
 
-var ele_radio_label = '<label><span><span></span></span></label>';
+var ele_radio_wrapper = ".radio-btn";
+var ele_radio = '<div class="radio-btn">'+
+					'<input type="radio" />'+
+					'<label><span></span></label>'+
+				'</div>';
 
 var ele_input = '<input />';
 
 var ele_textarea = '<textarea></textarea>';
 
-var ele_dropdown = '<div class="selected-listitem">Click Me</div>'+
-						'<ul>'+
-							'<li value="" rel="0"><i class="fa fa-pencil-square-o"></i></li>'+
-                        '</ul>'+
-                    '<input type="hidden" class="dropdown-item" />';
+var ele_dropdown = '<div class="select-dropdown">'+
+						'<div class="selected-listitem">Click Me</div>'+
+							'<ul>'+
+								'<li value="" rel="0"><i class="fa fa-pencil-square-o"></i></li>'+
+							'</ul>'+
+					'</div>';
 					
 var div_col_md_6 = '<div class="col-md-6"></div>';

@@ -33,8 +33,8 @@ $.fn.dynamicForm = function(options){
 					"action" : formTag.action,
 				});
 				formElement 	= jsonParse(jsonStringify(formData[key].formElements));
-				var getElement  = generateElements(formElement); 
-				$(formCreate).append(getElement);
+				//var getElement  = generateElements(formElement); 
+				$(formCreate).append(generateElements(formElement));
 			});
 			$(self).append(formCreate);
 		},
