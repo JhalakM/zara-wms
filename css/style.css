@@ -68,12 +68,14 @@ a:focus {
 /*------------------------------------*\
 Checkbox Radio Button
 \*------------------------------------*/
-
-.css-label {
+.table-grid th .css-label {
     background-image: url("../img/icons/checkbox.png");
 }
+.css-label {
+    background-image: url("../img/icons/icon-checkbox.png");
+}
 .checkbox {
-    margin: 0 10px;
+       text-align: center;
 }
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"],
@@ -122,9 +124,8 @@ input.css-checkbox[type="checkbox"]:checked + label.css-label {
     float: left;
    
 }
-.css-checkbox {
-}
-    height: 18px;
+.css-checkbox { height: 18px;}
+
 /*------- Forms Element Radio Button -------*/
 
 .radio-btn input {
@@ -252,10 +253,10 @@ button
 }
 .uie-btn-disable:hover {
     cursor: no-drop;
-	background-color: #f6f6f6;
-	border: 1px solid #d8d8d8;
-	box-shadow:none;
-	color: #c5c5c5;
+ background-color: #f6f6f6;
+ border: 1px solid #d8d8d8;
+ box-shadow:none;
+ color: #c5c5c5;
 }
 .w-xs {
     min-width: 80px;
@@ -694,7 +695,7 @@ Dropdown
     content: "";
     position: absolute;
     right: 14px;
-    top: 13px;
+     top: 14px;
 }
 .check-btn-form-uie {
     margin: 5px 0 10px;
@@ -1602,9 +1603,7 @@ Loader
 Application form action ablock
 \*------------------------------------*/
 
-.app-action-form {
-    padding:  15px 15px 0 15px;
-}
+
 .heading {
     color: #5C5C5C;
     font-weight: bold;
@@ -1617,7 +1616,6 @@ Application form action ablock
 .form-action-field {
     border-bottom: 1px solid #D8D8D8;
     border-top: 1px solid #D8D8D8;
-    margin-top: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -1631,11 +1629,14 @@ Application form action ablock
     width: 100px;
 }
 .set-empty {
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .title {
-    padding: 15px 15px 10px;
+    padding: 15px;
+}
+.app-action-form .title {
+    padding: 10px 0;
 }
 /*------------------------------------*\
 Panel
@@ -1765,7 +1766,7 @@ Panel
 .view .dropdown-list {
     display: inline-block;
     font-size: 12px;
-    height: 19px;
+    height:20px;
     line-height: 16px;
     padding: 0;
 }
@@ -1983,9 +1984,8 @@ Table
     color: #2991D6;
 }
 .table-grid th span {
-    display: inherit;
-    height: 35px;
-    padding: 0 40px 0 10px;
+    display: inline-block;
+    padding: 0 20px 0 10px;
     vertical-align: middle;
 }
 .table-grid td {
@@ -1996,6 +1996,13 @@ Table
     padding-left: 10px;
     padding-right: 10px;
     vertical-align: middle;
+}
+.table-grid th span.sorting {
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 11px;
+    padding: 0;
+    width: auto;
 }
 #table-grid.table-record {
     height: 470px;
@@ -2023,14 +2030,46 @@ Table
     font-size: 17px;
     font-weight: bold;
     padding: 0;
-	color:#2991d6;line-height: 25px;
+	color:#2991d6; line-height: 28px;
 }
 .table-grid th.more-field-show  span{
     padding: 0 0 0 10px;color:#ffffff;
 }
+
 .table-grid td.more-field-show {
     padding: 0;
 }
+.table-grid th.more-field-show a span,.table-grid th.more-field-show a:hover {text-decoration: none;}
+.table-grid td.more-field-show a{ text-decoration: none;}
+.table-grid td.more-field-show a span {
+    display: block;
+    height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+	
+}
+.table-grid td.more-field-show a:hover span{background-color:#2991d6;color:#ffffff;}
+.table-grid th span.sorting.sortable a.asc, .table-grid th span.sorting.sortable a.desc {
+    color: #ffffff;
+}
+.table-grid th span.sorting  a.asc, .table-grid th span.sorting  a.desc {
+   color:#ffffff;
+}
+.table-grid th span.sorting a {
+ color:#6ab2e2;
+    display: block;
+    font-size: 14px;
+    margin-top: -9px;
+}
+.table-grid th span.sorting a.asc.disable,.table-grid th span.sorting a.desc.disable{ color:#6ab2e2;}
+.table-grid .checkbox { margin: 0;}
+.table-grid th span.sorting .sorting-order {
+    color: #fff;
+    line-height: 10px;
+    margin-bottom: 5px;
+    margin-top: -3px;
+}
+
 /*------------------------------------*\
 Forms Element 
 \*------------------------------------*/
@@ -2039,6 +2078,24 @@ Forms Element
     float: left;
     text-align: right;
     width: 130px;
+}
+.form-col-1 {
+    float: left;
+    text-align: right;
+    width: 125px;
+}
+.form-col-2 {
+    float: left;
+    width: 76%;
+}
+.p-r-5{padding:0 5px 0 0 ;}
+.form-col-full-width {
+    float: left;
+    max-width: 375px;
+    width: 100%;
+}
+.padding-right {
+    padding: 0 2px 0 0;
 }
 
 /*------------------------------------*\
