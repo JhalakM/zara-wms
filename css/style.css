@@ -88,18 +88,17 @@ Checkbox Radio Button
 }
 input.css-checkbox[type="checkbox"] + label.css-label {
     background-position: 0 2px;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
     height: 20px;
     line-height: 22px;
-    margin-left: -20px;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 10px;
     opacity: 1;
     padding-left: 20px;
     vertical-align: middle;
-    
 }
 input[type="checkbox"]:not(old) + label > span,
 input[type="radio"]:not(old) + label > span {
@@ -551,10 +550,10 @@ a.button:focus {
 Toggle Switch
 \*------------------------------------*/
 ul.toggle-switch {
-    border: 1px solid #D8D8D8;
-    clear: both;
+    border: 1px solid #d8d8d8;
+    display: inline-block;
     height: 33px;
-    list-style: none outside none;
+    list-style: outside none none;
     margin: 0;
     padding: 0;
     width: 70px;
@@ -637,7 +636,7 @@ Lable
 Dropdown
 \*------------------------------------*/
 .dropdown-list {
-    border: 1px solid #d8d8d8;
+  
     cursor: pointer;
     font-size: 14px;
     height: 35px;
@@ -1719,8 +1718,8 @@ Panel
     height: 20px;
     line-height: 18px;
     text-align: center;
-    width: 20px;
-}
+    width: 20px; float: left;
+	 margin: 0 5px;}
 .page select {
     border: 1px solid #D8D8D8;
     color: #120e5b;
@@ -1739,7 +1738,7 @@ Panel
 }
 .pagination-block {
     height: 45px;
-    line-height: 45px;
+    line-height: 42px;
 }
 .pages-info {
     position: relative;
@@ -1768,7 +1767,7 @@ Panel
     font-size: 12px;
     height:20px;
     line-height: 16px;
-    padding: 0;
+    padding: 0;    float: left;
 }
 .page .dropdown-list ul li,
 .view .dropdown-list ul li {
@@ -1776,9 +1775,11 @@ Panel
     height: 19px;
     padding: 0 5px;
 }
-.page .dropdown-list .selected-listitem,
-.view .dropdown-list .selected-listitem {
+.page .dropdown-list .selected-listitem, .view .dropdown-list .selected-listitem {
     padding: 0 20px 0 5px;
+    line-height: 16px;
+    border: 1px solid #d8d8d8;
+    height: 20px;
 }
 .page .selected-listitem::before,
 .view  .selected-listitem::before {
@@ -1792,6 +1793,20 @@ Panel
 .view .dropdown-list ul {
     top: 17px;
     width: 106%;
+}
+.page > span,.view > span {
+    display: inline-block;
+    float: left;
+    line-height: 18px;
+}
+.page{
+    min-width: 166px;   padding: 12px 0;
+}
+.view {
+    min-width: 120px;   padding: 12px 0;
+}
+.view .dropdown-list {
+    margin: 0 5px;
 }
 /*----------Grid Action Group-----------*/
 
@@ -2127,11 +2142,7 @@ Element Block Style
 Header
 \*------------------------------------*/
 
-header {
-    background: #555 none repeat scroll 0 0 !important;
-    height: 106px;
-    color: #fff;
-}
+
 .header-top {
     background: #ffffff none repeat scroll 0 0;
     border-bottom: 1px solid #d8d8d8;
@@ -2226,13 +2237,14 @@ header {
     text-decoration: none;
 }
 .arrow {
-    border: 1px solid #5c5c5c;
+    border: 1px solid #d8d8d8;
     display: inline-block;
     height: 18px;
     line-height: 15px;
     text-align: center;
     width: 18px;
 	font-size: 12px;
+	color:#a6a6a6;
 }
 .notify-msg {
     border-right: 1px solid #d8d8d8;
@@ -2273,21 +2285,155 @@ header {
     height: 22px;
     line-height: 17px;
 }
-.language  .selected-listitem::before {
-    border-left: 5px solid #ffffff;
-    border-right: 5px solid #ffffff;
-    border-top: 5px solid #373374;
+.language .selected-listitem::before {
+    border-left: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    border-top: 4px solid #a6a6a6;
     content: "";
     position: absolute;
-    right: 0;
+    right: -5px;
     top: 7px;
+}
+.language .selected-listitem::after {
+    border: 1px solid #d8d8d8;
+    content: "";
+    height: 18px;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 19px;
 }
 .language  .dropdown-list ul{ top: 18px;}
 .language .dropdown-list ul li{color: #5c5c5c;
     display: block;
     font-size: 11px;
     text-decoration: none;}
-	
+
+.menu-part::before {
+    background: #120e5b none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 30px;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+}
+.block-container {
+    padding-left: 80px;
+    width: 100%;
+}
+.navbar-default {
+    border: medium none;
+}
+
+.logo-fix-width::before {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2) 0px, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+    content: "";
+    height: 100%;
+    margin-left: -12px !important;
+    position: absolute;
+    width: 12px;
+}.logo-fix-width::after {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0px, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+    content: "";
+    height: 100%;
+    margin-left: 0 !important;
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 12px;
+}
+.logo-fix-width {
+    background: #ffffff none repeat scroll 0 0;
+    float: left;
+    left: 0;
+    margin-top: 0;
+    position: relative;
+    width: 213px;
+    z-index: 999999;
+}
+.logo-fix-width a {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.mobile-logo {
+    display: none;
+}
+.menu {
+    height: 40px;
+}
+.navbar1.clearfix {
+    height: 40px;
+}
+.menu li {
+    list-style: outside none none;
+}
+.menu li a {
+    border-right: 1px solid #cecece;
+    color: #41484d;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+}
+.menu .icon {
+    border: 1px solid #5c5c5c;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 13px;
+    font-style: normal;
+    height: 22px;
+    line-height: 19px;
+    margin-right: 5px;
+    text-align: center;
+    width: 22px;
+}
+.search {
+    float: right;
+    margin-right: 5px;
+    width: 20%;
+}
+.search .text-box {
+    background: #fff url("../images/search-icon.png") no-repeat scroll 95% center;
+    margin: 4px 0;
+}
+.bradcrum-menu {
+    height: 30px;
+    margin-left: 19px;
+    position: relative;
+    z-index: 9999;
+}
+.bradcrum-menu > ul {
+    margin: 0;
+}
+div.bradcrum-menu li::before {
+    color: #ffffff;
+    content: ">";
+    display: block;
+    float: right;
+    padding: 0 5px;
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}.bradcrum-menu li:first-child {
+    padding: 0 0 0 17px;
+}
+.bradcrum-menu li {
+    color: #ffffff;
+    float: left;
+    font-size: 10px;
+    line-height: 30px;
+    list-style: outside none none;
+    margin-left: 5px;
+    text-transform: uppercase;
+}	
 /*------------------------------------*\
 Sidebar
 \*------------------------------------*/
