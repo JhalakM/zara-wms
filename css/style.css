@@ -2115,6 +2115,15 @@ Forms Element
     padding: 0 2px 0 0;
 }
 
+.textarea-box {
+    border: 1px solid #d8d8d8;
+    font-size: 12px;
+    height: 70px;
+    padding: 8px;
+    resize: none;
+	width:100%;
+}
+
 /*------------------------------------*\
 Element Block Style
 \*------------------------------------*/
