@@ -636,7 +636,7 @@ Lable
 Dropdown
 \*------------------------------------*/
 .dropdown-list {
-  
+	border:1px solid #d8d8d8;
     cursor: pointer;
     font-size: 14px;
     height: 35px;
@@ -1808,6 +1808,9 @@ Panel
 .view .dropdown-list {
     margin: 0 5px;
 }
+.pages-info .dropdown-list {
+    border: medium none;
+}
 /*----------Grid Action Group-----------*/
 
 .grid-action-group {
@@ -2308,7 +2311,12 @@ Header
     display: block;
     font-size: 11px;
     text-decoration: none;}
-
+.menu-part {
+    background: #e6e6e6 none repeat scroll 0 0;
+    height: 70px;
+    position: relative;
+    z-index: 9;
+}
 .menu-part::before {
     background: #120e5b none repeat scroll 0 0;
     bottom: 0;
@@ -2400,7 +2408,7 @@ Header
     width: 20%;
 }
 .search .text-box {
-    background: #fff url("../images/search-icon.png") no-repeat scroll 95% center;
+    background: #fff url("../img/icons/svg/") no-repeat scroll 95% center;
     margin: 4px 0;
 }
 .bradcrum-menu {
@@ -2434,6 +2442,19 @@ div.bradcrum-menu li::before {
     margin-left: 5px;
     text-transform: uppercase;
 }	
+div.bradcrum-menu a, .navbar-header div.bradcrum-menu a:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: #2991d6;
+}
+div.bradcrum-menu a {
+    border: medium none;
+    color: #fff;
+    font-size: 10px;
+    margin-right: 2px;
+    padding: 0 2px;
+    position: relative;
+    text-transform: uppercase;
+}
 /*------------------------------------*\
 Sidebar
 \*------------------------------------*/
