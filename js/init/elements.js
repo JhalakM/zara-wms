@@ -9,7 +9,7 @@ $(document).ready(function(){
 	datePicker();
 	accordionPanel();
 	generateSVG();
-	//dateTimePicker();
+	dateTimePicker();
 	
 });
 

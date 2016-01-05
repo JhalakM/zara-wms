@@ -74,7 +74,7 @@ Checkbox Radio Button
 .css-label {
     background-image: url("../img/icons/icon-checkbox.png");
 }
-.checkbox {
+.table-grid .checkbox {
        text-align: center;
 }
 .checkbox input[type="checkbox"],
@@ -88,18 +88,17 @@ Checkbox Radio Button
 }
 input.css-checkbox[type="checkbox"] + label.css-label {
     background-position: 0 2px;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
     height: 20px;
     line-height: 22px;
-    margin-left: -20px;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 10px;
     opacity: 1;
     padding-left: 20px;
     vertical-align: middle;
-    
 }
 input[type="checkbox"]:not(old) + label > span,
 input[type="radio"]:not(old) + label > span {
@@ -253,10 +252,10 @@ button
 }
 .uie-btn-disable:hover {
     cursor: no-drop;
-	background-color: #f6f6f6;
-	border: 1px solid #d8d8d8;
-	box-shadow:none;
-	color: #c5c5c5;
+ background-color: #f6f6f6;
+ border: 1px solid #d8d8d8;
+ box-shadow:none;
+ color: #c5c5c5;
 }
 .w-xs {
     min-width: 80px;
@@ -293,7 +292,7 @@ button
 .form-btn-group {
     clear: both;
     margin-top: 0px;
- 
+    overflow: hidden;
     text-align: center;
     margin-left: 100px;
     margin-top: 10px;
@@ -419,7 +418,7 @@ a.button:focus {
     display: inline-block;
     float: left;
     height: 100%;
-    line-height: 40px;
+    line-height: 38px;
     text-align: center;
     width: 40px;
 }
@@ -551,10 +550,10 @@ a.button:focus {
 Toggle Switch
 \*------------------------------------*/
 ul.toggle-switch {
-    border: 1px solid #D8D8D8;
-    clear: both;
+    border: 1px solid #d8d8d8;
+    display: inline-block;
     height: 33px;
-    list-style: none outside none;
+    list-style: outside none none;
     margin: 0;
     padding: 0;
     width: 70px;
@@ -637,7 +636,7 @@ Lable
 Dropdown
 \*------------------------------------*/
 .dropdown-list {
-    border: 1px solid #d8d8d8;
+	border:1px solid #d8d8d8;
     cursor: pointer;
     font-size: 14px;
     height: 35px;
@@ -1628,15 +1627,14 @@ Application form action ablock
     text-align: right;
     width: 100px;
 }
-.set-empty {
-    margin-top: 8px;
-}
-
 .title {
     padding: 15px;
 }
 .app-action-form .title {
     padding: 10px 0;
+}
+.set-empty .checkbox {
+    margin: 7px 0 0;
 }
 /*------------------------------------*\
 Panel
@@ -1712,18 +1710,15 @@ Panel
     font-size: 12px;
 }
 .page a {
-    border: 1px solid #d8d8d8;
+    border: 1px solid #D8D8D8;
     color: #120e5b;
     display: inline-block;
-    float: left;
     font-size: 9px;
     height: 20px;
-    line-height: 16px;
-    margin-right: 3px;
-    margin-top: 5px;
+    line-height: 18px;
     text-align: center;
-    width: 20px;
-}
+    width: 20px; float: left;
+	 margin: 0 5px;}
 .page select {
     border: 1px solid #D8D8D8;
     color: #120e5b;
@@ -1734,52 +1729,44 @@ Panel
     text-align: center;
     width: auto
 }
-.view, .page, .records {
+.view,
+.page,
+.records {
     float: left;
-    line-height: 30px;
     margin-right: 15px;
-}
-.page span:first-child{
-    float: left;
-    margin-right: 5px;
 }
 .pagination-block {
     height: 45px;
-   
+    line-height: 42px;
 }
 .pages-info {
-    float: left;
-    padding: 10px;
     position: relative;
+    float: left;
     width: auto;
+    padding: 0 10px;
 }
 .page,
 .view {
     position: relative;
 }
-.page > span {
-    float: left;
-}
-.page::before, .view::before {
-    background-color: #5c5c5c;
+.page:before,
+.view:before {
+    background-color: #5C5C5C;
     content: "";
     display: block;
     height: 13px;
     position: absolute;
     right: -8px;
-    top: 9px;
+    top: 17px;
     width: 1px;
 }
-.page .dropdown-list, .view .dropdown-list {
-    border: medium none;
+.page .dropdown-list,
+.view .dropdown-list {
     display: inline-block;
-    float: left;
     font-size: 12px;
-    height: 20px;
+    height:20px;
     line-height: 16px;
-    margin-right: 3px;
-    margin-top: 5px;
-    padding: 0;
+    padding: 0;    float: left;
 }
 .page .dropdown-list ul li,
 .view .dropdown-list ul li {
@@ -1787,33 +1774,48 @@ Panel
     height: 19px;
     padding: 0 5px;
 }
-.view {
-    margin-left: 5px;
-}
 .page .dropdown-list .selected-listitem, .view .dropdown-list .selected-listitem {
+    padding: 0 20px 0 5px;
+    line-height: 16px;
     border: 1px solid #d8d8d8;
     height: 20px;
-    line-height: 16px;
-    padding: 0 20px 0 5px;
 }
-.page .selected-listitem::before, .view .selected-listitem::before {
+.page .selected-listitem::before,
+.view  .selected-listitem::before {
+    right: 4px;
+    top: 7px;
     border-left: 4px solid #ffffff;
     border-right: 4px solid #ffffff;
     border-top: 4px solid #373374;
-    right: 4px;
-    top: 8px;
 }
 .page .dropdown-list ul,
 .view .dropdown-list ul {
     top: 17px;
     width: 106%;
 }
+.page > span,.view > span {
+    display: inline-block;
+    float: left;
+    line-height: 18px;
+}
+.page{
+    min-width: 166px;   padding: 12px 0;
+}
+.view {
+    min-width: 120px;   padding: 12px 0;
+}
+.view .dropdown-list {
+    margin: 0 5px;
+}
+.pages-info .dropdown-list {
+    border: medium none;
+}
 /*----------Grid Action Group-----------*/
 
 .grid-action-group {
     border: 1px solid #D8D8D8;
     float: right;
-    margin: 10px;
+    margin: 7px;
 }
 .grid-action-group a {
     border-right: 1px solid #D8D8D8;
@@ -2094,6 +2096,24 @@ Forms Element
     text-align: right;
     width: 130px;
 }
+.form-col-1 {
+    float: left;
+    text-align: right;
+    width: 125px;
+}
+.form-col-2 {
+    float: left;
+    width: 76%;
+}
+.p-r-5{padding:0 5px 0 0 ;}
+.form-col-full-width {
+    float: left;
+    max-width: 375px;
+    width: 100%;
+}
+.padding-right {
+    padding: 0 2px 0 0;
+}
 
 /*------------------------------------*\
 Element Block Style
@@ -2124,11 +2144,7 @@ Element Block Style
 Header
 \*------------------------------------*/
 
-header {
-    background: #555 none repeat scroll 0 0 !important;
-    height: 106px;
-    color: #fff;
-}
+
 .header-top {
     background: #ffffff none repeat scroll 0 0;
     border-bottom: 1px solid #d8d8d8;
@@ -2223,13 +2239,14 @@ header {
     text-decoration: none;
 }
 .arrow {
-    border: 1px solid #5c5c5c;
+    border: 1px solid #d8d8d8;
     display: inline-block;
     height: 18px;
     line-height: 15px;
     text-align: center;
     width: 18px;
 	font-size: 12px;
+	color:#a6a6a6;
 }
 .notify-msg {
     border-right: 1px solid #d8d8d8;
@@ -2270,21 +2287,173 @@ header {
     height: 22px;
     line-height: 17px;
 }
-.language  .selected-listitem::before {
-    border-left: 5px solid #ffffff;
-    border-right: 5px solid #ffffff;
-    border-top: 5px solid #373374;
+.language .selected-listitem::before {
+    border-left: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    border-top: 4px solid #a6a6a6;
     content: "";
     position: absolute;
-    right: 0;
+    right: -5px;
     top: 7px;
+}
+.language .selected-listitem::after {
+    border: 1px solid #d8d8d8;
+    content: "";
+    height: 18px;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 19px;
 }
 .language  .dropdown-list ul{ top: 18px;}
 .language .dropdown-list ul li{color: #5c5c5c;
     display: block;
     font-size: 11px;
     text-decoration: none;}
-	
+.menu-part {
+    background: #e6e6e6 none repeat scroll 0 0;
+    height: 70px;
+    position: relative;
+    z-index: 9;
+}
+.menu-part::before {
+    background: #120e5b none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 30px;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+}
+.block-container {
+    padding-left: 80px;
+    width: 100%;
+}
+.navbar-default {
+    border: medium none;
+}
+
+.logo-fix-width::before {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2) 0px, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+    content: "";
+    height: 100%;
+    margin-left: -12px !important;
+    position: absolute;
+    width: 12px;
+}.logo-fix-width::after {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0px, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+    content: "";
+    height: 100%;
+    margin-left: 0 !important;
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 12px;
+}
+.logo-fix-width {
+    background: #ffffff none repeat scroll 0 0;
+    float: left;
+    left: 0;
+    margin-top: 0;
+    position: relative;
+    width: 213px;
+    z-index: 999999;
+}
+.logo-fix-width a {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.mobile-logo {
+    display: none;
+}
+.menu {
+    height: 40px;
+}
+.navbar1.clearfix {
+    height: 40px;
+}
+.menu li {
+    list-style: outside none none;
+}
+.menu li a {
+    border-right: 1px solid #cecece;
+    color: #41484d;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+}
+.menu .icon {
+    border: 1px solid #5c5c5c;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 13px;
+    font-style: normal;
+    height: 22px;
+    line-height: 19px;
+    margin-right: 5px;
+    text-align: center;
+    width: 22px;
+}
+.search {
+    float: right;
+    margin-right: 5px;
+    width: 20%;
+}
+.search .text-box {
+    background: #fff url("../img/icons/svg/") no-repeat scroll 95% center;
+    margin: 4px 0;
+}
+.bradcrum-menu {
+    height: 30px;
+    margin-left: 19px;
+    position: relative;
+    z-index: 9999;
+}
+.bradcrum-menu > ul {
+    margin: 0;
+}
+div.bradcrum-menu li::before {
+    color: #ffffff;
+    content: ">";
+    display: block;
+    float: right;
+    padding: 0 5px;
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}.bradcrum-menu li:first-child {
+    padding: 0 0 0 17px;
+}
+.bradcrum-menu li {
+    color: #ffffff;
+    float: left;
+    font-size: 10px;
+    line-height: 30px;
+    list-style: outside none none;
+    margin-left: 5px;
+    text-transform: uppercase;
+}	
+div.bradcrum-menu a, .navbar-header div.bradcrum-menu a:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: #2991d6;
+}
+div.bradcrum-menu a {
+    border: medium none;
+    color: #fff;
+    font-size: 10px;
+    margin-right: 2px;
+    padding: 0 2px;
+    position: relative;
+    text-transform: uppercase;
+}
 /*------------------------------------*\
 Sidebar
 \*------------------------------------*/
