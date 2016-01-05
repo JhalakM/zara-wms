@@ -39,10 +39,7 @@ $.fn.dynamicForm = function(options){
 			
 		},
 		init : function(){
-			loadScript(SET_WEB_URL+"template/elements.js", function(){
-					methods.generateForm(defaults.formObject);
-					
-			});
+			methods.generateForm(defaults.formObject);
 		}
 	};
 	return methods.init();

@@ -49,13 +49,17 @@ function generateElements(formElement,formId){
 				window[functionCallback](formId,formElement[fe]);
 				break;
 			case "textarea":
-				//window[functionCallback](formId,formElement[fe]);
+				window[functionCallback](formId,formElement[fe]);
 				break;
 			case "dropdown":
-				//window[functionCallback](formId,formElement[fe]);
+				window[functionCallback](formId,formElement[fe]);
 				break;
 			case "radio":
 				window[functionCallback](formId,formElement[fe]);
+				/*if(formElement[fe].switch == undefined)
+					window[functionCallback](formId,formElement[fe]);
+				else
+					generate_switch(formId,formElement[fe]);*/
 				break;
 			case "checkbox":
 				window[functionCallback](formId,formElement[fe]);
@@ -92,6 +96,61 @@ function generate_text(formId,formElement){
 								"type"    : formElement.type
 							});
 	return inputHTML;
+}
+
+function generate_textarea(formId,formElement){
+	var textareaHTML  =  $(ele_textarea).appendTo("#"+formId+" .form-row:last")
+							.find("textarea").attr({
+								"name"    : formElement.name,
+								"tabindex": formElement.tabindex,
+								"type"    : formElement.type
+							});
+	return textareaHTML;
+}
+
+function generate_dropdown(formId,formElement){
+	var dropdownHTML  =  $(ele_dropdown).appendTo("#"+formId+" .form-row:last");
+	var liClone;
+	for(var i=0; i<formElement.defaultvalue.length; i++){
+		liClone = document.createElement("li");
+		$(liClone).attr({
+			"value" : formElement.defaultvalue[i].key,
+			"rel"	: formElement.defaultvalue[i].key
+		});
+		$(liClone).html(edit_icon+" "+formElement.defaultvalue[i].value);
+		dropdownHTML.find("ul").append(liClone);
+	}
+	dropdownHTML.find("input").attr({
+			"name"    : formElement.name,
+			"tabindex": formElement.tabindex,
+	});
+	custom_dropdown_list();
+	return dropdownHTML;
+}
+
+
+function generate_switch(formId,formElement){
+	checkHTML = $(ele_switch).appendTo("#"+formId+" .form-row:last");
+
+	for(var i=0; i<formElement.defaultvalue.length; i++){
+		$(ele_switch).find("a").attr({
+			"value" : formElement.defaultvalue[i].value
+		});
+		$(ele_switch).find("a").attr({
+			"name"    : formElement.name,
+			"tabindex": formElement.tabindex,
+			"type"    : formElement.type,
+			"id"	  : formElement.name+"-"+i
+		});
+		$(radioHTML).find(".radio-btn").append(inputClone);
+		$(labelClone).text($.i18n.prop(formElement.defaultvalue[i].labelkey));
+		$(labelClone).append(spanClone);
+		$(labelClone).find("span").html(document.createElement("span"));
+		$(labelClone).attr({
+			"for" : formElement.name+"-"+i
+		});
+		$(radioHTML).find(".radio-btn").append(labelClone);
+	}	
 }
 
 function generate_radio(formId,formElement){
@@ -146,22 +205,6 @@ function generate_checkbox(formId,formElement){
 		});
 		$(checkHTML).find(".checkbox").append(labelClone);
 	}	
-}
-
-function generateCheckBox(checkValues,formElement){
-	var checkHTML = $(ele_checkbox);
-	checkHTML.find("input").attr({
-		"name"    : formElement.name,
-		"tabindex": formElement.tabindex,
-		"type"    : formElement.type,
-		"value"	  : checkValues.value,
-		"id"	  : formElement.name
-	});
-	checkHTML.find("label").attr({
-		"for"	  : formElement.name
-	});
-	checkHTML.find("label").text($.i18n.prop(checkValues.label));
-	return checkHTML;
 }
 
 
