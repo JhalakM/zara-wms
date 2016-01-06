@@ -1918,7 +1918,7 @@ Alert message
     float: left;
     text-align: center;
     vertical-align: middle;
-    width: 50px;
+    width: 42px;
 }
 
 .alert-icon {
@@ -1951,6 +1951,18 @@ Alert message
     vertical-align: middle;
 	color:#120e5b;
 }
+.close-icon a {
+    color: #120E5B;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 1;
+}
+.close-icon a:hover {
+    color: #120E5B;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 1;
+}
 .alert-er-bg-color {
 border:1px solid #ff0000;
 }
@@ -1971,6 +1983,123 @@ border:1px solid #feaa30;
 .ui-alert-normal .alert-bg-color {
     background: #5c5c5c none repeat scroll 0 0;
 }
+
+.error-info-icon {
+    background: red;
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 6px;
+}
+
+.error-msg::before {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ff0000;
+    border-style: solid solid solid dashed;
+    border-width: 6px 5px;
+    content: "";
+    left: -11px;
+    position: absolute;
+    top: 11px;
+    transform: rotate(-180deg);
+}
+
+.error-msg {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #f24534;
+    display: block;
+    float: right;
+    margin-bottom: 5px;
+    max-width: 260px;
+    padding: 7px 15px;
+    position: absolute;
+    right: -266px;
+    top: 0;
+    width: 260px;
+    z-index: 999;
+}
+.error-msg.left-bottom {
+    left: 0;
+    top: 40px;
+}
+
+.error-msg.left-bottom::before {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ff0000;
+    border-style: solid solid solid dashed;
+    border-width: 6px 5px;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: -12px;
+    transform: rotate(-92deg);
+}
+/*------------------------------------*\
+switch 
+\*------------------------------------*/
+
+.switch {
+    background: rgba(0, 0, 0, 0.25) none repeat scroll 0 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) inset, 0 1px rgba(255, 255, 255, 0.1);
+    height: 40px;
+    margin: 20px auto;
+    position: relative;
+    width: 120px;
+}
+.switch-label {
+    color: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    float: left;
+    font-size: 11px;
+    height: 40px;
+    line-height: 41px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    width: 58px;
+    z-index: 2;
+}
+.switch-label:active {
+    font-weight: bold;
+}
+.switch-label-off {
+    padding-left: 2px;
+}
+.switch-label-on {
+    padding-right: 2px;
+}
+.switch-input {
+    display: none;
+}
+.switch-input:checked + .switch-label {
+    color: rgba(0, 0, 0, 0.65);
+    float: left;
+    font-weight: bold;
+    height: 40px;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+    transition: all 0.15s ease-out 0s;
+}
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+    left: 60px;
+}
+.switch-selection {
+    background: #65bd63;
+    display: block;
+    height: 38px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 58px;
+    z-index: 1;
+}
+.switch-blue .switch-selection {
+    background: #3aa2d0;
+}
+.switch-yellow .switch-selection {
+    background: #c4bb61;
+}
+
+
 /*------------------------------------*\
 Table
 \*------------------------------------*/
@@ -2118,12 +2247,14 @@ Forms Element
 .textarea-box {
     border: 1px solid #d8d8d8;
     font-size: 12px;
-    height: 70px;
-    padding: 8px;
+    height: 113px;
+    padding: 10px;
     resize: none;
-	width:100%;
+    width: 100%;
 }
-
+.highlight-input {
+    border: 1px solid #ff0000;
+}
 /*------------------------------------*\
 Element Block Style
 \*------------------------------------*/
