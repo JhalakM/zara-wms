@@ -160,10 +160,9 @@ Mobile Screen · width: 767px
 @media (max-width:767px) {
 
 /*----------Table Grid-----------*/
-	.view, .page, .records {display: inline;float: none;margin-right: 5px;}
-	.pages-info div:before{ right: -1px;top: 0;}
+	
 	.pagination-block {height: auto; line-height: 24px;}
-	.pages-info {float: left;padding: 10px 15px;}
+
 /*---------- End Table Grid-----------*/
 /*----------Menu-----------*/
   .navbar-toggle{  height: 70px;}
@@ -289,8 +288,8 @@ iPhone 6 landscape · width: 667px
 
 @media (max-width:667px) {
 /*----------Table Grid-----------*/
-	.pages-info {  width: 321px;}
-	.view::before {background-color: transparent;}
+
+	.page_record_options::before {background-color: transparent;}
 	
 /*---------- End Table Grid-----------*/
 }
@@ -350,7 +349,7 @@ iPhone 5 landscape · width: 568px
 	.pagination-block {padding: 0 0 10px 0}
 	.grid-action-group{display:none;}
 	.pages-info {width: 100%;}
-	.view::before {background-color: #5c5c5c;}
+	.page_record_options::before {background-color: #5c5c5c;}
 /*---------- End Table Grid-----------*/
 }
 
@@ -383,7 +382,7 @@ iPhone 6 portrait · width: 375px
 \*------------------------------------*/
 
 @media (max-width:375px) {
-	.view::before {background-color: transparent;}
+	.page_record_options::before {background-color: transparent;}
 }
 
 
