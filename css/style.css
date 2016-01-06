@@ -2588,9 +2588,9 @@ Header
   .navbar-default .navbar-brand {
     display: inline;
   }
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
-  }
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #5c5c5c;
+}
   .navbar-default .navbar-nav .dropdown-menu > li > a {
     color: red;
     background-color: #ccc;
@@ -2638,7 +2638,7 @@ Header
     color: #41484d;
     float: left;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 31px;
     padding: 5px 20px;
     text-transform: uppercase;
 }

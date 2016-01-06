@@ -161,7 +161,7 @@ Mobile Screen · width: 767px
 }
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 0;   border-top: medium none;
 }
 .nav > li > a{float:none}
 .menu {
@@ -185,6 +185,10 @@ Mobile Screen · width: 767px
 }
 .navbar-nav .open .dropdown-menu > li > a {
     line-height: 25px;
+}
+.nav  li {
+    border-bottom: 1px solid #d8d8d8;
+    border-right: medium none;
 }
    /*---------- End Menu-----------*/
 }

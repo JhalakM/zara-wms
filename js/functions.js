@@ -134,30 +134,29 @@ function generateScrollbar(selector) {
 }
 
 /* function to generate custom dropdown */
-function custom_dropdown_list() {
-    $('.dropdown-list .selected-listitem').click(function() {
-        var this_ul = $(this).parent().find('ul');
-        $('.dropdown-list ul').not(this_ul).hide();
-        this_ul.toggle();
+function custom_dropdown_list()
+{
+	$('.dropdown-list .selected-listitem').click(function(){
+		  var this_ul = $(this).parent().find('ul');
+		  $('.dropdown-list ul').not(this_ul).hide();
+		  this_ul.toggle();
 
-        if (this_ul.find('li').length >= 4) {
-            $(".dropdown-list").css({
-                height: this_ul.height()
-            });
-
-            // Scrollbar JavaScript
-            generateScrollbar(".dropdown-list");
-        }
-    });
-    $('.dropdown-list ul li').click(function() {
-        var selectbox_val = $(this).attr('rel');
-        var selectbox_text = $(this).text();
-        $(this).parents('.dropdown-list').find('.selected-listitem').text(selectbox_text);
-        $(this).parents('.dropdown-list').find('.dropdown-item').attr('value', selectbox_val);
-        $('.dropdown-list ul').hide();
-    });
+		if(this_ul.find('li').length >= 4)
+		{
+			this_ul.css({height:this_ul.height()});
+			
+		   // Scrollbar JavaScript
+		   generateScrollbar(this_ul);
+		} 
+	});
+	$('.dropdown-list ul li').click(function(){
+	  var selectbox_val  = $(this).attr('rel');
+	  var selectbox_text = $(this).text();
+	  $(this).parents('.dropdown-list').find('.selected-listitem').text(selectbox_text);
+	  $(this).parents('.dropdown-list').find('.dropdown-item').attr('value',selectbox_val);
+	  $('.dropdown-list ul').hide();
+	});
 }
-
 /* function to generate effects of toggle switch */
 function effectToggleSwitch() {
 
