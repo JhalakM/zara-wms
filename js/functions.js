@@ -387,6 +387,29 @@ function sidebarHeight() {
 		});
 	}
 }
+// Sidebar In Mobile
+function sidebarMobile() {
+	if($( window ).width()<=768){
+		$("#nav_pan").owlCarousel({
+			items : 9, //10 items above 1000px browser width
+			itemsTablet: [768,5],						 
+			itemsMobile: [600,3],
+			responsive: true,
+			navigation: true
+		 });
+	}
+}
+// panel action icon height 
+function actionBtnHeight() {
+	if($( window ).width() > 568){
+		$(".app-action-group a").css("height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
+			$(".app-action-group a" ).css("height", $(".panel-block-heading ").height()+10 + "px")
+		});
+	}
+	
+}
+
+
 $(document).ready(function(){
 	
 	$('.error-msg').hide();
@@ -434,3 +457,4 @@ function show_error(value){
 	$(value).next('.error-msg').show();
 	$(value).remove();
 }
+

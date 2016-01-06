@@ -147,7 +147,88 @@ iPad portrait · width: 768px
     width: 96%;
 }
 .search{    display: none;}
+/* Sidebar */
+.left-panel li {
+    border: medium none;
+}
+.tooltip::after, [data-tooltip]::after {
+    display: none;
+}
+.tooltip-right::before {
+    left: 50%;
+    transform: rotate(89deg);
+}
+.tooltip-right:hover::before, .tooltip-right:hover::after, .tooltip-right:focus::before, .tooltip-right:focus::after {
+    display: none;
+}
+.left-panel{width:100%;}
+.left-panel li a {
+    color: #2991d6;
+    height: auto;
+    line-height: 20px;
+    padding-top: 48px;
+    text-align: center;
+    width: auto;
+}
+.left-panel li {
+    height: auto;
+}
+.left-panel ul li.active a {
+    color: #120e5b !important;
+}
+.left-panel li.active {
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+}
 
+
+.left-panel li {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.left-panel ul li.active a:hover, .left-panel ul li a:hover {
+    text-decoration: none;
+}
+.left-panel .owl-prev {
+    background: #d8d8d8 url("../images/left-panel-prv-arrow.png") no-repeat scroll center center;
+    color: rgba(0, 0, 0, 0);
+    height: 100%;
+    left: -10px;
+    position: absolute;
+    top: 0;
+    width: 15px;
+}
+.left-panel .owl-next {
+    background: #d8d8d8 url("../images/left-panel-next-arrow.png") no-repeat scroll center center;
+    color: rgba(0, 0, 0, 0);
+    height: 100%;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 15px;
+}
+.left-panel .owl-carousel .owl-wrapper-outer {
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+}
+.left-panel li {
+    width: 100%;
+}
+
+.left-panel li {
+    border-right: 1px solid #d8d8d8;
+    height: 85px;
+    padding: 5px;
+	background-position: center 15px;
+    background-repeat: no-repeat;
+}
+.left-panel ul li a {
+    font-size: 14px;
+}
+.left-panel li:hover a{color:#fff;}
+.owl-buttons {
+    display: none;
+}
 }
 
 
@@ -160,10 +241,9 @@ Mobile Screen · width: 767px
 @media (max-width:767px) {
 
 /*----------Table Grid-----------*/
-	.view, .page, .records {display: inline;float: none;margin-right: 5px;}
-	.pages-info div:before{ right: -1px;top: 0;}
+	
 	.pagination-block {height: auto; line-height: 24px;}
-	.pages-info {float: left;padding: 10px 15px;}
+
 /*---------- End Table Grid-----------*/
 /*----------Menu-----------*/
   .navbar-toggle{  height: 70px;}
@@ -268,6 +348,7 @@ ul.nav li.dropdown-submenu:hover .dropdown-menu {
     border-right: medium none;}
 	.nav li:last-child {
     border-bottom: medium none;}
+
    /*---------- End Menu-----------*/
 }
 
@@ -278,7 +359,10 @@ ul.nav li.dropdown-submenu:hover .dropdown-menu {
 iPhone 6 Plump landscape · width: 736px 
 \*------------------------------------*/
 
-@media (max-width:736px) {}
+@media (max-width:736px) {
+.panel-block-heading{width: 60%;}
+.left-panel li a{   font-size: 12px;line-height: 30px;  padding-top: 41px;}
+}
 
 
 
@@ -289,8 +373,8 @@ iPhone 6 landscape · width: 667px
 
 @media (max-width:667px) {
 /*----------Table Grid-----------*/
-	.pages-info {  width: 321px;}
-	.view::before {background-color: transparent;}
+
+	.page_record_options::before {background-color: transparent;}
 	
 /*---------- End Table Grid-----------*/
 }
@@ -323,6 +407,9 @@ iPhone 6 landscape · width: 600px
 .language {
     float: right;
 }
+.panel-block-heading {
+    width: 55%;
+}
 	}
 /*---------- End Table Grid-----------*/
 
@@ -343,14 +430,21 @@ iPhone 5 landscape · width: 568px
 		width: 100%;
 	}
 	.app-action-group{display:none;}
-	.mobile-action-grp-btn{display:block;}
+.mobile-action-grp-btn {
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 	.mobile-action-grp-btn .app-action-group {
 		display: block;
 	}
 	.pagination-block {padding: 0 0 10px 0}
 	.grid-action-group{display:none;}
 	.pages-info {width: 100%;}
-	.view::before {background-color: #5c5c5c;}
+	.page_record_options::before {background-color: #5c5c5c;}
+	
 /*---------- End Table Grid-----------*/
 }
 
@@ -361,7 +455,12 @@ iPhone 6 Plump portrait · width: 414px
 \*------------------------------------*/
 
 @media (max-width:414px) {
-
+/* Sidebar */	
+.left-panel ul li a {
+    font-size: 12px;
+    line-height: 14px;
+	padding-top: 46px;
+}
 }
 
 
@@ -383,7 +482,9 @@ iPhone 6 portrait · width: 375px
 \*------------------------------------*/
 
 @media (max-width:375px) {
-	.view::before {background-color: transparent;}
+	.page_record_options::before {background-color: transparent;}
+	.page-record-options, .page-options, .page-total-records {    margin-bottom: 5px;}
+  
 }
 
 
