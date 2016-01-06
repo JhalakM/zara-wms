@@ -9,10 +9,13 @@ $(document).ready(function(){
 	effectToggleSwitch();
 	actionBlock();
 	appActionBlock();
+	
 });
 
 
 
 $(window).load(function(){
 	generateScrollbar();
+	actionBtnHeight();
 });
+

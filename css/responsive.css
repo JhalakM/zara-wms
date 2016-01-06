@@ -160,10 +160,9 @@ Mobile Screen · width: 767px
 @media (max-width:767px) {
 
 /*----------Table Grid-----------*/
-	.view, .page, .records {display: inline;float: none;margin-right: 5px;}
-	.pages-info div:before{ right: -1px;top: 0;}
+	
 	.pagination-block {height: auto; line-height: 24px;}
-	.pages-info {float: left;padding: 10px 15px;}
+
 /*---------- End Table Grid-----------*/
 /*----------Menu-----------*/
   .navbar-toggle{  height: 70px;}
@@ -278,7 +277,9 @@ ul.nav li.dropdown-submenu:hover .dropdown-menu {
 iPhone 6 Plump landscape · width: 736px 
 \*------------------------------------*/
 
-@media (max-width:736px) {}
+@media (max-width:736px) {
+.panel-block-heading{width: 60%;}
+}
 
 
 
@@ -289,8 +290,8 @@ iPhone 6 landscape · width: 667px
 
 @media (max-width:667px) {
 /*----------Table Grid-----------*/
-	.pages-info {  width: 321px;}
-	.view::before {background-color: transparent;}
+
+	.page_record_options::before {background-color: transparent;}
 	
 /*---------- End Table Grid-----------*/
 }
@@ -323,6 +324,9 @@ iPhone 6 landscape · width: 600px
 .language {
     float: right;
 }
+.panel-block-heading {
+    width: 55%;
+}
 	}
 /*---------- End Table Grid-----------*/
 
@@ -343,14 +347,21 @@ iPhone 5 landscape · width: 568px
 		width: 100%;
 	}
 	.app-action-group{display:none;}
-	.mobile-action-grp-btn{display:block;}
+.mobile-action-grp-btn {
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 	.mobile-action-grp-btn .app-action-group {
 		display: block;
 	}
 	.pagination-block {padding: 0 0 10px 0}
 	.grid-action-group{display:none;}
 	.pages-info {width: 100%;}
-	.view::before {background-color: #5c5c5c;}
+	.page_record_options::before {background-color: #5c5c5c;}
+	
 /*---------- End Table Grid-----------*/
 }
 
@@ -383,7 +394,9 @@ iPhone 6 portrait · width: 375px
 \*------------------------------------*/
 
 @media (max-width:375px) {
-	.view::before {background-color: transparent;}
+	.page_record_options::before {background-color: transparent;}
+	.page-record-options, .page-options, .page-total-records {    margin-bottom: 5px;}
+  
 }
 
 

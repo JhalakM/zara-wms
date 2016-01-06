@@ -379,9 +379,23 @@ function sidebarHeight() {
 	if($( window ).width()>=1024){
 				$(".left-panel").css("height", $(window).height()-108 + "px"), $(window).resize(function() {
 					$(".left-panel").css("height", $(window).height()-108 + "px")
-	});
+				});
+	}
 }
+// panel action icon height 
+function actionBtnHeight() {
+	if($( window ).width() > 568){
+		$(".app-action-group a").css("height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
+			$(".app-action-group a" ).css("height", $(".panel-block-heading ").height()+10 + "px")
+		});
+		$(".app-action-group a").css("line-height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
+			$(".app-action-group a" ).css("line-height", $(".panel-block-heading ").height()+10 + "px")
+		});
+	}
+	
 }
+
+
 $(document).ready(function(){
 	
 	$('.error-msg').hide();
