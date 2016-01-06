@@ -19,6 +19,7 @@ $.fn.dynamicForm = function(options){
 	},options);
 	var methods = {
 		generateForm : function(formData){
+			$(self).find("form").remove();
 			var formString = jsonStringify(formData);
 			formCreate  = document.createElement("form");
 			$(self).append(formCreate);
@@ -32,9 +33,10 @@ $.fn.dynamicForm = function(options){
 					"method" : formTag.method,
 					"action" : formTag.action,
 				});
+
 				formElement 	= jsonParse(jsonStringify(formData[key].formElements));
 				$(formCreate).append(generateElements(formElement,formTag.name));
-				formCaption = generateCaption(formTag.name,formData[key].caption);
+				formCaption 	= generateCaption(formTag.name,formData[key].caption);
 			});
 			
 		},

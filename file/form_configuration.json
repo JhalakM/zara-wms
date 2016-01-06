@@ -1,93 +1,92 @@
 {  
    "errorCode":0,
-   "successMessage":"response_success",
+   "successMessage":"response.success",
    "returnObject":{  
-      "forminfo":{  
+      "formInfo":{  
          "formElements":[  
             {  
-               "labelkey":"containerInventory.containerNumber",
                "validation":"r",
+               "tabIndex":"1",
                "name":"containerNumber",
-               "tabindex":"1",
-               "type":"text",
-               "defaultvalue":""
+               "labelKey":"containerInventory.containerNumber",
+               "defaultValue":"",
+               "type":"text"
             },
             {  
-               "labelkey":"containerInventory.containerCycle",
                "validation":"r,n",
+               "tabIndex":"2",
                "name":"containerCycle",
-               "tabindex":"2",
-               "type":"text",
-               "defaultvalue":""
+               "labelKey":"containerInventory.containerCycle",
+               "defaultValue":"",
+               "type":"text"
             },
             {  
-               "labelkey":"containerInventory.email",
                "validation":"r,e",
+               "tabIndex":"3",
                "name":"email",
-               "tabindex":"3",
-               "type":"text",
-               "defaultvalue":""
+               "labelKey":"containerInventory.email",
+               "defaultValue":"",
+               "type":"text"
             },
             {  
-               "labelkey":"containerInventory.vgm",
                "validation":"r,n",
+               "tabIndex":"4",
                "name":"vgm",
-               "tabindex":"4",
-               "type":"text",
-               "defaultvalue":""
+               "labelKey":"containerInventory.vgm",
+               "defaultValue":"",
+               "type":"text"
             },
             {  
                "cols":"5",
-               "labelkey":"containerInventory.address",
                "validation":"",
+               "tabIndex":"5",
                "name":"address",
-               "tabindex":"5",
+               "labelKey":"containerInventory.address",
+               "defaultValue":"",
                "type":"textarea",
-               "defaultvalue":"",
                "rows":"10"
             },
             {  
-               "labelkey":"containerInventory.shippingStatus",
                "validation":"r",
+               "tabIndex":"6",
                "name":"shippingStatus",
-               "tabindex":"6",
-               "type":"dropdown",
-               "defaultvalue":[  
+               "labelKey":"containerInventory.shippingStatus",
+               "defaultValue":[  
                   {  
-                     "value":"Departed",
-                     "key":"102"
+                     "value":"102",
+                     "label":"Departed"
                   },
                   {  
-                     "value":"Not Departed",
-                     "key":"105"
+                     "value":"105",
+                     "label":"Not Departed"
                   }
-               ]
+               ],
+               "type":"dropdown"
             },
             {  
-               "labelkey":"containerInventory.containerStatus",
                "validation":"r",
+               "tabIndex":"7",
                "name":"containerStatus",
-               "tabindex":"7",
+               "labelKey":"containerInventory.containerStatus",
                "switch":"true",
-               "type":"radio",
-               "defaultvalue":[  
+               "defaultValue":[  
                   {  
-                     "labelkey":"containerInventory.containerStatus.active",
+                     "labelKey":"containerInventory.containerStatus.active",
                      "value":"active"
                   },
                   {  
-                     "labelkey":"containerInventory.containerStatus.inActive",
+                     "labelKey":"containerInventory.containerStatus.inActive",
                      "value":"InActive"
                   }
-               ]
+               ],
+               "type":"radio"
             },
             {  
-               "labelkey":"containerInventory.daysOfGP",
                "validation":"r",
+               "tabIndex":"8",
                "name":"daysOfGP",
-               "tabindex":"8",
-               "type":"checkbox",
-               "defaultvalue":[  
+               "labelKey":"containerInventory.daysOfGP",
+               "defaultValue":[  
                   {  
                      "value":"days",
                      "label":"containerInventory.daysOfGP.Days"
@@ -100,24 +99,25 @@
                      "value":"month",
                      "label":"containerInventory.daysOfGP.Month"
                   }
-               ]
+               ],
+               "type":"checkbox"
             },
             {  
-               "labelkey":"containerInventory.vgmMeasuredDate",
                "validation":"r",
+               "tabIndex":"9",
                "name":"vgmMeasuredDate",
-               "tabindex":"9",
+               "labelKey":"containerInventory.vgmMeasuredDate",
                "minDate":"24/12/2015",
                "dateFormat":"d/m/yyyy",
                "format":"date",
-               "type":"text",
-               "defaultvalue":""
+               "defaultValue":"",
+               "type":"text"
             },
             {  
-               "labelkey":"containerInventory.containerImage",
                "validation":"r",
+               "tabIndex":"10",
                "name":"containerImage",
-               "tabindex":"10",
+               "labelKey":"containerInventory.containerImage",
                "image":{  
                   "accept":"jpg,png",
                   "size":"5MB"
@@ -129,16 +129,16 @@
          "formButtons":[  
             {  
                "submit":{  
-                  "keyvalue":"containerInventory.btnAddContainerInventory",
-                  "keyname":"btnSubmit"
+                  "keyName":"btnSubmit",
+                  "keyValue":"containerInventory.btnAddContainerInventory"
                },
                "reset":{  
-                  "keyvalue":"containerInventory.btnResetContainerInventory",
-                  "keyname":"btnReset"
+                  "keyName":"btnReset",
+                  "keyValue":"containerInventory.btnResetContainerInventory"
                },
                "cancel":{  
-                  "keyvalue":"containerInventory.btnCancelContainerInventory",
-                  "keyname":"btnCancel"
+                  "keyName":"btnCancel",
+                  "keyValue":"containerInventory.btnCancelContainerInventory"
                }
             }
          ],

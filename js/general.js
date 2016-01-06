@@ -41,7 +41,7 @@ function generateElements(formElement,formId){
 	var formWrapper;
 	for(var fe = 0; fe < formElement.length; fe++){
 		generateFormRow(formId);
-		generateLabel(formId,formElement[fe].labelkey);
+		generateLabel(formId,formElement[fe].labelKey);
 		functionCallback = "generate_"+formElement[fe].type;
 
 		switch(formElement[fe].type) {
@@ -92,7 +92,7 @@ function generate_text(formId,formElement){
 	var inputHTML  =  $(ele_input).appendTo("#"+formId+" .form-row:last")
 						.find("input").attr({
 								"name"    : formElement.name,
-								"tabindex": formElement.tabindex,
+								"tabindex": formElement.tabIndex,
 								"type"    : formElement.type
 							});
 	return inputHTML;
@@ -102,7 +102,7 @@ function generate_textarea(formId,formElement){
 	var textareaHTML  =  $(ele_textarea).appendTo("#"+formId+" .form-row:last")
 							.find("textarea").attr({
 								"name"    : formElement.name,
-								"tabindex": formElement.tabindex,
+								"tabindex": formElement.tabIndex,
 								"type"    : formElement.type
 							});
 	return textareaHTML;
@@ -111,18 +111,18 @@ function generate_textarea(formId,formElement){
 function generate_dropdown(formId,formElement){
 	var dropdownHTML  =  $(ele_dropdown).appendTo("#"+formId+" .form-row:last");
 	var liClone;
-	for(var i=0; i<formElement.defaultvalue.length; i++){
+	for(var i=0; i<formElement.defaultValue.length; i++){
 		liClone = document.createElement("li");
 		$(liClone).attr({
-			"value" : formElement.defaultvalue[i].key,
-			"rel"	: formElement.defaultvalue[i].key
+			"value" : formElement.defaultValue[i].value,
+			"rel"	: formElement.defaultValue[i].value
 		});
-		$(liClone).html(edit_icon+" "+formElement.defaultvalue[i].value);
+		$(liClone).html(edit_icon+" "+formElement.defaultValue[i].label);
 		dropdownHTML.find("ul").append(liClone);
 	}
 	dropdownHTML.find("input").attr({
 			"name"    : formElement.name,
-			"tabindex": formElement.tabindex,
+			"tabindex": formElement.tabIndex,
 	});
 	custom_dropdown_list();
 	return dropdownHTML;
@@ -132,18 +132,18 @@ function generate_dropdown(formId,formElement){
 function generate_switch(formId,formElement){
 	checkHTML = $(ele_switch).appendTo("#"+formId+" .form-row:last");
 
-	for(var i=0; i<formElement.defaultvalue.length; i++){
+	for(var i=0; i<formElement.defaultValue.length; i++){
 		$(ele_switch).find("a").attr({
-			"value" : formElement.defaultvalue[i].value
+			"value" : formElement.defaultValue[i].value
 		});
 		$(ele_switch).find("a").attr({
 			"name"    : formElement.name,
-			"tabindex": formElement.tabindex,
+			"tabindex": formElement.tabIndex,
 			"type"    : formElement.type,
 			"id"	  : formElement.name+"-"+i
 		});
 		$(radioHTML).find(".radio-btn").append(inputClone);
-		$(labelClone).text($.i18n.prop(formElement.defaultvalue[i].labelkey));
+		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].label));
 		$(labelClone).append(spanClone);
 		$(labelClone).find("span").html(document.createElement("span"));
 		$(labelClone).attr({
@@ -158,19 +158,19 @@ function generate_radio(formId,formElement){
 	var inputClone;
 	var labelClone;
 	var spanClone;
-	for(var i=0; i<formElement.defaultvalue.length; i++){
+	for(var i=0; i<formElement.defaultValue.length; i++){
 		inputClone = document.createElement("input");
 		labelClone = document.createElement("label");
 		spanClone  = document.createElement("span");
 		$(inputClone).attr({
 			"name"    : formElement.name,
-			"tabindex": formElement.tabindex,
+			"tabindex": formElement.tabIndex,
 			"type"    : formElement.type,
-			"value"	  : formElement.defaultvalue[i].value,
+			"value"	  : formElement.defaultValue[i].value,
 			"id"	  : formElement.name+"-"+i
 		});
 		$(radioHTML).find(".radio-btn").append(inputClone);
-		$(labelClone).text($.i18n.prop(formElement.defaultvalue[i].labelkey));
+		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].label));
 		$(labelClone).append(spanClone);
 		$(labelClone).find("span").html(document.createElement("span"));
 		$(labelClone).attr({
@@ -186,19 +186,19 @@ function generate_checkbox(formId,formElement){
 	var inputClone;
 	var labelClone;
 	var spanClone;
-	for(var i=0; i<formElement.defaultvalue.length; i++){
+	for(var i=0; i<formElement.defaultValue.length; i++){
 		inputClone = document.createElement("input");
 		labelClone = document.createElement("label");
 		$(inputClone).attr({
 			"name"    : formElement.name,
-			"tabindex": formElement.tabindex,
+			"tabindex": formElement.tabIndex,
 			"type"    : formElement.type,
-			"value"	  : formElement.defaultvalue[i].value,
+			"value"	  : formElement.defaultValue[i].value,
 			"id"	  : formElement.name+"-"+i,
 			"class"	  : "css-checkbox"
 		});
 		$(checkHTML).find(".checkbox").append(inputClone);
-		$(labelClone).text($.i18n.prop(formElement.defaultvalue[i].label));
+		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].label));
 		$(labelClone).attr({
 			"for" : formElement.name+"-"+i,
 			"class"	  : "css-label"
