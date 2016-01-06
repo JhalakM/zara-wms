@@ -732,6 +732,20 @@
                             </div>
                         </div>
                     </div>
+					 <div class="form-row col-md-6 clearfix">
+                        <div class="form-col-1">
+                            <label class="label"><b>File Uploaded :</b> </label>
+                        </div>
+                        <div class="col-md-6 form-col-2 p-r-5">
+                            <div class="field prepend-icon file text-box">
+                               <label class="field-icon">
+									<i class="fa fa-cloud-upload"></i>
+								</label><input type="text" placeholder="Select File" id="uploader2" class="gui-input">
+								 <span class="uie-btn uie-btn-primary btn-sm right">Choose File</span>
+								 <input type="file" onchange="document.getElementById('uploader2').value = this.value;" id="file2" name="file2" class="gui-file">
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-row col-md-6 clearfix">
                         <div class="form-col-1">
                             <label class="label"><b>Textarea :</b> </label>
@@ -765,22 +779,15 @@
                     <label for="month_1" class="switch-label switch-label-on">OFF</label>
                     <span class="switch-selection"></span>
                 </div>
-				<div class="section">
-					<div class="col-md-3">
-						<div class="row">
-							<label class="field prepend-icon file text-box">
-							   
-								 <label class="field-icon">
+				 <div class="col-md-6 form-col-2 p-r-5">
+                            <div class="field prepend-icon file text-box">
+                               <label class="field-icon">
 									<i class="fa fa-cloud-upload"></i>
 								</label><input type="text" placeholder="Select File" id="uploader2" class="gui-input">
-								 <span class="button btn-primary">Choose File</span>
+								 <span class="uie-btn uie-btn-primary btn-sm right">Choose File</span>
 								 <input type="file" onchange="document.getElementById('uploader2').value = this.value;" id="file2" name="file2" class="gui-file">
-
-							</label>
-						</div>
-
-					</div>
-                                            </div>
+                            </div>
+                        </div>
             </div>
 			 <div class="col-md-12 panel">
                 <h2 class="panel-title">CSS Directional Tooltips</h2>
