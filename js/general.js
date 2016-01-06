@@ -3,6 +3,8 @@
 |@desc   : Function need to use on init level.
 */
 
+var mainWrapper = "";
+var add_class_value = "";
 
 /* function to load javascript file in run time */
 function loadScript(url, callback){
@@ -41,7 +43,7 @@ function generateElements(formElement,formId){
 		generateFormRow(formId);
 		generateLabel(formId,formElement[fe].labelKey);
 		functionCallback = "generate_"+formElement[fe].type;
-
+	
 		switch(formElement[fe].type) {
 			case "text":
 				window[functionCallback](formId,formElement[fe]);
@@ -53,11 +55,10 @@ function generateElements(formElement,formId){
 				window[functionCallback](formId,formElement[fe]);
 				break;
 			case "radio":
-				window[functionCallback](formId,formElement[fe]);
-				/*if(formElement[fe].switch == undefined)
+				if(formElement[fe].switch == undefined)
 					window[functionCallback](formId,formElement[fe]);
 				else
-					generate_switch(formId,formElement[fe]);*/
+					generate_switch(formId,formElement[fe]);
 				break;
 			case "checkbox":
 				window[functionCallback](formId,formElement[fe]);
@@ -66,8 +67,14 @@ function generateElements(formElement,formId){
 				window[functionCallback](formId,formElement[fe]);
 				break;
 		}
+		
+		if(typeof formElement[fe].additional != "undefined"){
+			functionCallback = "generate_"+formElement[fe].additional.type;
+			window[functionCallback](formId,formElement[fe].additional,1);
+		}
 	}
 }
+
 
 function generateCaption(formId,formCaption){
 	var caption = $("#"+formId).prev(form_panel_title_class).text(formCaption);
@@ -84,14 +91,15 @@ function generateLabel(formId,labelKey){
 	return labelHTML;
 }
 
-function generate_text(formId,formElement){
+function generate_text(formId,formElement,flag){
 	var inputHTML  = "";
-	
+	add_class_value = (flag == 1)?additional_class:"";
+	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
 	if(formElement.format != undefined){
 		var format = formElement.format;
 		switch(format){
 			case "date":
-				inputHTML  =  $(ele_input).appendTo("#"+formId+" .form-row:last")
+				inputHTML  =  $(ele_input).appendTo(mainWrapper)
 									.find("input").attr({
 										"name"        : formElement.name,
 										"tabindex"    : formElement.tabIndex,
@@ -106,12 +114,12 @@ function generate_text(formId,formElement){
 				break;
 		}
 	}else{
-		inputHTML  =  $(ele_input).appendTo("#"+formId+" .form-row:last")
+		inputHTML  = $(ele_input).appendTo(mainWrapper)
 						.find("input").attr({
 							"name"    : formElement.name,
 							"tabindex": formElement.tabIndex,
 							"type"    : formElement.type
-						});
+						}).parent().addClass(add_class_value);
 	}
 	
 	return inputHTML;
@@ -119,7 +127,8 @@ function generate_text(formId,formElement){
 
 
 function generate_textarea(formId,formElement){
-	var textareaHTML  =  $(ele_textarea).appendTo("#"+formId+" .form-row:last")
+	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
+	var textareaHTML  =  $(ele_textarea).appendTo(mainWrapper)
 							.find("textarea").attr({
 								"name"    : formElement.name,
 								"tabindex": formElement.tabIndex,
@@ -129,7 +138,8 @@ function generate_textarea(formId,formElement){
 }
 
 function generate_dropdown(formId,formElement){
-	var dropdownHTML  =  $(ele_dropdown).appendTo("#"+formId+" .form-row:last");
+	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
+	var dropdownHTML  =  $(ele_dropdown).appendTo(mainWrapper);
 	var liClone;
 	for(var i=0; i<formElement.defaultValue.length; i++){
 		liClone = document.createElement("li");
@@ -150,31 +160,41 @@ function generate_dropdown(formId,formElement){
 
 
 function generate_switch(formId,formElement){
-	checkHTML = $(ele_switch).appendTo("#"+formId+" .form-row:last");
-
+	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
+	switchHTML = $(ele_switch).appendTo(mainWrapper);
+	var inputClone;
+	var labelClone;
+	var spanClone = document.createElement("span");
+	var add_class = "";
 	for(var i=0; i<formElement.defaultValue.length; i++){
-		$(ele_switch).find("a").attr({
-			"value" : formElement.defaultValue[i].value
-		});
-		$(ele_switch).find("a").attr({
+		add_class = (i==0)?"switch-label-off":"switch-label-on";
+		inputClone = document.createElement("input");
+		labelClone = document.createElement("label");
+		$(inputClone).attr({
 			"name"    : formElement.name,
 			"tabindex": formElement.tabIndex,
 			"type"    : formElement.type,
-			"id"	  : formElement.name+"-"+i
+			"value"	  : formElement.defaultValue[i].value,
+			"id"	  : formElement.name+"-"+i,
+			"class"	  : "switch-input"
 		});
-		$(radioHTML).find(".radio-btn").append(inputClone);
-		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].label));
-		$(labelClone).append(spanClone);
-		$(labelClone).find("span").html(document.createElement("span"));
+		$(switchHTML).find(".switch").append(inputClone);
+		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].labelKey));
 		$(labelClone).attr({
-			"for" : formElement.name+"-"+i
+			"for" 	: formElement.name+"-"+i,
+			"class" : "switch-label "+ add_class
 		});
-		$(radioHTML).find(".radio-btn").append(labelClone);
+		$(switchHTML).find(".switch").append(labelClone);
 	}	
+	$(spanClone).attr({
+		"class" : "switch-selection"
+	});
+	$(switchHTML).find(".switch").append(spanClone);
 }
 
 function generate_radio(formId,formElement){
-	radioHTML = $(ele_radio).appendTo("#"+formId+" .form-row:last");
+	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
+	radioHTML = $(ele_radio).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
 	var spanClone;
@@ -190,7 +210,7 @@ function generate_radio(formId,formElement){
 			"id"	  : formElement.name+"-"+i
 		});
 		$(radioHTML).find(".radio-btn").append(inputClone);
-		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].label));
+		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].labelKey));
 		$(labelClone).append(spanClone);
 		$(labelClone).find("span").html(document.createElement("span"));
 		$(labelClone).attr({
@@ -202,7 +222,8 @@ function generate_radio(formId,formElement){
 
 
 function generate_checkbox(formId,formElement){
-	checkHTML = $(ele_checkbox).appendTo("#"+formId+" .form-row:last");
+	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
+	checkHTML = $(ele_checkbox).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
 	var spanClone;
@@ -237,5 +258,33 @@ function returnObject(obj){
 }
 
 function generateButtons(formButtons,formId){
-	var t = jsonStringify(formButtons);
+	var buttonHTML = $(div_col_md_12).appendTo("#"+formId);
+	if(formButtons[0].submit != "undefiend"){
+		var btnSubmit = $(btn_normal);
+		$(btnSubmit).attr({
+			"type" : "button",
+			"name" : formButtons[0].submit.keyName,
+		});
+		$(btnSubmit).text($.i18n.prop(formButtons[0].submit.keyValue));
+		buttonHTML.append(btnSubmit);
+	}
+	if(formButtons[0].reset != "undefiend"){
+		var btnReset = $(btn_normal);
+		$(btnReset).attr({
+			"type" : "reset",
+			"name" : formButtons[0].reset.keyName,
+		});
+		$(btnReset).text($.i18n.prop(formButtons[0].reset.keyValue));
+		buttonHTML.append(btnReset);
+	}
+	if(formButtons[0].cancel != "undefiend"){
+		var btnCancel = $(btn_normal);
+		$(btnCancel).attr({
+			"type" : "button",
+			"name" : formButtons[0].reset.keyName,
+		});
+		$(btnCancel).text($.i18n.prop(formButtons[0].reset.keyValue));
+		buttonHTML.append(btnCancel);
+	}
+	return buttonHTML;
 }

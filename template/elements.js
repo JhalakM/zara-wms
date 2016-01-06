@@ -1,6 +1,6 @@
 var form_panel_title_class = ".panel-title";
 
-var btn_normal = '<button class="uie-btn uie-primary-small-button" type="button">Generate Form</button>';
+var btn_normal = '<button class="uie-btn uie-btn-primary">Generate Form</button>';
 
 var btn_disable = '<button class="uie-btn uie-primary-disable" type="button">Disable</button>';
 
@@ -23,46 +23,48 @@ var ele_label = '<div class="form-col-1">'+
 					'<label class="label"></label>'+
 				'</div>';
 				
-var ele_radio = '<div class="form-col-2">'+
-					'<div class="p-r-5">'+
+var ele_radio = '<div class="p-r-5">'+
 						'<div class="radio-btn">'+
 							
 						'</div>'+
-					'</div>'+
-				'</div>';					
+					'</div>';			
 				
-var ele_input = '<div class="form-col-2">'+
-					'<div class="p-r-5">'+
+var ele_switch = '<div class="p-r-5">'+
+						'<div class="switch">'+
+							
+						'</div>'+
+					'</div>';				
+				
+				
+var ele_input = '<div class="p-r-5">'+
 						'<input class="text-box" />'+
-					'</div>'+
-				'</div>';
+					'</div>';
 
 				
-var ele_textarea = '<div class="form-col-2">'+
-					'<div class="p-r-5">'+
+var ele_textarea = '<div class="p-r-5">'+
 						'<textarea class="textarea-box"></textarea>'+
-					'</div>'+
-				'</div>';				
+					'</div>';			
 
 var edit_icon = '<i class="fa fa-pencil-square-o"></i>';
 				
-var ele_dropdown = '<div class="form-col-2">'+
-					'<div class="p-r-5">'+
+var ele_dropdown = '<div class="p-r-5">'+
 						'<div class="dropdown-list">'+
 							'<div class="selected-listitem">Click Me</div>'+
 								'<ul>'+
 								'</ul>'+
 								'<input class="dropdown-item" type="hidden" />'+
 						'</div>'+
-					'</div>'+
-				'</div>';	
+					'</div>';
 
-var ele_checkbox = '<div class="form-col-2">'+
-					 '<div class="p-r-5">'+
+var ele_checkbox = '<div class="p-r-5">'+
 						'<div class="checkbox">'+
 						
 						'</div>'+
-					 '</div>'+
-				 '</div>';
-					
+					 '</div>';
+var additional_class = "col-md-6 no-padding";
+					 
 var div_col_md_6 = '<div class="form-row col-md-6"></div>';
+
+var div_form_col_2 = '<div class="form-col-2"></div>';
+
+var div_col_md_12 = '<div class="col-md-12 clearfix"></div>';

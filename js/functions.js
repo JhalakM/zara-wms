@@ -53,10 +53,10 @@ function ajaxCallBack(ajax_url, success_callback, failure_callback, params) {
 
 /* function to get form element from dynamic form plugin */
 function getFormElement() {
-
-    $(".call-formbtn").click(function() {
-        var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
+		var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
         ajaxCallBack(ajaxUrl, generateFormSuccess, generateFormError);
+    $(".call-formbtn").click(function() {
+        
     });
 
 }
@@ -105,7 +105,7 @@ function generateFormSuccess(json_data){
 	var jsonString = jsonStringify(json_data);
 	var obj = jsonParse(jsonString);
 	if (obj.errorCode == 0) {
-		$('.form-content').dynamicForm({
+		$('#form-content').dynamicForm({
 			formObject : obj.returnObject
 		});
 	}
@@ -382,10 +382,10 @@ function dateTimePicker() {
 // Sidebar Height 
 function sidebarHeight() {
 	if($( window ).width()>=1024){
-				$(".left-panel").css("height", $(window).height()-108 + "px"), $(window).resize(function() {
-					$(".left-panel").css("height", $(window).height()-108 + "px")
-	});
-}
+			$(".left-panel").css("height", $(window).height()-108 + "px"), $(window).resize(function() {
+			$(".left-panel").css("height", $(window).height()-108 + "px")
+		});
+	}
 }
 $(document).ready(function(){
 	

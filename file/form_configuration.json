@@ -10,7 +10,17 @@
                "name":"containerNumber",
                "labelKey":"containerInventory.containerNumber",
                "defaultValue":"",
-               "type":"text"
+               "type":"text",
+			   "additional" : 
+				   {  
+					   "validation":"r",
+					   "tabIndex":"1",
+					   "name":"containerNumber",
+					   "labelKey":"containerInventory.containerNumber",
+					   "defaultValue":"",
+					   "type":"text"
+					}
+			   
             },
             {  
                "validation":"r,n",
