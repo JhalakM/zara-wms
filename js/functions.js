@@ -374,8 +374,14 @@ function dateTimePicker() {
     });
 }
 
-
-
+// Sidebar Height 
+function sidebarHeight() {
+	if($( window ).width()>=1024){
+				$(".left-panel").css("height", $(window).height()-108 + "px"), $(window).resize(function() {
+					$(".left-panel").css("height", $(window).height()-108 + "px")
+	});
+}
+}
 $(document).ready(function(){
 	
 	$('.error-msg').hide();
@@ -414,6 +420,8 @@ $(document).ready(function(){
 			}
 		}
 	});
+	
+	
 });
 
 function show_error(value){
