@@ -134,30 +134,32 @@ function generateScrollbar(selector) {
 }
 
 /* function to generate custom dropdown */
-function custom_dropdown_list() {
-    $('.dropdown-list .selected-listitem').click(function() {
-        var this_ul = $(this).parent().find('ul');
-        $('.dropdown-list ul').not(this_ul).hide();
-        this_ul.toggle();
+function custom_dropdown_list()
+{
+	$('.dropdown-list .selected-listitem').click(function(){
+		  var this_ul = $(this).parent().find('ul');
+		  $('.dropdown-list ul').not(this_ul).hide();
+		  this_ul.toggle();
 
-        if (this_ul.find('li').length >= 4) {
-            this_ul.css({
-                height: this_ul.height()
-            });
-
-            // Scrollbar JavaScript
-            generateScrollbar(this_ul);
-        }
-    });
-    $('.dropdown-list ul li').click(function() {
-        var selectbox_val = $(this).attr('rel');
-        var selectbox_text = $(this).text();
-        $(this).parents('.dropdown-list').find('.selected-listitem').text(selectbox_text);
-        $(this).parents('.dropdown-list').find('.dropdown-item').attr('value', selectbox_val);
-        $('.dropdown-list ul').hide();
-    });
+		if(this_ul.find('li').length >= 4)
+		{
+			this_ul.css({height:this_ul.height()});
+			
+		   // Scrollbar JavaScript
+		   generateScrollbar(this_ul);
+		} 
+	});
+	$('.dropdown-list ul li').click(function(){
+	  var selectbox_val  = $(this).attr('rel');
+	  var selectbox_text = $(this).text();
+	  $(this).parents('.dropdown-list').find('.selected-listitem').text(selectbox_text);
+	  $(this).parents('.dropdown-list').find('.dropdown-item').attr('value',selectbox_val);
+	  $('.dropdown-list ul').hide();
+	});
+	$('form').on("mouseleave",function(){
+		 $('.dropdown-list ul').hide();
+	});
 }
-
 /* function to generate effects of toggle switch */
 function effectToggleSwitch() {
 
@@ -313,6 +315,7 @@ function generateSVG() {
                     '</svg>';
                 $(this).html(svg_html);
                 break;
+			
             default:
 
         }
@@ -320,10 +323,12 @@ function generateSVG() {
 }
 
 /* function to generate date picker */
-function datePicker() {
-    $("#datepicker").datepicker({
+function datePicker(datePicId) {
+    $(datePicId).datepicker({
         changeMonth: true,
         changeYear: true,
+		dateFormat: $(datePicId).data("format"),
+		minDate:new Date(2015, 12 - 1, 24), //$(datePicId).data("minDate")
         dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // For formatting
     });
 }

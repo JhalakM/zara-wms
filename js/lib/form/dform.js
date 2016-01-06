@@ -24,18 +24,20 @@ $.fn.dynamicForm = function(options){
 			formCreate  = document.createElement("form");
 			$(self).append(formCreate);
 			$.each(formData, function(key, value) {
-				
+				formCaption = formData[key].caption;
 				formTag 	= jsonParse(jsonStringify(formData[key].formTag));
-
+				
 				$(formCreate).attr({
 					"name" 	 : formTag.name,
 					"id"	 : formTag.name,
 					"method" : formTag.method,
 					"action" : formTag.action,
 				});
-
+				
 				formElement 	= jsonParse(jsonStringify(formData[key].formElements));
 				$(formCreate).append(generateElements(formElement,formTag.name));
+				//formButtons 	= jsonParse(jsonStringify(formData[key].formButtons));
+				//$(formCreate).append(generateButtons(formData[key].formButtons,formTag.name));
 				formCaption 	= generateCaption(formTag.name,formData[key].caption);
 			});
 			

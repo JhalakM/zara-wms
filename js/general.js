@@ -3,6 +3,7 @@
 |@desc   : Function need to use on init level.
 */
 
+
 /* function to load javascript file in run time */
 function loadScript(url, callback){
 
@@ -36,9 +37,6 @@ function jsonParse(jParseData){
 }
 
 function generateElements(formElement,formId){
-	var getElement = "";
-	var element = "";
-	var formWrapper;
 	for(var fe = 0; fe < formElement.length; fe++){
 		generateFormRow(formId);
 		generateLabel(formId,formElement[fe].labelKey);
@@ -65,12 +63,10 @@ function generateElements(formElement,formId){
 				window[functionCallback](formId,formElement[fe]);
 				break;
 			case "file":
-				//window[functionCallback](formId,formElement[fe]);
+				window[functionCallback](formId,formElement[fe]);
 				break;
 		}
 	}
-	return getElement;
-	
 }
 
 function generateCaption(formId,formCaption){
@@ -89,14 +85,38 @@ function generateLabel(formId,labelKey){
 }
 
 function generate_text(formId,formElement){
-	var inputHTML  =  $(ele_input).appendTo("#"+formId+" .form-row:last")
+	var inputHTML  = "";
+	
+	if(formElement.format != undefined){
+		var format = formElement.format;
+		switch(format){
+			case "date":
+				inputHTML  =  $(ele_input).appendTo("#"+formId+" .form-row:last")
+									.find("input").attr({
+										"name"        : formElement.name,
+										"tabindex"    : formElement.tabIndex,
+										"type"        : formElement.type,
+										"data-minDate": formElement.minDate,
+										"id"	      : formElement.name,
+										"data-format" : formElement.dateFormat
+									});
+				datePicker("#"+formElement.name);
+				break;
+			case "time":
+				break;
+		}
+	}else{
+		inputHTML  =  $(ele_input).appendTo("#"+formId+" .form-row:last")
 						.find("input").attr({
-								"name"    : formElement.name,
-								"tabindex": formElement.tabIndex,
-								"type"    : formElement.type
-							});
+							"name"    : formElement.name,
+							"tabindex": formElement.tabIndex,
+							"type"    : formElement.type
+						});
+	}
+	
 	return inputHTML;
 }
+
 
 function generate_textarea(formId,formElement){
 	var textareaHTML  =  $(ele_textarea).appendTo("#"+formId+" .form-row:last")
@@ -207,20 +227,15 @@ function generate_checkbox(formId,formElement){
 	}	
 }
 
+function generate_file(){
+	
+}
+
 
 function returnObject(obj){
 	return $('<div>').append(obj.clone()).html();
 }
-function generateButtons(btn_type){
-	switch(btn_type) {
-		case "submit":
-				
-			break;
-		case "reset":
-				
-			break;				
-		case "cancel":
-				
-			break;				
-	}
+
+function generateButtons(formButtons,formId){
+	var t = jsonStringify(formButtons);
 }

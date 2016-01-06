@@ -22,18 +22,6 @@ var btn_reset = '<button class="uie-secondary-button uie-button" type="reset">Re
 var ele_label = '<div class="form-col-1">'+
 					'<label class="label"></label>'+
 				'</div>';
-
-
-var ele_switch = '<div class="form-col-2">'+
-					'<div class="p-r-5">'+
-						'<div class="radio-switch">'+
-							'<ul class="toggle-switch">'+
-								'<li class="on switch"><a href="javascript:void(0);"></a></li>'+
-								'<li class="off"><a href="javascript:void(0);"></a></li>'+								 
-							'</ul>'+
-						'</div>'+
-					'</div>'+
-				'</div>';					
 				
 var ele_radio = '<div class="form-col-2">'+
 					'<div class="p-r-5">'+
@@ -55,13 +43,14 @@ var ele_textarea = '<div class="form-col-2">'+
 						'<textarea class="textarea-box"></textarea>'+
 					'</div>'+
 				'</div>';				
+
 var edit_icon = '<i class="fa fa-pencil-square-o"></i>';
+				
 var ele_dropdown = '<div class="form-col-2">'+
 					'<div class="p-r-5">'+
 						'<div class="dropdown-list">'+
 							'<div class="selected-listitem">Click Me</div>'+
 								'<ul>'+
-									
 								'</ul>'+
 								'<input class="dropdown-item" type="hidden" />'+
 						'</div>'+
@@ -75,5 +64,5 @@ var ele_checkbox = '<div class="form-col-2">'+
 						'</div>'+
 					 '</div>'+
 				 '</div>';
-			
+					
 var div_col_md_6 = '<div class="form-row col-md-6"></div>';
