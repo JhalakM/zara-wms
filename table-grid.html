@@ -26,10 +26,10 @@
             <!-- Panel Block-->
             <div class="panel-block">
                 <!-- Panel Head -->
-                <div class="panel-block-head">
+                <div class="panel-block-head clearfix">
                     <div class="panel-block-icon"><i class="fa fa-sticky-note"></i>
                     </div>
-                    <div class="panel-block-heading">Table Example</div>
+                    <div class="panel-block-heading "> Table Example</div>
                     <div class="app-action-group">
                         <a href="#"><i class="fa fa-print"></i></a>
                         <a href="#" class="active"><i class="fa fa-filter"></i></a>
@@ -85,12 +85,13 @@
                                             <input type="text" class="text-box" name="service_code" value="">
                                         </div>
                                         <div class="no-padding  margin-5 pull-left">
-                                            <ul class="toggle-switch">
-                                                <li class="on switch"><a href="javascript:void(0);">ON</a>
-                                                </li>
-                                                <li class="off"><a href="javascript:void(0);">OFF</a>
-                                                </li>
-                                            </ul>
+                                            <div class="switch">
+                    <input type="radio" class="switch-input" name="view" value="week" id="on_1" checked>
+                    <label for="on_1" class="switch-label switch-label-off">ON</label>
+                    <input type="radio" class="switch-input" name="view" value="month" id="off_1">
+                    <label for="off_1" class="switch-label switch-label-on">OFF</label>
+                    <span class="switch-selection"></span>
+                </div>
                                         </div>
                                     </div>
                                     <div class="form-row clearfix">
@@ -116,12 +117,15 @@
                                             <input type="text" class="text-box" name="service_code" value="">
                                         </div>
                                         <div class="no-padding  margin-5 pull-left">
-                                            <ul class="toggle-switch">
-                                                <li class="on switch"><a href="javascript:void(0);">ON</a>
-                                                </li>
-                                                <li class="off"><a href="javascript:void(0);">OFF</a>
-                                                </li>
-                                            </ul>
+                                           
+                                            <div class="switch">
+                    <input type="radio" class="switch-input" name="switch2" value="week" id="on_2" checked>
+                    <label for="on_2" class="switch-label switch-label-off">ON</label>
+                    <input type="radio" class="switch-input" name="switch2" value="month" id="off_2">
+                    <label for="off_2" class="switch-label switch-label-on">OFF</label>
+                    <span class="switch-selection"></span>
+                </div>
+                                        
                                         </div>
                                     </div>
                                     <div class="form-row clearfix">
@@ -210,7 +214,7 @@
                     <div class="pagination-block clearfix">
                         <div class="pages-info">
                             <div class="page-options">
-                                <span>Page</span> <a href="#"><i class="fa fa-chevron-left"></i></a>
+                                <span>Page</span> <a href="#" class="disable"><i class="fa fa-chevron-left"></i></a>
 
                                 <div class="dropdown-list">
                                     <div class="selected-listitem">11</div>
