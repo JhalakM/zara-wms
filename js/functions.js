@@ -141,12 +141,12 @@ function custom_dropdown_list() {
         this_ul.toggle();
 
         if (this_ul.find('li').length >= 4) {
-            this_ul.css({
+            $(".dropdown-list").css({
                 height: this_ul.height()
             });
 
             // Scrollbar JavaScript
-            generateScrollbar(this_ul);
+            generateScrollbar(".dropdown-list");
         }
     });
     $('.dropdown-list ul li').click(function() {
@@ -313,6 +313,7 @@ function generateSVG() {
                     '</svg>';
                 $(this).html(svg_html);
                 break;
+			
             default:
 
         }
