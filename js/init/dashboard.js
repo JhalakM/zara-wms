@@ -6,12 +6,14 @@
 $(document).ready(function(){
 	linkDropdown();
 	sidebarHeight();
-	
+	sidebarMobile() 
 });
 
 
 
 $(window).load(function(){
+
+
 });
 
 

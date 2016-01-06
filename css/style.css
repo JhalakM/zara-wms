@@ -892,23 +892,22 @@ Tooltip
 .tooltip:before,
 [data-tooltip]:before {
     z-index: 1001;
-    border: 6px solid transparent;
+    border: 8px solid transparent;
     background: transparent;
     content: "";
 }
 /* Base styles for the tooltip's content area */
 
-.tooltip:after,
-[data-tooltip]:after {
-    z-index: 1000;
-    padding: 8px;
-    width: 160px;
-    background-color: #000;
-    background-color: hsla(0, 0%, 20%, 0.9);
-    color: #fff;
+.tooltip::after, [data-tooltip]::after {
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    color: #2991d6;
     content: attr(data-tooltip);
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.2;
+    padding: 8px;
+    white-space: nowrap;
+    z-index: 1000;
 }
 /* Directions */
 /* Top (default) */
@@ -926,9 +925,9 @@ Tooltip
 .tooltip:before,
 .tooltip-top:before {
     margin-left: -6px;
-    margin-bottom: -12px;
+    margin-bottom: -15px;
     border-top-color: #000;
-    border-top-color: hsla(0, 0%, 20%, 0.9);
+   border-top-color: #d8d8d8;;
 }
 /* Horizontally align top/bottom tooltips */
 
@@ -963,11 +962,11 @@ Tooltip
 }
 .tooltip-left:before {
     margin-left: 0;
-    margin-right: -12px;
+    margin-right: -15px;
     margin-bottom: 0;
     border-top-color: transparent;
     border-left-color: #000;
-    border-left-color: hsla(0, 0%, 20%, 0.9);
+    border-left-color: #d8d8d8;
 }
 .tooltip-left:hover:before,
 .tooltip-left:hover:after,
@@ -986,11 +985,11 @@ Tooltip
     left: 50%;
 }
 .tooltip-bottom:before {
-    margin-top: -12px;
+    margin-top: -15px;
     margin-bottom: 0;
     border-top-color: transparent;
     border-bottom-color: #000;
-    border-bottom-color: hsla(0, 0%, 20%, 0.9);
+    border-bottom-color: #d8d8d8;
 }
 .tooltip-bottom:hover:before,
 .tooltip-bottom:hover:after,
@@ -1005,28 +1004,30 @@ Tooltip
 .tooltip-right:before,
 .tooltip-right:after {
     bottom: 50%;
-    left: 100%;
+    left:78%;
 }
 .tooltip-right:before {
-    margin-bottom: 0;
-    margin-left: -12px;
+     border-right-color: #d8d8d8;
     border-top-color: transparent;
-    border-right-color: #000;
-    border-right-color: hsla(0, 0%, 20%, 0.9);
+    margin-bottom: 0;
+    margin-left: -16px;
 }
 .tooltip-right:hover:before,
 .tooltip-right:hover:after,
 .tooltip-right:focus:before,
 .tooltip-right:focus:after {
-    -webkit-transform: translateX(12px);
-    -moz-transform: translateX(12px);
-    transform: translateX(12px);
+    -webkit-transform: translateX(13px);
+    -moz-transform: translateX(13px);
+    transform: translateX(13px);
 }
 /* Move directional arrows down a bit for left/right tooltips */
 
-.tooltip-left:before,
+.tooltip-left:before {
+    top: 2px;
+}
+
 .tooltip-right:before {
-    top: 3px;
+    top: 20px;
 }
 /* Vertically center tooltip content for left/right tooltips */
 
@@ -1753,6 +1754,53 @@ Alert message
 .ui-alert-warning .alert-icon span {
     background-color: #feaa30;
 }
+/*  Alert Error Message   */
+.error-info-icon {
+    background: red;
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 6px;
+}
+.error-msg::before {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ff0000;
+    border-style: solid solid solid dashed;
+    border-width: 6px 5px;
+    content: "";
+    left: -11px;
+    position: absolute;
+    top: 11px;
+    transform: rotate(-180deg);
+}
+.error-msg {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #f24534;
+    display: block;
+    float: right;
+    margin-bottom: 5px;
+    max-width: 260px;
+    padding: 7px 15px;
+    position: absolute;
+    right: -266px;
+    top: 0;
+    width: 260px;
+    z-index: 999;
+}
+.error-msg.left-bottom {
+    left: 0;
+    top: 40px;
+}
+.error-msg.left-bottom::before {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ff0000;
+    border-style: solid solid solid dashed;
+    border-width: 6px 5px;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: -12px;
+    transform: rotate(-92deg);
+}
 /*------------------------------------*\
 switch 
 \*------------------------------------*/
@@ -2470,6 +2518,10 @@ div.bradcrum-menu a {
     position: relative;
     text-transform: uppercase;
 }
+div.bradcrum-menu a, .navbar-header div.bradcrum-menu a:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: #2991d6;
+}
 /*------------------------------------*\
 Sidebar
 \*------------------------------------*/
@@ -2508,11 +2560,47 @@ Sidebar
     padding: 0;
 }
 .left-panel li {
-    background: rgba(0, 0, 0, 0) url("../images/sprite-left-panel.png") repeat scroll 0 0;
+    background-position: center center;
+    background-repeat: no-repeat;
     border-bottom: 1px solid #d8d8d8;
     height: 60px;
     width: 60px;
 }
+.left-panel li:hover{background-color:#2991d6;}
+.left-panel li a {
+    color: transparent;
+    display: block;
+    height: 60px;
+    width: 60px;
+}
+.left-panel li.operation-planning{background-image:url("../img/dashborad/svg/operation-planning.svg");}
+.left-panel li.operation-planning:hover{background-image:url("../img/dashborad/svg/operation-planning-hover.svg");}
+
+.left-panel li.billing{background-image:url("../img/dashborad/svg/billing.svg");}
+.left-panel li.billing:hover{background-image:url("../img/dashborad/svg/billing-hover.svg");}
+
+.left-panel li.edi{background-image:url("../img/dashborad/svg/edi.svg");}
+.left-panel li.edi:hover{background-image:url("../img/dashborad/svg/edi-hover.svg");}
+
+.left-panel li.gate{background-image:url("../img/dashborad/svg/gate.svg");}
+.left-panel li.gate:hover{background-image:url("../img/dashborad/svg/gate-hover.svg");}
+
+.left-panel li.containers{background-image:url("../img/dashborad/svg/containers.svg");}
+.left-panel li.containers:hover{background-image:url("../img/dashborad/svg/containers-hover.svg");}
+
+.left-panel li.services{background-image:url("../img/dashborad/svg/services.svg");}
+.left-panel li.services:hover{background-image:url("../img/dashborad/svg/services-hover.svg");}
+
+.left-panel li.reporting{background-image:url("../img/dashborad/svg/reporting.svg");}
+.left-panel li.reporting:hover{background-image:url("../img/dashborad/svg/reporting-hover.svg");}
+
+.left-panel li.operation-dashboard{background-image:url("../img/dashborad/svg/operation-dashboard.svg");}
+.left-panel li.operation-dashboard:hover{background-image:url("../img/dashborad/svg/operation-dashboard-hover.svg");}
+
+.left-panel li.administration{background-image:url("../img/dashborad/svg/administration.svg");}
+.left-panel li.administration:hover{background-image:url("../img/dashborad/svg/administration-hover.svg");}
+
+
 /*------------------------------------*\
 Main Body
 \*------------------------------------*/
@@ -2530,3 +2618,70 @@ Footer
 footer {
     margin-left: 150px;
 }
+
+/********************** owl carousel slider ***********************/
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+/********************** EOF owl carousel slider ***********************/
