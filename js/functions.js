@@ -378,3 +378,59 @@ function dateTimePicker() {
         pickDate: false
     });
 }
+
+// Sidebar Height 
+function sidebarHeight() {
+	if($( window ).width()>=1024){
+				$(".left-panel").css("height", $(window).height()-108 + "px"), $(window).resize(function() {
+					$(".left-panel").css("height", $(window).height()-108 + "px")
+	});
+}
+}
+$(document).ready(function(){
+	
+	$('.error-msg').hide();
+	
+	$(".validate-details").on('change focusout',function(){
+		var input_value = $(this).val();
+		$(this).next('span.error-msg').hide();
+		if(input_value == ""){
+			$(this).addClass('highlight-input');
+			$( '<i class="error-info-icon" onclick="show_error(this)">Click Me</i>' ).insertAfter( this );
+			$(this).next('span.error-msg').hide();
+		}
+	});
+	
+	$(".validate-details").on('focusin touch touchmove',function(){
+		$(this).removeClass('highlight-input');
+		$(this).next('.error-info-icon').remove();
+		$(this).next('span.error-msg').show();
+	}); 
+		
+	$('.validate-login').on('click',function(){
+		$(".error-info-icon").remove();
+		$('.error-msg').hide();
+		var input_value = $('.validate-details').val();
+		if(input_value == ""){
+			$(".validate-details").addClass('highlight-input');
+			$( '<i class="error-info-icon" onclick="show_error(this)">Click Me</i>' ).insertAfter( ".validate-details" );
+		}else{
+			var username = $("#username").val();
+			var password = $("#password").val();
+			if(username == "zodiac" && password == "welcome"){
+				location.href = "index.html";
+			}else{
+				$(".validate-details").addClass('highlight-input');
+				$( '<i class="error-info-icon" onclick="show_error(this)">Click Me</i>' ).insertAfter( ".validate-details" );
+			}
+		}
+	});
+	
+	
+});
+
+function show_error(value){
+	$(value).prev('input').removeClass('highlight-input');
+	$(value).next('.error-msg').show();
+	$(value).remove();
+}
