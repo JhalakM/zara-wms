@@ -1891,16 +1891,58 @@ Panel
 /*------------------------------------*\
 Alert message 
 \*------------------------------------*/
+.ui-alert {
+    border-radius: 0;
+   
+    margin-bottom: 20px;
+    padding: 15px;
+   
+}
+.alert-icon {
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 12%;
+}
+.alert-icon span {
+    background-color: #d8d8d8;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    font-size: 22px;
+    height: 34px;
+    line-height: 31px;
+    text-align: center;
+    width: 34px;
+}
+.alert-rext {
+    float: left;
+    width: 78%;
+}
+.close-icon {
+    color: #120e5b;
+    float: right;
+    padding: 10px 0;
+    width: 6%;
+}
+
+.close-icon a ,.close-icon a:hover{
+    color: #120E5B;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.close-icon a:hover{opacity: 1}
+
+/* Alert Success */
 
 .ui-alert-success {
     border: 1px solid #45b6b0;
 }
-.ui-alert {
-    margin-bottom: 20px;
-    padding: 15px;
-    float: left;
-    width: 100%;
-}
+.ui-alert-success .alert-icon span{background-color:green}
+
+
 .validations-ui-text {
     display: inline-block;
     color: #5c5c5c;
@@ -1910,22 +1952,8 @@ Alert message
 .validations-ui.alert-icon {
     display: inline-block;
 }
-.validations-ui {
-    float: left;
-    text-align: center;
-    vertical-align: middle;
-    width: 42px;
-}
-.alert-icon {
-    background: #45b6b0;
-    border-radius: 20px;
-    height: 34px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    vertical-align: top;
-    width: 34px;
-}
+
+
 .validations-ui .alert-icon i {
     color: #ffffff;
     font-size: 22px;
@@ -1938,25 +1966,7 @@ Alert message
 .validations-ui-text p {
     font-size: 12px;
 }
-.close-icon {
-    display: table-row;
-    float: right;
-    padding: 10px 0;
-    vertical-align: middle;
-    color: #120e5b;
-}
-.close-icon a {
-    color: #120E5B;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 1;
-}
-.close-icon a:hover {
-    color: #120E5B;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 1;
-}
+
 .alert-er-bg-color {
     border: 1px solid #ff0000;
 }
