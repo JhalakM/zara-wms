@@ -7,6 +7,7 @@ $(document).ready(function(){
 	linkDropdown();
 	sidebarHeight();
 	sidebarMobile() 
+	
 });
 
 
