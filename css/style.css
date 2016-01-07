@@ -186,6 +186,8 @@ input[type="radio"]:checked:not(old) + label > span > span {
     float: left;
     margin-top: 6px;
 }
+.radio-btn.radio-btn label { line-height: 22px;
+}
 /*------------------------------------*\
 button
 \*------------------------------------*/
@@ -648,7 +650,7 @@ Text Box
     width: 100%;
     padding: 5px 8px;
 }
-.text-box:focus {
+.text-box:focus ,.textarea-box:focus {
     border: 1px solid #2991D6;
     box-shadow: 0 0 4px rgba(41, 145, 214, 0.3);
     -webkit-box-shadow: 0 0 4px rgba(41, 145, 214, 0.3);
@@ -831,21 +833,7 @@ Dropdown
 .uie-dp-menu ul li i {
     padding: 0 5px 0 0;
 }
-.uie-btn-icon.simptip-position-bottom[data-tooltip]::before {
-    border-bottom-color: #d8d8d8;
-}
-.uie-btn-icon[data-tooltip]::before {
-    border: 10px solid rgba(0, 0, 0, 0);
-    content: "";
-}
-.uie-btn-icon.simptip-position-bottom::before {
-    margin-top: -13px;
-}
-.uie-btn-icon.simptip-position-bottom[data-tooltip]::after {
-    background-color: #ffffff;
-    border: 1px solid #d8d8d8;
-    color: #0c79c1;
-}
+
 
 
 /*------------------------------------*\
@@ -866,11 +854,11 @@ File upload button
     margin-bottom: 22px;
 }
 .field.prepend-icon.file {
-    border: 1px solid #d8d8d8;
+    border: medium none;
     display: inline-block;
     left: 0;
     line-height: 30px;
-    padding-left: 15px;
+    padding-left: 0;
     position: relative;
     top: 0;
     vertical-align: top;
@@ -891,15 +879,13 @@ File upload button
     left: 0;
 }
 .gui-input {
-    border: medium none;
+    border: 1px solid #d8d8d8;
+    height: 35px;
     line-height: 22px;
+    padding: 5px 8px;
     text-align: left;
+    width: 280px;
 }
-
-
-
-
-
 /*------------------------------------*\
 Tooltip
 \*------------------------------------*/
@@ -989,17 +975,16 @@ Tooltip
 [data-tooltip]:before,
 .tooltip:before,
 .tooltip-top:before {
-    margin-left: -6px;
+ border-top-color: #d8d8d8;
     margin-bottom: -15px;
-    border-top-color: #000;
-   border-top-color: #d8d8d8;;
+    margin-left: -6px;
 }
 /* Horizontally align top/bottom tooltips */
 
 [data-tooltip]:after,
 .tooltip:after,
 .tooltip-top:after {
-    margin-left: -80px;
+  left: -50%;
 }
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after,
@@ -1013,9 +998,9 @@ Tooltip
 .tooltip-top:hover:after,
 .tooltip-top:focus:before,
 .tooltip-top:focus:after {
-    -webkit-transform: translateY(-12px);
+  /*  -webkit-transform: translateY(-12px);
     -moz-transform: translateY(-12px);
-    transform: translateY(-12px);
+    transform: translateY(-12px); */
 }
 /* Left */
 
@@ -1047,7 +1032,7 @@ Tooltip
 .tooltip-bottom:after {
     top: 100%;
     bottom: auto;
-    left: 50%;
+    
 }
 .tooltip-bottom:before {
     margin-top: -15px;
@@ -1060,16 +1045,15 @@ Tooltip
 .tooltip-bottom:hover:after,
 .tooltip-bottom:focus:before,
 .tooltip-bottom:focus:after {
-    -webkit-transform: translateY(12px);
+   /* -webkit-transform: translateY(12px);
     -moz-transform: translateY(12px);
-    transform: translateY(12px);
+    transform: translateY(12px);*/
 }
 /* Right */
 
-.tooltip-right:before,
-.tooltip-right:after {
+.tooltip-right::before, .tooltip-right::after {
     bottom: 50%;
-    left:78%;
+    left: 100%;
 }
 .tooltip-right:before {
      border-right-color: #d8d8d8;
@@ -1081,9 +1065,9 @@ Tooltip
 .tooltip-right:hover:after,
 .tooltip-right:focus:before,
 .tooltip-right:focus:after {
-    -webkit-transform: translateX(13px);
+  /*  -webkit-transform: translateX(13px);
     -moz-transform: translateX(13px);
-    transform: translateX(13px);
+    transform: translateX(13px); */
 }
 /* Move directional arrows down a bit for left/right tooltips */
 
@@ -1091,8 +1075,8 @@ Tooltip
     top: 2px;
 }
 
-.tooltip-right:before {
-    top: 20px;
+.tooltip-right::before {
+     top: 33%;
 }
 /* Vertically center tooltip content for left/right tooltips */
 
@@ -2090,6 +2074,7 @@ Forms Element
     resize: none;
     width: 100%;
 }
+
 .highlight-input {
     border: 1px solid #ff0000;
 }
