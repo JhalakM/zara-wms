@@ -53,10 +53,10 @@ function ajaxCallBack(ajax_url, success_callback, failure_callback, params) {
 
 /* function to get form element from dynamic form plugin */
 function getFormElement() {
-
-    $(".call-formbtn").click(function() {
-        var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
+		var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
         ajaxCallBack(ajaxUrl, generateFormSuccess, generateFormError);
+    $(".call-formbtn").click(function() {
+        
     });
 
 }
@@ -105,7 +105,7 @@ function generateFormSuccess(json_data){
 	var jsonString = jsonStringify(json_data);
 	var obj = jsonParse(jsonString);
 	if (obj.errorCode == 0) {
-		$('.form-content').dynamicForm({
+		$('#form-content').dynamicForm({
 			formObject : obj.returnObject
 		});
 	}
@@ -155,6 +155,9 @@ function custom_dropdown_list()
 	  $(this).parents('.dropdown-list').find('.selected-listitem').text(selectbox_text);
 	  $(this).parents('.dropdown-list').find('.dropdown-item').attr('value',selectbox_val);
 	  $('.dropdown-list ul').hide();
+	});
+	$('form').on("mouseleave",function(){
+		 $('.dropdown-list ul').hide();
 	});
 }
 /* function to generate effects of toggle switch */
@@ -320,10 +323,12 @@ function generateSVG() {
 }
 
 /* function to generate date picker */
-function datePicker() {
-    $("#datepicker").datepicker({
+function datePicker(datePicId) {
+    $(datePicId).datepicker({
         changeMonth: true,
         changeYear: true,
+		dateFormat: $(datePicId).data("format"),
+		minDate:new Date(2015, 12 - 1, 24), //$(datePicId).data("minDate")
         dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // For formatting
     });
 }
@@ -377,9 +382,21 @@ function dateTimePicker() {
 // Sidebar Height 
 function sidebarHeight() {
 	if($( window ).width()>=1024){
-				$(".left-panel").css("height", $(window).height()-108 + "px"), $(window).resize(function() {
-					$(".left-panel").css("height", $(window).height()-108 + "px")
-				});
+			$(".left-panel").css("height", $(window).height()-108 + "px"), $(window).resize(function() {
+			$(".left-panel").css("height", $(window).height()-108 + "px")
+		});
+	}
+}
+// Sidebar In Mobile
+function sidebarMobile() {
+	if($( window ).width()<=768){
+		$("#nav_pan").owlCarousel({
+			items : 9, //10 items above 1000px browser width
+			itemsTablet: [768,5],						 
+			itemsMobile: [600,3],
+			responsive: true,
+			navigation: true
+		 });
 	}
 }
 // panel action icon height 
@@ -387,9 +404,6 @@ function actionBtnHeight() {
 	if($( window ).width() > 568){
 		$(".app-action-group a").css("height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
 			$(".app-action-group a" ).css("height", $(".panel-block-heading ").height()+10 + "px")
-		});
-		$(".app-action-group a").css("line-height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
-			$(".app-action-group a" ).css("line-height", $(".panel-block-heading ").height()+10 + "px")
 		});
 	}
 	
@@ -443,3 +457,4 @@ function show_error(value){
 	$(value).next('.error-msg').show();
 	$(value).remove();
 }
+
