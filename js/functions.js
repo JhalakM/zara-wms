@@ -343,7 +343,11 @@ function sidebarScroll() {
 
 }
 
-
+function actionBlock() {
+    $(".grid-action-group a").click(function() {
+        $(".grid-action-form").slideToggle("slow");
+    });
+}
 
 function appActionBlock() {
     $(".app-action-group a").click(function() {
