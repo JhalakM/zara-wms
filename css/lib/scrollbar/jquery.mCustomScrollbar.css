@@ -678,8 +678,11 @@ Scroll bar Colors and Background
 	
 	.mCS-3d.mCSB_scrollTools .mCSB_buttonUp{ background-position: 0 -13px }
 	
-	.mCS-3d.mCSB_scrollTools .mCSB_buttonDown{ background-position: 0 0; }
-	
+	.mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
+		background-position: 0 0;
+		bottom: 10px;
+		height: 10px;
+	}
 
 .mCS-3d.mCSB_scrollTools .mCSB_buttonLeft {
     background-position: -13px 0

@@ -229,6 +229,8 @@ iPad portrait · width: 768px
 .owl-buttons {
     display: none;
 }
+.mobile-sidebarmenu{display:block;}
+   .desktop-sidebar{display:none;}
 }
 
 
@@ -350,6 +352,7 @@ ul.nav li.dropdown-submenu:hover .dropdown-menu {
     border-bottom: medium none;}
 
    /*---------- End Menu-----------*/
+   
 }
 
 
