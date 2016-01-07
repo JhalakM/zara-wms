@@ -590,6 +590,19 @@ a.button:focus {
     color: #0c79c1;
     text-decoration: none;
 }
+
+/*------- Forms Element UI Date Picker -------*/
+
+.ui-datepicker-title select::before {
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-top: 5px solid #373374;
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+
 /*------------------------------------*\
 Toggle Switch
 \*------------------------------------*/
@@ -706,17 +719,31 @@ Dropdown
     z-index: 100;
 }
 .dropdown-list ul li {
-    border-bottom: 1px solid #d8d8d8;
+    /*border-bottom: 1px solid #d8d8d8;
     color: #5c5c5c;
     cursor: pointer;
     display: block;
     font-size: 14px;
     height: 34px;
-    padding: 0 10px;
+    padding: 0 10px;*/
+	
+	 border-bottom: 1px solid #d8d8d8;
+    color: #5c5c5c;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 7px 10px;
 }
 .dropdown-list .mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
     background-position: 0 10px;
 }
+.pages-info .dropdown-list .mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -1px -1px;
+}
+.pages-info .mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: 0 0;
+    bottom: 0;}
 .dropdown-list .mCSB_scrollTools a + .mCSB_draggerContainer {
     margin: 10px 0;
 }
@@ -739,6 +766,7 @@ Dropdown
 .check-btn-form-uie {
     margin: 5px 0 10px;
 }
+.page-record-options .dropdown-list ul{    left: 0; top: 19px;}
 /* Button Action Dropdown */
 
 .uie-dropdown-btn {
@@ -1441,7 +1469,7 @@ Application form action ablock
     padding: 10px 0;
 }
 .set-empty .checkbox {
-    margin: 7px 0 0;
+    margin:0;
 }
 /*------------------------------------*\
 Panel
@@ -1593,7 +1621,7 @@ Panel
 .page-record-options .dropdown-list ul li {
     font-size: 12px;
     height: 19px;
-    padding: 0 5px;
+    padding: 0 5px;line-height:16px;
 }
 .page-options .dropdown-list .selected-listitem,
 .page-record-options .dropdown-list .selected-listitem {
@@ -1601,6 +1629,7 @@ Panel
     line-height: 16px;
     border: 1px solid #d8d8d8;
     height: 20px;
+	width: 40px;
 }
 .page-options .selected-listitem::before,
 .page-record-options .selected-listitem::before {
@@ -1613,7 +1642,7 @@ Panel
 .page-options .dropdown-list ul,
 .view .dropdown-list ul {
     top: 17px;
-    width: 106%;
+   
 }
 .page-options > span,
 .page-record-options > span {
@@ -1825,6 +1854,22 @@ Alert message
     top: 11px;
     transform: rotate(-180deg);
 }
+.error-msg.right-top::before {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ff0000;
+    border-style: solid solid solid dashed;
+    border-width: 6px 5px;
+    content: "";
+    left: 118px;
+    position: absolute;
+    top: 11px;
+    transform: rotate(-1deg);
+}
+.error-msg.right-top {
+    left: 0;
+    max-width: 120px;
+    text-align: right;
+    width: 100%;
+}
 .error-msg {
     background: #ffffff none repeat scroll 0 0;
     border: 1px solid #f24534;
@@ -1909,7 +1954,80 @@ switch
     z-index: 1;
 }
 
+/*------------------------------------*\
+Model Dialog Box
+\*------------------------------------*/
+.modal-dialog {
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -50px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%) !important;
+       width: auto;
+}
+.modal-title {
+    color: #5c5c5c;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.42857;
+    margin: 0;
+	padding:10px;
+}
+.modal-title .icon {
+    margin-right: 6px;
+}
+.modal-content{  border-radius: 0;}
+.modal-header {
+    border-bottom: 1px solid #e5e5e5;
+    height: 40px;
+    padding: 0px;
+}
+.modal-header .close{
+ border-left: 1px solid #d8d8d8;
+    color: #120e5b;
+    display: block;
+    float: right;
+    line-height: 39px;
+    text-align: center;
+    width: 37px;
+	margin-top: 0;
+	opacity:1;
+	  text-shadow: none;}
+	.modal-header .close:hover {
+    background: #120e5b none repeat scroll 0 0;
+    color: #fff;
+  
+}
+#batch_update .modal-dialog {
+    width: 460px;
+}
+#batch_update .field-name {
+    float: left;
+    text-align: right;
+    width: 70px;
+}
 
+.modal-body {
+    padding: 15px 15px 5px;
+    position: relative;
+}
+.modal-content .form-btn-group.clearfix {
+    margin-bottom: 10px;
+   
+}
+.modal-dialog .uie-button .btn-icon i {
+    font-size: 18px;
+}
+#add-record .modal-dialog {
+    width: 820px;
+}
+.modal-body .field-name {
+    float: left;
+    text-align: right;
+    width: 80px;
+}
+.modal-body .form-btn-group{  margin-left: 80px;}
 
 
 /*------------------------------------*\
@@ -1966,6 +2084,7 @@ Table
    
     padding: 0;
     width: 100%;
+	max-height:400px;
 }
 .table-grid th:first-child span,
 .table-grid tr td:first-child {
@@ -2045,6 +2164,7 @@ Table
     margin-bottom: 5px;
     margin-top: -3px;
 }
+.table-record .mCSB_container_wrapper{position:relative;}
 /*------------------------------------*\
 Forms Element 
 \*------------------------------------*/
@@ -2095,7 +2215,7 @@ Element Block Style
 }
 .panel-title {
     font-size: 14px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     margin-top: 0;
 }
 .panel {
@@ -2738,8 +2858,7 @@ Main Body
     margin-left: 150px;
 }
 .right-panel {
-    margin-bottom: 30px;
-    margin-left: 80px;
+     margin-left: 80px;
     margin-right: 20px;
     padding-top: 20px;
 }
@@ -2761,3 +2880,4 @@ Footer
 }
 
 
+.mobile-sidebarmenu{display:none;}
