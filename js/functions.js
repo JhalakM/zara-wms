@@ -343,11 +343,7 @@ function sidebarScroll() {
 
 }
 
-function actionBlock() {
-    $(".grid-action-group a").click(function() {
-        $(".grid-action-form").slideToggle("slow");
-    });
-}
+
 
 function appActionBlock() {
     $(".app-action-group a").click(function() {
@@ -382,11 +378,11 @@ function dateTimePicker() {
 
 // Sidebar Height 
 function sidebarHeight() {
-	if($( window ).width()>=1024){
-			$(".left-panel").css("height", $(window).height()-108 + "px"), $(window).resize(function() {
-			$(".left-panel").css("height", $(window).height()-108 + "px")
+	
+			$(".desktop-sidebar").css("height", $(window).height()-140 + "px"), $(window).resize(function() {
+			$(".desktop-sidebar").css("height", $(window).height()-140 + "px")
 		});
-	}
+	
 }
 // Sidebar In Mobile
 function sidebarMobile() {
@@ -459,5 +455,14 @@ function show_error(value){
 	$(value).remove();
 }
 
+// panel action icon height 
+function heightGrid() {
+	if($( window ).width() > 568){
+		$(".table-record").css("max-height", $(".desktop-sidebar").height()-170 + "px"), $(window).resize(function() {
+			$(".table-record" ).css("max-height", $(".desktop-sidebar").height()-170 + "px")
+		});
+	}
+	
+}
 
 

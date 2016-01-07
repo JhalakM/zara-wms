@@ -191,10 +191,8 @@
         <input type="text" value="" name="service_code" class="text-box" placeholder="Search">
     </div>
 	</header>
-	<!-- End Header -->
-	<section class="clearfix">
-	<!-- Sidebar -->
-	<aside class="left-panel">
+	<section class="left-panel mobile-sidebarmenu" >
+	
 		
 		<ul id="nav_pan">
 	
@@ -207,6 +205,27 @@
 			<li class="reporting"><a href="javascript:void(0);" class="tooltip-right tab_action" id="reporting" data-tooltip="Reporting">Reporting</a></li>
 			<li class="operation-dashboard"><a href="javascript:void(0);" class="tooltip-right tab_action" id="operation-dashboard" data-tooltip="Operation Dashboard">Operation Dashboard</a></li>
 			<li class="administration"><a href="javascript:void(0);" class="tooltip-right tab_action" id="administration" data-tooltip="Administration">Administration</a></li>
+			
+		</ul>
+	
+	</section>
+	<!-- End Header -->
+	<section class="clearfix">
+	<!-- Sidebar -->
+	<aside class="left-panel desktop-sidebar" >
+		
+		<ul>
+	
+			<li class="operation-planning"><a data-tooltip="Operation Dashboard" href="javascript:void(0);" class="tab_action tooltip-right" id="operation_planning">Operation &amp; Planning</a></li>
+			<li class="billing"><a href="javascript:void(0);" class="tooltip-right tab_action" id="billing" data-tooltip="Billing">Billing</a></li>
+			<li class="edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="edi" data-tooltip="EDI">EDI</a></li>
+			<li class="gate"><a href="javascript:void(0);" class="tooltip-right tab_action" id="gate" data-tooltip="Gate">Gate</a></li>
+			<li class="containers"><a href="javascript:void(0);" class="tooltip-right tab_action" id="containers" data-tooltip="Container">Container</a></li>
+			<li class="services"><a href="javascript:void(0);" class="tooltip-right tab_action" id="services" data-tooltip="Services">Services</a></li>
+			<li class="reporting"><a href="javascript:void(0);" class="tooltip-right tab_action" id="reporting" data-tooltip="Reporting">Reporting</a></li>
+			<li class="operation-dashboard"><a href="javascript:void(0);" class="tooltip-right tab_action" id="operation-dashboard" data-tooltip="Operation Dashboard">Operation Dashboard</a></li>
+			<li class="administration"><a href="javascript:void(0);" class="tooltip-right tab_action" id="administration" data-tooltip="Administration">Administration</a></li>
+			
 		</ul>
 		</aside>
 		<aside class="right-panel">
@@ -350,53 +369,70 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-action-form clearfix " style="display:none;">
-                        <form>
-                            <div class="form-col ">
-                                <div class="title"><span class="heading ">Batch Update </span>
-                                </div>
-                                <div class="form-action-field clearfix">
-                                    <div class="form-row clearfix">
-                                        <div class="field-name">
-                                            <label class="label">Vessel Name</label>
-                                        </div>
-                                        <div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3">
-                                            <input type="text" class="text-box" name="service_code" value="">
-                                        </div>
-                                        <div class="pull-left set-empty col-md-3 col-sm-3 col-xs-3 no-padding "><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty1"><label for="set-empty1" class="css-label">Set Empty</label></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-row clearfix">
-                                        <div class="field-name">
-                                            <label class="label">Type </label>
-                                        </div>
-                                        <div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3">
-                                            <input type="text" class="text-box" name="service_code" value="">
-                                        </div>
-                                        <div class="pull-left set-empty col-md-3 col-sm-3 col-xs-3 no-padding "><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty2"><label for="set-empty2" class="css-label">Set Empty</label></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-row clearfix">
-                                        <div class="field-name">
-                                            <label class="label">Length </label>
-                                        </div>
-                                        <div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3">
-                                            <input type="text" class="text-box" name="service_code" value="">
-                                        </div>
-                                        <div class="pull-left set-empty col-md-3 col-sm-3 col-xs-3 no-padding "><span class="checkbox"><input type="checkbox" class="css-checkbox" id="set-empty3"><label for="set-empty3" class="css-label">Set Empty</label></span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Form Footer -->
-                                    <div class="form-btn-group  clearfix">
-                                        <button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><img src="img/icons/svg/filter-white.svg" alt="Filter" ></span>
-                                            <div class="btn-value">Update </div>
-                                        </button>
-                                    </div>
-                                </div>
-                        </form>
-
-                        </div>
+                    
+						<!-- Modal -->
+				  <div class="modal fade" id="batch_update" role="dialog">
+					<div class="modal-dialog">
+					
+					  <!-- Modal content-->
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title"><span class="icon"><i class="fa fa-pencil-square-o"></span></i>Batch Update</h4>
+						</div>
+						<div class="modal-body">
+						  <form>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label">Vessel Name</label></div>
+						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
+						   <input type="text" value="" name="service_code" class="text-box">
+													</div>
+						  <div class=" margin-5  pull-left set-empty">
+						  <span class="checkbox">
+														<input type="checkbox" class="css-checkbox" id="set-empty1">
+														<label for="set-empty1" class="css-label">Set Empty</label>
+						  </span>
+						  
+						  </div>
+						  </div>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label"> Type </label></div>
+						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
+						   <input type="text" value="" name="service_code" class="text-box">
+													</div>
+						  <div class=" margin-5  pull-left set-empty">
+						  <span class="checkbox">
+														<input type="checkbox" class="css-checkbox" id="set-empty2">
+														<label for="set-empty2" class="css-label">Set Empty</label>
+						  </span>
+						  
+						  </div>
+						  </div>
+						  <div class="clearfix">
+						  <div class="field-name"><label class="label"> Length </label></div>
+						  <div class=" margin-5  pull-left col-md-5 col-sm-5 col-xs-5">
+						   <input type="text" value="" name="service_code" class="text-box">
+													</div>
+						  <div class=" margin-5  pull-left set-empty">
+						  <span class="checkbox">
+														<input type="checkbox" class="css-checkbox" id="set-empty3">
+														<label for="set-empty3" class="css-label">Set Empty</label>
+						  </span>
+						  
+						  </div>
+						  </div>
+						  </form>
+						</div>
+						<div class="form-btn-group  clearfix"> 
+												<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><i class="fa fa-pencil-square-o"></i></span>
+						<div class="btn-value">Update </div>
+					   </button>
+					   
+										   </div>
+					  </div>
+					  
+					</div>
+				  </div>
                     </div>
                     <!-- Panel pagination -->
                     <div class="pagination-block clearfix">
@@ -441,7 +477,8 @@
                             </div>
                         </div>
                         <div class="grid-action-group">
-                            <a href="#"><i class="fa fa-pencil-square-o"></i></a>
+						
+                            <a href="#" data-toggle="modal" data-target="#batch_update"><i class="fa fa-pencil-square-o"></i></a>
                             <a href="#"><i class="fa fa-trash"></i></a>
                             <a href="#"><i class="fa fa-floppy-o"></i></a>
                         </div>
@@ -872,6 +909,422 @@
                                     </td>
                                     <td>000</td>
                                     <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>LOLO</td>
+                                    <td>0000</td>
+                                    <td>LOLO</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                    <td>RAIL</td>
+                                    <td>004</td>
+                                    <td>455</td>
+                                </tr>
+								<tr class="selected">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input class="css-checkbox" type="checkbox">
+                                            <label class="css-label" for="checkbox2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="more-field-show"><a href="#"><span >+</span></a>
+                                    </td>
+                                    <td>000</td>
+                                    <td class="disable">LOLO</td>
                                     <td>0000</td>
                                     <td>LOLO</td>
                                     <td>RAIL</td>
