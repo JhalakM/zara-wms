@@ -198,8 +198,9 @@ button
     color: #2991d6;
     font-size: 14px;
     height: 40px;
+    margin: 5px 5px 5px 0;
+    overflow: hidden;
     padding: 0 22px;
-    overflow: hidden
 }
 .uie-btn:hover {
     background-color: #0c79c1;
@@ -866,6 +867,7 @@ File upload button
 }
 .uie-btn.uie-btn-primary.btn-sm.right {
     float: right;
+    margin: 0;
 }
 .file {
     display: block;
