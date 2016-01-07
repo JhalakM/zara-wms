@@ -39,6 +39,7 @@ $.fn.dynamicForm = function(options){
 				generateButtons(formData[key].formButtons,formTag.name);
 				formCaption 	= generateCaption(formTag.name,formData[key].caption);
 			});
+			custom_dropdown_list();
 			
 		},
 		init : function(){

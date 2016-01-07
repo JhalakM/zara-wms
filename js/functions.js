@@ -144,16 +144,17 @@ function custom_dropdown_list()
 		if(this_ul.find('li').length >= 4)
 		{
 			this_ul.css({height:this_ul.height()});
-			
 		   // Scrollbar JavaScript
 		   generateScrollbar(this_ul);
 		} 
 	});
 	$('.dropdown-list ul li').click(function(){
-	  var selectbox_val  = $(this).attr('rel');
+	  var selectbox_rel  = $(this).attr('rel');
+	  var selectbox_val  = $(this).attr('value');
+	  var selected_value = (selectbox_val != "")?selectbox_rel:"";
 	  var selectbox_text = $(this).text();
 	  $(this).parents('.dropdown-list').find('.selected-listitem').text(selectbox_text);
-	  $(this).parents('.dropdown-list').find('.dropdown-item').attr('value',selectbox_val);
+	  $(this).parents('.dropdown-list').find('.dropdown-item').attr('value',selected_value);
 	  $('.dropdown-list ul').hide();
 	});
 	$('form').on("mouseleave",function(){
