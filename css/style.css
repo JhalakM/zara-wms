@@ -357,7 +357,6 @@ a.button:focus {
     width: 348px;
 }
 /*------- File upload button normal Disable -------*/
-
 .file .gui-file {
     bottom: 0;
     cursor: pointer;
@@ -373,12 +372,21 @@ a.button:focus {
     margin-bottom: 22px;
 }
 .field.prepend-icon.file {
+    border: 1px solid #d8d8d8;
     display: inline-block;
     left: 0;
+    line-height: 30px;
+    padding-left: 15px;
     position: relative;
     top: 0;
     vertical-align: top;
     width: 100%;
+}
+.uie-btn.uie-btn-primary.btn-sm.right {
+    border: medium none;
+    border-radius: 0;
+    float: right;
+    line-height: 25px;
 }
 .file {
     display: block;
@@ -390,11 +398,14 @@ a.button:focus {
 }
 .field-icon {
     left: 0;
+    line-height: 33px;
+    margin: 0 10px 0 0;
 }
 .gui-input {
     border: medium none;
+    font-size: 14px;
     line-height: 22px;
-    text-align: center;
+    text-align: left;
 }
 /*------- Forms Element normal Disable -------*/
 
@@ -835,6 +846,60 @@ Dropdown
     border: 1px solid #d8d8d8;
     color: #0c79c1;
 }
+
+
+/*------------------------------------*\
+File upload button
+\*------------------------------------*/
+.file .gui-file {
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    padding: 8px 10px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 11;
+}
+.section {
+    margin-bottom: 22px;
+}
+.field.prepend-icon.file {
+    border: 1px solid #d8d8d8;
+    display: inline-block;
+    left: 0;
+    line-height: 30px;
+    padding-left: 15px;
+    position: relative;
+    top: 0;
+    vertical-align: top;
+    width: 100%;
+}
+.uie-btn.uie-btn-primary.btn-sm.right {
+    float: right;
+}
+.file {
+    display: block;
+    width: 100%;
+}
+.field {
+    display: block;
+    position: relative;
+}
+.field-icon {
+    left: 0;
+}
+.gui-input {
+    border: medium none;
+    line-height: 22px;
+    text-align: left;
+}
+
+
+
+
+
 /*------------------------------------*\
 Tooltip
 \*------------------------------------*/
@@ -1856,6 +1921,10 @@ switch
     width: 34px;
     z-index: 1;
 }
+
+
+
+
 /*------------------------------------*\
 Table
 \*------------------------------------*/
@@ -2572,6 +2641,7 @@ Sidebar
     display: block;
     height: 60px;
     width: 60px;
+	  font-size: 0;
 }
 .left-panel li.operation-planning{background-image:url("../img/dashborad/svg/operation-planning.svg");}
 .left-panel li.operation-planning:hover{background-image:url("../img/dashborad/svg/operation-planning-hover.svg");}
@@ -2601,25 +2671,7 @@ Sidebar
 .left-panel li.administration:hover{background-image:url("../img/dashborad/svg/administration-hover.svg");}
 
 
-/*------------------------------------*\
-Main Body
-\*------------------------------------*/
-
-.main {
-    background: #000 none repeat scroll 0 0;
-    color: #fff;
-    height: 1640px;
-    margin-left: 150px;
-}
-/*------------------------------------*\
-Footer
-\*------------------------------------*/
-
-footer {
-    margin-left: 150px;
-}
-
-/********************** owl carousel slider ***********************/
+/* For Responsive View */
 .owl-carousel .owl-wrapper:after {
 	content: ".";
 	display: block;
@@ -2684,4 +2736,35 @@ footer {
   -moz-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
 }
-/********************** EOF owl carousel slider ***********************/
+
+
+
+/*------------------------------------*\
+Main Body
+\*------------------------------------*/
+
+.main {
+    background: #000 none repeat scroll 0 0;
+    color: #fff;
+    height: 1640px;
+    margin-left: 150px;
+}
+
+/*------------------------------------*\
+Footer
+\*------------------------------------*/
+
+.footer {
+    background-color: #474747;
+    bottom: 0;
+    color: #ffffff;
+    left: 0;
+    padding: 10px 0;
+    position: relative;
+    right: 0;
+    text-align: center;
+    width: 100%;
+	font-size:13px;
+}
+
+
