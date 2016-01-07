@@ -5,22 +5,24 @@
       "formInfo":{  
          "formElements":[  
             {  
-               "validation":"r",
-               "tabIndex":"1",
-               "name":"containerNumber",
-               "labelKey":"containerInventory.containerNumber",
-               "defaultValue":"",
-               "type":"text",
-			   "additional" : 
-				   {  
-					   "validation":"r",
-					   "tabIndex":"1",
-					   "name":"containerNumber",
-					   "labelKey":"containerInventory.containerNumber",
-					   "defaultValue":"",
-					   "type":"text"
-					}
-			   
+				"labelKey":"containerInventory.containerNumber",
+               "multiple":[  
+                  {  
+                     "validation":"r",
+                     "tabIndex":"1",
+                     "name":"containerNumber",
+                    
+                     "defaultValue":"",
+                     "type":"text"
+                  },
+                  {  
+                     "validation":"r",
+                     "tabIndex":"1",
+                     "name":"containerNumber11",
+                     "defaultValue":"",
+                     "type":"text"
+                  }
+               ]
             },
             {  
                "validation":"r,n",

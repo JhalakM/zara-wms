@@ -39,39 +39,39 @@ function jsonParse(jParseData){
 }
 
 function generateElements(formElement,formId){
+	
 	for(var fe = 0; fe < formElement.length; fe++){
 		generateFormRow(formId);
 		generateLabel(formId,formElement[fe].labelKey);
-		functionCallback = "generate_"+formElement[fe].type;
-	
-		switch(formElement[fe].type) {
-			case "text":
-				window[functionCallback](formId,formElement[fe]);
-				break;
-			case "textarea":
-				window[functionCallback](formId,formElement[fe]);
-				break;
-			case "dropdown":
-				window[functionCallback](formId,formElement[fe]);
-				break;
-			case "radio":
-				if(formElement[fe].switch == undefined)
+		mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
+			if(typeof formElement[fe].multiple != "undefined"){
+				for(var m = 0; m < formElement[fe].multiple.length; m++){
+					var multiAttr = formElement[fe].multiple;
+					functionCallback = "generate_"+multiAttr[m].type;
+					if(typeof multiAttr[m].type != "undefined"){
+						if(multiAttr[m].type == "radio" ){
+							if(typeof multiAttr[m].switch == "undefined"){
+								window[functionCallback](formId,multiAttr[m],1);
+							}else{
+								generate_switch(formId,multiAttr[m],1);
+							}	
+						}else{
+							window[functionCallback](formId,multiAttr[m],1);
+						}
+					}
+				}
+			}else{
+				functionCallback = "generate_"+formElement[fe].type;
+				if(formElement[fe].type == "radio" ){
+					if(typeof formElement[fe].switch == "undefined"){
+						window[functionCallback](formId,formElement[fe]);
+					}else{
+						generate_switch(formId,formElement[fe]);
+					}
+				}else{
 					window[functionCallback](formId,formElement[fe]);
-				else
-					generate_switch(formId,formElement[fe]);
-				break;
-			case "checkbox":
-				window[functionCallback](formId,formElement[fe]);
-				break;
-			case "file":
-				window[functionCallback](formId,formElement[fe]);
-				break;
-		}
-		
-		if(typeof formElement[fe].additional != "undefined"){
-			functionCallback = "generate_"+formElement[fe].additional.type;
-			window[functionCallback](formId,formElement[fe].additional,1);
-		}
+				}
+			}
 	}
 }
 
@@ -94,7 +94,7 @@ function generateLabel(formId,labelKey){
 function generate_text(formId,formElement,flag){
 	var inputHTML  = "";
 	add_class_value = (flag == 1)?additional_class:"";
-	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
+	
 	if(formElement.format != undefined){
 		var format = formElement.format;
 		switch(format){
@@ -127,18 +127,18 @@ function generate_text(formId,formElement,flag){
 
 
 function generate_textarea(formId,formElement){
-	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
 	var textareaHTML  =  $(ele_textarea).appendTo(mainWrapper)
 							.find("textarea").attr({
 								"name"    : formElement.name,
 								"tabindex": formElement.tabIndex,
+								"cols"	  : formElement.cols,
+								"rows"	  : formElement.rows,
 								"type"    : formElement.type
 							});
 	return textareaHTML;
 }
 
 function generate_dropdown(formId,formElement){
-	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
 	var dropdownHTML  =  $(ele_dropdown).appendTo(mainWrapper);
 	var liClone;
 	for(var i=0; i<formElement.defaultValue.length; i++){
@@ -147,7 +147,7 @@ function generate_dropdown(formId,formElement){
 			"value" : formElement.defaultValue[i].value,
 			"rel"	: formElement.defaultValue[i].value
 		});
-		$(liClone).html(edit_icon+" "+formElement.defaultValue[i].label);
+		$(liClone).html(formElement.defaultValue[i].label);
 		dropdownHTML.find("ul").append(liClone);
 	}
 	dropdownHTML.find("input").attr({
@@ -160,7 +160,6 @@ function generate_dropdown(formId,formElement){
 
 
 function generate_switch(formId,formElement){
-	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
 	switchHTML = $(ele_switch).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
@@ -193,7 +192,6 @@ function generate_switch(formId,formElement){
 }
 
 function generate_radio(formId,formElement){
-	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
 	radioHTML = $(ele_radio).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
@@ -222,7 +220,6 @@ function generate_radio(formId,formElement){
 
 
 function generate_checkbox(formId,formElement){
-	mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
 	checkHTML = $(ele_checkbox).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
