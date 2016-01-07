@@ -1219,7 +1219,7 @@ Date and time Piker
     padding: 20px;
 }
 .text-box.hasDatepicker {
-    max-width: 300px;
+  /*  max-width: 300px;*/
 }
 .table-condensed {
     margin: auto;
@@ -2669,6 +2669,7 @@ Sidebar
 }
 
 
+
 /*------------------------------------*\
 Main Body
 \*------------------------------------*/
@@ -2695,5 +2696,5 @@ footer {
     width: 100%;
 }
 
-
+/********************** EOF owl carousel slider ***********************/
 

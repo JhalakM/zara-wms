@@ -19,30 +19,30 @@ $.fn.dynamicForm = function(options){
 	},options);
 	var methods = {
 		generateForm : function(formData){
+			$(self).find("form").remove();
 			var formString = jsonStringify(formData);
-			
+			formCreate  = document.createElement("form");
+			$(self).append(formCreate).addClass("panel");
 			$.each(formData, function(key, value) {
 				formCaption = formData[key].caption;
 				formTag 	= jsonParse(jsonStringify(formData[key].formTag));
-				formCreate  = document.createElement("form");
-	
+				
 				$(formCreate).attr({
 					"name" 	 : formTag.name,
 					"id"	 : formTag.name,
 					"method" : formTag.method,
-					"action" : formTag.action,
+					"action" : formTag.action
 				});
+				
 				formElement 	= jsonParse(jsonStringify(formData[key].formElements));
-				var getElement  = generateElements(formElement); 
-				$(formCreate).append(getElement);
+				$(formCreate).append(generateElements(formElement,formTag.name));
+				generateButtons(formData[key].formButtons,formTag.name);
+				formCaption 	= generateCaption(formTag.name,formData[key].caption);
 			});
-			$(self).append(formCreate);
+			
 		},
 		init : function(){
-			loadScript(SET_WEB_URL+"template/elements.js", function(){
-					methods.generateForm(defaults.formObject);
-					
-			});
+			methods.generateForm(defaults.formObject);
 		}
 	};
 	return methods.init();

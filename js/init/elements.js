@@ -4,12 +4,12 @@
 */
 
 $(document).ready(function(){
-	custom_dropdown_list();
-	effectToggleSwitch();
-	datePicker();
+	//custom_dropdown_list();
+	//effectToggleSwitch();
+	//datePicker();
 	accordionPanel();
 	generateSVG();
-	dateTimePicker();
+	//dateTimePicker();
 	
 });
 
