@@ -198,8 +198,9 @@ button
     color: #2991d6;
     font-size: 14px;
     height: 40px;
+    margin: 5px 5px 5px 0;
+    overflow: hidden;
     padding: 0 22px;
-    overflow: hidden
 }
 .uie-btn:hover {
     background-color: #0c79c1;
@@ -854,11 +855,11 @@ File upload button
     margin-bottom: 22px;
 }
 .field.prepend-icon.file {
-    border: 1px solid #d8d8d8;
+    border: medium none;
     display: inline-block;
     left: 0;
     line-height: 30px;
-    padding-left: 15px;
+    padding-left: 0;
     position: relative;
     top: 0;
     vertical-align: top;
@@ -866,6 +867,7 @@ File upload button
 }
 .uie-btn.uie-btn-primary.btn-sm.right {
     float: right;
+    margin: 0;
 }
 .file {
     display: block;
@@ -879,15 +881,13 @@ File upload button
     left: 0;
 }
 .gui-input {
-    border: medium none;
+    border: 1px solid #d8d8d8;
+    height: 35px;
     line-height: 22px;
+    padding: 5px 8px;
     text-align: left;
+    width: 280px;
 }
-
-
-
-
-
 /*------------------------------------*\
 Tooltip
 \*------------------------------------*/

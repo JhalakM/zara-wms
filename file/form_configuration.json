@@ -5,22 +5,31 @@
       "formInfo":{  
          "formElements":[  
             {  
-				"labelKey":"containerInventory.containerNumber",
+				 "labelKey":"containerInventory.containerNumber",
                "multiple":[  
                   {  
                      "validation":"r",
                      "tabIndex":"1",
                      "name":"containerNumber",
-                    
                      "defaultValue":"",
                      "type":"text"
                   },
                   {  
-                     "validation":"r",
-                     "tabIndex":"1",
-                     "name":"containerNumber11",
-                     "defaultValue":"",
-                     "type":"text"
+                    "validation":"r",
+				   "tabIndex":"6",
+				   "name":"shippingStatus",
+				   "labelKey":"containerInventory.shippingStatus",
+				   "defaultValue":[  
+					  {  
+						 "value":"102",
+						 "label":"Departed"
+					  },
+					  {  
+						 "value":"105",
+						 "label":"Not Departed"
+					  }
+				   ],
+				   "type":"dropdown"
                   }
                ]
             },

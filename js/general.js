@@ -73,6 +73,7 @@ function generateElements(formElement,formId){
 				}
 			}
 	}
+	
 }
 
 
@@ -107,7 +108,7 @@ function generate_text(formId,formElement,flag){
 										"data-minDate": formElement.minDate,
 										"id"	      : formElement.name,
 										"data-format" : formElement.dateFormat
-									});
+									}).parents(".p-r-5").addClass(add_class_value);
 				datePicker("#"+formElement.name);
 				break;
 			case "time":
@@ -119,14 +120,15 @@ function generate_text(formId,formElement,flag){
 							"name"    : formElement.name,
 							"tabindex": formElement.tabIndex,
 							"type"    : formElement.type
-						}).parent().addClass(add_class_value);
+						}).parents(".p-r-5").addClass(add_class_value);
 	}
 	
 	return inputHTML;
 }
 
 
-function generate_textarea(formId,formElement){
+function generate_textarea(formId,formElement,flag){
+	add_class_value = (flag == 1)?additional_class:"";
 	var textareaHTML  =  $(ele_textarea).appendTo(mainWrapper)
 							.find("textarea").attr({
 								"name"    : formElement.name,
@@ -134,11 +136,12 @@ function generate_textarea(formId,formElement){
 								"cols"	  : formElement.cols,
 								"rows"	  : formElement.rows,
 								"type"    : formElement.type
-							});
+							}).parents(".p-r-5").addClass(add_class_value);
 	return textareaHTML;
 }
 
-function generate_dropdown(formId,formElement){
+function generate_dropdown(formId,formElement,flag,selected){
+	add_class_value = (flag == 1)?additional_class:"";
 	var dropdownHTML  =  $(ele_dropdown).appendTo(mainWrapper);
 	var liClone;
 	for(var i=0; i<formElement.defaultValue.length; i++){
@@ -153,13 +156,14 @@ function generate_dropdown(formId,formElement){
 	dropdownHTML.find("input").attr({
 			"name"    : formElement.name,
 			"tabindex": formElement.tabIndex,
-	});
-	custom_dropdown_list();
-	return dropdownHTML;
+	}).parents(".p-r-5").addClass(add_class_value);
+	var selectedValue = (selected != "")?selected:"";
+	dropdownHTML.find(".selected-listitem").text(selectedValue);
 }
 
 
-function generate_switch(formId,formElement){
+function generate_switch(formId,formElement,flag){
+	add_class_value = (flag == 1)?additional_class:"";
 	switchHTML = $(ele_switch).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
@@ -188,10 +192,11 @@ function generate_switch(formId,formElement){
 	$(spanClone).attr({
 		"class" : "switch-selection"
 	});
-	$(switchHTML).find(".switch").append(spanClone);
+	$(switchHTML).find(".switch").append(spanClone).parents(".p-r-5").addClass(add_class_value);
 }
 
-function generate_radio(formId,formElement){
+function generate_radio(formId,formElement,flag){
+	add_class_value = (flag == 1)?additional_class:"";
 	radioHTML = $(ele_radio).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
@@ -214,12 +219,13 @@ function generate_radio(formId,formElement){
 		$(labelClone).attr({
 			"for" : formElement.name+"-"+i
 		});
-		$(radioHTML).find(".radio-btn").append(labelClone);
+		$(radioHTML).find(".radio-btn").append(labelClone).parents(".p-r-5").addClass(add_class_value);
 	}	
 }
 
 
-function generate_checkbox(formId,formElement){
+function generate_checkbox(formId,formElement,flag){
+	add_class_value = (flag == 1)?additional_class:"";
 	checkHTML = $(ele_checkbox).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
@@ -241,7 +247,7 @@ function generate_checkbox(formId,formElement){
 			"for" : formElement.name+"-"+i,
 			"class"	  : "css-label"
 		});
-		$(checkHTML).find(".checkbox").append(labelClone);
+		$(checkHTML).find(".checkbox").append(labelClone).parents(".p-r-5").addClass(add_class_value);
 	}	
 }
 

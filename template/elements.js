@@ -51,6 +51,7 @@ var ele_dropdown = '<div class="p-r-5">'+
 						'<div class="dropdown-list">'+
 							'<div class="selected-listitem">Click Me</div>'+
 								'<ul>'+
+									'<li value="">Click Me</li>'+
 								'</ul>'+
 								'<input class="dropdown-item" type="hidden" />'+
 						'</div>'+
