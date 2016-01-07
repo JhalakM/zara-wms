@@ -2572,6 +2572,7 @@ Sidebar
     display: block;
     height: 60px;
     width: 60px;
+	  font-size: 0;
 }
 .left-panel li.operation-planning{background-image:url("../img/dashborad/svg/operation-planning.svg");}
 .left-panel li.operation-planning:hover{background-image:url("../img/dashborad/svg/operation-planning-hover.svg");}
@@ -2601,25 +2602,7 @@ Sidebar
 .left-panel li.administration:hover{background-image:url("../img/dashborad/svg/administration-hover.svg");}
 
 
-/*------------------------------------*\
-Main Body
-\*------------------------------------*/
-
-.main {
-    background: #000 none repeat scroll 0 0;
-    color: #fff;
-    height: 1640px;
-    margin-left: 150px;
-}
-/*------------------------------------*\
-Footer
-\*------------------------------------*/
-
-footer {
-    margin-left: 150px;
-}
-
-/********************** owl carousel slider ***********************/
+/* For Responsive View */
 .owl-carousel .owl-wrapper:after {
 	content: ".";
 	display: block;
@@ -2684,4 +2667,33 @@ footer {
   -moz-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
 }
-/********************** EOF owl carousel slider ***********************/
+
+
+/*------------------------------------*\
+Main Body
+\*------------------------------------*/
+
+.main {
+    background: #000 none repeat scroll 0 0;
+    color: #fff;
+    height: 1640px;
+    margin-left: 150px;
+}
+/*------------------------------------*\
+Footer
+\*------------------------------------*/
+
+footer {
+  background: #474747 none repeat scroll 0 0;
+    bottom: 0;
+    color: #ffffff;
+    left: 0;
+    padding: 10px 0;
+    position: relative;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+
