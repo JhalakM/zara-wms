@@ -835,6 +835,60 @@ Dropdown
     border: 1px solid #d8d8d8;
     color: #0c79c1;
 }
+
+
+/*------------------------------------*\
+File upload button
+\*------------------------------------*/
+.file .gui-file {
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    padding: 8px 10px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 11;
+}
+.section {
+    margin-bottom: 22px;
+}
+.field.prepend-icon.file {
+    border: 1px solid #d8d8d8;
+    display: inline-block;
+    left: 0;
+    line-height: 30px;
+    padding-left: 15px;
+    position: relative;
+    top: 0;
+    vertical-align: top;
+    width: 100%;
+}
+.uie-btn.uie-btn-primary.btn-sm.right {
+    float: right;
+}
+.file {
+    display: block;
+    width: 100%;
+}
+.field {
+    display: block;
+    position: relative;
+}
+.field-icon {
+    left: 0;
+}
+.gui-input {
+    border: medium none;
+    line-height: 22px;
+    text-align: left;
+}
+
+
+
+
+
 /*------------------------------------*\
 Tooltip
 \*------------------------------------*/
@@ -1856,6 +1910,10 @@ switch
     width: 34px;
     z-index: 1;
 }
+
+
+
+
 /*------------------------------------*\
 Table
 \*------------------------------------*/
@@ -2680,6 +2738,7 @@ Main Body
     height: 1640px;
     margin-left: 150px;
 }
+
 /*------------------------------------*\
 Footer
 \*------------------------------------*/
@@ -2696,5 +2755,5 @@ footer {
     width: 100%;
 }
 
-/********************** EOF owl carousel slider ***********************/
+
 
