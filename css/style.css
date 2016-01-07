@@ -590,6 +590,19 @@ a.button:focus {
     color: #0c79c1;
     text-decoration: none;
 }
+
+/*------- Forms Element UI Date Picker -------*/
+
+.ui-datepicker-title select::before {
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-top: 5px solid #373374;
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+
 /*------------------------------------*\
 Toggle Switch
 \*------------------------------------*/
@@ -1841,6 +1854,22 @@ Alert message
     top: 11px;
     transform: rotate(-180deg);
 }
+.error-msg.right-top::before {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ff0000;
+    border-style: solid solid solid dashed;
+    border-width: 6px 5px;
+    content: "";
+    left: 118px;
+    position: absolute;
+    top: 11px;
+    transform: rotate(-1deg);
+}
+.error-msg.right-top {
+    left: 0;
+    max-width: 120px;
+    text-align: right;
+    width: 100%;
+}
 .error-msg {
     background: #ffffff none repeat scroll 0 0;
     border: 1px solid #f24534;
@@ -2186,7 +2215,7 @@ Element Block Style
 }
 .panel-title {
     font-size: 14px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     margin-top: 0;
 }
 .panel {
