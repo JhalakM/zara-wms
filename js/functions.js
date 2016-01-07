@@ -40,6 +40,7 @@ function ajaxCallBack(ajax_url, success_callback, failure_callback, params) {
         data: params,
         cache: false,
         crossDomain: true,
+		contentType: 'multipart/form-data',
         error: function(data, status, error) {
             ajaxLoaderStop();
             failure_callback(error);
@@ -55,9 +56,9 @@ function ajaxCallBack(ajax_url, success_callback, failure_callback, params) {
 function getFormElement() {
 		var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
         ajaxCallBack(ajaxUrl, generateFormSuccess, generateFormError);
-    $(".call-formbtn").click(function() {
-        
-    });
+		$(".call-formbtn").click(function() {
+			
+		});
 
 }
 
@@ -326,6 +327,7 @@ function generateSVG() {
 /* function to generate date picker */
 function datePicker(datePicId) {
     $(datePicId).datepicker({
+		showOtherMonths: true,
         changeMonth: true,
         changeYear: true,
 		dateFormat: $(datePicId).data("format"),
