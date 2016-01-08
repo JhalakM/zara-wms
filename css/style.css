@@ -1670,7 +1670,9 @@ Panel
     color: #c5c5c5;
     cursor: default;
 }
-
+.pages-info .dropdown-list ul {
+    left: 0;
+}
 /*----------Grid Action Group-----------*/
 
 .grid-action-group {

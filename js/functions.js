@@ -424,7 +424,7 @@ function sidebarMobile() {
 }
 // panel action icon height 
 function actionBtnHeight() {
-	if($( window ).width() > 568){
+	if($( window ).width() >= 568){
 		$(".app-action-group a").css("height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
 			$(".app-action-group a" ).css("height", $(".panel-block-heading ").height()+10 + "px")
 		});
@@ -432,7 +432,8 @@ function actionBtnHeight() {
 			$(".app-action-group a" ).css("line-height", $(".panel-block-heading ").height()+10 + "px")
 		});
 	}
-	if($( window ).width() < 568){
+	if($( window ).width() <= 568){
+	 
 		$(".action-arrow a").css("height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
 			$(".action-arrow a" ).css("height", $(".panel-block-heading ").height()+10 + "px")
 		});

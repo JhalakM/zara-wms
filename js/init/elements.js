@@ -4,7 +4,7 @@
 */
 
 $(document).ready(function(){
-	//custom_dropdown_list();
+	custom_dropdown_list();
 	//effectToggleSwitch();
 	//datePicker();
 	accordionPanel();
