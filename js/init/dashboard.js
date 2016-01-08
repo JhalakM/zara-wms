@@ -8,16 +8,19 @@ $(document).ready(function(){
 	sidebarHeight();
 	sidebarMobile() 
 	heightGrid();
+	sidebarScroll();
+	linkDropdownMobile();
+	
 });
 
 
 
 $(window).load(function(){
-
+	
 
 });
 
 
 $(window).scroll(function(){
-	sidebarScroll();
+	
 });

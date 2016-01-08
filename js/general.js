@@ -6,30 +6,6 @@
 var mainWrapper = "";
 var add_class_value = "";
 
-/* function to load javascript file in run time */
-function loadScript(url, callback){
-
-    var script = document.createElement("script")
-    script.type = "text/javascript";
-
-    if (script.readyState){  //IE
-        script.onreadystatechange = function(){
-            if (script.readyState == "loaded" ||
-                    script.readyState == "complete"){
-                script.onreadystatechange = null;
-                callback();
-            }
-        };
-    } else {  //Others
-        script.onload = function(){
-            callback();
-        };
-    }
-    script.src = url;
-    document.getElementsByTagName("body")[0].appendChild(script);
-}
-
-
 function jsonStringify(jStringData){
 	return  JSON.stringify(jStringData);
 }
