@@ -1837,8 +1837,7 @@ Alert message
 }
 /*  Alert Error Message   */
 .error-info-icon {
-    background: red;
-    color: rgba(0, 0, 0, 0);
+   color: red;
     cursor: pointer;
     position: absolute;
     right: 14px;
@@ -2182,6 +2181,7 @@ Forms Element
 .form-col-2 {
     float: left;
     width: 76%;
+	position:relative;
 }
 .p-r-5 {
     padding: 0 5px 0 0;
