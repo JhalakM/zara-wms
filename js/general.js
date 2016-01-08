@@ -43,10 +43,10 @@ function generateElements(formElement,formId){
 	for(var fe = 0; fe < formElement.length; fe++){
 		generateFormRow(formId);
 		generateLabel(formId,formElement[fe].labelKey);
-		mainWrapper = $(div_form_col_2).appendTo("#"+formId+" .form-row:last");
-			if(typeof formElement[fe].multiple != "undefined"){
-				for(var m = 0; m < formElement[fe].multiple.length; m++){
-					var multiAttr = formElement[fe].multiple;
+		mainWrapper = $(div_form_col_2).appendTo("#"+formId+" "+selector_form_row+":last");
+			if(typeof formElement[fe].multiLevel != "undefined"){
+				for(var m = 0; m < formElement[fe].multiLevel.length; m++){
+					var multiAttr = formElement[fe].multiLevel;
 					functionCallback = "generate_"+multiAttr[m].type;
 					if(typeof multiAttr[m].type != "undefined"){
 						if(multiAttr[m].type == "radio" ){
@@ -78,18 +78,14 @@ function generateElements(formElement,formId){
 
 
 function generateCaption(formId,formCaption){
-	var caption = $("#"+formId).prev(form_panel_title_class).text(formCaption);
-	return caption;
-	
+	var caption = $("#"+formId).prev(selector_panel_title).text(formCaption);
 }
 function generateFormRow(formId){
 	var formRow = $(div_col_md_6).appendTo("#"+formId);
-	return formRow; 
 }
 
 function generateLabel(formId,labelKey){
-	var labelHTML = $(ele_label).appendTo("#"+formId+" .form-row:last").find("label").text($.i18n.prop(labelKey));
-	return labelHTML;
+	var labelHTML = $(ele_label).appendTo("#"+formId+" "+selector_form_row+":last").find(selector_label).text($.i18n.prop(labelKey));
 }
 
 function generate_text(formId,formElement,flag){
@@ -101,14 +97,14 @@ function generate_text(formId,formElement,flag){
 		switch(format){
 			case "date":
 				inputHTML  =  $(ele_input).appendTo(mainWrapper)
-									.find("input").attr({
+									.find(selector_input).attr({
 										"name"        : formElement.name,
 										"tabindex"    : formElement.tabIndex,
 										"type"        : formElement.type,
 										"data-minDate": formElement.minDate,
 										"id"	      : formElement.name,
 										"data-format" : formElement.dateFormat
-									}).parents(".p-r-5").addClass(add_class_value);
+									}).parents(selector_p_r_5).addClass(add_class_value);
 				datePicker("#"+formElement.name);
 				break;
 			case "time":
@@ -116,28 +112,26 @@ function generate_text(formId,formElement,flag){
 		}
 	}else{
 		inputHTML  = $(ele_input).appendTo(mainWrapper)
-						.find("input").attr({
+						.find(selector_input).attr({
 							"name"    : formElement.name,
 							"tabindex": formElement.tabIndex,
 							"type"    : formElement.type
-						}).parents(".p-r-5").addClass(add_class_value);
+						}).parents(selector_p_r_5).addClass(add_class_value);
 	}
 	
-	return inputHTML;
 }
 
 
 function generate_textarea(formId,formElement,flag){
 	add_class_value = (flag == 1)?additional_class:"";
 	var textareaHTML  =  $(ele_textarea).appendTo(mainWrapper)
-							.find("textarea").attr({
+							.find(selector_textarea).attr({
 								"name"    : formElement.name,
 								"tabindex": formElement.tabIndex,
 								"cols"	  : formElement.cols,
 								"rows"	  : formElement.rows,
 								"type"    : formElement.type
-							}).parents(".p-r-5").addClass(add_class_value);
-	return textareaHTML;
+							}).parents(selector_p_r_5).addClass(add_class_value);
 }
 
 function generate_dropdown(formId,formElement,flag,selected){
@@ -145,20 +139,20 @@ function generate_dropdown(formId,formElement,flag,selected){
 	var dropdownHTML  =  $(ele_dropdown).appendTo(mainWrapper);
 	var liClone;
 	for(var i=0; i<formElement.defaultValue.length; i++){
-		liClone = document.createElement("li");
+		liClone = document.createElement(selector_li);
 		$(liClone).attr({
 			"value" : formElement.defaultValue[i].value,
 			"rel"	: formElement.defaultValue[i].value
 		});
 		$(liClone).html(formElement.defaultValue[i].label);
-		dropdownHTML.find("ul").append(liClone);
+		dropdownHTML.find(selector_ul).append(liClone);
 	}
-	dropdownHTML.find("input").attr({
+	dropdownHTML.find(selector_input).attr({
 			"name"    : formElement.name,
 			"tabindex": formElement.tabIndex,
-	}).parents(".p-r-5").addClass(add_class_value);
+	}).parents(selector_p_r_5).addClass(add_class_value);
 	var selectedValue = (selected != "")?selected:"";
-	dropdownHTML.find(".selected-listitem").text(selectedValue);
+	dropdownHTML.find(selector_select_listitem).text(selectedValue);
 }
 
 
@@ -167,32 +161,32 @@ function generate_switch(formId,formElement,flag){
 	switchHTML = $(ele_switch).appendTo(mainWrapper);
 	var inputClone;
 	var labelClone;
-	var spanClone = document.createElement("span");
+	var spanClone = document.createElement(selector_span);
 	var add_class = "";
 	for(var i=0; i<formElement.defaultValue.length; i++){
-		add_class = (i==0)?"switch-label-off":"switch-label-on";
-		inputClone = document.createElement("input");
-		labelClone = document.createElement("label");
+		add_class = (i==0)?class_switch_label_off:class_switch_label_on;
+		inputClone = document.createElement(selector_input);
+		labelClone = document.createElement(selector_label);
 		$(inputClone).attr({
 			"name"    : formElement.name,
 			"tabindex": formElement.tabIndex,
 			"type"    : formElement.type,
 			"value"	  : formElement.defaultValue[i].value,
 			"id"	  : formElement.name+"-"+i,
-			"class"	  : "switch-input"
+			"class"	  : class_switch_input
 		});
-		$(switchHTML).find(".switch").append(inputClone);
+		$(switchHTML).find(selector_switch).append(inputClone);
 		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].labelKey));
 		$(labelClone).attr({
 			"for" 	: formElement.name+"-"+i,
-			"class" : "switch-label "+ add_class
+			"class" : class_switch_label+" "+ add_class
 		});
-		$(switchHTML).find(".switch").append(labelClone);
+		$(switchHTML).find(selector_switch).append(labelClone);
 	}	
 	$(spanClone).attr({
-		"class" : "switch-selection"
+		"class" : class_switch_selection
 	});
-	$(switchHTML).find(".switch").append(spanClone).parents(".p-r-5").addClass(add_class_value);
+	$(switchHTML).find(selector_switch).append(spanClone).parents(selector_p_r_5).addClass(add_class_value);
 }
 
 function generate_radio(formId,formElement,flag){
@@ -202,9 +196,9 @@ function generate_radio(formId,formElement,flag){
 	var labelClone;
 	var spanClone;
 	for(var i=0; i<formElement.defaultValue.length; i++){
-		inputClone = document.createElement("input");
-		labelClone = document.createElement("label");
-		spanClone  = document.createElement("span");
+		inputClone = document.createElement(selector_input);
+		labelClone = document.createElement(selector_label);
+		spanClone  = document.createElement(selector_span);
 		$(inputClone).attr({
 			"name"    : formElement.name,
 			"tabindex": formElement.tabIndex,
@@ -212,14 +206,14 @@ function generate_radio(formId,formElement,flag){
 			"value"	  : formElement.defaultValue[i].value,
 			"id"	  : formElement.name+"-"+i
 		});
-		$(radioHTML).find(".radio-btn").append(inputClone);
+		$(radioHTML).find(selector_radio_btn).append(inputClone);
 		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].labelKey));
 		$(labelClone).append(spanClone);
-		$(labelClone).find("span").html(document.createElement("span"));
+		$(labelClone).find(selector_span).html(document.createElement(selector_span));
 		$(labelClone).attr({
 			"for" : formElement.name+"-"+i
 		});
-		$(radioHTML).find(".radio-btn").append(labelClone).parents(".p-r-5").addClass(add_class_value);
+		$(radioHTML).find(selector_radio_btn).append(labelClone).parents(selector_p_r_5).addClass(add_class_value);
 	}	
 }
 
@@ -231,28 +225,41 @@ function generate_checkbox(formId,formElement,flag){
 	var labelClone;
 	var spanClone;
 	for(var i=0; i<formElement.defaultValue.length; i++){
-		inputClone = document.createElement("input");
-		labelClone = document.createElement("label");
+		inputClone = document.createElement(selector_input);
+		labelClone = document.createElement(selector_label);
 		$(inputClone).attr({
 			"name"    : formElement.name,
 			"tabindex": formElement.tabIndex,
 			"type"    : formElement.type,
 			"value"	  : formElement.defaultValue[i].value,
 			"id"	  : formElement.name+"-"+i,
-			"class"	  : "css-checkbox"
+			"class"	  : class_css_checkbox
 		});
-		$(checkHTML).find(".checkbox").append(inputClone);
+		$(checkHTML).find(selector_checkbox).append(inputClone);
 		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].label));
 		$(labelClone).attr({
 			"for" : formElement.name+"-"+i,
-			"class"	  : "css-label"
+			"class"	  : class_css_label
 		});
-		$(checkHTML).find(".checkbox").append(labelClone).parents(".p-r-5").addClass(add_class_value);
+		$(checkHTML).find(selector_checkbox).append(labelClone).parents(selector_p_r_5).addClass(add_class_value);
 	}	
 }
 
-function generate_file(){
+function generate_file(formId,formElement,flag){
+	add_class_value = (flag == 1)?additional_class:"";
 	
+	var fileUploadHTML  = $(ele_file_upload).appendTo(mainWrapper)
+							.find(selector_gui_input).attr({
+								"id"    : formElement.name,
+								"class" : class_gui_input
+							}).parents(selector_p_r_5).addClass(add_class_value);	
+							
+	$(fileUploadHTML).find(selector_gui_file).attr({
+				"name"    	: formElement.name,
+				"tabindex"	: formElement.tabIndex,
+				"type"    	: formElement.type,
+				"multiple"  : formElement.multiple
+			});
 }
 
 
@@ -284,9 +291,9 @@ function generateButtons(formButtons,formId){
 		var btnCancel = $(btn_normal);
 		$(btnCancel).attr({
 			"type" : "button",
-			"name" : formButtons[0].reset.keyName,
+			"name" : formButtons[0].cancel.keyName,
 		});
-		$(btnCancel).text($.i18n.prop(formButtons[0].reset.keyValue));
+		$(btnCancel).text($.i18n.prop(formButtons[0].cancel.keyValue));
 		buttonHTML.append(btnCancel);
 	}
 	return buttonHTML;

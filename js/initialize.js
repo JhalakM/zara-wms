@@ -4,7 +4,6 @@
 */
 
 $(document).ready(function(){
-	languagePlugin(current_lang);
 });
 
 
@@ -12,5 +11,4 @@ $(document).ready(function(){
 $(window).load(function(){
 	generateBlockUI();
 	unblockUI();
-	generateDynamicElements();
 });
