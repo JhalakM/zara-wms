@@ -29,7 +29,7 @@ var class_css_label			 = "css-label";
 
 var class_gui_input			 = "gui-input";
 var class_gui_file		 	 = "gui-file";
-
+var class_multi_file		 = "multi";
 
 var btn_normal 			= '<button class="uie-btn uie-btn-primary">Generate Form</button>';
 var btn_disable 		= '<button class="uie-btn uie-primary-disable" type="button">Disable</button>';
@@ -63,9 +63,9 @@ var ele_textarea = '<div class="p-r-5">'+
 					'</div>';			
 var ele_file_upload = '<div class="p-r-5">'+
 						'<div class="field prepend-icon file">'+
-                               '<input type="text" placeholder="'+$.i18n.prop("select_file")+'" class="'+class_gui_input+'">'+
+                               //'<input type="text" placeholder="'+$.i18n.prop("select_file")+'" class="'+class_gui_input+'">'+
 								'<span class="uie-btn uie-btn-primary btn-sm right">'+$.i18n.prop('choose_file')+'</span>'+
-								'<input class="'+class_gui_file+'"  onchange="document.getElementById(this.name).value = this.value;">'+
+								'<input class="'+class_multi_file+' '+class_gui_file+'">'+
                             '</div>'+
 					  '</div>'; 			
 var ele_dropdown = '<div class="p-r-5">'+

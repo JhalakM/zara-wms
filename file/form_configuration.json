@@ -139,8 +139,20 @@
                "tabIndex":"10",
                "name":"containerImage",
                "labelKey":"containerInventory.containerImage",
-               "image":{  
-                  "accept":"jpg,png",
+               "fileValidation":{  
+                  "accept":"jpg|png",
+                  "size":"5MB"
+               },
+               "type":"file",
+               "multiple":"true"
+            },
+			{  
+               "validation":"r",
+               "tabIndex":"11",
+               "name":"DamageImage",
+               "labelKey":"containerInventory.containerImage",
+               "fileValidation":{  
+                  "accept":"jpg|png",
                   "size":"5MB"
                },
                "type":"file",

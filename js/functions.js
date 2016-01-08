@@ -111,7 +111,7 @@ function generateFormSuccess(json_data){
 
 /* function to call dynamic form plugin for error */
 function generateFormError(json_data) {
-    alert(json_data);
+    //alert(json_data);
 }
 
 /* function to call generate scrollbar */
@@ -468,4 +468,41 @@ function heightGrid() {
 	
 }
 
+function setMultiFilePlugin(fileInputId){
+  // invoke plugin
+  var fileInputId = "#"+fileInputId;
+  $(fileInputId).MultiFile({  
+    accept: $(fileInputId).data("accept"),
+    maxsize: $(fileInputId).data("size"),
+	preview : true,
+	STRING: {
+			remove: 'x',
+			denied: 'You cannot select a $ext file.\nTry again...',
+			file: '$file',
+			selected: 'File selected: $file',
+			duplicate: 'This file has already been selected:\n$file',
+			toomuch: 'The files selected exceed the maximum size permited ($size)',
+			toomany: 'Too many files selected (max: $max)',
+			toobig: '$file is too big (max $size)'
+		}
+  });
+}
 
+function createJSON() {
+    jsonObj = [];
+	var add = "";
+    $("input[data-file!='"+true+"'][type!='file']").each(function() {
+        var key   = $(this).attr("name");
+		var value = $(this).val();
+        item = {};
+        //item[add];
+        jsonObj.push(item);
+    });
+
+    console.log(jsonStringify(jsonObj));
+}
+
+
+function sendFormData(formId){
+	createJSON();
+}
