@@ -3,7 +3,7 @@
 |@desc   : Commonly used functions to call ajax, ajax success/failure callback, exceptions etc.
 */
 /* constant for set baseurl path */
-const SET_WEB_URL = "https://localhost/zara-wms/";
+const SET_WEB_URL = "http://localhost/zara-wms/";
 //const SET_WEB_URL = "./";
 
 var current_lang = "en-us";
@@ -523,13 +523,14 @@ function setMultiFilePlugin(fileInputId){
 }
 
 function createJSON() {
-    jsonObj = [];
-	var add = "";
+    var jsonObj = [];
+	var item = {};
+
     $("input[data-file!='"+true+"'][type!='file']").each(function() {
         var key   = $(this).attr("name");
 		var value = $(this).val();
         item = {};
-        //item[add];
+		item[key] = value;
         jsonObj.push(item);
     });
 
