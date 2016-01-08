@@ -384,7 +384,10 @@ ul.nav li.dropdown-submenu:hover .dropdown-menu {
     border-bottom: medium none;}
 
    /*---------- End Menu-----------*/
-   
+  #batch_update .modal-dialog {
+    
+    width: 90%;
+} 
 }
 
 
@@ -434,6 +437,9 @@ iPhone 6 landscape · width: 600px
 		height: 27px;
 	}
 	.form-btn-group{ margin-left: 0;}
+	#batch_update .form-btn-group {
+    margin-left: 100px;
+}
 	.header-left {
     display: none;
     }
@@ -491,6 +497,11 @@ iPhone 5 landscape · width: 568px
     width: 77%;
 }
 /*---------- End Table Grid-----------*/
+#batch_update .col-xs-5 {
+    padding: 0;
+    width: 100%;
+}
+#batch_update .field-name{    text-align: left;}
 }
 
 
@@ -506,6 +517,7 @@ iPhone 6 Plump portrait · width: 414px
     line-height: 14px;
 	padding-top: 46px;
 }
+
 }
 
 

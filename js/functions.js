@@ -348,11 +348,6 @@ function actionBlock() {
     });
 }
 
-function appActionBlock() {
-    $(".app-action-group a").click(function() {
-        $(".app-action-form ").slideToggle("slow");
-    });
-}
 
 
 //dp-menu action
@@ -545,4 +540,40 @@ function createJSON() {
 
 function sendFormData(formId){
 	createJSON();
+}
+
+function generate_pagination_options(defaultOptions,stepOption,nameOptions,currentOption){
+ 
+ var dropdownHTML  =  $(pagination_options);
+ var liClone;
+ var optionValue;
+ var optionLoop;
+ currentOption = currentOption ? currentOption : 1;
+ optionLoop    = stepOption == 1 ? defaultOptions.length : defaultOptions;
+ for(var i=0; i<optionLoop; i++){
+  optionValue = stepOption == 1 ? defaultOptions[i] : i+1;
+  liClone = document.createElement("li");
+  $(liClone).attr({
+   "value" : optionValue,
+   "rel" : optionValue
+  });
+  $(liClone).html(optionValue);
+  dropdownHTML.find("ul").append(liClone);
+ }
+ 
+ dropdownHTML.find("input").attr({
+   "name": nameOptions,
+   "value": currentOption
+ });
+ 
+ dropdownHTML.find(".selected-listitem").text(currentOption);
+ 
+ return dropdownHTML;
+}
+function replaceWithObject(regEx,string,mapObj){
+	var regex = new RegExp(regEx,"gi");
+	return string.replace(regex, function(matched){
+		return mapObj[matched];
+	});
+
 }
