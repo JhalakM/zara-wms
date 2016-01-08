@@ -658,11 +658,12 @@ Text Box
 \*------------------------------------*/
 
 .text-box {
-    border: 1px solid #D8D8D8;
+    border: 1px solid #d8d8d8;
     font-size: 12px;
     height: 35px;
-    width: 100%;
+    margin: 0 0 5px;
     padding: 5px 8px;
+    width: 100%;
 }
 .text-box:focus ,.textarea-box:focus {
     border: 1px solid #2991D6;
@@ -697,6 +698,7 @@ Dropdown
     line-height: 30px;
     padding: 0 14px 0 10px;
     position: relative;
+	margin:0 0 5px 0px;
 }
 .drop-menu-list .dropdown-list ul li i {
     font-size: 18px;
@@ -1670,6 +1672,9 @@ Panel
     color: #c5c5c5;
     cursor: default;
 }
+.pages-info .dropdown-list ul {
+    left: 0;
+}
 /*----------Grid Action Group-----------*/
 
 .grid-action-group {
@@ -2183,7 +2188,10 @@ Table
 /*------------------------------------*\
 Forms Element 
 \*------------------------------------*/
-
+.form-row.col-md-6.clearfix{
+	margin:0px;
+	padding:0px;
+}
 .form-content .field-name {
     float: left;
     text-align: right;
