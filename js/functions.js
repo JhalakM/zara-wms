@@ -3,7 +3,7 @@
 |@desc   : Commonly used functions to call ajax, ajax success/failure callback, exceptions etc.
 */
 /* constant for set baseurl path */
-const SET_WEB_URL = "http://localhost/zara-wms/";
+const SET_WEB_URL = "https://localhost/zara-wms/";
 //const SET_WEB_URL = "./";
 
 var current_lang = "en-us";
@@ -456,7 +456,7 @@ $(document).ready(function(){
 		$(this).next('span.error-msg').hide();
 		if(input_value == ""){
 			$(this).addClass('highlight-input');
-			$( '<i class="error-info-icon fa fa-exclamation-circle" onclick="show_error(this)"> </i>' ).insertAfter( this );
+			$( '<i class="error-info-icon fa fa-times-circle" onclick="show_error(this)"> </i>' ).insertAfter( this );
 			$(this).next('span.error-msg').hide();
 		}
 	});
@@ -473,7 +473,7 @@ $(document).ready(function(){
 		var input_value = $('.validate-details').val();
 		if(input_value == ""){
 			$(".validate-details").addClass('highlight-input');
-			$( '<i class="error-info-icon fa fa-exclamation-circle" onclick="show_error(this)"> </i>' ).insertAfter( ".validate-details" );
+			$( '<i class="error-info-icon fa fa-times-circle" onclick="show_error(this)"> </i>' ).insertAfter( ".validate-details" );
 		}else{
 			var username = $("#username").val();
 			var password = $("#password").val();
@@ -481,7 +481,7 @@ $(document).ready(function(){
 				location.href = "index.html";
 			}else{
 				$(".validate-details").addClass('highlight-input');
-				$( '<i class="error-info-icon" onclick="show_error(this)">Click Me</i>' ).insertAfter( ".validate-details" );
+				$( '<i class="error-info-icon fa fa-times-circle" onclick="show_error(this)"> </i>' ).insertAfter( ".validate-details" );
 			}
 		}
 	});
