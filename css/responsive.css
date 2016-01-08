@@ -25,6 +25,21 @@ iPad landscape · width: 1024px
 .form-col-2 {
     width: 100%;
 }
+
+/*----------Form validations Error Message-----------*/
+.error-msg.right-top {
+    left: 0;
+    width:100%;
+ text-align:left;
+    top: 40px;
+ max-width:100%;
+}
+.error-msg.right-top::before {
+    left: 0;
+    position: absolute;
+    top: -12px;
+    transform: rotate(-92deg);
+}
 }
 
 
@@ -431,9 +446,16 @@ iPhone 6 landscape · width: 600px
     float: right;
 }
 .panel-block-heading { width: 55%;}
-	}
-/*---------- End Table Grid-----------*/
 
+.app-action-form {
+    padding: 0 10px;
+}
+.app-action-form .field-name, .grid-action-form .field-name {
+  
+    text-align: left;
+
+/*---------- End Table Grid-----------*/
+	}
 
 
 

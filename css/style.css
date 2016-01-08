@@ -2054,7 +2054,9 @@ Model Dialog Box
 /*------------------------------------*\
 Table
 \*------------------------------------*/
-
+.table-grid {
+    width: 100%;
+}
 .table-grid th:first-child {
     padding: 0 10px;
 }
