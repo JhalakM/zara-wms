@@ -16,6 +16,15 @@ iPad landscape · width: 1024px
  .header-left {
     padding-left: 0;
 }
+
+/*----------Form Elements  -----------*/
+.form-col-1 {
+    text-align: left;
+}
+
+.form-col-2 {
+    width: 100%;
+}
 }
 
 
@@ -37,6 +46,7 @@ iPad landscape · width: 1024px
 }
 .nav > li > a{    font-size: 13px;padding: 5px 10px;}
 .logo-fix-width a{  padding-top: 6px;}	
+.panel-block-heading{   width: 65%;}
 }
 
 
@@ -231,6 +241,13 @@ iPad portrait · width: 768px
 }
 .mobile-sidebarmenu{display:block;}
    .desktop-sidebar{display:none;}
+ .right-panel {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 80px;
+    padding-top: 20px;
+}  
+
 }
 
 
@@ -378,7 +395,10 @@ iPhone 6 landscape · width: 667px
 /*----------Table Grid-----------*/
 
 	.page_record_options::before {background-color: transparent;}
-	
+	.pages-info{    width: 80%;}
+	.bottom-pagination .pages-info {   width: 100% !important;}
+	.panel-block-head{position:relative;   overflow: unset;}
+	.panel-block-heading { width: 55%;}
 /*---------- End Table Grid-----------*/
 }
 
@@ -410,9 +430,7 @@ iPhone 6 landscape · width: 600px
 .language {
     float: right;
 }
-.panel-block-heading {
-    width: 55%;
-}
+.panel-block-heading { width: 55%;}
 	}
 /*---------- End Table Grid-----------*/
 
@@ -443,11 +461,13 @@ iPhone 5 landscape · width: 568px
 	.mobile-action-grp-btn .app-action-group {
 		display: block;
 	}
-	.pagination-block {padding: 0 0 10px 0}
+
 	.grid-action-group{display:none;}
 	.pages-info {width: 100%;}
 	.page_record_options::before {background-color: #5c5c5c;}
-	
+	.panel-block-heading {
+    width: 77%;
+}
 /*---------- End Table Grid-----------*/
 }
 

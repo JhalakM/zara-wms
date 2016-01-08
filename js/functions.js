@@ -236,7 +236,7 @@ function generateBlockUI() {
 
 /* function to unblock block UI element */
 function unblockUI() {
-    setTimeout($.unblockUI, 1000);
+   setTimeout($.unblockUI, 1000);
 }
 
 /* function to load javascript file in run time */
@@ -367,6 +367,13 @@ function linkDropdown() {
 }
 
 
+
+//dp-menu action in mobile
+function linkDropdownMobile() {
+    $(".action-arrow a").click(function() {
+        $(".action-grp").slideToggle("slow");
+    });
+}
 function generateDynamicElements() {
     loadScript(SET_WEB_URL + "template/elements.js", function() {
         $(".call-formbtn").html(btn_normal);
@@ -381,29 +388,59 @@ function dateTimePicker() {
 
 // Sidebar Height 
 function sidebarHeight() {
-	
-			$(".desktop-sidebar").css("height", $(window).height()-140 + "px"), $(window).resize(function() {
-			$(".desktop-sidebar").css("height", $(window).height()-140 + "px")
+	if($( window ).width() >= 1024){
+		
+		$(".desktop-sidebar").css("min-height", $(window).height()-50 + "px"), $(window).resize(function() {
+			$(".desktop-sidebar").css("min-height", $(window).height()-50 + "px")
 		});
+	}else
+	{
+		$(".desktop-sidebar").css("height", $(window).height() + "px"), $(window).resize(function() 
+		{
+			$(".desktop-sidebar").css("height", $(window).height()  + "px")
+		});
+	}
+	// if($( window ).height() < 600){
+		
+		//$(".desktop-sidebar").css("min-height", $(window).height()+110 + "px"), $(window).resize(function() 
+		//{
+		//	$(".desktop-sidebar").css("min-height", $(window).height()+110  + "px")
+		//});
+//	}
+
 	
 }
 // Sidebar In Mobile
 function sidebarMobile() {
-	if($( window ).width()<=768){
+	
 		$("#nav_pan").owlCarousel({
-			items : 9, //10 items above 1000px browser width
+			items : 5, //10 items above 1000px browser width
 			itemsTablet: [768,5],						 
 			itemsMobile: [600,3],
 			responsive: true,
 			navigation: true
 		 });
-	}
+	
 }
 // panel action icon height 
 function actionBtnHeight() {
 	if($( window ).width() > 568){
 		$(".app-action-group a").css("height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
 			$(".app-action-group a" ).css("height", $(".panel-block-heading ").height()+10 + "px")
+		});
+		$(".app-action-group a").css("line-height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
+			$(".app-action-group a" ).css("line-height", $(".panel-block-heading ").height()+10 + "px")
+		});
+	}
+	if($( window ).width() < 568){
+		$(".action-arrow a").css("height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
+			$(".action-arrow a" ).css("height", $(".panel-block-heading ").height()+10 + "px")
+		});
+		$(".action-arrow a").css("line-height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
+			$(".action-arrow a" ).css("line-height", $(".panel-block-heading ").height()+10 + "px")
+		});
+		$(".action-grp").css("top", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
+			$(".action-grp" ).css("10", $(".panel-block-heading ").height()+10 + "px")
 		});
 	}
 	
@@ -459,10 +496,11 @@ function show_error(value){
 }
 
 // panel action icon height 
-function heightGrid() {
-	if($( window ).width() > 568){
-		$(".table-record").css("max-height", $(".desktop-sidebar").height()-170 + "px"), $(window).resize(function() {
-			$(".table-record" ).css("max-height", $(".desktop-sidebar").height()-170 + "px")
+function heightGrid() { 
+	
+	if($( window ).width() >= 1024 ){
+		$(".table-record").css("max-height", $(".desktop-sidebar").height() + "px"), $(window).resize(function() {
+			$(".table-record" ).css("max-height", $(".desktop-sidebar").height()+ "px")
 		});
 	}
 	
