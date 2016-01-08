@@ -225,17 +225,26 @@ function generate_file(formId,formElement,flag){
 	add_class_value = (flag == 1)?additional_class:"";
 	
 	var fileUploadHTML  = $(ele_file_upload).appendTo(mainWrapper)
-							.find(selector_gui_input).attr({
+							/*.find(selector_gui_input).attr({
 								"id"    : formElement.name,
 								"class" : class_gui_input
-							}).parents(selector_p_r_5).addClass(add_class_value);	
+							}).parents(selector_p_r_5).addClass(add_class_value)*/;	
 							
 	$(fileUploadHTML).find(selector_gui_file).attr({
 				"name"    	: formElement.name,
 				"tabindex"	: formElement.tabIndex,
 				"type"    	: formElement.type,
+				"id"    	: formElement.name,
 				"multiple"  : formElement.multiple
 			});
+	
+	if(typeof formElement.fileValidation != "undefined"){
+		$(fileUploadHTML).find(selector_gui_file).attr({
+				"data-accept"	: formElement.fileValidation.accept,
+				"data-size"		: formElement.fileValidation.size
+			});
+	}
+	setMultiFilePlugin(formElement.name);
 }
 
 
@@ -250,6 +259,7 @@ function generateButtons(formButtons,formId){
 		$(btnSubmit).attr({
 			"type" : "button",
 			"name" : formButtons[0].submit.keyName,
+			"onclick" : "sendFormData('#"+formId+"')"
 		});
 		$(btnSubmit).text($.i18n.prop(formButtons[0].submit.keyValue));
 		buttonHTML.append(btnSubmit);

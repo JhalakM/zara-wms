@@ -28,10 +28,10 @@ $.fn.dynamicForm = function(options){
 				formTag 	= jsonParse(jsonStringify(formData[key].formTag));
 				
 				$(formCreate).attr({
-					"name" 	 : formTag.name,
-					"id"	 : formTag.name,
-					"method" : formTag.method,
-					"action" : formTag.action
+					"name" 	   : formTag.name,
+					"id"	   : formTag.name,
+					"method"   : formTag.method,
+					"action"   : formTag.action
 				});
 				
 				formElement 	= jsonParse(jsonStringify(formData[key].formElements));
