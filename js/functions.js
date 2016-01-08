@@ -54,12 +54,11 @@ function ajaxCallBack(ajax_url, success_callback, failure_callback, params) {
 
 /* function to get form element from dynamic form plugin */
 function getFormElement() {
-		var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
-        ajaxCallBack(ajaxUrl, generateFormSuccess, generateFormError);
-		$(".call-formbtn").click(function() {
-			
-		});
-
+	var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
+	ajaxCallBack(ajaxUrl, generateFormSuccess, generateFormError);
+	$(".call-formbtn").click(function() {
+		
+	});
 }
 
 /* call plugin for i18n language tanslation library */
@@ -86,8 +85,6 @@ function languagePlugin(lang) {
             getTemplateParams();
         }
     });
-
-
 }
 /* function to call xustom exception */
 function customException() {
@@ -227,12 +224,12 @@ function generateBlockUI() {
 
                 break;
             default:
-                $.blockUI({
-                    overlayCSS: {
-                        backgroundColor: '#000'
-                    },
-                    message: LOADER_MESSAGE
-                });
+			$.blockUI({
+				overlayCSS: {
+					backgroundColor: '#000'
+				},
+				message: LOADER_MESSAGE
+			});
         }
     });
 }
@@ -243,21 +240,21 @@ function unblockUI() {
 }
 
 /* function to load javascript file in run time */
-function loadScript(url, callback) {
+function loadScript(url, callback){
 
     var script = document.createElement("script")
     script.type = "text/javascript";
 
-    if (script.readyState) { //IE
-        script.onreadystatechange = function() {
+    if (script.readyState){  //IE
+        script.onreadystatechange = function(){
             if (script.readyState == "loaded" ||
-                script.readyState == "complete") {
+                    script.readyState == "complete"){
                 script.onreadystatechange = null;
                 callback();
             }
         };
-    } else { //Others
-        script.onload = function() {
+    } else {  //Others
+        script.onload = function(){
             callback();
         };
     }
