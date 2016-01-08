@@ -2937,8 +2937,18 @@ body p {
 .element-block:hover p,.element-block:hover h3{color:#fff;}
 .element-block:hover h3 { border-bottom: 1px solid rgba(255, 255, 255, 0.2);  }
 .element-block.bayplan .icon {
-    background: rgba(0, 0, 0, 0) url("../images/icons/bayplan-icon.png") no-repeat scroll 15px 0;
+    background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/bayplan-icon.png") no-repeat scroll 15px 0;
+  
+}
+.element-block.bayplan:hover .icon {
+    background-position:16px -71px;
+}
+.element-block.bayplan .icon {
+   
+    display: block;
     height: 65px;
+    margin: 0 auto;
+    text-align: center;
     width: 85px;
 }
 .element-block h3 {
