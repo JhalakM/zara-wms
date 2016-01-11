@@ -9,6 +9,7 @@ $(document).ready(function(){
 	//datePicker();
 	accordionPanel();
 	generateSVG();
+	sidebarHeight();
 	//dateTimePicker();
 	
 });
