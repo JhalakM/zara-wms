@@ -44,6 +44,7 @@ iPad landscape · width: 1024px
 .error-msg.left-bottom {
     left: 0;
     max-width: 100%;
+	width:100%;
 }
 .p-r-5 {
     padding: 0;
