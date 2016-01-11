@@ -484,7 +484,7 @@ function setMultiFilePlugin(fileInputId){
   $(fileInputId).MultiFile({  
     accept: $(fileInputId).data("accept"),
     maxsize: $(fileInputId).data("size"),
-	preview : true,
+	preview : false,
 	STRING: {
 			remove: 'x',
 			denied: 'You cannot select a $ext file.\nTry again...',
@@ -501,7 +501,6 @@ function setMultiFilePlugin(fileInputId){
 function createJSON() {
     var jsonObj = [];
 	var output  = {};
-	var output_1  = [];
     $("input[data-file!='"+true+"'][type!='file']").each(function() {
         var key   	= $(this).attr("name");
 		var value 	= $(this).val();
@@ -515,9 +514,9 @@ function createJSON() {
 			output[key] = [];
 		}
 		output[key].push({
-				"name" 		: name,
-				"imageData" : value		
-			});
+			"name" 		: name,
+			"imageData" : value		
+		});
     });
 	jsonObj.push(output);
 	return jsonObj;
