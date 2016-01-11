@@ -433,7 +433,7 @@ function actionBtnHeight() {
 }
 
 
-$(document).ready(function(){
+function validateDetails(){
 	
 	$('.error-msg').hide();
 	
@@ -472,8 +472,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	
-});
+}
 
 function show_error(value){
 	$(value).prev('input').removeClass('highlight-input');
