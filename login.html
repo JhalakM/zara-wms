@@ -16,16 +16,33 @@
 	<link rel="icon" href="img/favicon.ico">
     
 	<title data-replace="text">{{site_login_title}}</title>
+	<link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="css/lib/font/font-awesome.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/lib/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
     
 </head>
 
 <body data-reference="page-loader">
-    <div>
+<header class="login-header">
+	 <div class="login-container">
+	 <div class="logo-header">
+	  <a href="#"><img src="img/logo.png"></a>
+	  
+	 </div>
+	 </div>
+</header>
+<section>
+			 <div class="login-container">
+    <div class="form clearfix">
 		<form id="frmLogin" name="login_form" method="post">
 			<input type="button" value="Submit">
 		</form>
     </div>
-	
+	</div>
+</section>
     <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
 	<script src="js/lib/blockUI/jquery.blockUI.js"></script>
 	<script src="js/lib/language/jquery.i18n.properties.js"></script>
