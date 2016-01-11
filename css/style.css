@@ -2915,14 +2915,11 @@ body p {
     line-height: 18px;
 }
 .element-sec {
-    
-    padding-bottom: 35px;
-    padding-left: 21px;
-    padding-right: 20px;
+     padding: 30px 20px 35px 21px;
 }
 .element-block {
     color: #5c5c5c;
-    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 30px;
     position: relative;
     text-align: center;
