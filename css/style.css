@@ -1678,9 +1678,9 @@ Panel
 /*----------Grid Action Group-----------*/
 
 .grid-action-group {
-    border: 1px solid #D8D8D8;
+    border: 1px solid #d8d8d8;
     float: right;
-    margin: 7px;
+    margin: 8px 7px 7px;
 }
 .grid-action-group a {
     border-right: 1px solid #D8D8D8;
@@ -2190,7 +2190,9 @@ Table
     margin-top: -3px;
 }
 .table-record .mCSB_container_wrapper{position:relative;}
-
+.table-record .mCustomScrollBox {
+    width: 100%;
+}
 
 
 
