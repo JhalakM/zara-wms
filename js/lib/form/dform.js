@@ -22,7 +22,7 @@ $.fn.dynamicForm = function(options){
 			$(self).find("form").remove();
 			var formString = jsonStringify(formData);
 			formCreate  = document.createElement("form");
-			$(self).append(formCreate).addClass("panel");
+			$(self).append(formCreate).addClass("element-sec clearfix");
 			$.each(formData, function(key, value) {
 				formCaption = formData[key].caption;
 				formTag 	= jsonParse(jsonStringify(formData[key].formTag));

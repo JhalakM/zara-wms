@@ -524,19 +524,18 @@ function setMultiFilePlugin(fileInputId){
 
 function createJSON() {
     var jsonObj = [];
-	var item = {};
-	var obj = new Object();
+	var output = {};
     $("input[data-file!='"+true+"'][type!='file']").each(function() {
         var key   = $(this).attr("name");
 		var value = $(this).val();
-        item = {};
-		obj.key = value;
-		jsonObj = JSON.stringify(obj);
-		//item[key] = value;
-        //jsonObj.push(item);
+		output[key] = value;
     });
-
-    console.log(jsonObj);
+	$("input[data-file ='"+true+"'][type = 'file']").each(function() {
+        var key   = $(this).attr("name");
+		var value = $(this).val();
+		output[key] = value;
+    });
+	console.log(JSON.stringify(output));
 }
 
 
