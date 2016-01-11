@@ -384,7 +384,6 @@ function dateTimePicker() {
 // Sidebar Height 
 function sidebarHeight() {
 	if($( window ).width() >= 1024){
-		
 		$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px"), $(window).resize(function() {
 			$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px")
 		});
@@ -395,26 +394,16 @@ function sidebarHeight() {
 			$(".desktop-sidebar").css("height", $(window).height()  + "px")
 		});
 	}
-	// if($( window ).height() < 600){
-		
-		//$(".desktop-sidebar").css("min-height", $(window).height()+110 + "px"), $(window).resize(function() 
-		//{
-		//	$(".desktop-sidebar").css("min-height", $(window).height()+110  + "px")
-		//});
-//	}
-
-	
 }
 // Sidebar In Mobile
 function sidebarMobile() {
-	
-		$("#nav_pan").owlCarousel({
-			items : 5, //10 items above 1000px browser width
-			itemsTablet: [768,5],						 
-			itemsMobile: [600,3],
-			responsive: true,
-			navigation: true
-		 });
+	$("#nav_pan").owlCarousel({
+		items : 5, //10 items above 1000px browser width
+		itemsTablet: [768,5],						 
+		itemsMobile: [600,3],
+		responsive: true,
+		navigation: true
+	});
 	
 }
 // panel action icon height 
@@ -555,36 +544,36 @@ function sendFormData(formId){
 
 function generate_pagination_options(defaultOptions,stepOption,nameOptions,currentOption){
  
- var dropdownHTML  =  $(pagination_options);
- var liClone;
- var optionValue;
- var optionLoop;
- currentOption = currentOption ? currentOption : 1;
- optionLoop    = stepOption == 1 ? defaultOptions.length : defaultOptions;
- for(var i=0; i<optionLoop; i++){
-  optionValue = stepOption == 1 ? defaultOptions[i] : i+1;
-  liClone = document.createElement("li");
-  $(liClone).attr({
-   "value" : optionValue,
-   "rel" : optionValue
-  });
-  $(liClone).html(optionValue);
-  dropdownHTML.find("ul").append(liClone);
- }
+	var dropdownHTML  =  $(pagination_options);
+	var liClone;
+	var optionValue;
+	var optionLoop;
+	currentOption = currentOption ? currentOption : 1;
+	optionLoop    = stepOption == 1 ? defaultOptions.length : defaultOptions;
+	for(var i=0; i<optionLoop; i++){
+		optionValue = stepOption == 1 ? defaultOptions[i] : i+1;
+		liClone = document.createElement("li");
+		$(liClone).attr({
+		"value" : optionValue,
+		"rel" : optionValue
+		});
+		$(liClone).html(optionValue);
+		dropdownHTML.find("ul").append(liClone);
+	}
  
- dropdownHTML.find("input").attr({
-   "name": nameOptions,
-   "value": currentOption
- });
+	dropdownHTML.find("input").attr({
+	   "name": nameOptions,
+	   "value": currentOption
+	});
  
- dropdownHTML.find(".selected-listitem").text(currentOption);
+	dropdownHTML.find(".selected-listitem").text(currentOption);
  
- return dropdownHTML;
+	return dropdownHTML;
 }
+
 function replaceWithObject(regEx,string,mapObj){
 	var regex = new RegExp(regEx,"gi");
 	return string.replace(regex, function(matched){
 		return mapObj[matched];
 	});
-
 }
