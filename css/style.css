@@ -1677,7 +1677,7 @@ Panel
     left: 0;
 }
 .bottom-pagination .dropdown-list ul {
-    bottom: 0;
+    bottom: 19px;
     top: auto;
 }
 /*----------Grid Action Group-----------*/
@@ -2064,6 +2064,9 @@ Table
 \*------------------------------------*/
 .table-grid {
     width: 100%;
+}
+.checkbox-col,.more-field-show{
+    width: 25px;
 }
 .table-grid th:first-child {
     padding: 0 10px;
