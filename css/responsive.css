@@ -28,7 +28,6 @@ iPad landscape · width: 1024px
 
 /*----------Form validations Error Message-----------*/
 .error-msg.right-top {
-    height: 35px;
     left: 0;
     max-width: 100%;
     text-align: left;
@@ -44,10 +43,9 @@ iPad landscape · width: 1024px
 .error-msg.left-bottom {
     left: 0;
     max-width: 100%;
+	width:100%;
 }
-.p-r-5 {
-    padding: 0;
-}
+
 }
 
 
@@ -84,6 +82,9 @@ iPad portrait · width: 768px
 }
 .block-container {
     padding-left: 0;
+}
+.p-r-5 {
+    padding: 0;
 }
 .logo-fix-width::after ,.logo-fix-width::before{
     background-image: none;}

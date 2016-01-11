@@ -1906,7 +1906,7 @@ Alert message
 }
 .error-msg.left-bottom {
     left: 0;
-    max-width: 195px;
+    max-width: 206px;
     top: 40px;
 }
 .error-msg.left-bottom::before {
@@ -1920,7 +1920,7 @@ Alert message
     transform: rotate(-92deg);
 }
 .error-msg-text .error-info-icon {
-    margin: 0 30px 0 0;
+    margin: 0 25px 0 0;
 }
 /*------------------------------------*\
 switch 
@@ -2915,7 +2915,7 @@ body p {
     line-height: 18px;
 }
 .element-sec {
-     padding: 30px 20px 35px 21px;
+     padding: 30px 10px 35px 10px;
 }
 .element-block {
     color: #5c5c5c;

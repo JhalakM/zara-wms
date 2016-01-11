@@ -1185,7 +1185,7 @@ border:1px solid #2991D6;
 .ui-datepicker-title select {
       -webkit-appearance: none;        /*Removes default chrome and safari style*/
       -moz-appearance: none;          /* Removes Default Firefox style*/
-      background: url(../../../img/icons/h-scroll-arrow.png) no-repeat;         /*Adds background-image*/
-      background-position: 70px 10px;                /*Position of the background-image*/
+      background: url(../../../img/icons/down-arow.jpg) no-repeat;         /*Adds background-image*/
+      background-position: 70px 15px;                /*Position of the background-image*/
       width: 100px;                /*Width of select dropdown to give space for arrow image*/
 }
