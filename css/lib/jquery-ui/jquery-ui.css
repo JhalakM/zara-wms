@@ -264,7 +264,7 @@ button.ui-button::-moz-focus-inner {
     background: #f6f6f6 none repeat scroll 0 0;
     line-height: 1.8em;
     margin: 0 2.3em;
-    text-align: center;
+
 }
 .ui-datepicker .ui-datepicker-title select {
 	font-size: 1em;
@@ -1186,7 +1186,7 @@ border:1px solid #2991D6;
 .ui-datepicker-title select {
       -webkit-appearance: none;        /*Removes default chrome and safari style*/
       -moz-appearance: none;          /* Removes Default Firefox style*/
-      background: url(../../../img/icons/down-arow.jpg) no-repeat;         /*Adds background-image*/
+      background:#ffffff url(../../../img/icons/down-arow.jpg) no-repeat;         /*Adds background-image*/
       background-position: 70px 15px;                /*Position of the background-image*/
       width: 100px;                /*Width of select dropdown to give space for arrow image*/
 }
