@@ -525,16 +525,18 @@ function setMultiFilePlugin(fileInputId){
 function createJSON() {
     var jsonObj = [];
 	var item = {};
-
+	var obj = new Object();
     $("input[data-file!='"+true+"'][type!='file']").each(function() {
         var key   = $(this).attr("name");
 		var value = $(this).val();
         item = {};
-		item[key] = value;
-        jsonObj.push(item);
+		obj.key = value;
+		jsonObj = JSON.stringify(obj);
+		//item[key] = value;
+        //jsonObj.push(item);
     });
 
-    console.log(jsonStringify(jsonObj));
+    console.log(jsonObj);
 }
 
 
