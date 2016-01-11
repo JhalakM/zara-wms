@@ -1919,6 +1919,9 @@ Alert message
     top: -12px;
     transform: rotate(-92deg);
 }
+.error-msg-text .error-info-icon {
+    margin: 0 30px 0 0;
+}
 /*------------------------------------*\
 switch 
 \*------------------------------------*/
