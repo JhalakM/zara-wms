@@ -1675,6 +1675,10 @@ Panel
 .pages-info .dropdown-list ul {
     left: 0;
 }
+.bottom-pagination .dropdown-list ul {
+    bottom: 0;
+    top: auto;
+}
 /*----------Grid Action Group-----------*/
 
 .grid-action-group {
@@ -1897,7 +1901,7 @@ Alert message
     font-size: 12px;
     margin-bottom: 5px;
     max-width: 260px;
-    padding: 7px 13px 7px 8px;
+    padding: 7px 13px 10px 8px;
     position: absolute;
     right: -266px;
     top: 0;
@@ -1918,6 +1922,8 @@ Alert message
     position: absolute;
     top: -12px;
     transform: rotate(-92deg);
+ -webkit-transform: rotate(-92deg);
+ -moz-transform: rotate(-92deg);
 }
 /*------------------------------------*\
 switch 
