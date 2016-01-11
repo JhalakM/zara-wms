@@ -511,15 +511,15 @@ function setMultiFilePlugin(fileInputId){
   });
 }
 
-function createJSON() {
+function createJSON(formId) {
     var jsonObj = [];
 	var output  = {};
-    $("input[data-file!='"+true+"'][type!='file']").each(function() {
+    $(formId+" input[data-file!='"+true+"'][type!='file']").each(function() {
         var key   	= $(this).attr("name");
 		var value 	= $(this).val();
 		output[key] = value;
     });
-	$("input[data-file='"+true+"']").each(function(index) {
+	$(formId+" input[data-file='"+true+"']").each(function(index) {
         var key   = $(this).attr("name");
 		var value = $(this).val();
 		var name  = $(this).data("title");
@@ -532,13 +532,14 @@ function createJSON() {
 		});
     });
 	jsonObj.push(output);
-	return jsonObj;
 	//console.log(JSON.stringify(jsonObj));
+	return jsonObj;
+	
 }
 
 
 function sendFormData(formId){
-	createJSON();
+	createJSON(formId);
 }
 
 function generate_pagination_options(defaultOptions,stepOption,nameOptions,currentOption){
