@@ -223,8 +223,9 @@ button.ui-button::-moz-focus-inner {
 	display: none;
 }
 .ui-datepicker .ui-datepicker-header {
-	position: relative;
-	padding: .2em 0;
+    overflow: hidden;
+    padding: 0.2em 0;
+    position: relative;
 }
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
@@ -259,12 +260,16 @@ button.ui-button::-moz-focus-inner {
     width: 40px;
     border-left: 1px solid #d8d8d8;
 	cursor:pointer;
+	z-index: 9999;
+	background: #ffffff none repeat 
 }
 .ui-datepicker .ui-datepicker-title {
     background: #f6f6f6 none repeat scroll 0 0;
     line-height: 1.8em;
-    margin: 0 2.3em;
-
+    margin: -10px 0 -9px 2.3em;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
 }
 .ui-datepicker .ui-datepicker-title select {
 	font-size: 1em;
