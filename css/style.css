@@ -1499,7 +1499,7 @@ Panel
     float: left;
     font-size: 15px;
     font-weight: bold;
-    line-height: 27px;
+    line-height: 24px;
     min-height: 39px;
     padding: 5px 24px 5px 16px;
     text-transform: uppercase;
@@ -2187,11 +2187,6 @@ Table
     margin-top: -3px;
 }
 .table-record .mCSB_container_wrapper{position:relative;}
-
-
-
-
-
 /*------------------------------------*\
 Forms Element 
 \*------------------------------------*/
@@ -2232,11 +2227,6 @@ Forms Element
 .highlight-input {
     border: 1px solid #ff0000;
 }
-
-
-
-
-
 /*------------------------------------*\
 Element Block Style
 \*------------------------------------*/
@@ -2261,11 +2251,6 @@ Element Block Style
     margin-bottom: 20px;
     padding: 30px 15px;
 }
-
-
-
-
-
 /*------------------------------------*\
 Header
 \*------------------------------------*/
@@ -2792,32 +2777,32 @@ Sidebar
     width: 60px;
 	  font-size: 0;
 }
-.left-panel li.operation-planning{background-image:url("../img/dashborad/svg/sidebar/operation-planning.svg");}
-.left-panel li.operation-planning:hover{background-image:url("../img/dashborad/sidebar/svg/operation-planning-hover.svg");}
+.left-panel li.operation-planning{background-image:url("../img/dashborad/svg/operation-planning.svg");}
+.left-panel li.operation-planning:hover{background-image:url("../img/dashborad/svg/operation-planning-hover.svg");}
 
-.left-panel li.billing{background-image:url("../img/dashborad/svg/sidebar/billing.svg");}
-.left-panel li.billing:hover{background-image:url("../img/dashborad/svg/sidebar/billing-hover.svg");}
+.left-panel li.billing{background-image:url("../img/dashborad/svg/billing.svg");}
+.left-panel li.billing:hover{background-image:url("../img/dashborad/svg/billing-hover.svg");}
 
-.left-panel li.edi{background-image:url("../img/dashborad/svg/sidebar/edi.svg");}
-.left-panel li.edi:hover{background-image:url("../img/dashborad/svg/sidebar/edi-hover.svg");}
+.left-panel li.edi{background-image:url("../img/dashborad/svg/edi.svg");}
+.left-panel li.edi:hover{background-image:url("../img/dashborad/svg/edi-hover.svg");}
 
-.left-panel li.gate{background-image:url("../img/dashborad/svg/sidebar/gate.svg");}
-.left-panel li.gate:hover{background-image:url("../img/dashborad/svg/sidebar/gate-hover.svg");}
+.left-panel li.gate{background-image:url("../img/dashborad/svg/gate.svg");}
+.left-panel li.gate:hover{background-image:url("../img/dashborad/svg/gate-hover.svg");}
 
-.left-panel li.containers{background-image:url("../img/dashborad/svg/sidebar/containers.svg");}
-.left-panel li.containers:hover{background-image:url("../img/dashborad/svg/sidebar/containers-hover.svg");}
+.left-panel li.containers{background-image:url("../img/dashborad/svg/containers.svg");}
+.left-panel li.containers:hover{background-image:url("../img/dashborad/svg/containers-hover.svg");}
 
-.left-panel li.services{background-image:url("../img/dashborad/svg/sidebar/services.svg");}
-.left-panel li.services:hover{background-image:url("../img/dashborad/svg/sidebar/services-hover.svg");}
+.left-panel li.services{background-image:url("../img/dashborad/svg/services.svg");}
+.left-panel li.services:hover{background-image:url("../img/dashborad/svg/services-hover.svg");}
 
-.left-panel li.reporting{background-image:url("../img/dashborad/svg/sidebar/reporting.svg");}
-.left-panel li.reporting:hover{background-image:url("../img/dashborad/svg/sidebar/reporting-hover.svg");}
+.left-panel li.reporting{background-image:url("../img/dashborad/svg/reporting.svg");}
+.left-panel li.reporting:hover{background-image:url("../img/dashborad/svg/reporting-hover.svg");}
 
-.left-panel li.operation-dashboard{background-image:url("../img/dashborad/svg/sidebar/operation-dashboard.svg");}
-.left-panel li.operation-dashboard:hover{background-image:url("../img/dashborad/svg/sidebar/operation-dashboard-hover.svg");}
+.left-panel li.operation-dashboard{background-image:url("../img/dashborad/svg/operation-dashboard.svg");}
+.left-panel li.operation-dashboard:hover{background-image:url("../img/dashborad/svg/operation-dashboard-hover.svg");}
 
-.left-panel li.administration{background-image:url("../img/dashborad/svg/sidebar/administration.svg");}
-.left-panel li.administration:hover{background-image:url("../img/dashborad/svg/sidebar/administration-hover.svg");}
+.left-panel li.administration{background-image:url("../img/dashborad/svg/administration.svg");}
+.left-panel li.administration:hover{background-image:url("../img/dashborad/svg/administration-hover.svg");}
 
 
 /* For Responsive View */
@@ -2904,6 +2889,7 @@ Main Body
     padding-top: 20px;
 }
 
+
 /*------------------------------------*\
 Home Block
 \*------------------------------------*/
@@ -2973,6 +2959,7 @@ body p {
 .element-block.about-zodiac:hover .icon {background-position: 10px -70px;}
 
 
+
 /*------------------------------------*\
 Footer
 \*------------------------------------*/
@@ -2992,3 +2979,6 @@ Footer
 
 
 .mobile-sidebarmenu{display:none;}
+.error-msg-text .error-info-icon {
+    margin: 0 30px 0 0;
+}
