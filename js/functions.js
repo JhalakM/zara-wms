@@ -385,8 +385,8 @@ function dateTimePicker() {
 function sidebarHeight() {
 	if($( window ).width() >= 1024){
 		
-		$(".desktop-sidebar").css("min-height", $(window).height()-50 + "px"), $(window).resize(function() {
-			$(".desktop-sidebar").css("min-height", $(window).height()-50 + "px")
+		$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px"), $(window).resize(function() {
+			$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px")
 		});
 	}else
 	{
