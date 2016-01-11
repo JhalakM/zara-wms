@@ -348,6 +348,11 @@ function actionBlock() {
     });
 }
 
+function appActionBlock() {
+    $(".app-action-group a").click(function() {
+        $(".app-action-form ").slideToggle("slow");
+    });
+}
 
 
 //dp-menu action
@@ -384,14 +389,14 @@ function dateTimePicker() {
 function sidebarHeight() {
 	if($( window ).width() >= 1024){
 		
-		$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px"), $(window).resize(function() {
-			$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px")
+		$(".desktop-sidebar").css("min-height", $(document).height()-140 + "px"), $(window).resize(function() {
+			$(".desktop-sidebar").css("min-height", $(document).height()-140 + "px")
 		});
 	}else
 	{
-		$(".desktop-sidebar").css("height", $(window).height() + "px"), $(window).resize(function() 
+		$(".desktop-sidebar").css("height", $(document).height() + "px"), $(window).resize(function() 
 		{
-			$(".desktop-sidebar").css("height", $(window).height()  + "px")
+			$(".desktop-sidebar").css("height", $(document).height()  + "px")
 		});
 	}	
 }
