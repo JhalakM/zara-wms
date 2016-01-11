@@ -530,10 +530,15 @@ function createJSON() {
 		var value = $(this).val();
 		output[key] = value;
     });
-	$("input[data-file ='"+true+"'][type = 'file']").each(function() {
+	$("input[data-file='"+true+"']").each(function() {
         var key   = $(this).attr("name");
 		var value = $(this).val();
-		output[key] = value;
+		var name  = $(this).data("title");
+		alert(key);
+		output[key] = {
+			"imageData" : value,
+			"name" : 
+		};
     });
 	console.log(JSON.stringify(output));
 }
