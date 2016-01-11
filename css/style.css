@@ -2445,24 +2445,24 @@ Header
 }
 .language .dropdown-list ul {
     left: 8px;
-    top: 26px;
     overflow-y: unset;
+    top: 26px;
 }
 .language .dropdown-list ul::before {
-    border-bottom: 6px dashed #d8d8d8;
-    border-left: 6px solid rgba(0, 0, 0, 0);
-    border-right: 6px solid rgba(0, 0, 0, 0);
+    border-bottom: 5px dashed #d8d8d8;
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
     content: "";
-    left: 39%;
+    left: 46%;
     position: absolute;
-    top: -7px;
+    top: -5px;
 }
 .language .dropdown-list ul li {
     color: #5c5c5c;
     display: block;
     font-size: 11px;
     height: 30px;
-    line-height: 30px;
+   padding: 4px 10px;
     text-decoration: none;
 }
 .menu-part {
