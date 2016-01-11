@@ -2,9 +2,11 @@
 /* ZARA - Ultimate Port Solution - Responsive 
 /* --------------------------------------------------------  */
 
-
-
-
+@media (max-width:1200px) {
+.element-sec .col-md-3 {
+    width: 50%;float:left;
+}
+}
 /*------------------------------------*\
 iPad landscape · width: 1024px
 \*------------------------------------*/
@@ -427,6 +429,11 @@ iPhone 6 landscape · width: 667px
 	.panel-block-head{position:relative;   overflow: unset;}
 	.panel-block-heading { width: 55%;}
 /*---------- End Table Grid-----------*/
+
+.element-sec .col-md-3 {
+    float: none;
+    width: 100%;
+}
 }
 
 

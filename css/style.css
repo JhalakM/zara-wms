@@ -1596,7 +1596,7 @@ Panel
     position: relative;
     float: left;
     width: auto;
-    padding: 13px 10px;
+    padding: 13px 7px 7px 10px;
 }
 .page-options,
 .page-record-options {
@@ -1674,6 +1674,10 @@ Panel
 }
 .pages-info .dropdown-list ul {
     left: 0;
+}
+.bottom-pagination .dropdown-list ul {
+    bottom: 0;
+    top: auto;
 }
 /*----------Grid Action Group-----------*/
 
@@ -2916,16 +2920,21 @@ body p {
     font-size: 14px;
     line-height: 18px;
 }
+.element-block p {
+    height: 52px;
+    overflow: hidden;
+}
 .element-sec {
      padding: 30px 10px 35px 10px;
 }
+
 .element-block {
     color: #5c5c5c;
     margin-bottom: 30px;
     padding: 30px;
     position: relative;
     text-align: center;
-	 border: 1px solid #d8d8d8;
+	 border: 1px solid #d8d8d8;height: 240px;
 }
 .element-block:hover {
     background: #2991d6 none repeat scroll 0 0;
@@ -2973,7 +2982,9 @@ body p {
 .element-block.demos:hover .icon {background-position: 15px -72px;}
 .element-block.about-zodiac .icon {background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/about-zodiac-icon.png") no-repeat scroll 10px 0;}
 .element-block.about-zodiac:hover .icon {background-position: 10px -70px;}
-
+.padding-bottom-none {
+    padding-bottom: 0;
+}
 /*------------------------------------*\
 Footer
 \*------------------------------------*/
