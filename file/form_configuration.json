@@ -149,7 +149,7 @@
 			{  
                "validation":"r",
                "tabIndex":"11",
-               "name":"DamageImage",
+               "name":"damageImage",
                "labelKey":"containerInventory.containerImage",
                "fileValidation":{  
                   "accept":"jpg|png",
