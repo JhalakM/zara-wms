@@ -497,7 +497,7 @@ function setMultiFilePlugin(fileInputId){
   $(fileInputId).MultiFile({  
     accept: $(fileInputId).data("accept"),
     maxsize: $(fileInputId).data("size"),
-	preview : false,
+	preview : true,
 	STRING: {
 			remove: $.i18n.prop('multiplefile.remove'),
 			denied: $.i18n.prop('multiplefile.denied'),
@@ -517,12 +517,23 @@ function createJSON(formId) {
     $(formId+" input[data-file!='"+true+"'][type!='file']").each(function() {
         var key   	= $(this).attr("name");
 		var value 	= $(this).val();
+		var checkValue = [];
+		if($(this).attr("type") == "radio"){
+			value 	= $("input[name = '"+key+"']:checked").val();
+		}
+		if($(this).attr("type") == "checkbox"){
+			$("input[name = '"+key+"']:checked").each(function(){
+				checkValue.push($(this).val());			
+			});
+			value = checkValue;
+		}
 		output[key] = value;
     });
-	$(formId+" input[data-file='"+true+"']").each(function(index) {
+	$(formId+" input[data-file='"+true+"']").each(function() {
         var key   = $(this).attr("name");
 		var value = $(this).val();
 		var name  = $(this).data("title");
+		alert(key);
 		if(typeof output[key] == "undefined"){
 			output[key] = [];
 		}
@@ -532,9 +543,8 @@ function createJSON(formId) {
 		});
     });
 	jsonObj.push(output);
-	//console.log(JSON.stringify(jsonObj));
-	return jsonObj;
-	
+	console.log(JSON.stringify(jsonObj));
+	//return jsonObj;
 }
 
 
