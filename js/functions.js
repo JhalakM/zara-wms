@@ -384,7 +384,7 @@ function dateTimePicker() {
 // Sidebar Height 
 function sidebarHeight() {
 	if($( window ).width() >= 1024){
-		
+		alert("tffhgv");
 		$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px"), $(window).resize(function() {
 			$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px")
 		});
@@ -394,16 +394,7 @@ function sidebarHeight() {
 		{
 			$(".desktop-sidebar").css("height", $(window).height()  + "px")
 		});
-	}
-	// if($( window ).height() < 600){
-		
-		//$(".desktop-sidebar").css("min-height", $(window).height()+110 + "px"), $(window).resize(function() 
-		//{
-		//	$(".desktop-sidebar").css("min-height", $(window).height()+110  + "px")
-		//});
-//	}
-
-	
+	}	
 }
 // Sidebar In Mobile
 function sidebarMobile() {
