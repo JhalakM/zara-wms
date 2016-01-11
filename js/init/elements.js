@@ -11,7 +11,7 @@ $(document).ready(function(){
 	generateSVG();
 	sidebarHeight();
 	//dateTimePicker();
-	
+	validateDetails();
 });
 
 

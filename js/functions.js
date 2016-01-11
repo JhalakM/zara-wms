@@ -438,7 +438,7 @@ function actionBtnHeight() {
 }
 
 
-$(document).ready(function(){
+function validateDetails(){
 	
 	$('.error-msg').hide();
 	
@@ -477,8 +477,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	
-});
+}
 
 function show_error(value){
 	$(value).prev('input').removeClass('highlight-input');
@@ -505,27 +504,27 @@ function setMultiFilePlugin(fileInputId){
     maxsize: $(fileInputId).data("size"),
 	preview : false,
 	STRING: {
-			remove: 'x',
-			denied: 'You cannot select a $ext file.\nTry again...',
-			file: '$file',
-			selected: 'File selected: $file',
-			duplicate: 'This file has already been selected:\n$file',
-			toomuch: 'The files selected exceed the maximum size permited ($size)',
-			toomany: 'Too many files selected (max: $max)',
-			toobig: '$file is too big (max $size)'
+			remove: $.i18n.prop('multiplefile.remove'),
+			denied: $.i18n.prop('multiplefile.denied'),
+			file: $.i18n.prop('multiplefile.file'),
+			selected: $.i18n.prop('multiplefile.selected'),
+			duplicate: $.i18n.prop('multiplefile.duplicate'),
+			toomuch: $.i18n.prop('multiplefile.toomuch'),
+			toomany: $.i18n.prop('multiplefile.toomany'),
+			toobig: $.i18n.prop('multiplefile.toobig')
 		}
   });
 }
 
-function createJSON() {
+function createJSON(formId) {
     var jsonObj = [];
 	var output  = {};
-    $("input[data-file!='"+true+"'][type!='file']").each(function() {
+    $(formId+" input[data-file!='"+true+"'][type!='file']").each(function() {
         var key   	= $(this).attr("name");
 		var value 	= $(this).val();
 		output[key] = value;
     });
-	$("input[data-file='"+true+"']").each(function(index) {
+	$(formId+" input[data-file='"+true+"']").each(function(index) {
         var key   = $(this).attr("name");
 		var value = $(this).val();
 		var name  = $(this).data("title");
@@ -538,13 +537,14 @@ function createJSON() {
 		});
     });
 	jsonObj.push(output);
-	return jsonObj;
 	//console.log(JSON.stringify(jsonObj));
+	return jsonObj;
+	
 }
 
 
 function sendFormData(formId){
-	createJSON();
+	createJSON(formId);
 }
 
 function generate_pagination_options(defaultOptions,stepOption,nameOptions,currentOption){

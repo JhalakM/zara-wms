@@ -223,8 +223,9 @@ button.ui-button::-moz-focus-inner {
 	display: none;
 }
 .ui-datepicker .ui-datepicker-header {
-	position: relative;
-	padding: .2em 0;
+    overflow: hidden;
+    padding: 0.2em 0;
+    position: relative;
 }
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
@@ -259,11 +260,16 @@ button.ui-button::-moz-focus-inner {
     width: 40px;
     border-left: 1px solid #d8d8d8;
 	cursor:pointer;
+	z-index: 9999;
+	background: #ffffff none repeat 
 }
 .ui-datepicker .ui-datepicker-title {
-	margin: 0 2.3em;
-	line-height: 1.8em;
-	text-align: center;
+    background: #f6f6f6 none repeat scroll 0 0;
+    line-height: 1.8em;
+    margin: -10px 0 -9px 2.3em;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
 }
 .ui-datepicker .ui-datepicker-title select {
 	font-size: 1em;
@@ -277,7 +283,7 @@ button.ui-button::-moz-focus-inner {
     margin: 0 5px;
     padding: 0 10px;
     text-align: left;
-    width: 90px;
+    width: 97px;
 }
 .ui-datepicker table {
 	width: 100%;
@@ -901,12 +907,11 @@ border:1px solid #2991D6;
 	color: #212121;
 	text-decoration: none;
 }
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active {
-	border: 1px solid #120e5b;
-	font-weight: normal;
-	color: #212121;
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: #2991d6 none repeat scroll 0 0;
+    border: 1px solid #120e5b;
+    color: #ffffff;
+    font-weight: normal;
 }
 .ui-state-active a,
 .ui-state-active a:link,
@@ -914,13 +919,14 @@ border:1px solid #2991D6;
 	color: #212121;
 	text-decoration: none;
 }
+.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled .ui-state-default:hover {
+    border: 1px solid #ffffff;
+}
 
 /* Interaction Cues
 ----------------------------------*/
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-    background: #2991d6 none repeat scroll 0 0;
-    border: 1px solid #2991d6;
-    color: #ffffff;
+    border: 1px solid #120e5b;
 }
 .ui-state-highlight a,
 .ui-widget-content .ui-state-highlight a,
@@ -1185,7 +1191,7 @@ border:1px solid #2991D6;
 .ui-datepicker-title select {
       -webkit-appearance: none;        /*Removes default chrome and safari style*/
       -moz-appearance: none;          /* Removes Default Firefox style*/
-      background: url(../../../img/icons/down-arow.jpg) no-repeat;         /*Adds background-image*/
+      background:#ffffff url(../../../img/icons/down-arow.jpg) no-repeat;         /*Adds background-image*/
       background-position: 70px 15px;                /*Position of the background-image*/
       width: 100px;                /*Width of select dropdown to give space for arrow image*/
 }
