@@ -2793,7 +2793,7 @@ Sidebar
 	  font-size: 0;
 }
 .left-panel li.operation-planning{background-image:url("../img/dashborad/svg/sidebar/operation-planning.svg");}
-.left-panel li.operation-planning:hover{background-image:url("../img/dashborad/sidebar/svg/operation-planning-hover.svg");}
+.left-panel li.operation-planning:hover{background-image:url("../img/dashborad/svg/sidebar/operation-planning-hover.svg");}
 
 .left-panel li.billing{background-image:url("../img/dashborad/svg/sidebar/billing.svg");}
 .left-panel li.billing:hover{background-image:url("../img/dashborad/svg/sidebar/billing-hover.svg");}
@@ -2912,11 +2912,7 @@ body p {
     line-height: 18px;
 }
 .element-sec {
-    background: #ffffff none repeat scroll 0 0;
-    border-bottom: 1px solid #d8d8d8;
-    border-left: 1px solid #d8d8d8;
-    border-right: 1px solid #d8d8d8;
-    overflow: hidden;
+    
     padding-bottom: 35px;
     padding-left: 21px;
     padding-right: 20px;
@@ -2935,22 +2931,6 @@ body p {
     transition: all 0.5s ease 0s;
 }
 .element-block:hover p,.element-block:hover h3{color:#fff;}
-.element-block:hover h3 { border-bottom: 1px solid rgba(255, 255, 255, 0.2);  }
-.element-block.bayplan .icon {
-    background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/bayplan-icon.png") no-repeat scroll 15px 0;
-  
-}
-.element-block.bayplan:hover .icon {
-    background-position:16px -71px;
-}
-.element-block.bayplan .icon {
-   
-    display: block;
-    height: 65px;
-    margin: 0 auto;
-    text-align: center;
-    width: 85px;
-}
 .element-block h3 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: #2991d6;
@@ -2961,8 +2941,36 @@ body p {
     padding: 15px 0;
     text-transform: uppercase;
 }
+.element-block:hover h3 { border-bottom: 1px solid rgba(255, 255, 255, 0.2);  }
+.element-block .icon {
+     display: block;
+    height: 65px;
+    margin: 0 auto;
+    text-align: center;
+    width: 85px;
 }
-
+.element-block.bayplan .icon {
+    background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/bayplan-icon.png") no-repeat scroll 15px 0;
+  
+}
+.element-block.bayplan:hover .icon {
+    background-position:16px -71px;
+}
+.element-block.generic-reports .icon {
+    background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/generic-reports-icon.png") no-repeat scroll 15px -70px;}
+	
+.element-block.generic-reports:hover .icon {
+    background-position: 15px 0;
+}
+.element-block.bis1 .icon {
+    background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/bis-icon.png") no-repeat scroll 15px 22px;}
+	.element-block.bis1:hover .icon {
+    background-position: 15px -62px;
+}
+.element-block.demos .icon {background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/demos-icon.png") no-repeat scroll 15px 0;}
+.element-block.demos:hover .icon {background-position: 15px -72px;}
+.element-block.about-zodiac .icon {background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/about-zodiac-icon.png") no-repeat scroll 10px 0;}
+.element-block.about-zodiac:hover .icon {background-position: 10px -70px;}
 
 /*------------------------------------*\
 Footer

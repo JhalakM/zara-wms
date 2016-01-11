@@ -12,32 +12,218 @@
       <!-- Favicon icon -->
       <link rel="icon" href="img/favicon.ico">
       <title data-replace="text">{{site_login_title}}</title>
-		
-	  <!-- CSS fiels -->
-	 <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
-	 <link rel="stylesheet" href="css/lib/font/font-awesome.min.css">
-	 <link rel="stylesheet" href="css/style.css">
-	 <link rel="stylesheet" href="css/reset.css">
-	 <link rel="stylesheet" href="css/responsive.css">
-	 <link rel="stylesheet" href="css/lib/scrollbar/jquery.mCustomScrollbar.css">
-	 <link rel="stylesheet" href="css/lib/jquery-ui/jquery-ui.css">
-	 <link rel="stylesheet" href="assets/blue/style.css">
-		
-	</head>
-   <body>
-      <div class="container">
-		<!--<div class="col-md-12">
-            <div class="col-md-4">
-				<div class="call-formbtn"></div>
+      <!-- CSS fiels -->
+      <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+      <link rel="stylesheet" href="css/lib/font/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/lib/scrollbar/jquery.mCustomScrollbar.css">
+      <link rel="stylesheet" href="css/lib/jquery-ui/jquery-ui.css">
+      <link rel="stylesheet" href="assets/blue/style.css">
+   </head>
+   <body data-reference="page-loader">
+      <!-- Header -->
+      <header>
+         <section class="header-top">
+            <div class="block-container clearfix">
+               <div class="col-md-8 no-padding">
+                  <div class="header-left">
+                     <div class="header-date">Monday, 10 August 2015</div>
+                     <div class="header-time">10:33:34 AM</div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="header-right">
+                     <div class="user-profile">
+                        <span class="user-name"></span>
+                        <div class="user-profile-menu"></div>
+                     </div>
+                     <div class="top-bar-menu">
+                        <div class="user-profile">
+                           <a href="#" class="user-profile-link">Hello Zodiac <span class="arrow"><i class="fa fa-caret-down"></i></span></a>
+                           <div style="display: none;" class="user-profile-menu">
+                              <ul>
+                                 <li>
+                                    <a href="login.html">Logout</a>
+                                 </li>
+                                 <li>
+                                    <a href="# ">Change Password</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="notify-msg">
+                           <a href="#">
+                           <img src="img/icons/notification.png">
+                           <span class="badge badge-danger badge-xs circle">3</span>
+                           </a>
+                        </div>
+                        <div class="settings">
+                           <a href="#">
+                           <img src="img/icons/settings.png">
+                           </a>
+                        </div>
+                        <div class="language">
+                           <div class="dropdown-list ">
+                              <div class="selected-listitem">English</div>
+                              <ul>
+                                 <li value=""> English</li>
+                                 <li value="" rel="">Brazil</li>
+                                 <li value="" rel=""> French</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-		</div>
-		<div class="padding-top"></div>-->
-        <section class="ac_item">
-            <div class="col-md-12" id="form-content">
-                <h2 class="panel-title"></h2>
+         </section>
+         <section class="menu-part clearfix">
+            <div class="block-container">
+               <nav class="navbar navbar-default">
+                  <div>
+                     <div class="logo-fix-width">
+                        <a href="index.html"><img src="img/logo.png">
+                        </a>
+                     </div>
+                     <div class="logo-fix-width mobile-logo">
+                        <a href="index.html"><img src="img/login-logo-mobile.png">
+                        </a>
+                     </div>
+                  </div>
+                  <div id="navbar">
+                     <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                           <span class="sr-only">Toggle navigation</span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                           <div class="menu clearfix">
+                              <ul class="nav navbar-nav">
+                                 <li class="active">
+                                    <a href="index.html"> <i class="fa fa-home icon"></i> Home</a>
+                                 </li>
+                                 <li>
+                                    <a href="index.html">  <i class="fa fa-user icon"></i>  About Zodiac</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">
+                                    <i class="icon"><strong>?</strong></i> Help</a>
+                                 </li>
+                              </ul>
+                              <div class="search">
+                                 <input type="text" placeholder="Search" class="text-box" name="service_code" value="">
+                              </div>
+                           </div>
+                           <div class="bradcrum-menu">
+                              <ul>
+                                 <li><a href="javascript:void(0);" class="tab_action bread_home" id="home">Home</a>
+                                 </li>
+                                 <li class="bred_pan">You are on home page</li>
+                              </ul>
+                           </div>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                     </nav>
+                  </div>
+                  <!--/.nav-collapse -->
+                  <!--/.container-fluid -->
+               </nav>
             </div>
-        </section>
-      </div>
+         </section>
+         <div class="search mobile-search">
+            <input type="text" value="" name="service_code" class="text-box" placeholder="Search">
+         </div>
+      </header>
+      <!-- End Header -->
+      <section class="clearfix">
+         <!-- Sidebar -->
+         <aside class="left-panel desktop-sidebar" >
+            <ul>
+               <li class="operation-planning"><a data-tooltip="Operation Dashboard" href="javascript:void(0);" class="tab_action tooltip-right" id="operation_planning">Operation &amp; Planning</a></li>
+               <li class="billing"><a href="javascript:void(0);" class="tooltip-right tab_action" id="billing" data-tooltip="Billing">Billing</a></li>
+               <li class="edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="edi" data-tooltip="EDI">EDI</a></li>
+               <li class="gate"><a href="javascript:void(0);" class="tooltip-right tab_action" id="gate" data-tooltip="Gate">Gate</a></li>
+               <li class="containers"><a href="javascript:void(0);" class="tooltip-right tab_action" id="containers" data-tooltip="Container">Container</a></li>
+               <li class="services"><a href="javascript:void(0);" class="tooltip-right tab_action" id="services" data-tooltip="Services">Services</a></li>
+               <li class="reporting"><a href="javascript:void(0);" class="tooltip-right tab_action" id="reporting" data-tooltip="Reporting">Reporting</a></li>
+               <li class="operation-dashboard"><a href="javascript:void(0);" class="tooltip-right tab_action" id="operation-dashboard" data-tooltip="Operation Dashboard">Operation Dashboard</a></li>
+               <li class="administration"><a href="javascript:void(0);" class="tooltip-right tab_action" id="administration" data-tooltip="Administration">Administration</a></li>
+            </ul>
+         </aside>
+         <!-- Sidebar For Mobile -->
+         <aside class="left-panel mobile-sidebarmenu" >
+            <ul id="nav_pan">
+               <li class="operation-planning"><a href="javascript:void(0);" class="tab_action" id="operation_planning">Operation &amp; Planning</a></li>
+               <li class="billing"><a href="javascript:void(0);" class="tab_action" id="billing" >Billing</a></li>
+               <li class="edi"><a href="javascript:void(0);" class="tab_action" id="edi">EDI</a></li>
+               <li class="gate"><a href="javascript:void(0);" class="tab_action" id="gate" >Gate</a></li>
+               <li class="containers"><a href="javascript:void(0);" class="tab_action" id="containers" >Container</a></li>
+               <li class="services"><a href="javascript:void(0);" class="tab_action" id="services" >Services</a></li>
+               <li class="reporting"><a href="javascript:void(0);" class="tab_action" id="reporting" >Reporting</a></li>
+               <li class="operation-dashboard"><a href="javascript:void(0);" class="tab_action" id="operation-dashboard">Operation Dashboard</a></li>
+               <li class="administration"><a href="javascript:void(0);" class="tab_action" id="administration">Administration</a></li>
+            </ul>
+         </aside>
+         <aside class="right-panel">
+            <!--	 Panel Block-->
+            <div class="panel-block">
+               <!-- Panel Head -->
+               <div class="panel-block-head clearfix">
+                  <div class="panel-block-icon"><i class="fa fa-home"></i> </div>
+                  <div class="panel-block-heading "> Home</div>
+                  <div class="app-action-group">
+                     <a href="#"><i class="fa fa-print"></i></a>
+                     <a href="#" class="active"><i class="fa fa-filter"></i></a>
+                     <a href="#"><i class="fa fa-sort-amount-desc"></i></a>
+                     <a href="#" class="range">Range</a>
+                     <a href="#"><i class="fa fa-plus"></i></a>
+                  </div>
+                  <!-- Mobile Action Area -->
+                  <div class="mobile-action-grp-btn">
+                     <div class="action-arrow open" ><a href="#"><i class="fa fa-caret-down"></i></a>
+                     </div>
+                     <div class="action-grp" style="display:none;">
+                        <div class="grid-specific clearfix">
+                           <p>Grid Specific Actions</p>
+                           <div class="app-action-group ">
+                              <a href="#"><i class="fa fa-print"></i></a>
+                              <a href="#" class="active"><i class="fa fa-filter"></i></a>
+                              <a href="#"><i class="fa fa-sort-amount-desc"></i></a>
+                              <a href="#"><i class="fa fa-plus"></i></a>
+                              <a href="#"><i class="fa fa-print"></i></a>
+                           </div>
+                        </div>
+                        <div class="app-specific clearfix">
+                           <p>Application Specific Actions</p>
+                           <div class="app-action-group ">
+                              <a href="#"><i class="fa fa-pencil-square-o"></i></a>
+                              <a href="#"><i class="fa fa-trash"></i></a>
+                              <a href="#"><i class="fa fa-floppy-o"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!--End  Mobile Action Area -->
+               </div>
+               <div class="panel-block-content no-padding">
+                  <div class="col-md-12" id="form-content">
+                     <h2 class="panel-title"></h2>
+                  </div>
+               </div>
+               <!--End Panel-->
+            </div>
+         </aside>
+      </section>
+      <!-- End Sidebar -->
+      <footer class="footer">
+         2016 Copyright &copy; DP World. All rights reserved.
+      </footer>
       <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
       <script src="js/lib/blockUI/jquery.blockUI.js"></script>
       <script src="js/lib/multifile/jQuery.MultiFile.min.js"></script>
@@ -46,12 +232,10 @@
       <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/lib/jQueryUI/jquery-ui.js"></script>
       <!-- Custom JavaScript -->
-	  <script src="js/functions.js"></script>
-	  <script src="template/elements.js"></script>
-      
+      <script src="js/functions.js"></script>
+      <script src="template/elements.js"></script>
       <script src="js/initialize.js"></script>
-
-	  <script src="js/general.js"></script>
+      <script src="js/general.js"></script>
       <script src="js/lib/form/dform.js"></script>
       <script src="js/init/elements.js"></script>
    </body>
