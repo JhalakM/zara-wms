@@ -381,20 +381,7 @@ function dateTimePicker() {
     });
 }
 
-// Sidebar Height 
-function sidebarHeight() {
-	if($( window ).width() >= 1024){
-		$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px"), $(window).resize(function() {
-			$(".desktop-sidebar").css("min-height", $(window).height()-140 + "px")
-		});
-	}else
-	{
-		$(".desktop-sidebar").css("height", $(window).height() + "px"), $(window).resize(function() 
-		{
-			$(".desktop-sidebar").css("height", $(window).height()  + "px")
-		});
-	}
-}
+
 // Sidebar In Mobile
 function sidebarMobile() {
 	$("#nav_pan").owlCarousel({
