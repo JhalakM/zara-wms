@@ -1511,7 +1511,7 @@ Panel
     border-left: 1px solid #D8D8D8;
     border-right: 1px solid #D8D8D8;
     border-bottom: 1px solid #D8D8D8;
-    overflow: hidden;
+    
 }
 .panel-block {
     padding-bottom: 10px;
@@ -2888,6 +2888,78 @@ Main Body
     margin-right: 20px;
     padding-top: 20px;
 }
+
+
+/*------------------------------------*\
+Home Block
+\*------------------------------------*/
+body p {
+    font-size: 14px;
+    line-height: 18px;
+}
+.element-sec {
+    
+    padding-bottom: 35px;
+    padding-left: 21px;
+    padding-right: 20px;
+}
+.element-block {
+    color: #5c5c5c;
+    margin-top: 30px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+	 border: 1px solid #d8d8d8;
+}
+.element-block:hover {
+    background: #2991d6 none repeat scroll 0 0;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+.element-block:hover p,.element-block:hover h3{color:#fff;}
+.element-block h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #2991d6;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+.element-block:hover h3 { border-bottom: 1px solid rgba(255, 255, 255, 0.2);  }
+.element-block .icon {
+     display: block;
+    height: 65px;
+    margin: 0 auto;
+    text-align: center;
+    width: 85px;
+}
+.element-block.bayplan .icon {
+    background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/bayplan-icon.png") no-repeat scroll 15px 0;
+  
+}
+.element-block.bayplan:hover .icon {
+    background-position:16px -71px;
+}
+.element-block.generic-reports .icon {
+    background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/generic-reports-icon.png") no-repeat scroll 15px -70px;}
+	
+.element-block.generic-reports:hover .icon {
+    background-position: 15px 0;
+}
+.element-block.bis1 .icon {
+    background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/bis-icon.png") no-repeat scroll 15px 22px;}
+	.element-block.bis1:hover .icon {
+    background-position: 15px -62px;
+}
+.element-block.demos .icon {background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/demos-icon.png") no-repeat scroll 15px 0;}
+.element-block.demos:hover .icon {background-position: 15px -72px;}
+.element-block.about-zodiac .icon {background: rgba(0, 0, 0, 0) url("../img/dashborad/svg/dashboard-home/about-zodiac-icon.png") no-repeat scroll 10px 0;}
+.element-block.about-zodiac:hover .icon {background-position: 10px -70px;}
+
+
+
 /*------------------------------------*\
 Footer
 \*------------------------------------*/
