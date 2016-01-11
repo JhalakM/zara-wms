@@ -518,6 +518,11 @@ iPhone 5 landscape · width: 568px
     width: 100%;
 }
 #batch_update .field-name{    text-align: left;}
+.element-sec .col-md-3 {
+    
+    padding: 0;
+   
+}
 }
 
 
