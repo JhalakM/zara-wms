@@ -415,6 +415,7 @@ function sidebarMobile() {
 // panel action icon height 
 function actionBtnHeight() {
 	if($( window ).width() >= 568){
+		
 		$(".app-action-group a").css("height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
 			$(".app-action-group a" ).css("height", $(".panel-block-heading ").height()+10 + "px")
 		});
@@ -502,7 +503,6 @@ function setMultiFilePlugin(fileInputId){
   $(fileInputId).MultiFile({  
     accept: $(fileInputId).data("accept"),
     maxsize: $(fileInputId).data("size"),
-	preview : true,
 	STRING: {
 			remove: $.i18n.prop('multiplefile.remove'),
 			denied: $.i18n.prop('multiplefile.denied'),
@@ -532,13 +532,14 @@ function createJSON(formId) {
 			});
 			value = checkValue;
 		}
-		output[key] = value;
+		if(value != ""){
+			output[key] = value;
+		}
     });
 	$(formId+" input[data-file='"+true+"']").each(function() {
         var key   = $(this).attr("name");
 		var value = $(this).val();
 		var name  = $(this).data("title");
-		alert(key);
 		if(typeof output[key] == "undefined"){
 			output[key] = [];
 		}
