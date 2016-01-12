@@ -64,6 +64,9 @@ a:focus {
 .margin50 {
     margin-top: 50px;
 }
+.position-rel {
+    position: relative;
+}
 /*------------------------------------*\
 Checkbox Radio Button
 \*------------------------------------*/
@@ -676,6 +679,11 @@ Text Box
     box-shadow: 0 0 4px rgba(41, 145, 214, 0.3);
     -webkit-box-shadow: 0 0 4px rgba(41, 145, 214, 0.3);
     -moz-box-shadow: 0 0 4px rgba(41, 145, 214, 0.3);
+}
+.input-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 /*------------------------------------*\
 Lable
@@ -2357,7 +2365,7 @@ Header
     padding-left: 223px;
 }
 .header-date {
-    background: rgba(0, 0, 0, 0) url("../img/calender-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../img/icons/calender-icon.png") no-repeat scroll 0 0;
     border-right: 1px solid #d8d8d8;
     color: #5c5c5c;
     float: left;
@@ -2369,7 +2377,7 @@ Header
     padding-bottom: 5px;
 }
 .header-time {
-    background: rgba(0, 0, 0, 0) url("../img/clock-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../img/icons/clock-icon.png") no-repeat scroll 0 0;
     color: #5c5c5c;
     float: right;
     font-size: 11px;
@@ -3094,7 +3102,9 @@ Login
 .user-login {
     color: #2991d6;
     display: block;
-    margin-top: 10px;
+    font-size: 15px;
+    margin: 0 0 20px;
+    text-align: center;
 }
 .login-container {
     margin: 0 auto;
@@ -3105,5 +3115,12 @@ Login
     border: 1px solid #d8d8d8;
     box-shadow: 0 0 11px -1px rgba(0, 0, 0, 0.2);
     margin-top: -2px;
-    padding: 30px 10px;
+    padding: 20px 10px;
+}
+#frmLogin .text-box {
+    padding-right: 35px;
+}
+.form-element {
+    padding: 0 30px 20px;
+    position: relative;
 }

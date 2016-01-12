@@ -11,7 +11,7 @@ $(document).ready(function(){
 	sidebarScroll();
 	linkDropdownMobile();
 	appActionBlock();
-	actionBtnHeight();
+	
 	
 });
 
