@@ -5,182 +5,102 @@
       "formInfo":{  
          "formElements":[  
             {  
-				 "labelKey":"containerInventory.containerNumber",
-               "multiLevel":[  
-                  {  
-                     "validation":"r",
-                     "tabIndex":"1",
-                     "name":"containerNumber",
-                     "defaultValue":"",
-                     "type":"text"
-                  },
-                  {  
-                    "validation":"r",
-				   "tabIndex":"6",
-				   "name":"shippingStatus",
-				   "labelKey":"containerInventory.shippingStatus",
-				   "defaultValue":[  
-					  {  
-						 "value":"102",
-						 "label":"Departed"
-					  },
-					  {  
-						 "value":"105",
-						 "label":"Not Departed"
-					  }
-				   ],
-				   "type":"dropdown"
-                  }
-               ]
+               "validation":"r",
+               "tabIndex":"1",
+               "name":"deviceName",
+               "labelKey":"device.deviceName",
+               "defaultValue":"Device1-CHE",
+               "type":"text"
             },
             {  
-               "validation":"r,n",
+               "validation":"r",
                "tabIndex":"2",
-               "name":"containerCycle",
-               "labelKey":"containerInventory.containerCycle",
-               "defaultValue":"",
-               "type":"text"
-            },
-            {  
-               "validation":"r,e",
-               "tabIndex":"3",
-               "name":"email",
-               "labelKey":"containerInventory.email",
-               "defaultValue":"",
-               "type":"text"
-            },
-            {  
-               "validation":"r,n",
-               "tabIndex":"4",
-               "name":"vgm",
-               "labelKey":"containerInventory.vgm",
-               "defaultValue":"",
+               "name":"certifyingStatus",
+               "labelKey":"device.certifyingStatus",
+               "defaultValue":"Authorized Certified",
                "type":"text"
             },
             {  
                "cols":"5",
                "validation":"",
-               "tabIndex":"5",
-               "name":"address",
-               "labelKey":"containerInventory.address",
-               "defaultValue":"",
+               "tabIndex":"3",
+               "name":"terminalInfo",
+               "labelKey":"device.terminalInfo",
+               "defaultValue":"This is sample informatin about terminal.",
                "type":"textarea",
                "rows":"10"
             },
             {  
                "validation":"r",
-               "tabIndex":"6",
-               "name":"shippingStatus",
-               "labelKey":"containerInventory.shippingStatus",
+               "tabIndex":"4",
+               "name":"deviceType",
+               "labelKey":"device.deviceType",
                "defaultValue":[  
                   {  
+                     "selected":true,
                      "value":"102",
-                     "label":"Departed"
+                     "label":"ABC"
                   },
                   {  
                      "value":"105",
-                     "label":"Not Departed"
+                     "label":"XYZ"
                   }
                ],
                "type":"dropdown"
             },
             {  
                "validation":"r",
-               "tabIndex":"7",
-               "name":"containerStatus",
-               "labelKey":"containerInventory.containerStatus",
-               "switch":"true",
+               "tabIndex":"5",
+               "name":"uom",
+               "labelKey":"device.uom",
+               "switch":"false",
                "defaultValue":[  
                   {  
-                     "labelKey":"containerInventory.containerStatus.active",
-                     "value":"active"
+                     "value":"KG",
+                     "label":"device.uom.kg"
                   },
                   {  
-                     "labelKey":"containerInventory.containerStatus.inActive",
-                     "value":"InActive"
+                     "selected":true,
+                     "value":"Pound",
+                     "label":"device.uom.lbs"
                   }
                ],
                "type":"radio"
             },
             {  
                "validation":"r",
-               "tabIndex":"8",
-               "name":"daysOfGP",
-               "labelKey":"containerInventory.daysOfGP",
-               "defaultValue":[  
-                  {  
-                     "value":"days",
-                     "label":"containerInventory.daysOfGP.Days"
-                  },
-                  {  
-                     "value":"week",
-                     "label":"containerInventory.daysOfGP.Week"
-                  },
-                  {  
-                     "value":"month",
-                     "label":"containerInventory.daysOfGP.Month"
-                  }
-               ],
-               "type":"checkbox"
-            },
-            {  
-               "validation":"r",
-               "tabIndex":"9",
-               "name":"vgmMeasuredDate",
-               "labelKey":"containerInventory.vgmMeasuredDate",
+               "tabIndex":"6",
+               "name":"certificationEndDate",
+               "labelKey":"device.certificationEndDate",
                "minDate":"24/12/2015",
-               "dateFormat":"d/m/yyyy",
+               "dateFormat":"dd/m/yy",
                "format":"date",
-               "defaultValue":"",
+               "defaultValue":"10/12/2016",
                "type":"text"
-            },
-            {  
-               "validation":"r",
-               "tabIndex":"10",
-               "name":"containerImage",
-               "labelKey":"containerInventory.containerImage",
-               "fileValidation":{  
-                  "accept":"jpg|png",
-                  "size":"5MB"
-               },
-               "type":"file",
-               "multiple":"true"
-            },
-			{  
-               "validation":"r",
-               "tabIndex":"11",
-               "name":"damageImage",
-               "labelKey":"containerInventory.containerImage",
-               "fileValidation":{  
-                  "accept":"jpg|png",
-                  "size":"5MB"
-               },
-               "type":"file",
-               "multiple":"true"
             }
          ],
          "formButtons":[  
             {  
                "submit":{  
                   "keyName":"btnSubmit",
-                  "keyValue":"containerInventory.btnAddContainerInventory"
+                  "keyValue":"device.btnAddDevice"
                },
                "reset":{  
                   "keyName":"btnReset",
-                  "keyValue":"containerInventory.btnResetContainerInventory"
+                  "keyValue":"device.btnDeviceReset"
                },
                "cancel":{  
                   "keyName":"btnCancel",
-                  "keyValue":"containerInventory.btnCancelContainerInventory"
+                  "keyValue":"device.btnCancelDevice"
                }
             }
          ],
          "formTag":{  
-            "name":"addContainerInventory",
-            "action":"../containerInventory/addContainerInventory",
+            "name":"addDevice",
+            "action":"../device/updateRecord",
             "method":"POST"
          },
-         "caption":"Add Container Inventory"
+         "caption":"add.device"
       }
    }
 }

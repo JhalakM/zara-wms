@@ -20,6 +20,7 @@ $.fn.dynamicForm = function(options){
 	var methods = {
 		generateForm : function(formData){
 			$(self).find("form").remove();
+			var params = new Array();
 			var formString = jsonStringify(formData);
 			formCreate  = document.createElement("form");
 			$(self).append(formCreate).addClass("element-sec clearfix");
@@ -27,17 +28,20 @@ $.fn.dynamicForm = function(options){
 				formCaption = formData[key].caption;
 				formTag 	= jsonParse(jsonStringify(formData[key].formTag));
 				
-				$(formCreate).attr({
-					"name" 	   : formTag.name,
-					"id"	   : formTag.name,
-					"method"   : formTag.method,
-					"action"   : formTag.action
-				});
-				
-				formElement 	= jsonParse(jsonStringify(formData[key].formElements));
-				$(formCreate).append(generateElements(formElement,formTag.name));
-				generateButtons(formData[key].formButtons,formTag.name);
-				formCaption 	= generateCaption(formTag.name,formData[key].caption);
+				params = [formTag.name,formData[key]];
+				var errorStatus = misConfigError(params,$.i18n.prop("errormsg.config_error"));
+				if(errorStatus ==  true){
+					$(formCreate).attr({
+						"name" 	   : formTag.name,
+						"id"	   : formTag.name,
+						"method"   : formTag.method,
+						"action"   : formTag.action
+					});
+					formElement 	= jsonParse(jsonStringify(formData[key].formElements));
+					$(formCreate).append(generateElements(formElement,formTag.name));
+					generateButtons(formData[key].formButtons,formTag.name);
+					formCaption 	= generateCaption(formTag.name,formData[key].caption);
+				}
 			});
 			custom_dropdown_list();
 			

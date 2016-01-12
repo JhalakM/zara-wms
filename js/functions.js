@@ -103,6 +103,9 @@ function generateFormSuccess(json_data){
 	var jsonString = jsonStringify(json_data);
 	var obj = jsonParse(jsonString);
 	if (obj.errorCode == 0) {
+		if(obj.returnObject.formInfo.hasOwnProperty("formElements") == false){
+			return false;
+		}
 		$('#form-content').dynamicForm({
 			formObject : obj.returnObject
 		});
@@ -328,7 +331,8 @@ function datePicker(datePicId) {
         changeMonth: true,
         changeYear: true,
 		dateFormat: $(datePicId).data("format"),
-		minDate:new Date(2015, 12 - 1, 24), //$(datePicId).data("minDate")
+		defaultDate: new Date($(datePicId).data("default-date")),
+		minDate:new Date($(datePicId).data("minDate")),
         dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // For formatting
     });
 }
@@ -592,4 +596,15 @@ function replaceWithObject(regEx,string,mapObj){
 	return string.replace(regex, function(matched){
 		return mapObj[matched];
 	});
+}
+
+function misConfigError(params,message){
+	for(var i=0; i<params.length; i++){
+		if((params[i] == "") || (typeof params[i] == "undefined")){
+			//alert(message);
+			return false;
+		}else{
+			return true;
+		}
+	}
 }
