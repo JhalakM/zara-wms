@@ -226,6 +226,10 @@ button
     border: 1px solid #0c79c1;
     color: #fff;
 }
+.uie-btn.uie-btn-primary a {
+    color: #ffffff;
+}
+
 .uie-btn-success {
     background-color: #45b6b0;
     border: 1px solid #39a9a3;
@@ -690,17 +694,20 @@ Lable
 \*------------------------------------*/
 
 .label {
-    border-radius: 0 0 0 0;
-    color: #5C5C5C;
+    border-radius: 0;
+    color: #5c5c5c;
     font-size: 12px;
     font-weight: normal;
     height: 35px;
-    line-height: 33px;
+    line-height: 16px;
     margin: 0 10px 0 0;
+    overflow: hidden;
     padding: 0;
     text-align: right;
-}
-/*------------------------------------*\
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+}/*------------------------------------*\
 Dropdown
 \*------------------------------------*/
 
@@ -730,7 +737,7 @@ Dropdown
     max-height: 170px !important;
     overflow-y: auto;
     position: absolute;
-    top: 31px;
+    top: 33px;
     width: 101%;
     z-index: 100;
 }
@@ -895,6 +902,21 @@ File upload button
     width: 100%;
     z-index: 11;
 }
+.MultiFile-list {
+    position: relative;
+    z-index: 999999999;
+}
+.file-upload {
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    padding: 8px 10px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 11;
+}
 .section {
     margin-bottom: 22px;
 }
@@ -933,11 +955,17 @@ File upload button
     width: 280px;
 }
 .modal-body-file1.modal-box-file1, .modal-body-file2 {
+    height: 225px;
+    min-height: 95px;
+    overflow-x: hidden !important;
     padding: 15px;
-	width:100%;
-	max-width:350px;
+    position: relative;
+    width: 100%;
+    z-index: 99999;
 }
-
+.MultiFile-label:last-child{
+border:none;
+}
 .modal-body-file2.modal-box-file1,.modal-body-file2.modal-box-file2 {
     padding: 15px;
 	
@@ -956,6 +984,10 @@ File upload button
 }
 .MultiFile-label {
     border-bottom: 1px solid #e5e5e5;
+    clear: both;
+    float: left;
+    margin: 3px 0;
+    width: 100%;
 }
 .MultiFile-remove {
     border: 2px solid #2991d6;
@@ -985,6 +1017,27 @@ File upload button
 	-webkit-transition:1s;
 	-moz-transition:1s;
 }
+
+.input-file { position: relative; margin:0 0 5px 0px; } .input-file .input-group-addon { border: 0px; padding: 0px; }
+.input-file .input-group-addon .btn , .form-control{ border-radius: 0; }
+.input-file .input-group-addon input { 
+	cursor: pointer;
+	position:absolute; 
+	width: 72px;
+	z-index:2;
+	top:0;
+	right:0;
+	filter: alpha(opacity=0);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity:0; background-color:transparent; 
+	color:transparent; }
+.input-group-addon .btn.btn-primary {
+margin:0px 0 0 10px;
+}
+.input-group-addon{
+background:none;
+}
+
 
 /*------------------------------------*\
 Tooltip
@@ -1353,8 +1406,8 @@ Date and time Piker
 }
 .bootstrap-datetimepicker-widget.dropdown-menu-time-piker::before {
     border-bottom: 10px dashed #dadada;
-    border-left: 10px solid #ffffff;
-    border-right: 10px solid #ffffff;
+    border-left: 10px solid rgba(0,0,0,0);
+    border-right: 10px solid rgba(0,0,0,0);
     content: "";
     position: absolute;
     right: 0;
@@ -1376,8 +1429,8 @@ Date and time Piker
 }
 .ui-widget-content::before {
     border-bottom: 10px dashed #dadada;
-    border-left: 10px solid #ffffff;
-    border-right: 10px solid #ffffff;
+    border-left: 10px solid rgba(0,0,0,0);
+    border-right: 10px solid rgba(0,0,0,0);
     content: "";
     position: absolute;
     right: 0;
@@ -2246,12 +2299,15 @@ Table
 .table-grid th span.sorting a.asc,
 .table-grid th span.sorting a.desc {
     color: #ffffff;
+	text-align:center;
 }
 .table-grid th span.sorting a {
     color: #6ab2e2;
     display: block;
     font-size: 14px;
-    margin-top: -9px;
+    margin-bottom: 2px;
+    margin-top: -6px;
+    text-align: center;
 }
 .table-grid th span.sorting a.asc.disable,
 .table-grid th span.sorting a.desc.disable {
@@ -2260,11 +2316,23 @@ Table
 .table-grid .checkbox {
     margin: 0;
 }
+
+.number-col {
+    width: 25px;
+}
+.table-grid th.checkbox-col {
+    max-width: 15px;
+    width: 15px;
+}
+
 .table-grid th span.sorting .sorting-order {
-    color: #fff;
+   color: #fff;
+    display: block;
     line-height: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     margin-top: -3px;
+    padding: 0;
+    text-align: center;
 }
 .table-record .mCSB_container_wrapper{position:relative;}
 .table-record .mCustomScrollBox {
@@ -2290,6 +2358,7 @@ Forms Element
     float: left;
     text-align: right;
     width: 125px;
+	line-height:25px;
 }
 .form-col-2 {
     float: left;
