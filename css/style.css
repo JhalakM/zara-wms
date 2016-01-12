@@ -918,6 +918,10 @@ File upload button
     text-align: left;
     width: 280px;
 }
+.modal-body-file1.modal-box-file1 {
+    padding: 15px;
+}
+
 /*------------------------------------*\
 Tooltip
 \*------------------------------------*/
