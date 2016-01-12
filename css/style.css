@@ -96,7 +96,7 @@ input.css-checkbox[type="checkbox"] + label.css-label {
     display: inline-block;
     font-size: 13px;
     height: 20px;
-    line-height: 22px;
+    line-height: 17px;
     margin-left: 0;
     margin-right: 10px;
     opacity: 1;
@@ -121,6 +121,13 @@ input[type="radio"]:checked:not(old) + label > span {
 }
 input.css-checkbox[type="checkbox"]:checked + label.css-label {
     background-position: 0 -18px;
+}
+body .checkbox, .radio {
+    display: block;
+    height: 35px;
+    line-height: 28px;
+    position: relative;
+	margin:0px;
 }
 .check-block {
     float: left;
@@ -486,15 +493,14 @@ a.button:focus {
     padding: 0 24px;
     width: auto;
 }
-.uie-secondary-button {
+.uie-secondary-btn{
     background: #ffffff none repeat scroll 0 0;
     border: 1px solid #0c79c1;
     border-radius: 3px;
-    height: 41px;
+    font-size: 14px;
+    height: 40px;
     line-height: 0;
     padding: 0 24px;
-    float: left;
-    font-size: 14px;
 }
 .uie-icon-btn:hover {
     background: #fff !important;
@@ -926,8 +932,58 @@ File upload button
     text-align: left;
     width: 280px;
 }
-.modal-body-file1.modal-box-file1 {
+.modal-body-file1.modal-box-file1, .modal-body-file2 {
     padding: 15px;
+	width:100%;
+	max-width:350px;
+}
+
+.modal-body-file2.modal-box-file1,.modal-body-file2.modal-box-file2 {
+    padding: 15px;
+	
+}
+.modal-dialog.modal-box-file1 {
+    max-width: 350px;
+    width: 100%;
+}
+.modal-dialog.modal-box-file2 {
+    max-width: 350px;
+    width: 100%;
+	padding: 15px;
+}
+.MultiFile-label span span {
+    border: medium none;
+}
+.MultiFile-label {
+    border-bottom: 1px solid #e5e5e5;
+}
+.MultiFile-remove {
+    border: 2px solid #2991d6;
+    border-radius: 25px;
+    color: #000000;
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    height: 25px;
+    line-height: 19px;
+    margin: 3px 0 0;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    transition:1s;
+	-webkit-transition:1s;
+	-moz-transition:1s;
+    width: 25px;
+}
+.MultiFile-remove:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	color:#000000;
+	text-decoration:none;
+	transition:1s;
+	-webkit-transition:1s;
+	-moz-transition:1s;
 }
 
 /*------------------------------------*\
@@ -1949,6 +2005,7 @@ switch
     position: relative;
     width: 70px;
     line-height: 29px;
+	z-index:1;
 }
 .switch-label {
     color: rgba(255, 255, 255, 0.35);
@@ -2248,7 +2305,6 @@ Forms Element
 .textarea-box {
     border: 1px solid #d8d8d8;
     font-size: 12px;
-    height: 113px;
     padding: 10px;
     resize: none;
     width: 100%;
