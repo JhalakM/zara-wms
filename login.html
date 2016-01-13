@@ -41,8 +41,26 @@
 			<h1 class="user-login">User Login</h1>
 			<form id="frmLogin" name="login_form" method="post">
 			<div class="form-row position-rel">
-			<input type="text" class="text-box" name="email" tabindex="3" placeholder="User Name">
+			<input type="text" class="text-box" name="email" tabindex="0" placeholder="User Name">
 			<span class="input-icon"><img src="img/icons/user.png"></span>
+			</div>
+			<div class="form-row position-rel">
+			<input type="password" class="text-box" name="email" tabindex="1" placeholder="Password">
+			<span class="input-icon"><img src="img/icons/lock.png"></span>
+			</div>
+			<div class="form-row position-rel">
+			<div class="dropdown-list">
+                                            <div class="selected-listitem">Click Me</div>
+                                            <ul style="display: none;">
+                                                <li value=""> <i class="fa fa-pencil-square-o"></i> Select Category</li>
+                                                <li rel="5" value="1"> <i class="fa fa-pencil-square-o"></i> Select Category1</li>
+                                                <li rel="6" value="2"> <i class="fa fa-pencil-square-o"></i> Select Category2</li>
+                                                <li rel="7" value="3"><i class="fa fa-pencil-square-o"></i> Select Category3</li>
+                                                <li rel="8" value="4"><i class="fa fa-pencil-square-o"></i> Select Category4</li>
+                                                <li rel="9" value="5"><i class="fa fa-pencil-square-o"></i> Select Category5</li>
+                                            </ul>
+                                            <input type="hidden" value="12" class="dropdown-item" name="search_category">
+                                        </div>
 			</div>
 				<input type="button" value="Submit">
 			</form>
@@ -59,6 +77,9 @@
     <script src="js/functions.js"></script>
     <script src="js/initialize.js"></script>
     <script src="js/init/login.js"></script>
+	
+	 <!-- custom scrollbar plugin -->
+    <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 	
 </body>
 </html>

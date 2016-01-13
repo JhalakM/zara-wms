@@ -407,15 +407,21 @@ function sidebarHeight() {
 
 // Sidebar In Mobile
 function sidebarMobile() {
-	$("#nav_pan").owlCarousel({
-		items : 5, //10 items above 1000px browser width
-		itemsTablet: [768,5],						 
-		itemsMobile: [600,3],
-		responsive: true,
-		navigation: true
-	});
+	
+	 $('.sidebar-nav').owlCarousel({
+                margin: 0,
+                loop: true,
+                autoWidth: true,
+				navigation:false,
+				responsive:true,
+				nav:true,
+                items: 4
+              });
 	
 }
+
+
+
 // panel action icon height 
 function actionBtnHeight() {
 	if($( window ).width() >= 568){
