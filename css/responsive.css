@@ -226,22 +226,23 @@ iPad portrait · width: 768px
     text-decoration: none;
 }
 .left-panel .owl-prev {
-    background: #d8d8d8 url("../images/left-panel-prv-arrow.png") no-repeat scroll center center;
+    background: #d8d8d8 url("../img/icons/left-panel-prv-arrow.png") no-repeat scroll center center;
     color: rgba(0, 0, 0, 0);
     height: 100%;
-    left: -10px;
-    position: absolute;
+    left: 0px;
+     position: absolute;
     top: 0;
-    width: 15px;
+    width: 15px;font-size:0;
 }
 .left-panel .owl-next {
-    background: #d8d8d8 url("../images/left-panel-next-arrow.png") no-repeat scroll center center;
+    background: #d8d8d8 url("../img/icons/left-panel-next-arrow.png") no-repeat scroll center center;
     color: rgba(0, 0, 0, 0);
     height: 100%;
     position: absolute;
-    right: -10px;
+    right: 0px;
     top: 0;
-    width: 15px;
+    width: 15px;font-size:0;
+	
 }
 .left-panel .owl-carousel .owl-wrapper-outer {
     border-bottom: 1px solid #d8d8d8;
@@ -267,12 +268,13 @@ iPad portrait · width: 768px
 }
 .mobile-sidebarmenu{display:block;}
    .desktop-sidebar{display:none;}
- .right-panel {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 80px;
+.right-panel {
+    clear: both;
+    margin: 0 auto;
     padding-top: 20px;
-}  
+    width: 96%;
+}
+
 
 }
 
