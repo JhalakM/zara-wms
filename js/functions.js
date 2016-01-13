@@ -54,11 +54,11 @@ function ajaxCallBack(ajax_url, success_callback, failure_callback, params) {
 
 /* function to get form element from dynamic form plugin */
 function getFormElement() {
-	var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
+	/*var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
 	ajaxCallBack(ajaxUrl, generateFormSuccess, generateFormError);
 	$(".call-formbtn").click(function() {
 		
-	});
+	});*/
 }
 
 /* call plugin for i18n language tanslation library */
