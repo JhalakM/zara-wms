@@ -684,6 +684,10 @@ Text Box
     -webkit-box-shadow: 0 0 4px rgba(41, 145, 214, 0.3);
     -moz-box-shadow: 0 0 4px rgba(41, 145, 214, 0.3);
 }
+html body .form-col-2.p-r-5 .disable-text-box {
+    background: #f6f6f6 none repeat scroll 0 0;
+    cursor: no-drop;
+}
 .input-icon {
     position: absolute;
     right: 10px;
@@ -828,10 +832,17 @@ Dropdown
     border: 1px solid #0c79c1;
     border-radius: 0 3px 3px 0;
     height: 24px;
-    line-height: 22px;
+    line-height: 10px;
     padding: 0;
     position: relative;
     width: 15px;
+}
+.uie-dropdown-btn-click i {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 0;
+    text-align: center;
+	color: #120e5b;
 }
 .uie-dp-menu {
     background: #ffffff none repeat scroll 0 0;
@@ -1362,11 +1373,13 @@ Date and time Piker
 .table-condensed tr:nth-child(2) .minute {
     font-size: 16px;
     color: #000;
+	font-weight:normal;
 }
 .timepicker-minutes .table-condensed tr:nth-child(2) {
     height: 30px;
     font-size: 16px;
     line-height: 20px;
+	font-weight:normal;
 }
 .timepicker-hours .table-condensed tr:nth-child(2) {
     height: 30px;
@@ -1384,21 +1397,24 @@ Date and time Piker
 }
 .table-condensed tr:nth-child(2) {
     color: #120e5b;
-    font-size: 24px;
-    height: 60px;
-    line-height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 45px;
 }
 .table-condensed .btn {
+    background-color: #f6f6f6;
     border: 1px solid #d8d8d8;
     border-radius: 0;
 }
 .timepicker-hours .table-condensed tr td {
     text-align: center;
     width: 43px;
+	font-weight:normal;
 }
 .timepicker-seconds .table-condensed tr td {
     text-align: center;
     width: 43px;
+	font-weight:normal;
 }
 .timepicker-minutes .table-condensed tr td {
     text-align: center;
@@ -1414,7 +1430,32 @@ Date and time Piker
     top: -11px;
 }
 .text-box.add-on {
-    max-width: 300px;
+    display: table-cell;
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+span.add-on {
+    background-color: #f6f6f6;
+    border: 1px solid #d8d8d8;
+    border-image: none;
+    border-left: 0 none;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+	display: table-cell;
+	font-size:20px;
+	color:#120e5b;
+}
+.text-box-icon {
+    display: table;
+    width: 100%;
+}
+.text-box.hasDatepicker {
+    margin: 0;
 }
 .clear-top {
     clear: both;
@@ -1602,7 +1643,6 @@ Panel
 .panel-block-head {
     background-color: #F6F6F6;
     border: 1px solid #D8D8D8;
-	  overflow: hidden;
 }
 .panel-block-icon {
     color: #120e5b;
@@ -1623,7 +1663,7 @@ Panel
     line-height: 27px;
     min-height: 39px;
     padding: 5px 24px 5px 16px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     width: 68%;
 }
 .panel-block-content {
@@ -2321,8 +2361,8 @@ Table
     width: 25px;
 }
 .table-grid th.checkbox-col {
-    max-width: 15px;
-    width: 15px;
+    max-width: 30px;
+    width: 30px;
 }
 
 .table-grid th span.sorting .sorting-order {
