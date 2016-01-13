@@ -432,6 +432,9 @@ function actionBtnHeight() {
 		$(".app-action-group a").css("line-height", $(".panel-block-heading ").height()+10 + "px"), $(window).resize(function() {
 			$(".app-action-group a" ).css("line-height", $(".panel-block-heading ").height()+10 + "px")
 		});
+		$(".panel-block-head").css("height", $(".panel-block-heading ").height()+11 + "px"), $(window).resize(function() {
+			$(".panel-block-head" ).css("height", $(".panel-block-heading ").height()+11 + "px")
+		});
 	}
 	if($( window ).width() <= 568){
 	 

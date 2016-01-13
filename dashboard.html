@@ -21,6 +21,7 @@
 	 <link rel="stylesheet" href="css/lib/scrollbar/jquery.mCustomScrollbar.css">
 	 <link rel="stylesheet" href="css/lib/jquery-ui/jquery-ui.css">
 	 <link rel="stylesheet" href="assets/blue/style.css">
+	  <link rel="stylesheet" href="css/lib/owl-carousel/owl.carousel.min.css">
 </head>
 
 <body data-reference="page-loader">
@@ -154,7 +155,7 @@
 		
 		<ul>
 	
-			<li class="operation-planning"><a data-tooltip="Operation Dashboard" href="javascript:void(0);" class="tab_action tooltip-right" id="operation_planning">Operation &amp; Planning</a></li>
+			<li class="operation-planning" ><a data-tooltip="Operation Dashboard" href="javascript:void(0);" class="tab_action tooltip-right" id="operation_planning">Operation &amp; Planning</a></li>
 			<li class="billing"><a href="javascript:void(0);" class="tooltip-right tab_action" id="billing" data-tooltip="Billing">Billing</a></li>
 			<li class="edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="edi" data-tooltip="EDI">EDI</a></li>
 			<li class="gate"><a href="javascript:void(0);" class="tooltip-right tab_action" id="gate" data-tooltip="Gate">Gate</a></li>
@@ -169,22 +170,20 @@
 	<!-- Sidebar For Mobile -->
 	<aside class="left-panel mobile-sidebarmenu" >
 	
-		
-		<ul id="nav_pan">
-	
-			<li class="operation-planning"><a href="javascript:void(0);" class="tab_action" id="operation_planning">Operation &amp; Planning</a></li>
-			<li class="billing"><a href="javascript:void(0);" class="tab_action" id="billing" >Billing</a></li>
-			<li class="edi"><a href="javascript:void(0);" class="tab_action" id="edi">EDI</a></li>
-			<li class="gate"><a href="javascript:void(0);" class="tab_action" id="gate" >Gate</a></li>
-			<li class="containers"><a href="javascript:void(0);" class="tab_action" id="containers" >Container</a></li>
-			<li class="services"><a href="javascript:void(0);" class="tab_action" id="services" >Services</a></li>
-			<li class="reporting"><a href="javascript:void(0);" class="tab_action" id="reporting" >Reporting</a></li>
-			<li class="operation-dashboard"><a href="javascript:void(0);" class="tab_action" id="operation-dashboard">Operation Dashboard</a></li>
-			<li class="administration"><a href="javascript:void(0);" class="tab_action" id="administration">Administration</a></li>
-			
-		</ul>
+		 <ul  class="sidebar-nav">
+   <li class="operation-planning item"><a href="javascript:void(0);" class="tab_action" id="operation_planning">Operation &amp; Planning</a></li>
+			<li class="billing item"><a href="javascript:void(0);" class="tab_action" id="billing" >Billing</a></li>
+			<li class="edi item"><a href="javascript:void(0);" class="tab_action" id="edi">EDI</a></li>
+			<li class="gate item"><a href="javascript:void(0);" class="tab_action" id="gate" >Gate</a></li>
+			<li class="containers item"><a href="javascript:void(0);" class="tab_action" id="containers" >Container</a></li>
+			<li class="services item"><a href="javascript:void(0);" class="tab_action" id="services" >Services</a></li>
+			<li class="reporting item"><a href="javascript:void(0);" class="tab_action" id="reporting" >Reporting</a></li>
+			<li class="operation-dashboard item"><a href="javascript:void(0);" class="tab_action" id="operation-dashboard">Operation Dashboard</a></li>
+			<li class="administration item"><a href="javascript:void(0);" class="tab_action" id="administration">Administration</a></li>
+</ul>
 		
 	</aside>
+	
 		<aside class="right-panel">
 		 
        
@@ -195,11 +194,11 @@
                     <div class="panel-block-icon"><i class="fa fa-home"></i> </div>
                     <div class="panel-block-heading "> Home</div>
                     <div class="app-action-group">
-                        <a href="#"><i class="fa fa-print"></i></a>
-                        <a href="#" class="active"><i class="fa fa-filter"></i></a>
-                        <a href="#"><i class="fa fa-sort-amount-desc"></i></a>
-						<a href="#" class="range">Range</a>
-                        <a href="#"><i class="fa fa-plus"></i></a>
+                        <a href="#" data-tooltip="print" class="tooltip-bottom"><i class="fa fa-print"></i></a>
+                        <a href="#" class="active tooltip-bottom" data-tooltip="print"><i class="fa fa-filter"></i></a>
+                        <a href="#" data-tooltip="print" class="tooltip-bottom"><i class="fa fa-sort-amount-desc"></i></a>
+						<a href="#" class="range" data-tooltip="print" >Range</a>
+                        <a href="#" data-tooltip="print" class="tooltip-bottom" ><i class="fa fa-plus"></i></a>
                     </div>
 <!-- Mobile Action Area -->
                     <div class="mobile-action-grp-btn">
@@ -209,17 +208,17 @@
                             <div class="grid-specific clearfix">
                                 <p>Grid Specific Actions</p>
                                 <div class="app-action-group ">
-                                    <a href="#"><i class="fa fa-print"></i></a>
-                                    <a href="#" class="active"><i class="fa fa-filter"></i></a>
-                                    <a href="#"><i class="fa fa-sort-amount-desc"></i></a>
-                                    <a href="#"><i class="fa fa-plus"></i></a>
-                                    <a href="#"><i class="fa fa-print"></i></a>
+                                    <a href="#" data-tooltip="print"><i class="fa fa-print"></i></a>
+                                    <a href="#" class="active"  data-tooltip="print"><i class="fa fa-filter"></i></a>
+                                    <a href="#"  data-tooltip="print"><i class="fa fa-sort-amount-desc"></i></a>
+                                    <a href="#"  data-tooltip="print"><i class="fa fa-plus"></i></a>
+                                    <a href="#"  data-tooltip="print"><i class="fa fa-print"></i></a>
                                 </div>
                             </div>
                             <div class="app-specific clearfix">
                                 <p>Application Specific Actions</p>
                                 <div class="app-action-group ">
-                                    <a href="#"><i class="fa fa-pencil-square-o"></i></a>
+                                    <a href="#" ><i class="fa fa-pencil-square-o"></i></a>
                                     <a href="#"><i class="fa fa-trash"></i></a>
                                     <a href="#"><i class="fa fa-floppy-o"></i></a>
                                 </div>
@@ -284,7 +283,7 @@
 			2016 Copyright &copy; DP World. All rights reserved.
 		</footer>
 		
-    <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
+    <script src="js/lib/jQuery/jquery.min.js"></script>
     <!-- Bootstrap Plugin Js -->
     <script src="js/lib/bootstrap/bootstrap.min.js"></script>
     <script src="js/lib/blockUI/jquery.blockUI.js"></script>
@@ -297,7 +296,7 @@
     <script src="js/init/table-grid.js"></script>
     <script src="js/init/dashboard.js"></script>
 	
-	<script src="js/lib/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/lib/owl-carousel/owl.carousel.js"></script>
 	
 	
 	
