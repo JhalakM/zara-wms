@@ -6,16 +6,13 @@
 $(document).ready(function(){
 	custom_dropdown_list();
 	//effectToggleSwitch();
-	//datePicker();
+	datePicker("#datepicker");
 	accordionPanel();
 	generateSVG();
 	sidebarHeight();
-	//dateTimePicker();
+	dateTimePicker();
 	validateDetails();
 });
-
-
-
 
 $(window).load(function(){
 	getFormElement();
