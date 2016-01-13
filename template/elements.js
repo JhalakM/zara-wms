@@ -18,6 +18,8 @@ var selector_checkbox		 = ".checkbox";
 var selector_file			 = ".file";
 var selector_gui_file		 = ".gui-file";
 var selector_gui_input		 = ".gui-input";
+var selector_app_error		 = ".app-error";
+
 
 var class_switch_input 	 	 = "switch-input";
 var class_switch_selection	 = "switch-selection";
@@ -31,6 +33,7 @@ var class_gui_input			 = "gui-input";
 var class_gui_file		 	 = "gui-file";
 var class_multi_file		 = "multi";
 
+
 var btn_normal 			= '<button class="uie-btn uie-btn-primary">Generate Form</button>';
 var btn_disable 		= '<button class="uie-btn uie-primary-disable" type="button">Disable</button>';
 var btn_error 			= '<button class="uie-btn uie-primary-error" type="button">Error</button>';
@@ -42,7 +45,7 @@ var btn_filter = '<button class="uie-primary-button margin-5 uie-button uie-icon
 					'<span class="btn-icon"><span class="svg" data-svg="svg-filter"></span></span>'+
 					'<div class="btn-value"></div>'+
 				'</button>';
-var btn_reset = '<button class="uie-secondary-button uie-button" type="reset">Reset</button>';
+var btn_reset = '<button class="uie-btn uie-secondary-btn">Reset</button>';
 
 var ele_label = '<div class="form-col-1">'+
 					'<label class="label"></label>'+
