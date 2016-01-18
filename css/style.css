@@ -1088,7 +1088,9 @@ Tooltip
     pointer-events: none;
 }
 /* Show the entire tooltip on hover and focus */
-
+.app-action-group .tooltip-bottom[data-tooltip]::after, .app-action-group .tooltip-bottom.tooltip::after, .app-action-group .tooltip-bottom.tooltip-top::after {
+    left: -9%;
+}
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after,
 [data-tooltip]:focus:before,
@@ -1266,6 +1268,7 @@ Accordion
     padding: 0;
 }
 .accordion-header {
+    background-color: #f6f6f6;
     border-top: 1px solid #d8d8d8;
     height: 28px;
     padding: 0 15px;
@@ -1273,6 +1276,7 @@ Accordion
 }
 .active .accordion-header {
     border-bottom: 1px solid #d8d8d8;
+	background-color:#ffffff;
 }
 .accordion-header h3 {
     color: #5c5c5c;
@@ -2088,6 +2092,22 @@ Alert message
 .error-msg-text .error-info-icon {
     margin: 0 25px 0 0;
 }
+
+/*  Error Message success Message and  Warning Message    */
+
+.error-info-icon.success.fa.fa-check-circle {
+    color: #45b6b0;
+}
+.success-info {
+    border: 1px solid #45b6b0;
+}
+.error-info-icon.warning.fa.fa-exclamation-circle {
+    color: #feaa30;
+}
+.warning-info {
+    border: 1px solid #feaa30;
+}
+
 /*------------------------------------*\
 switch 
 \*------------------------------------*/
@@ -2279,8 +2299,9 @@ Table
 .table-record {
    padding: 0;
     width: 100%;
-	
+ 
 }
+.table-grid th.sorting { cursor:pointer; }
 .table-grid th:first-child span,
 .table-grid tr td:first-child {
     padding: 0;
@@ -2332,25 +2353,25 @@ Table
     background-color: #2991d6;
     color: #ffffff;
 }
-.table-grid th span.sorting.sortable a.asc,
-.table-grid th span.sorting.sortable a.desc {
+.table-grid th span.sort-icon asc,
+.table-grid th span.sort-icon .desc {
     color: #ffffff;
 }
-.table-grid th span.sorting a.asc,
-.table-grid th span.sorting a.desc {
+.table-grid th span.sort-icon  asc,
+.table-grid th span.sort-icon desc {
     color: #ffffff;
-	text-align:center;
+ text-align:center;
 }
-.table-grid th span.sorting a {
-    color: #6ab2e2;
+.table-grid th span.sort-icon span {
+   
     display: block;
     font-size: 14px;
     margin-bottom: 2px;
     margin-top: -6px;
     text-align: center;
 }
-.table-grid th span.sorting a.asc.disable,
-.table-grid th span.sorting a.desc.disable {
+.table-grid th span.sort-icon .asc.disable,
+.table-grid th span.sort-icon .desc.disable {
     color: #6ab2e2;
 }
 .table-grid .checkbox {
@@ -2361,8 +2382,8 @@ Table
     width: 25px;
 }
 .table-grid th.checkbox-col {
-    max-width: 30px;
-    width: 30px;
+   max-width: 30px;		
+	    width: 30px;
 }
 
 .table-grid th span.sorting .sorting-order {
@@ -2378,8 +2399,19 @@ Table
 .table-record .mCustomScrollBox {
     width: 100%;
 }
-
-
+.table-grid th span.sort-icon {
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: -6px;
+}
+.table-grid th span.sort-icon span {
+    display: block;
+    padding: 0;
+}
+.table-grid th span.table-title{
+display: block;
+    position: relative;}
 
 
 /*------------------------------------*\
