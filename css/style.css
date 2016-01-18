@@ -1087,18 +1087,19 @@ Tooltip
     transform: translate3d(0, 0, 0);
     pointer-events: none;
 }
+.app-action-group .tooltip-bottom[data-tooltip]::after, .app-action-group .tooltip-bottom.tooltip::after, .app-action-group .tooltip-bottom.tooltip-top::after {
+    left: -9%;
+}
 /* Show the entire tooltip on hover and focus */
 .app-action-group .tooltip-bottom[data-tooltip]::after, .app-action-group .tooltip-bottom.tooltip::after, .app-action-group .tooltip-bottom.tooltip-top::after {
     left: -9%;
 }
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after,
-[data-tooltip]:focus:before,
-[data-tooltip]:focus:after,
+
 .tooltip:hover:before,
 .tooltip:hover:after,
-.tooltip:focus:before,
-.tooltip:focus:after {
+{
     visibility: visible;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
