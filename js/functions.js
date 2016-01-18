@@ -353,7 +353,7 @@ function actionBlock() {
 }
 
 function appActionBlock() {
-    $(".app-action-group a").click(function() {
+    $(".app-action a").click(function() {
         $(".app-action-form ").slideToggle("slow");
     });
 }
