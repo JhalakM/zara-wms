@@ -7,6 +7,7 @@ $(document).ready(function(){
 	custom_dropdown_list();
 	effectToggleSwitch();
 	actionBlock();
+	appActionBlock();
 	
 	
 	
