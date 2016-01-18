@@ -16,9 +16,9 @@ var selector_switch			 = ".switch";
 var selector_radio_btn		 = ".radio-btn";
 var selector_checkbox		 = ".checkbox";
 var selector_file			 = ".file";
-var selector_gui_file		 = ".gui-file";
-var selector_gui_input		 = ".gui-input";
+var selector_input_file		 = ".input-file";
 var selector_app_error		 = ".app-error";
+var selector_selected_file	 = ".selected-file-name";
 
 
 var class_switch_input 	 	 = "switch-input";
@@ -29,9 +29,9 @@ var class_switch_label_on 	 = "switch-label-on";
 var class_css_checkbox		 = "css-checkbox";
 var class_css_label			 = "css-label";
 
-var class_gui_input			 = "gui-input";
-var class_gui_file		 	 = "gui-file";
+var class_input_file		 = "input-file";
 var class_multi_file		 = "multi";
+var class_selected_file	 	 = "selected-file-name";
 
 
 var btn_normal 			= '<button class="uie-btn uie-btn-primary">Generate Form</button>';
@@ -64,11 +64,14 @@ var ele_input = '<div class="p-r-5">'+
 var ele_textarea = '<div class="p-r-5">'+
 						'<textarea class="textarea-box"></textarea>'+
 					'</div>';			
-var ele_file_upload = '<div class="p-r-5">'+
-						'<div class="field prepend-icon file">'+
-                               //'<input type="text" placeholder="'+$.i18n.prop("select_file")+'" class="'+class_gui_input+'">'+
-								'<span class="uie-btn uie-btn-primary btn-sm right">'+$.i18n.prop('choose_file')+'</span>'+
-								'<input class="'+class_multi_file+' '+class_gui_file+'">'+
+var ele_file_upload = '<div class="col-md-6 form-col-2 p-r-5">'+
+						'<div class="input-group '+class_input_file+'" >'+
+								'<div class="form-control '+class_selected_file+'">'+$.i18n.prop('no_file_selected')+'</div>'+
+								'<span class="input-group-addon">'+
+									'<a class="btn btn-primary" href="javascript:;">'+$.i18n.prop('choose_file')+
+									  '<input />'+
+									'</a>'+
+								  '</span>'+
                             '</div>'+
 					  '</div>'; 			
 var ele_dropdown = '<div class="p-r-5">'+
