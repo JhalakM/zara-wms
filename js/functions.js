@@ -54,11 +54,8 @@ function ajaxCallBack(ajax_url, success_callback, failure_callback, params) {
 
 /* function to get form element from dynamic form plugin */
 function getFormElement() {
-	/*var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
+	var ajaxUrl = SET_WEB_URL + "file/form_configuration.json";
 	ajaxCallBack(ajaxUrl, generateFormSuccess, generateFormError);
-	$(".call-formbtn").click(function() {
-		
-	});*/
 }
 
 /* call plugin for i18n language tanslation library */
@@ -615,5 +612,33 @@ function misConfigError(params,message){
 		}else{
 			return true;
 		}
+	}
+}
+
+function setCustomFileData(fileId){
+	var file_id 	= "#"+fileId;
+	var sub_str		= $(file_id).val().substr(0,15)
+	sub_str = ($(file_id).val().length > 15)?sub_str+"...": $(file_id).val();
+	$(file_id).parents(selector_input_file).find(selector_selected_file).html(sub_str).attr({
+				"title" : $(file_id).val(),
+				//"data-tooltip" : $(file_id).val(),
+				//"class" : "tooltip-bottom"
+	});
+	
+	var inputClone = document.createElement(selector_input);
+	$(file_id).parent().append(inputClone);
+	var file = $(file_id)[0].files[0];
+	if(file){
+		var oFReader = new FileReader();
+		oFReader.readAsDataURL(file);
+		oFReader.onload = function (oFREvent) {
+			$(inputClone).attr({
+				"type" 		 : "hidden",
+				"name" 		 : $(file_id).attr("name"),
+				"data-file"  : true,
+				"value"      : oFREvent.target.result,
+				"data-title" : $(file_id).val()
+			});
+		};
 	}
 }

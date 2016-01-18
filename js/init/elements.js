@@ -10,7 +10,7 @@ $(document).ready(function(){
 	accordionPanel();
 	generateSVG();
 	sidebarHeight();
-	dateTimePicker();
+	//dateTimePicker();
 	validateDetails();
 });
 

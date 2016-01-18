@@ -16,6 +16,7 @@ function jsonParse(jParseData){
 
 function generateElements(formElement,formId){
 	var params = new Array();
+
 	for(var fe = 0; fe < formElement.length; fe++){
 		generateFormRow(formId);
 		generateLabel(formId,formElement[fe].labelKey);
@@ -23,7 +24,6 @@ function generateElements(formElement,formId){
 			if(typeof formElement[fe].multiLevel != "undefined"){
 				for(var m = 0; m < formElement[fe].multiLevel.length; m++){
 					var multiAttr = formElement[fe].multiLevel;
-					//alert(multiAttr[m].name);
 					params = [multiAttr[m].name];
 					var errorStatus = misConfigError(params,$.i18n.prop("errormsg.config_error"));
 					
@@ -62,7 +62,6 @@ function generateElements(formElement,formId){
 				}
 			}
 	}
-	
 }
 
 
@@ -94,7 +93,8 @@ function generate_text(formId,formElement,flag){
 										"id"	      : formElement.name,
 										"data-format" : formElement.dateFormat,
 										"data-default-date" : formElement.defaultValue,
-										"value" : formElement.defaultValue
+										"value" : formElement.defaultValue,
+										"data-validate" : formElement.validation
 									}).parents(selector_p_r_5).addClass(add_class_value);
 				datePicker("#"+formElement.name);
 				break;
@@ -103,12 +103,13 @@ function generate_text(formId,formElement,flag){
 		}
 	}else{
 		inputHTML  = $(ele_input).appendTo(mainWrapper)
-						.find(selector_input).attr({
-							"name"    : formElement.name,
-							"tabindex": formElement.tabIndex,
-							"type"    : formElement.type,
-							"value"	  : formElement.defaultValue
-						}).parents(selector_p_r_5).addClass(add_class_value);
+					.find(selector_input).attr({
+						"name"    : formElement.name,
+						"tabindex": formElement.tabIndex,
+						"type"    : formElement.type,
+						"value"	  : formElement.defaultValue,
+						"data-validate" : formElement.validation
+					}).parents(selector_p_r_5).addClass(add_class_value);
 	}
 	
 }
@@ -123,6 +124,7 @@ function generate_textarea(formId,formElement,flag){
 								"cols"	  : formElement.cols,
 								"rows"	  : formElement.rows,
 								"type"    : formElement.type,
+								"data-validate" : formElement.validation
 							}).text(formElement.defaultValue).parents(selector_p_r_5).addClass(add_class_value);
 }
 
@@ -150,7 +152,8 @@ function generate_dropdown(formId,formElement,flag){
 	dropdownHTML.find(selector_input).attr({
 			"name"    : formElement.name,
 			"tabindex": formElement.tabIndex,
-			"value"	  : inputVal
+			"value"	  : inputVal,
+			"data-validate" : formElement.validation
 	}).parents(selector_p_r_5).addClass(add_class_value);
 }
 
@@ -175,7 +178,8 @@ function generate_switch(formId,formElement,flag){
 			"value"	  : formElement.defaultValue[i].value,
 			"id"	  : formElement.name+"-"+i,
 			"class"	  : class_switch_input,
-			"checked" : selectedValue
+			"checked" : selectedValue,
+			"data-validate" : formElement.validation
 		});
 		$(switchHTML).find(selector_switch).append(inputClone);
 		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].labelKey));
@@ -209,7 +213,8 @@ function generate_radio(formId,formElement,flag){
 			"type"    : formElement.type,
 			"value"	  : formElement.defaultValue[i].value,
 			"id"	  : formElement.name+"-"+i,
-			"checked" : selectedValue
+			"checked" : selectedValue,
+			"data-validate" : formElement.validation
 		});
 		$(radioHTML).find(selector_radio_btn).append(inputClone);
 		$(labelClone).text($.i18n.prop(formElement.defaultValue[i].labelKey));
@@ -241,6 +246,7 @@ function generate_checkbox(formId,formElement,flag){
 			"value"	  : formElement.defaultValue[i].value,
 			"id"	  : formElement.name+"-"+i,
 			"class"	  : class_css_checkbox,
+			"data-validate" : formElement.validation,
 			selectedValue
 		});
 		$(checkHTML).find(selector_checkbox).append(inputClone);
@@ -255,28 +261,26 @@ function generate_checkbox(formId,formElement,flag){
 
 function generate_file(formId,formElement,flag){
 	add_class_value = (flag == 1)?additional_class:"";
+
+	var fileUploadHTML  = $(ele_file_upload).appendTo(mainWrapper);
 	
-	var fileUploadHTML  = $(ele_file_upload).appendTo(mainWrapper)
-							/*.find(selector_gui_input).attr({
-								"id"    : formElement.name,
-								"class" : class_gui_input
-							}).parents(selector_p_r_5).addClass(add_class_value)*/;	
-							
-	$(fileUploadHTML).find(selector_gui_file).attr({
+	$(fileUploadHTML).find(selector_input).attr({
 				"name"    	: formElement.name,
 				"tabindex"	: formElement.tabIndex,
 				"type"    	: formElement.type,
 				"id"    	: formElement.name,
-				"multiple"  : formElement.multiple
+				"multiple"  : formElement.multiple,
+				"data-validate" : formElement.validation,
+				"onchange"  : "setCustomFileData(this.id)"
 			});
 	
 	if(typeof formElement.fileValidation != "undefined"){
-		$(fileUploadHTML).find(selector_gui_file).attr({
+		$(fileUploadHTML).find(selector_input).attr({
 				"data-accept"	: formElement.fileValidation.accept,
 				"data-size"		: formElement.fileValidation.size
 			});
 	}
-	setMultiFilePlugin(formElement.name);
+	//setMultiFilePlugin(formElement.name);
 }
 
 
