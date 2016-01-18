@@ -21,7 +21,8 @@
 	 <link rel="stylesheet" href="css/lib/scrollbar/jquery.mCustomScrollbar.css">
 	 <link rel="stylesheet" href="css/lib/jquery-ui/jquery-ui.css">
 	 <link rel="stylesheet" href="assets/blue/style.css">
-	  <link rel="stylesheet" href="css/lib/owl-carousel/owl.carousel.min.css">
+	 <link rel="stylesheet" href="css/lib/owl-carousel/owl.carousel.min.css">
+	 
 </head>
 
 <body data-reference="page-loader">
@@ -193,11 +194,19 @@
                 <div class="panel-block-head clearfix">
                     <div class="panel-block-icon"><i class="fa fa-home"></i> </div>
                     <div class="panel-block-heading "> Home</div>
+<<<<<<< HEAD
+                    <div class="app-action-group app-action">
+                        <a href="#" data-tooltip="print" class="tooltip-bottom"><i class="fa fa-print"></i></a>
+                        <a href="#" class="active tooltip-bottom" data-tooltip="print"><i class="fa fa-filter"></i></a>
+                        <a href="#" data-tooltip="print" class="tooltip-bottom"><i class="fa fa-sort-amount-desc"></i></a>
+						<a href="#" class="range tooltip-bottom" data-tooltip="print" >Range</a>
+=======
                     <div class="app-action-group">
                         <a href="#" data-tooltip="Print" class="tooltip-bottom"><i class="fa fa-print"></i></a>
                         <a href="#" class="active tooltip-bottom" data-tooltip="Filter"><i class="fa fa-filter"></i></a>
                         <a href="#" data-tooltip="print" class="Soting tooltip-bottom"><i class="fa fa-sort-amount-desc"></i></a>
 						<a href="#" class="range tooltip-bottom" data-tooltip="Range " >Range</a>
+>>>>>>> 4b905422685d51b1af9efe0c26063e885fe7431c
                         <a href="#" data-tooltip="print" class="tooltip-bottom" ><i class="fa fa-plus"></i></a>
                     </div>
 <!-- Mobile Action Area -->
@@ -228,6 +237,128 @@
                     <!--End  Mobile Action Area -->
                 </div>
                 <div class="panel-block-content no-padding ">
+				<div class="app-action-form clearfix" style="display:none;">
+                        <div class="title clearfix">
+                            <div class="field-name"> <span class="heading ">Filter </span>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3 no-padding">
+                                <div class="dropdown-list ">
+                                    <div class="selected-listitem">Click Me</div>
+                                    <ul>
+                                        <li value=""> 111</li>
+                                        <li value="" rel="">222</li>
+                                        <li value="" rel=""> 333</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" clearfix"></div>
+                        <div class="form-action-field clearfix">
+                            <form>
+
+                                <!-- Row -->
+                          
+                                    <div class="form-row clearfix">
+                                        <div class="field-name">
+                                            <label class="label">Type </label>
+                                        </div>
+
+                                        <div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3">
+                                            <div class="dropdown-list">
+                                                <div class="selected-listitem">Click Me</div>
+                                                <ul>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel=""> #4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel=""> #4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class=" no-padding  margin-5 pull-left col-md-3 col-sm-3 col-xs-3">
+                                            <input type="text" class="text-box" name="service_code" value="">
+                                        </div>
+                                        <div class="no-padding  margin-5 pull-left">
+                                            <div class="switch">
+                    <input type="radio" class="switch-input" name="view" value="week" id="on_1" checked>
+                    <label for="on_1" class="switch-label switch-label-off">ON</label>
+                    <input type="radio" class="switch-input" name="view" value="month" id="off_1">
+                    <label for="off_1" class="switch-label switch-label-on">OFF</label>
+                    <span class="switch-selection"></span>
+                </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row clearfix">
+                                        <div class="field-name">
+                                            <label class="label">Class</label>
+                                        </div>
+
+                                        <div class="no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
+                                            <div class="dropdown-list">
+                                                <div class="selected-listitem">Click Me</div>
+                                                <ul>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel=""> #4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel=""> #4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class=" no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
+                                            <input type="text" class="text-box" name="service_code" value="">
+                                        </div>
+                                        <div class="no-padding  margin-5 pull-left">
+                                           
+                                            <div class="switch">
+                    <input type="radio" class="switch-input" name="switch2" value="week" id="on_2" checked>
+                    <label for="on_2" class="switch-label switch-label-off">ON</label>
+                    <input type="radio" class="switch-input" name="switch2" value="month" id="off_2">
+                    <label for="off_2" class="switch-label switch-label-on">OFF</label>
+                    <span class="switch-selection"></span>
+                </div>
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="form-row clearfix">
+                                        <div class="field-name">
+                                            <label class="label">Add more fields</label>
+                                        </div>
+                                        <div class="no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
+                                            <div class="dropdown-list">
+                                                <div class="selected-listitem">Click Me</div>
+                                                <ul>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel=""> #4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                    <li value="" rel=""> #4566871</li>
+                                                    <li value="" rel="">#4566871</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Form Footer -->
+
+                                    <div class="form-btn-group  clearfix">
+                                        <button class="uie-primary-button margin-5 uie-button uie-icon-btn" type="button"> <span class="btn-icon"><img src="img/icons/svg/filter-white.svg" alt="Filter" ></span>
+                                            <div class="btn-value">Filter </div>
+                                        </button>
+                                        <button class="uie-secondary-button uie-button" type="reset">Reset </button>
+                                    </div>
+                                    <!-- End Row -->
+                                    <!-- End Form Footer -->
+
+                            </form>
+                            </div>
+                        </div>
+						
                 <div class="element-sec clearfix padding-bottom-none ">
 					<div class="col-md-3">
 					   <div class="element-block bayplan">
@@ -280,10 +411,9 @@
 	<!-- End Sidebar -->
 	
 	<footer class="footer">
-			2016 Copyright &copy; DP World. All rights reserved.
-		</footer>
-		
-    <script src="js/lib/jQuery/jquery.min.js"></script>
+		2016 Copyright &copy; DP World. All rights reserved.
+	</footer>
+	<script src="js/lib/jQuery/jquery-v2-1-1.min.js"></script> 
     <!-- Bootstrap Plugin Js -->
     <script src="js/lib/bootstrap/bootstrap.min.js"></script>
     <script src="js/lib/blockUI/jquery.blockUI.js"></script>
@@ -295,8 +425,7 @@
     <script src="js/initialize.js"></script>
     <script src="js/init/table-grid.js"></script>
     <script src="js/init/dashboard.js"></script>
-	
-	<script src="js/lib/owl-carousel/owl.carousel.js"></script>
+	<script src="js/lib/owl-slider/owl.carousel.js"></script>
 	
 	
 	
