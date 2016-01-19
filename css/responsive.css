@@ -64,11 +64,13 @@ iPad landscape · width: 1024px
   
 }
 .logo-fix-width img {
-    max-width: 100%;
+    max-width: 150px;
     width: auto;
 }
 .nav > li > a{    font-size: 13px;padding: 5px 10px;}
-.logo-fix-width a{  padding-top: 6px;}	
+.logo-fix-width a {
+    padding-top: 18px;
+}
 .panel-block-heading{   width: 65%;}
 }
 
@@ -98,9 +100,7 @@ iPad portrait · width: 768px
    
     border-bottom: 1px solid #d8d8d8;
 }
-.logo-fix-width a {
-    padding-top: 3px;  margin-left: -15px;
-}
+
 .navbar-toggle {
     border-bottom: medium none;
     border-top: medium none;
@@ -202,7 +202,7 @@ iPad portrait · width: 768px
     color: #2991d6;
     height: auto;
     line-height: 20px;
-    padding-top: 48px;
+    padding-top: 53px;
     text-align: center;
     width: auto;
 }
@@ -255,9 +255,10 @@ iPad portrait · width: 768px
 .left-panel li {
     border-right: 1px solid #d8d8d8;
     height: 85px;
-    padding: 5px;
+    padding: 0;
 	background-position: center 15px;
     background-repeat: no-repeat;
+	 background-size: 32px auto;
 }
 .left-panel ul li a {
     font-size: 14px;
@@ -275,7 +276,7 @@ iPad portrait · width: 768px
     width: 96%;
 }
 .left-panel ul li a{  font-size: 12px; line-height: 14px;}
-
+.sidebar-nav li{   width: 100px;   height: 100px;}
 }
 
 
@@ -412,7 +413,7 @@ iPhone 6 Plump landscape · width: 736px
 
 @media (max-width:736px) {
 .panel-block-heading{width: 60%;}
-.left-panel li a{   font-size: 12px;line-height: 30px;  padding-top: 41px;}
+
 }
 
 
@@ -535,11 +536,7 @@ iPhone 6 Plump portrait · width: 414px
 
 @media (max-width:414px) {
 /* Sidebar */	
-.left-panel ul li a {
-    font-size: 12px;
-    line-height: 14px;
-	padding-top: 46px;
-}
+
 
 }
 
