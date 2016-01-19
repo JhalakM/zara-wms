@@ -388,18 +388,13 @@ function dateTimePicker() {
 }
 // Sidebar Height 
 function sidebarHeight() {
-	if($( window ).width() >= 1024){
+	
 		
 		$(".desktop-sidebar").css("min-height", $(document).height()-140 + "px"), $(window).resize(function() {
 			$(".desktop-sidebar").css("min-height", $(document).height()-140 + "px")
 		});
-	}else
-	{
-		$(".desktop-sidebar").css("height", $(document).height() + "px"), $(window).resize(function() 
-		{
-			$(".desktop-sidebar").css("height", $(document).height()  + "px")
-		});
-	}	
+	
+	
 }
 
 // Sidebar In Mobile

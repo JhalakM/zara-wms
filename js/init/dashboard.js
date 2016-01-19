@@ -5,12 +5,11 @@
 $(document).ready(function(){
 
 	linkDropdown();
-	sidebarHeight();
 	sidebarMobile() 
 	heightGrid();
 	sidebarScroll();
 	linkDropdownMobile();
-	//appActionBlock();
+	
 	
 	
 });
@@ -18,7 +17,7 @@ $(document).ready(function(){
 
 
 $(window).load(function(){
-	
+	sidebarHeight();
 
 });
 
