@@ -92,8 +92,11 @@ iPad portrait · width: 768px
 }
 .logo-fix-width::after ,.logo-fix-width::before{
     background-image: none;}
-	.header-left {
-    padding-left: 15px;
+.header-left {
+    display:none;
+}
+.header-right {
+    float: left;
 }
 .top-bar-menu{ padding-right: 0px;}
 .navbar-header {
@@ -144,36 +147,17 @@ iPad portrait · width: 768px
 }
   /*---------- End Menu-----------*/
   
- .search.mobile-search {
-    background: #f6f6f6 none repeat scroll 0 0;
-    border-top: 1px solid #d8d8d8;
-    display: block;
-    float: none;
-    margin: 0 auto;
-    padding: 5px 0;
-    width: 100%;
-	border-bottom: 1px solid #d8d8d8;
-}
-.search .text-box {
-    display: block;
-    float: none;
-    height: 31px;
-    margin: 0 auto;
-    width: 96%;
-}
-.search{    display: none;}
 
-/*---------- End Menu-----------*/
   
  .search.mobile-search {
     background: #f6f6f6 none repeat scroll 0 0;
     border-top: 1px solid #d8d8d8;
     display: block;
     float: none;
-    margin: 0 auto;
+    margin:5px auto 0;
     padding: 5px 0;
     width: 100%;
-	border-bottom: 1px solid #d8d8d8;
+	
 }
 .search .text-box {
     display: block;
@@ -183,7 +167,16 @@ iPad portrait · width: 768px
     width: 96%;
 }
 .search{    display: none;}
+.header-top{ padding: 10px 0 0;}
+.mobile-search {
+    display: block;
+}
+.mobile-search img {
+    width: 20px;
+}
 /* Sidebar */
+.left-panel {  border-top: 1px solid #d8d8d8;
+}
 .left-panel li {
     border: medium none;
 }

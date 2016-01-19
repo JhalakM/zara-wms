@@ -2560,7 +2560,7 @@ Header
     padding-left: 223px;
 }
 .header-date {
-    background: rgba(0, 0, 0, 0) url("../img/icons/calender-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../img/icons/calender-icon.svg") no-repeat scroll 0 0;
     border-right: 1px solid #d8d8d8;
     color: #5c5c5c;
     float: left;
@@ -2895,6 +2895,12 @@ ul.nav li:hover > ul.dropdown-menu {
 }
 .menu .home.icon:hover ,.menu .active .home.icon {
     background: rgba(0, 0, 0, 0) url("../img/icons/home-hover.svg") no-repeat scroll center center / 14px auto;
+}
+.menu .help.icon {
+    background: rgba(0, 0, 0, 0) url("../img/icons/help.svg") no-repeat scroll center center / 12px auto;
+}
+.menu li a:hover .help.icon ,.menu .active .help.icon {
+    background: rgba(0, 0, 0, 0) url("../img/icons/help-hover.svg") no-repeat scroll center center / 12px auto;
 }
 .menu .active .icon,.menu li:hover .icon {
     border-color: #fff;

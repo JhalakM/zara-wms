@@ -375,6 +375,7 @@ function linkDropdownMobile() {
         $(".action-grp").slideToggle("slow");
     });
 }
+
 function generateDynamicElements() {
     loadScript(SET_WEB_URL + "template/elements.js", function() {
         $(".call-formbtn").html(btn_normal);
@@ -386,6 +387,13 @@ function dateTimePicker() {
         pickDate: false
     });
 }
+//search Mobile view
+function search-slide() {
+    $(".search a").click(function() {
+        $(".mobile-search").slideToggle("slow");
+    });
+}
+
 // Sidebar Height 
 function sidebarHeight() {
 	
