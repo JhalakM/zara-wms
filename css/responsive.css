@@ -478,9 +478,18 @@ iPhone 6 landscape · width: 600px
 .app-action-form .field-name, .grid-action-form .field-name {
   
     text-align: left;
-
+}
 /*---------- End Table Grid-----------*/
-	}
+
+/*----------Rule Mgmt Page-----------*/
+
+.accordion-box li:first-child {
+       width: 100%;
+}
+.accordion-box li {
+    width: 100%;
+}
+}
 
 
 

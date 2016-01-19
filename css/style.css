@@ -718,7 +718,8 @@ Lable
     white-space: normal;
     word-break: break-all;
     word-wrap: break-word;
-}/*------------------------------------*\
+}
+/*------------------------------------*\
 Dropdown
 \*------------------------------------*/
 
@@ -753,15 +754,7 @@ Dropdown
     z-index: 100;
 }
 .dropdown-list ul li {
-    /*border-bottom: 1px solid #d8d8d8;
-    color: #5c5c5c;
-    cursor: pointer;
-    display: block;
-    font-size: 14px;
-    height: 34px;
-    padding: 0 10px;*/
-	
-	 border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
     color: #5c5c5c;
     cursor: pointer;
     display: block;
@@ -905,7 +898,38 @@ Dropdown
 }
 
 
+/*------------------------------------*\
+Rule Mgmt page
+\*------------------------------------*/
 
+.panel-block-content-padding {
+    padding: 0 15px;
+}
+.accordion-box {
+    border-bottom: 1px solid #d8d8d8;
+    float: left;
+    margin: 0 0 20px;
+    padding: 0 0 30px;
+}
+.accordion-box li:first-child {
+    
+    padding: 10px 60px 10px 0;
+    width: 20%;
+}
+.accordion-box li {
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    list-style: outside none none;
+    padding: 10px 40px;
+    width: 26%;
+}
+.right-side-element {
+    float: right;
+    width: 70%;
+}
+.form-row.clearfix > label {
+    width: 29%;
+}
 /*------------------------------------*\
 File upload button
 \*------------------------------------*/
@@ -2863,7 +2887,7 @@ ul.nav li:hover > ul.dropdown-menu {
 .menu .about-us.icon {
     background: rgba(0, 0, 0, 0) url("../img/icons/about-us.svg") no-repeat scroll center center / 14px auto;
 }
-.menu .about-us.icon:hover ,.menu .active .about-us.icon {
+.menu li:hover .about-us.icon ,.menu .active .about-us.icon {
     background: rgba(0, 0, 0, 0) url("../img/icons/about-us-hover.svg") no-repeat scroll center center / 14px auto;
 }
 .menu .home.icon {
@@ -2872,7 +2896,7 @@ ul.nav li:hover > ul.dropdown-menu {
 .menu .home.icon:hover ,.menu .active .home.icon {
     background: rgba(0, 0, 0, 0) url("../img/icons/home-hover.svg") no-repeat scroll center center / 14px auto;
 }
-.menu .active .icon {
+.menu .active .icon,.menu li:hover .icon {
     border-color: #fff;
 }	
 .nav .dropdown-menu {
