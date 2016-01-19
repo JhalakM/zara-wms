@@ -8,6 +8,7 @@ $(document).ready(function(){
 	effectToggleSwitch();
 	actionBlock();
 	appActionBlock();
+	accordionPanel();
 	
 	
 	
