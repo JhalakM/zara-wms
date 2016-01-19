@@ -1459,15 +1459,21 @@ span.add-on {
     display: table;
     width: 100%;
 }
-.text-box.hasDatepicker {
-    margin: 0;
-}
+
 .clear-top {
     clear: both;
     padding: 20px;
 }
 .text-box.hasDatepicker {
   /*  max-width: 300px;*/
+}
+.date-text-box {
+    border: 1px solid #d8d8d8;
+    font-size: 12px;
+    height: 35px;
+    margin: 0 0 0px;
+    padding: 5px 8px;
+    width: 100%;
 }
 .table-condensed {
     margin: auto;
@@ -2094,15 +2100,27 @@ Alert message
     margin: 0 25px 0 0;
 }
 
+.error-info-ico {
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 19px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+.error-msg-text .error-info-ico {
+    margin: 0 25px 0 0;
+}
+
 /*  Error Message success Message and  Warning Message    */
 
-.error-info-icon.success.fa.fa-check-circle {
+.error-info-ico.success.fa.fa-check-circle {
     color: #45b6b0;
 }
 .success-info {
     border: 1px solid #45b6b0;
 }
-.error-info-icon.warning.fa.fa-exclamation-circle {
+.error-info-ico.warning.fa.fa-exclamation-circle {
     color: #feaa30;
 }
 .warning-info {
@@ -3209,4 +3227,12 @@ Login
 .form-element {
     padding: 0 30px 20px;
     position: relative;
+}
+
+/*------------------------------------*\
+Rule Mgmt page
+\*------------------------------------*/
+
+.panel-block-content-padding {
+    padding: 0 15px;
 }
