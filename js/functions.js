@@ -388,7 +388,7 @@ function dateTimePicker() {
     });
 }
 //search Mobile view
-function search-slide() {
+function searchSlide() {
     $(".search a").click(function() {
         $(".mobile-search").slideToggle("slow");
     });

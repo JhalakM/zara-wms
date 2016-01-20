@@ -9,7 +9,7 @@ $(document).ready(function(){
 	heightGrid();
 	sidebarScroll();
 	linkDropdownMobile();
-	
+	searchSlide();
 	
 	
 });
