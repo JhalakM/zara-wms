@@ -3262,27 +3262,33 @@ Footer
 
 .mobile-sidebarmenu{display:none;}
 
-
-
 /*------------------------------------*\
 Login
 \*------------------------------------*/
+
 .login-header {
-    background: #f6f6f6 none repeat scroll 0 0;
+    background: #ffffff none repeat scroll 0 0;
     border-bottom: 1px solid #e2e2e2;
     padding-top: 60px;
 }
 .login-container {
     margin: 0 auto;
-    width: 460px;
+    max-width: 460px;
+    width: 90%;
 }
 .logo-header {
-    background: #ffffff none repeat scroll 0 0;
+    background: #2992d6 none repeat scroll 0 0;
     border: 1px solid #d8d8d8;
-    padding: 20px 0 10px;
+    padding: 40px 0 32px;
     position: relative;
     text-align: center;
     z-index: 9999;
+}
+.logo-header img {
+    width: 188px;
+}
+.login {
+    background: #EEEEEE  none repeat scroll 0 0;
 }
 .user-login {
     color: #2991d6;
@@ -3291,10 +3297,7 @@ Login
     margin: 0 0 20px;
     text-align: center;
 }
-.login-container {
-    margin: 0 auto;
-    width: 460px;
-}
+
 .form {
     background: #ffffff none repeat scroll 0 0;
     border: 1px solid #d8d8d8;
@@ -3315,15 +3318,50 @@ Login
 .logo-fix-width > a {
     padding-top: 14px;
 }
-.login-disclaimer {
-    padding: 20px 0;font-size:13px;
+
+.text-align-center {
+    text-align: center;
 }
+.login-disclaimer {
+    padding: 20px 0;
+ font-size:13px;
+}
+.login-content {
+    padding-bottom: 60px;
+}
+.login .text-box {
+    font-size: 14px;
+ padding:5px 10px;
+}
+
 /*------------------------------------*\
 Rule Mgmt page
 \*------------------------------------*/
 
 .panel-block-content-padding {
     padding: 0 15px;
+}
+.accordion-box {
+    border-bottom: 1px solid #d8d8d8;
+    float: left;
+    margin: 0 0 20px;
+    padding: 0 0 30px;
+}
+.accordion-box li:first-child {
+    
+    padding: 10px 60px 10px 0;
+    width: 20%;
+}
+.accordion-box li {
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    list-style: outside none none;
+    padding: 10px 40px;
+    width: 26%;
+}
+.right-side-element {
+    float: right;
+    width: 70%;
 }
 
 
