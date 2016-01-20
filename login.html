@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 
-<html lang="en" >
+<html lang="en">
+
 <head>
-	<!-- Meta tags details -->
+    <!-- Meta tags details -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
- 
-	<meta name="description" content="{{meta_login_desc}}" data-replace="meta">
-	<meta name="keywords" content="{{meta_login_keywords}}" data-replace="meta">
-	<meta name="title" content="{{meta_login_title}}" data-replace="meta">
-	
-	<!-- Favicon icon -->
-	<link rel="icon" href="img/favicon.ico">
-    
-	<title data-replace="text">{{site_login_title}}</title>
-	<link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-	<link href="css/lib/font/font-awesome.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/reset.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
-	<link href="css/lib/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
-    
+
+    <meta name="description" content="{{meta_login_desc}}" data-replace="meta">
+    <meta name="keywords" content="{{meta_login_keywords}}" data-replace="meta">
+    <meta name="title" content="{{meta_login_title}}" data-replace="meta">
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="img/favicon.ico">
+
+    <title data-replace="text">{{site_login_title}}</title>
+    <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lib/font/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/lib/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+
 </head>
 
-<body data-reference="page-loader">
-<header class="login-header">
-	 <div class="login-container">
-	 <div class="logo-header">
-	  <a href="#"><img src="img/logo.png"></a>
-	  
-	 </div>
-	 </div>
-</header>
-<section>
-			 <div class="login-container">
-    <div class="form clearfix">
-		<div class="form-element">
-			<h1 class="user-login">User Login</h1>
-			<form id="frmLogin" name="login_form" method="post">
-			<div class="form-row position-rel">
-			<input type="text" class="text-box" name="email" tabindex="0" placeholder="User Name">
-			<span class="input-icon"><img src="img/icons/user.png"></span>
-			</div>
-			<div class="form-row position-rel">
-			<input type="password" class="text-box" name="email" tabindex="1" placeholder="Password">
-			<span class="input-icon"><img src="img/icons/lock.png"></span>
-			</div>
-			<div class="form-row position-rel">
-			<div class="dropdown-list">
-                                            <div class="selected-listitem">Click Me</div>
-                                            <ul style="display: none;">
-                                                <li value=""> <i class="fa fa-pencil-square-o"></i> Select Category</li>
-                                                <li rel="5" value="1"> <i class="fa fa-pencil-square-o"></i> Select Category1</li>
-                                                <li rel="6" value="2"> <i class="fa fa-pencil-square-o"></i> Select Category2</li>
-                                                <li rel="7" value="3"><i class="fa fa-pencil-square-o"></i> Select Category3</li>
-                                                <li rel="8" value="4"><i class="fa fa-pencil-square-o"></i> Select Category4</li>
-                                                <li rel="9" value="5"><i class="fa fa-pencil-square-o"></i> Select Category5</li>
-                                            </ul>
-                                            <input type="hidden" value="12" class="dropdown-item" name="search_category">
-                                        </div>
-			</div>
-				<input type="button" value="Submit">
-			</form>
-		</div>
-    </div>
-	</div>
-</section>
-    <script src="js/lib/jQuery/jquery-1.11.3.min.js"></script>
-	<script src="js/lib/blockUI/jquery.blockUI.js"></script>
-	<script src="js/lib/language/jquery.i18n.properties.js"></script>
-	<script src="js/lib/captcha/jquery.captcha.js"></script>
+<body data-reference="page-loader" class="login">
+    <header class="login-header">
+        <div class="login-container">
+            <div class="logo-header">
+                <a href="#"><img src="img/logo-1.svg"></a>
 
+            </div>
+        </div>
+    </header>
+    <section class="login-content">
+        <div class="login-container">
+            <div class="form clearfix">
+                <div class="form-element">
+                    <h1 class="user-login">User Login</h1>
+                    <form id="frmLogin" name="login_form" method="post">
+                        <div class="form-row position-rel">
+                            <input type="text" class="text-box" name="email" tabindex="0" placeholder="User ID">
+                            <span class="input-icon"><img src="img/icons/user.png"></span>
+                        </div>
+                        <div class="form-row position-rel">
+                            <input type="password" class="text-box" name="email" tabindex="1" placeholder="Password">
+                            <span class="input-icon"><img src="img/icons/lock.png"></span>
+                        </div>
+                        <div class="form-row position-rel">
+                            <div class="dropdown-list">
+                                <div class="selected-listitem grey-color">Select Language</div>
+                                <ul style="display: none;">
+                                    <li value="">Select Language</li>
+                                    <li rel="5" value="1">Select Language 1</li>
+                                    <li rel="6" value="2">Select Language 2</li>
+                                    <li rel="7" value="3">Select Language 3</li>
+                                    <li rel="8" value="4">Select Language 4</li>
+                                    <li rel="9" value="5">Select Language 5</li>
+                                </ul>
+                                <input type="hidden" value="12" class="dropdown-item" name="search_category">
+                            </div>
+                        </div>
+                        <div class="text-align-center">
+                            <p class="login-disclaimer">Disclaimer: Please read our <a href="#">Terms & Conditions </a></p>
+
+                            <button type="button" value="Submit" class="uie-btn uie-btn-primary">Login </button>
+                            <button type="reset" value="reset" class="uie-btn uie-secondary-btn"> Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+  <script src="js/lib/jQuery/jquery-v2-1-1.min.js"></script>   
+   
     <!-- Custom JavaScript -->
     <script src="js/functions.js"></script>
-    <script src="js/initialize.js"></script>
+   
     <script src="js/init/login.js"></script>
-	
-	 <!-- custom scrollbar plugin -->
+
+    <!-- custom scrollbar plugin -->
     <script src="js/lib/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	
+
 </body>
+
 </html>
