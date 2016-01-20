@@ -389,7 +389,7 @@ function dateTimePicker() {
 }
 //search Mobile view
 function searchSlide() {
-    $(".search a").click(function() {
+    $(".mobi-search a").click(function() {
         $(".mobile-search").slideToggle("slow");
     });
 }

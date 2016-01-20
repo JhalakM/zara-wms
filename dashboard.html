@@ -12,19 +12,17 @@
     <!-- Favicon icon -->
     <link rel="icon" href="img/favicon.ico">
     <title data-replace="text">{{site_dashboard_title}}</title>
-	 <!-- CSS fiels -->
-	 <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
-	 <link rel="stylesheet" href="css/lib/font/font-awesome.min.css">
-	 <link rel="stylesheet" href="css/style.css">
-	 <link rel="stylesheet" href="css/reset.css">
-	 <link rel="stylesheet" href="css/responsive.css">
-	 <link rel="stylesheet" href="css/lib/scrollbar/jquery.mCustomScrollbar.css">
-	 <link rel="stylesheet" href="css/lib/jquery-ui/jquery-ui.css">
-	 <link rel="stylesheet" href="assets/blue/style.css">
-	 <link rel="stylesheet" href="css/lib/owl-carousel/owl.carousel.min.css">
-	 
+    <!-- CSS fiels -->
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/font/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/lib/scrollbar/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/lib/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="assets/blue/style.css">
+    <link rel="stylesheet" href="css/lib/owl-carousel/owl.carousel.min.css">
 </head>
-
 <body data-reference="page-loader">
     <!-- Header -->
     <header>
@@ -56,17 +54,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="notify-msg">
-                                <a href="#">
-                                    <img src="img/icons/notification.png">
-                                    <span class="badge badge-danger badge-xs circle">3</span>
-                                </a>
-                            </div>
-                            <div class="settings">
-                                <a href="#">
-                                    <img src="img/icons/settings.png">
-                                </a>
-                            </div>
+
                             <div class="language">
                                 <div class="dropdown-list ">
                                     <div class="selected-listitem">English</div>
@@ -79,14 +67,15 @@
                             </div>
                         </div>
                     </div>
-					<div class="mobile-search  pull-right">
-					<a href="#"><img src="img/icons/search.svg" alt="Search"></a>
-					</div>
+                    <div class="mobi-search  pull-right">
+                        <a href="#"><img src="img/icons/search.svg" alt="Search">
+                        </a>
+                    </div>
                 </div>
             </div>
-			 <div class="search mobile-search">
-        <input type="text" value="" name="service_code" class="text-box" placeholder="Search">
-    </div>
+            <div class="search mobile-search" style="display:none;">
+                <input type="text" value="" name="service_code" class="text-box" placeholder="Search">
+            </div>
         </section>
         <section class="menu-part clearfix">
 
@@ -97,7 +86,7 @@
                             <a href="index.html"><img src="img/logo.svg">
                             </a>
                         </div>
-                       
+
                     </div>
                     <div id="navbar">
                         <nav class="navbar navbar-default navbar-static-top" role="navigation">
@@ -114,15 +103,15 @@
                                 <div class="menu clearfix">
                                     <ul class="nav navbar-nav">
                                         <li class="active">
-                                            <a href="index.html">  <span class="home icon">&nbsp;</span> Home</a>
+                                            <a href="index.html"> <span class="home icon">&nbsp;</span> Home</a>
                                         </li>
-										 <li>
-                                            <a href="index.html">   <span class="about-us icon">&nbsp;</span>  About Zodiac</a>
+                                        <li>
+                                            <a href="index.html"> <span class="about-us icon">&nbsp;</span> About Zodiac</a>
                                         </li>
-                                        
+
                                         <li>
                                             <a href="#">
-                                               <span class="help icon">&nbsp;</span> Help</a>
+                                                <span class="help icon">&nbsp;</span> Help</a>
                                         </li>
                                     </ul>
                                     <div class="search">
@@ -131,8 +120,7 @@
                                 </div>
                                 <div class="bradcrum-menu">
                                     <ul>
-                                        <li><a href="javascript:void(0);" class="tab_action bread_home" id="home">Home</a>
-                                        </li>
+
                                         <li class="bred_pan">You are on home page</li>
 
                                     </ul>
@@ -146,96 +134,61 @@
 
                     <!--/.container-fluid -->
                 </nav>
-
-
             </div>
         </section>
-		
-	</header>
-	
-	<!-- End Header -->
-	<section class="clearfix">
-	<!-- Sidebar -->
-	<aside class="left-panel desktop-sidebar" >
-		
-		<ul>
-	
-			<li class="container-vgm-mgmt" ><a data-tooltip="Container VGM Mgmt" href="javascript:void(0);" class="tab_action tooltip-right" id="container-vgm-mgmt">Container VGM Mgmt</a></li>
-			<li class="upload-edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="upload-edi" data-tooltip="Upload EDI">Upload EDI</a></li>
-			<li class="generate-edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="generate-edi" data-tooltip="Generate EDI">Generate EDI</a></li>
-			<li class="rules-mgmt"><a href="javascript:void(0);" class="tooltip-right tab_action" id="rules-mgmt" data-tooltip="Rules MGMT">Rules MGMT</a></li>
-			<li class="weigh-bridge"><a href="javascript:void(0);" class="tooltip-right tab_action" id="weigh-bridge" data-tooltip="Weigh Bridge/CHE Device MGMT">Weigh Bridge/CHE Device MGMT</a></li>
-			<li class="reports"><a href="javascript:void(0);" class="tooltip-right tab_action" id="reports" data-tooltip="Reports">Reports</a></li>
-			<li class="configuration"><a href="javascript:void(0);" class="tooltip-right tab_action" id="configuration" data-tooltip="Configuration & Settings">Configuration & Settings</a></li>
-			
-			
-			
-		</ul>
-		</aside>
-	<!-- Sidebar For Mobile -->
-	<aside class="left-panel mobile-sidebarmenu" >
-	
-		 <ul  class="sidebar-nav">
-   <li class="container-vgm-mgmt" ><a data-tooltip="Container VGM Mgmt" href="javascript:void(0);" class="tab_action tooltip-right" id="container-vgm-mgmt">Container VGM Mgmt</a></li>
-			<li class="upload-edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="upload-edi" data-tooltip="Upload EDI">Upload EDI</a></li>
-			<li class="generate-edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="generate-edi" data-tooltip="Generate EDI">Generate EDI</a></li>
-			<li class="rules-mgmt"><a href="javascript:void(0);" class="tooltip-right tab_action" id="rules-mgmt" data-tooltip="Rules MGMT">Rules MGMT</a></li>
-			<li class="weigh-bridge"><a href="javascript:void(0);" class="tooltip-right tab_action" id="weigh-bridge" data-tooltip="Weigh Bridge/CHE Device MGMT">Weigh Bridge/CHE Device MGMT</a></li>
-			<li class="reports"><a href="javascript:void(0);" class="tooltip-right tab_action" id="reports" data-tooltip="Reports">Reports</a></li>
-			<li class="configuration"><a href="javascript:void(0);" class="tooltip-right tab_action" id="configuration" data-tooltip="Configuration & Settings">Configuration & Settings</a></li>
-			
-</ul>
-		
-	</aside>
-	
-		<aside class="right-panel">
-		 
-       
-            <!--	 Panel Block-->
+
+    </header>
+    <!-- End Header -->
+    <section class="clearfix">
+        <!-- Sidebar -->
+        <aside class="left-panel desktop-sidebar">
+            <ul>
+                <li class="container-vgm-mgmt"><a data-tooltip="Container VGM Mgmt" href="javascript:void(0);" class="tab_action tooltip-right" id="container-vgm-mgmt">Container VGM Mgmt</a>
+                </li>
+                <li class="upload-edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="upload-edi" data-tooltip="Upload EDI">Upload EDI</a>
+                </li>
+                <li class="generate-edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="generate-edi" data-tooltip="Generate EDI">Generate EDI</a>
+                </li>
+                <li class="rules-mgmt"><a href="javascript:void(0);" class="tooltip-right tab_action" id="rules-mgmt" data-tooltip="Rules MGMT">Rules MGMT</a>
+                </li>
+                <li class="weigh-bridge"><a href="javascript:void(0);" class="tooltip-right tab_action" id="weigh-bridge" data-tooltip="Weigh Bridge/CHE Device MGMT">Weigh Bridge/CHE Device MGMT</a>
+                </li>
+                <li class="reports"><a href="javascript:void(0);" class="tooltip-right tab_action" id="reports" data-tooltip="Reports">Reports</a>
+                </li>
+                <li class="configuration"><a href="javascript:void(0);" class="tooltip-right tab_action" id="configuration" data-tooltip="Configuration & Settings">Configuration & Settings</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- Sidebar For Mobile -->
+        <aside class="left-panel mobile-sidebarmenu">
+
+            <ul class="sidebar-nav">
+                <li class="container-vgm-mgmt"><a data-tooltip="Container VGM Mgmt" href="javascript:void(0);" class="tab_action tooltip-right" id="container-vgm-mgmt">Container VGM Mgmt</a>
+                </li>
+                <li class="upload-edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="upload-edi" data-tooltip="Upload EDI">Upload EDI</a>
+                </li>
+                <li class="generate-edi"><a href="javascript:void(0);" class="tooltip-right tab_action" id="generate-edi" data-tooltip="Generate EDI">Generate EDI</a>
+                </li>
+                <li class="rules-mgmt"><a href="javascript:void(0);" class="tooltip-right tab_action" id="rules-mgmt" data-tooltip="Rules MGMT">Rules MGMT</a>
+                </li>
+                <li class="weigh-bridge"><a href="javascript:void(0);" class="tooltip-right tab_action" id="weigh-bridge" data-tooltip="Weigh Bridge/CHE Device MGMT">Weigh Bridge/CHE Device MGMT</a>
+                </li>
+                <li class="reports"><a href="javascript:void(0);" class="tooltip-right tab_action" id="reports" data-tooltip="Reports">Reports</a>
+                </li>
+                <li class="configuration"><a href="javascript:void(0);" class="tooltip-right tab_action" id="configuration" data-tooltip="Configuration & Settings">Configuration & Settings</a>
+                </li>
+            </ul>
+        </aside>
+        <aside class="right-panel">
+            <!-- Panel Block-->
             <div class="panel-block">
                 <!-- Panel Head -->
                 <div class="panel-block-head clearfix">
                     <div class="panel-block-icon"><i class="fa fa-home"></i> </div>
                     <div class="panel-block-heading "> Home</div>
-
-                    <div class="app-action-group app-action">
-                        <a href="#" data-tooltip="print" class="tooltip-bottom"><i class="fa fa-print"></i></a>
-                        <a href="#" class="active tooltip-bottom" data-tooltip="print"><i class="fa fa-filter"></i></a>
-                        <a href="#" data-tooltip="print" class="tooltip-bottom"><i class="fa fa-sort-amount-desc"></i></a>
-						<a href="#" class="range tooltip-bottom" data-tooltip="print" >Range</a>
-
-               
-                        <a href="#" data-tooltip="print" class="tooltip-bottom" ><i class="fa fa-plus"></i></a>
-                    </div>
-<!-- Mobile Action Area -->
-                    <div class="mobile-action-grp-btn">
-                        <div class="action-arrow open" ><a href="javascript:void(0);"><i class="fa fa-caret-down"></i></a>
-                        </div>
-                        <div class="action-grp" style="display:none;">
-                            <div class="grid-specific clearfix">
-                                <p>Grid Specific Actions</p>
-                                <div class="app-action-group ">
-                                    <a href="#" data-tooltip="print"><i class="fa fa-print"></i></a>
-                                    <a href="#" class="active"  data-tooltip="print"><i class="fa fa-filter"></i></a>
-                                    <a href="#"  data-tooltip="print"><i class="fa fa-sort-amount-desc"></i></a>
-                                    <a href="#"  data-tooltip="print"><i class="fa fa-plus"></i></a>
-                                    <a href="#"  data-tooltip="print"><i class="fa fa-print"></i></a>
-                                </div>
-                            </div>
-                            <div class="app-specific clearfix">
-                                <p>Application Specific Actions</p>
-                                <div class="app-action-group ">
-                                    <a href="#" ><i class="fa fa-pencil-square-o"></i></a>
-                                    <a href="#"><i class="fa fa-trash"></i></a>
-                                    <a href="#"><i class="fa fa-floppy-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End  Mobile Action Area -->
                 </div>
                 <div class="panel-block-content no-padding ">
-				<div class="app-action-form clearfix" style="display:none;">
+                    <div class="app-action-form clearfix" style="display:none;">
                         <div class="title clearfix">
                             <div class="field-name"> <span class="heading ">Filter </span>
                             </div>
@@ -246,7 +199,6 @@
                                         <li value=""> 111</li>
                                         <li value="" rel="">222</li>
                                         <li value="" rel=""> 333</li>
-
                                     </ul>
                                 </div>
                             </div>
@@ -254,180 +206,168 @@
                         <div class=" clearfix"></div>
                         <div class="form-action-field clearfix">
                             <form>
-
                                 <!-- Row -->
-                          
-                                    <div class="form-row clearfix">
-                                        <div class="field-name">
-                                            <label class="label">Type </label>
-                                        </div>
-
-                                        <div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3">
-                                            <div class="dropdown-list">
-                                                <div class="selected-listitem">Click Me</div>
-                                                <ul>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel=""> #4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel=""> #4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class=" no-padding  margin-5 pull-left col-md-3 col-sm-3 col-xs-3">
-                                            <input type="text" class="text-box" name="service_code" value="">
-                                        </div>
-                                        <div class="no-padding  margin-5 pull-left">
-                                            <div class="switch">
-                    <input type="radio" class="switch-input" name="view" value="week" id="on_1" checked>
-                    <label for="on_1" class="switch-label switch-label-off">ON</label>
-                    <input type="radio" class="switch-input" name="view" value="month" id="off_1">
-                    <label for="off_1" class="switch-label switch-label-on">OFF</label>
-                    <span class="switch-selection"></span>
-                </div>
+                                <div class="form-row clearfix">
+                                    <div class="field-name">
+                                        <label class="label">Type </label>
+                                    </div>
+                                    <div class="no-padding margin-5 col-md-3 col-sm-3 col-xs-3">
+                                        <div class="dropdown-list">
+                                            <div class="selected-listitem">Click Me</div>
+                                            <ul>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel=""> #4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel=""> #4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="form-row clearfix">
-                                        <div class="field-name">
-                                            <label class="label">Class</label>
-                                        </div>
-
-                                        <div class="no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
-                                            <div class="dropdown-list">
-                                                <div class="selected-listitem">Click Me</div>
-                                                <ul>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel=""> #4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel=""> #4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class=" no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
-                                            <input type="text" class="text-box" name="service_code" value="">
-                                        </div>
-                                        <div class="no-padding  margin-5 pull-left">
-                                           
-                                            <div class="switch">
-                    <input type="radio" class="switch-input" name="switch2" value="week" id="on_2" checked>
-                    <label for="on_2" class="switch-label switch-label-off">ON</label>
-                    <input type="radio" class="switch-input" name="switch2" value="month" id="off_2">
-                    <label for="off_2" class="switch-label switch-label-on">OFF</label>
-                    <span class="switch-selection"></span>
-                </div>
-                                        
+                                    <div class=" no-padding  margin-5 pull-left col-md-3 col-sm-3 col-xs-3">
+                                        <input type="text" class="text-box" name="service_code" value="">
+                                    </div>
+                                    <div class="no-padding  margin-5 pull-left">
+                                        <div class="switch">
+                                            <input type="radio" class="switch-input" name="view" value="week" id="on_1" checked>
+                                            <label for="on_1" class="switch-label switch-label-off">ON</label>
+                                            <input type="radio" class="switch-input" name="view" value="month" id="off_1">
+                                            <label for="off_1" class="switch-label switch-label-on">OFF</label>
+                                            <span class="switch-selection"></span>
                                         </div>
                                     </div>
-                                    <div class="form-row clearfix">
-                                        <div class="field-name">
-                                            <label class="label">Add more fields</label>
-                                        </div>
-                                        <div class="no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
-                                            <div class="dropdown-list">
-                                                <div class="selected-listitem">Click Me</div>
-                                                <ul>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel=""> #4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                    <li value="" rel=""> #4566871</li>
-                                                    <li value="" rel="">#4566871</li>
-                                                </ul>
-                                            </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="field-name">
+                                        <label class="label">Class</label>
+                                    </div>
+                                    <div class="no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
+                                        <div class="dropdown-list">
+                                            <div class="selected-listitem">Click Me</div>
+                                            <ul>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel=""> #4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel=""> #4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                            </ul>
                                         </div>
                                     </div>
-
-                                    <!-- Form Footer -->
-
-                                    <div class="form-btn-group  clearfix">
-                                        <button class="uie-primary-button margin-5 uie-button uie-icon-btn" type="button"> <span class="btn-icon"><img src="img/icons/svg/filter-white.svg" alt="Filter" ></span>
-                                            <div class="btn-value">Filter </div>
-                                        </button>
-                                        <button class="uie-secondary-button uie-button" type="reset">Reset </button>
+                                    <div class=" no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
+                                        <input type="text" class="text-box" name="service_code" value="">
                                     </div>
-                                    <!-- End Row -->
-                                    <!-- End Form Footer -->
-
+                                    <div class="no-padding  margin-5 pull-left">
+                                        <div class="switch">
+                                            <input type="radio" class="switch-input" name="switch2" value="week" id="on_2" checked>
+                                            <label for="on_2" class="switch-label switch-label-off">ON</label>
+                                            <input type="radio" class="switch-input" name="switch2" value="month" id="off_2">
+                                            <label for="off_2" class="switch-label switch-label-on">OFF</label>
+                                            <span class="switch-selection"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="field-name">
+                                        <label class="label">Add more fields</label>
+                                    </div>
+                                    <div class="no-padding margin-5  pull-left col-md-3 col-sm-3 col-xs-3">
+                                        <div class="dropdown-list">
+                                            <div class="selected-listitem">Click Me</div>
+                                            <ul>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel=""> #4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                                <li value="" rel=""> #4566871</li>
+                                                <li value="" rel="">#4566871</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Form Footer -->
+                                <div class="form-btn-group  clearfix">
+                                    <button class="uie-primary-button margin-5 uie-button uie-icon-btn" type="button"> <span class="btn-icon"><img src="img/icons/svg/filter-white.svg" alt="Filter" ></span>
+                                        <div class="btn-value">Filter </div>
+                                    </button>
+                                    <button class="uie-secondary-button uie-button" type="reset">Reset </button>
+                                </div>
+                                <!-- End Row -->
+                                <!-- End Form Footer -->
                             </form>
+                        </div>
+                    </div>
+                    <div class="element-sec clearfix padding-bottom-none ">
+                        <div class="col-md-3">
+                            <div class="element-block container-vgm-mgmt">
+                                <span class="icon">&nbsp; </span>
+                                <h3>Container VGM Mgmt</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
+
                             </div>
                         </div>
-						
-                <div class="element-sec clearfix padding-bottom-none ">
-					<div class="col-md-3">
-					   <div class="element-block container-vgm-mgmt">
-						  <span class="icon">&nbsp; </span>
-						  <h3>Container VGM Mgmt</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
-						  
-					   </div> 
-					</div>
-					<div class="col-md-3">
-						<div class="element-block upload-edi">
-						  <span class="icon">&nbsp;</span>
-						  <h3>Upload EDI</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
-						
+                        <div class="col-md-3">
+                            <div class="element-block upload-edi">
+                                <span class="icon">&nbsp;</span>
+                                <h3>Upload EDI</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
 
-					   </div> 
-					</div>
-					<div class="col-md-3">
-					   <div class="element-block generate-edi">
-						  <span class="icon">&nbsp;</span>
-						  <h3>Generate EDI</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
-						 
-					   </div> 
-					</div>
-					<div class="col-md-3">
-					   <div class="element-block rules-mgmt">
-						  <span class="icon">&nbsp;</span>
-						  <h3>Rules MGMT</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
-						  
-					   </div> 
-					</div>
-					<div class="col-md-3">
-					   <div class="element-block weigh-bridge">
-						  <span class="icon">&nbsp;</span>
-						  <h3>Weigh Bridge/CHE Device MGMT</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
-						 
-					   </div> 
-					</div>
-					<div class="col-md-3">
-					   <div class="element-block reports">
-						  <span class="icon">&nbsp;</span>
-						  <h3>Reports</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
-						  
-					   </div> 
-					</div>
-					<div class="col-md-3">
-					   <div class="element-block configuration">
-						  <span class="icon">&nbsp;</span>
-						  <h3>Configuration & Settings</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
-						 
-					   </div> 
-					</div>
-				</div>
-               </div>
-            <!--End Panel-->
-        </div>
-    
-           </aside>
-	</section>
-	<!-- End Sidebar -->
-	
-	<footer class="footer">
-		2016 Copyright &copy; DP World. All rights reserved.
-	</footer>
-	<script src="js/lib/jQuery/jquery-v2-1-1.min.js"></script> 
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="element-block generate-edi">
+                                <span class="icon">&nbsp;</span>
+                                <h3>Generate EDI</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="element-block rules-mgmt">
+                                <span class="icon">&nbsp;</span>
+                                <h3>Rules MGMT</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="element-block weigh-bridge">
+                                <span class="icon">&nbsp;</span>
+                                <h3>Weigh Bridge/CHE Device MGMT</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="element-block reports">
+                                <span class="icon">&nbsp;</span>
+                                <h3>Reports</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="element-block configuration">
+                                <span class="icon">&nbsp;</span>
+                                <h3>Configuration & Settings</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita? Videmus igitur ut.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Panel-->
+            </div>
+
+        </aside>
+    </section>
+    <!-- End Sidebar -->
+
+    <footer class="footer">
+        2016 Copyright &copy; DP World. All rights reserved.
+    </footer>
+    <script src="js/lib/jQuery/jquery-v2-1-1.min.js"></script>
     <!-- Bootstrap Plugin Js -->
     <script src="js/lib/bootstrap/bootstrap.min.js"></script>
     <script src="js/lib/blockUI/jquery.blockUI.js"></script>
@@ -439,10 +379,10 @@
     <script src="js/initialize.js"></script>
     <script src="js/init/table-grid.js"></script>
     <script src="js/init/dashboard.js"></script>
-	<script src="js/lib/owl-slider/owl.carousel.js"></script>
-	
-	
-	
+    <script src="js/lib/owl-slider/owl.carousel.js"></script>
+
+
+
 </body>
 
 </html>
