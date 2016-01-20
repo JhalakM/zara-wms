@@ -67,6 +67,9 @@ a:focus {
 .position-rel {
     position: relative;
 }
+.text-align-center {
+    text-align: center;
+}
 /*------------------------------------*\
 Checkbox Radio Button
 \*------------------------------------*/
@@ -75,7 +78,7 @@ Checkbox Radio Button
     background-image: url("../img/icons/icon-checkbox-heading.png");
 }
 .css-label {
-    background-image: url("../img/icons/icon-checkbox.png");
+    background-image: url("../img/icons/checkbox-blank.svg");
 }
 .table-grid .checkbox {
     text-align: center;
@@ -120,7 +123,7 @@ input[type="radio"]:checked:not(old) + label > span {
     background-image: linear-gradient(#E0E0E0, #F0F0F0);
 }
 input.css-checkbox[type="checkbox"]:checked + label.css-label {
-    background-position: 0 -18px;
+     background-image: url("../img/icons/checkbox-checked.svg");
 }
 body .checkbox, .radio {
     display: block;
@@ -762,9 +765,7 @@ Dropdown
     line-height: 21px;
     padding: 7px 10px;
 }
-.dropdown-list .mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
-    background-position: 0 10px;
-}
+
 .pages-info .dropdown-list .mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
     background-position: -1px -1px;
 }
@@ -1879,6 +1880,10 @@ Panel
     color: #c5c5c5;
     cursor: default;
 }
+.page-options img {
+    max-width: 100%;
+    width: auto;
+}
 .pages-info .dropdown-list ul {
     left: 0;
 }
@@ -2722,13 +2727,13 @@ Header
     top: 26px;
 }
 .language .dropdown-list ul::before {
-    border-bottom: 5px dashed #d8d8d8;
-    border-left: 4px solid rgba(0, 0, 0, 0);
-    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 7px dashed #d8d8d8;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid rgba(0, 0, 0, 0);
     content: "";
     left: 46%;
     position: absolute;
-    top: -5px;
+    top: -7px;
 }
 .language .dropdown-list ul li {
     color: #5c5c5c;
@@ -2987,11 +2992,11 @@ ul.nav li:hover > ul.dropdown-menu {
     width: 20%;
 }
 .search .text-box {
-    background: #fff url("../img/icons/svg/search.svg") no-repeat scroll 98% center / 20px auto;
+    background: #fff url("../img/icons/search.svg") no-repeat scroll 98% center / 20px auto;
     margin: 4px 0;
     height: 31px;
 }
-.mobile-search {
+.mobi-search {
     display: none;
 }
 /*----------Breadcrum-----------*/
@@ -3310,6 +3315,9 @@ Login
 .logo-fix-width > a {
     padding-top: 14px;
 }
+.login-disclaimer {
+    padding: 20px 0;font-size:13px;
+}
 /*------------------------------------*\
 Rule Mgmt page
 \*------------------------------------*/
@@ -3317,3 +3325,5 @@ Rule Mgmt page
 .panel-block-content-padding {
     padding: 0 15px;
 }
+
+

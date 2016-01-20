@@ -112,7 +112,7 @@ iPad portrait · width: 768px
     margin-bottom: 0;
     margin-right: 0;
     margin-top: 0;
-    padding: 10px 18px;
+    padding: 10px 25px;
     right: 0;
 }
 
@@ -149,30 +149,48 @@ iPad portrait · width: 768px
   
 
   
- .search.mobile-search {
+.search.mobile-search {
     background: #f6f6f6 none repeat scroll 0 0;
+    border-bottom: 1px solid #d8d8d8;
     border-top: 1px solid #d8d8d8;
     display: block;
     float: none;
-    margin:5px auto 0;
-    padding: 5px 0;
+    margin: 5px auto 0;
+    padding: 10px 0;
+    position: absolute;
+    top: 30px;
     width: 100%;
-	
+    z-index: 99;
 }
 .search .text-box {
     display: block;
     float: none;
     height: 31px;
     margin: 0 auto;
-    width: 96%;
+    width: 93%;
 }
 .search{    display: none;}
 .header-top{ padding: 10px 0 0;}
-.mobile-search {
-    display: block;
+.header-top .block-container {
+    margin-bottom: 5px;
 }
-.mobile-search img {
-    width: 20px;
+.mobi-search {
+    background-color: #ffffff;
+    display: block;
+    height: 35px;
+    line-height: 39px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -11px;
+    width: 74px;
+	border-left:1px solid #d8d8d8;
+}
+.mobi-search img {
+    width: 18px;
+}
+.search.mobile-search .text-box {
+    background-image: none;
 }
 /* Sidebar */
 .left-panel {  border-top: 1px solid #d8d8d8;
@@ -455,14 +473,9 @@ iPhone 6 landscape · width: 600px
 	.header-left {
     display: none;
     }
-	.header-right {
-    float: left;
-    width: 100%;
-}
+
 .top-bar-menu{width:100%;    padding-right: 6px;}
-.language {
-    float: right;
-}
+
 .panel-block-heading { width: 55%;}
 
 .app-action-form {
