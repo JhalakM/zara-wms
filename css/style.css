@@ -75,7 +75,7 @@ Checkbox Radio Button
 \*------------------------------------*/
 
 .table-grid th .css-label {
-    background-image: url("../img/icons/icon-checkbox-heading.png");
+    background-image: url("../img/icons/checkbox-blank-white.svg");
 }
 .css-label {
     background-image: url("../img/icons/checkbox-blank.svg");
@@ -124,6 +124,13 @@ input[type="radio"]:checked:not(old) + label > span {
 }
 input.css-checkbox[type="checkbox"]:checked + label.css-label {
      background-image: url("../img/icons/checkbox-checked.svg");
+}
+th .checkbox input.css-checkbox[type="checkbox"]:checked + label.css-label {
+    background-color: #fff;
+    background-image: url("../img/icons/checkbox-checked-head.svg");
+    background-position: 0 center;
+    height: 16px;
+    min-height: 16px;
 }
 body .checkbox, .radio {
     display: block;
@@ -1681,6 +1688,66 @@ Application form action ablock
 .set-empty .checkbox {
     margin:0;
 }
+.print {
+    background-image: url("../img/icons/print.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    font-size: 0;
+}
+.print:hover{ background-image: url("../img/icons/print-hover.svg");}
+
+.filter {
+    background-image: url("../img/icons/filter.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    font-size: 0;
+}
+.filter:hover{ background-image: url("../img/icons/filter-hover.svg");}
+
+.sorting {
+    background-image: url("../img/icons/sorting.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    font-size: 0;
+}
+.sorting:hover{ background-image: url("../img/icons/sorting-hover.svg");}
+.add-more{
+  background-image: url("../img/icons/add-more.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    font-size: 0;
+}
+.add-more:hover{ background-image: url("../img/icons/add-more-hover.svg");}
+
+.edit{
+  background-image: url("../img/icons/edit.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 14px;
+    font-size: 0;
+}
+.edit:hover{ background-image: url("../img/icons/edit-hover.svg");}
+
+.delete{
+  background-image: url("../img/icons/delete.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 14px;
+    font-size: 0;
+}
+.delete:hover{ background-image: url("../img/icons/delete-hover.svg");}
+.save{
+  background-image: url("../img/icons/save.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 14px;
+    font-size: 0;
+}
+.save:hover{ background-image: url("../img/icons/save-hover.svg");}
 /*------------------------------------*\
 Panel
 \*------------------------------------*/
@@ -1745,7 +1812,7 @@ Panel
     background-color: #FFFFFF;
 }
 .app-action-group a.active:hover {
-    background: #120e5b none repeat scroll 0 0;
+    background-color: #120e5b;
 }
 .app-action-group i.fa-sort-amount-desc,
 .pagination-block i.fa-sort-amount-desc {
@@ -1754,10 +1821,10 @@ Panel
 .app-action-group a.range {
     color: transparent;
     font-size: 11px;
-    background: rgba(0, 0, 0, 0) url("../img/icons/svg/range.svg") no-repeat scroll center center;
+    background: rgba(0, 0, 0, 0) url("../img/icons/range.svg") no-repeat scroll center center;
 }
 .app-action-group a.range:hover {
-    background-image: url("../img/icons/svg/range-hover.svg");
+    background-image: url("../img/icons/range-hover.svg");
     background-color: #120e5b;
 }
 /*----------Table Pagination-----------*/
@@ -1979,6 +2046,12 @@ Panel
 }
 .action-arrow.open {
     background: #fff none repeat scroll 0 0;
+}
+.action-arrow.open > a img {
+    width: 22px;
+}
+.action-arrow.open > a {
+    line-height: 49px !important;
 }
 /*------------------------------------*\
 Alert message 
@@ -2241,7 +2314,7 @@ Model Dialog Box
     font-weight: 600;
     line-height: 1.42857;
     margin: 0;
-	padding:10px;
+	padding:10px 0;  float: left;
 }
 .modal-title .icon {
     margin-right: 6px;
@@ -2297,7 +2370,10 @@ Model Dialog Box
     width: 80px;
 }
 .modal-body .form-btn-group{  margin-left: 80px;}
-
+.model-pop-head .icon {
+    float: left;
+    width: 40px; text-align: center;
+}
 
 /*------------------------------------*\
 Table
@@ -2890,10 +2966,10 @@ ul.nav li:hover > ul.dropdown-menu {
     background: rgba(0, 0, 0, 0) url("../img/icons/home-hover.svg") no-repeat scroll center center / 14px auto;
 }
 .menu .about-us.icon {
-    background: rgba(0, 0, 0, 0) url("../img/icons/about-us.svg") no-repeat scroll center center / 14px auto;
+    background: rgba(0, 0, 0, 0) url("../img/icons/about-us.svg") no-repeat scroll center 3px / 12px auto
 }
 .menu li:hover .about-us.icon ,.menu .active .about-us.icon {
-    background: rgba(0, 0, 0, 0) url("../img/icons/about-us-hover.svg") no-repeat scroll center center / 14px auto;
+    background: rgba(0, 0, 0, 0) url("../img/icons/about-us-hover.svg") no-repeat  scroll center 3px / 12px auto;
 }
 .menu .home.icon {
     background: rgba(0, 0, 0, 0) url("../img/icons/home.svg") no-repeat scroll center center / 14px auto;
@@ -3083,12 +3159,12 @@ Sidebar
     float: left;
     width: 60px;
 }
-.left-panel ul {
+.left-panel .sidebar-nav {
     list-style: outside none none;
     margin: 0;
     padding: 0;
 }
-.left-panel li {
+.left-panel .sidebar-nav .sidebar-link {
     background-position: center center;
     background-repeat: no-repeat;
     border-bottom: 1px solid #d8d8d8;
@@ -3097,8 +3173,8 @@ Sidebar
     width: 60px;
 	
 }
-.left-panel li:hover{background-color:#2991d6;}
-.left-panel li a {
+.left-panel .sidebar-nav  .sidebar-link:hover{background-color:#2991d6;}
+.left-panel .sidebar-nav  a {
     color: transparent;
     display: block;
     font-size: 0;
@@ -3107,29 +3183,29 @@ Sidebar
     text-align: center;
     width: 60px;
 }
-.left-panel ul li a img {
+.left-panel .sidebar-nav div a img {
     width: 32px;
 }
-.left-panel li.container-vgm-mgmt{background-image:url("../img/dashborad/container-vgm-mgmt.svg");}
-.left-panel li.container-vgm-mgmt:hover{background-image:url("../img/dashborad/container-vgm-mgmt-hover.svg");}
+.left-panel .sidebar-nav .container-vgm-mgmt{background-image:url("../img/dashborad/container-vgm-mgmt.svg");}
+.left-panel .sidebar-nav .container-vgm-mgmt:hover{background-image:url("../img/dashborad/container-vgm-mgmt-hover.svg");}
 
-.left-panel li.upload-edi{background-image:url("../img/dashborad/upload-edi.svg");}
-.left-panel li.upload-edi:hover{background-image:url("../img/dashborad/upload-edi-hover.svg");}
+.left-panel .sidebar-nav .upload-edi{background-image:url("../img/dashborad/upload-edi.svg");}
+.left-panel .sidebar-nav .upload-edi:hover{background-image:url("../img/dashborad/upload-edi-hover.svg");}
 
-.left-panel li.generate-edi{background-image:url("../img/dashborad/generate-edi.svg");}
-.left-panel li.generate-edi:hover{background-image:url("../img/dashborad/generate-edi-hover.svg");}
+.left-panel .sidebar-nav .generate-edi{background-image:url("../img/dashborad/generate-edi.svg");}
+.left-panel .sidebar-nav .generate-edi:hover{background-image:url("../img/dashborad/generate-edi-hover.svg");}
 
-.left-panel li.rules-mgmt{background-image:url("../img/dashborad/rules-mgmt.svg");}
-.left-panel li.rules-mgmt:hover{background-image:url("../img/dashborad/rules-mgmt-hover.svg");}
+.left-panel .sidebar-nav .rules-mgmt{background-image:url("../img/dashborad/rules-mgmt.svg");}
+.left-panel .sidebar-nav .rules-mgmt:hover{background-image:url("../img/dashborad/rules-mgmt-hover.svg");}
 
-.left-panel li.weigh-bridge{background-image:url("../img/dashborad/weigh-bridge.svg");}
-.left-panel li.weigh-bridge:hover{background-image:url("../img/dashborad/weigh-bridge-hover.svg");}
+.left-panel .sidebar-nav .weigh-bridge{background-image:url("../img/dashborad/weigh-bridge.svg");}
+.left-panel .sidebar-nav .weigh-bridge:hover{background-image:url("../img/dashborad/weigh-bridge-hover.svg");}
 
-.left-panel li.reports{background-image:url("../img/dashborad/reports.svg");}
-.left-panel li.reports:hover{background-image:url("../img/dashborad/reports-hover.svg");}
+.left-panel .sidebar-nav .reports{background-image:url("../img/dashborad/reports.svg");}
+.left-panel .sidebar-nav .reports:hover{background-image:url("../img/dashborad/reports-hover.svg");}
 
-.left-panel li.configuration{background-image:url("../img/dashborad/configuration.svg");}
-.left-panel li.configuration:hover{background-image:url("../img/dashborad/configuration-hover.svg");}
+.left-panel .sidebar-nav .configuration{background-image:url("../img/dashborad/configuration.svg");}
+.left-panel .sidebar-nav .configuration:hover{background-image:url("../img/dashborad/configuration-hover.svg");}
 
 
 /* For Responsive View */
@@ -3262,6 +3338,8 @@ Footer
 
 .mobile-sidebarmenu{display:none;}
 
+
+
 /*------------------------------------*\
 Login
 \*------------------------------------*/
@@ -3363,5 +3441,3 @@ Rule Mgmt page
     float: right;
     width: 70%;
 }
-
-

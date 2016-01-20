@@ -5,7 +5,13 @@
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <g>
 	<g>
-		<path fill="#5C5C5C" d="M0.001,0v16H16V0H0.001z M15.002,15H1.001V1h14L15.002,15L15.002,15z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#2991D6" d="M0,0v16h16.001V0H0z M6.969,12.563L2.516,8.484L4,7l2.906,2.656
+			l5.125-6.375l1.719,1.313L6.969,12.563z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M0,0v16h15.999V0H0z M15.001,15H1V1h14V15z"/>
 	</g>
 </g>
 </svg>

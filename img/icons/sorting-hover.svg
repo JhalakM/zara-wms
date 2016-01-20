@@ -5,7 +5,8 @@
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <g>
 	<g>
-		<path fill="#5C5C5C" d="M0.001,0v16H16V0H0.001z M15.002,15H1.001V1h14L15.002,15L15.002,15z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M7,10h3.005V9H7V10z M7,12h5.4v-1H7V12z M7,14h7.201v-1H7V14z
+			 M7,15v1h9v-1H7z M7,4h1v1h2V4H9V3H8V2H7V1H6V0H4v1H3v1H2v1H1v1H0v1h2V4h1V3h1v13h2V3h1V4z"/>
 	</g>
 </g>
 </svg>

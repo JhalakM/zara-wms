@@ -40,11 +40,11 @@
                     </div>
                     <div class="panel-block-heading "> Table Example</div>
                     <div class="app-action-group app-action">
-                        <a href="#"><i class="fa fa-print"></i></a>
-                        <a href="#" class="active"><i class="fa fa-filter"></i></a>
-                        <a href="#"><i class="fa fa-sort-amount-desc"></i></a>
+                        <a href="#" class="print">Print</a>
+                        <a href="#" class="active filter">Filter</a>
+                        <a href="#" class="sorting">Sorting</a>
 						<a href="#" class="range">Range</a>
-                        <a href="#"><i class="fa fa-plus"></i></a>
+                        <a href="#" class="add-more">Add More</a>
                     </div>
 
                 </div>
@@ -218,9 +218,9 @@
                         </div>
                         <div class="grid-action-group">
 						
-                            <a href="#" data-toggle="modal" data-target="#batch_update"><i class="fa fa-pencil-square-o"></i></a>
-                            <a href="#"><i class="fa fa-trash"></i></a>
-                            <a href="#"><i class="fa fa-floppy-o"></i></a>
+                            <a href="#" data-toggle="modal" data-target="#batch_update" class="edit">edit</a>
+                            <a href="#" class="delete">Delete</a>
+                            <a href="#" class="save">Save</a>
                         </div>
 						 <!-- Modal -->
 				  
@@ -230,8 +230,9 @@
 												  <!-- Modal content-->
 												  <div class="modal-content">
 													<div class="modal-header">
+													<div class="model-pop-head"><span class="icon"><img src="img/icons/edit.svg" alt="edit"></span> <h4 class="modal-title">Batch Update</h4></div>
 													  <button type="button" class="close" data-dismiss="modal">&times;</button>
-													  <h4 class="modal-title"><span class="icon"><i class="fa fa-pencil-square-o"></i></span> Batch Update</h4>
+													 
 													</div>
 													<div class="modal-body">
 													  <form>
@@ -277,7 +278,7 @@
 													  </form>
 													</div>
 													<div class="form-btn-group  clearfix"> 
-																			<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><i class="fa fa-pencil-square-o"></i></span>
+																			<button class="uie-primary-button margin-5 uie-button uie-icon-btn"> <span class="btn-icon"><img src="img/icons/edit-hover.svg" alt="edit"></span>
 													<div class="btn-value">Update </div>
 												   </button>
 												   
@@ -294,7 +295,7 @@
                  
                     <!-- Mobile Action Area -->
                     <div class="mobile-action-grp-btn">
-                        <div class="action-arrow open"><a href="#"><i class="fa fa-caret-down"></i></a>
+                        <div class="action-arrow open"><a href="#"><img src="img/icons/arrow-down.svg"></a>
                         </div>
                         <div class="action-grp">
                             <div class="grid-specific clearfix">
@@ -330,7 +331,7 @@
                                     </span>
                                     </th>
                                     <th class="more-field-show">
-                                        <span>+</span>
+                                        <span><img src="img/icons/more-less-field.svg"></span>
                                     </th>
                                     <th>
 									<span class="table-title">Container Cycle
